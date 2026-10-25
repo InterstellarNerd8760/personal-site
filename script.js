@@ -1,26 +1,34 @@
-// Smooth reveal on scroll
-const reveals = document.querySelectorAll('.reveal');
+const menuBtn = document.querySelector(".menu-btn");
+const mobileNav = document.querySelector("#mobile-nav");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      // Optional: unobserve after first reveal for performance
-      // observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.15,
-  rootMargin: '0px 0px -40px 0px'
+function setMenu(open) {
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  mobileNav.hidden = !open;
+}
+
+menuBtn.addEventListener("click", () => {
+  setMenu(menuBtn.getAttribute("aria-expanded") !== "true");
 });
 
-reveals.forEach((el) => observer.observe(el));
+mobileNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenu(false));
+});
 
-// Optional: slight parallax or nav highlight could go here later
-// Keep it lightweight for now
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenu(false);
+});
 
-// Mobile nav could be added if needed, but simple is fine for this version
-document.addEventListener('DOMContentLoaded', () => {
-  // Any init
-  console.log('Weston Rosch site loaded');
+const copyBtn = document.querySelector(".copy-call");
+const copyLabel = copyBtn.querySelector(".copy-label");
+copyBtn.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(copyBtn.dataset.copy);
+    copyLabel.textContent = "Copied";
+    window.setTimeout(() => {
+      copyLabel.textContent = "Copy callsign";
+    }, 1600);
+  } catch {
+    copyLabel.textContent = "Copy callsign";
+  }
 });

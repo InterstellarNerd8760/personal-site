@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weston Rosch — Builder</title>
+  <meta name="description" content="I build software, radios, and things that go up. Centauri Academy, WALL-E balloon, and more.">
+  <meta name="theme-color" content="#0a0c0f">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">Weston</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <nav aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <p class="eyebrow">San Francisco Bay Area</p>
+        <h1>Weston <span>Rosch</span></h1>
+        <p class="tagline">I build software, radios, and things that go up.</p>
+        <p class="sub">Long term I want to help humanity become multiplanetary.</p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">See the work</a>
+          <a href="#contact" class="btn ghost">Get in touch</a>
+        </div>
+        <dl class="stats">
+          <div><dt>Technician license</dt><dd>KO6OGZ</dd></div>
+          <div><dt>Kitfox flight time</dt><dd>0.7h</dd></div>
+          <div><dt>5K PR</dt><dd>19:13</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="about" class="wrap section">
+      <p class="kicker">About</p>
+      <div class="about-grid">
+        <h2>Building the things I wish already existed.</h2>
+        <div class="about-copy">
+          <p>High schooler in the San Francisco Bay Area building things that matter to me. Founder of Centauri Academy, leading the SFWHS Space Club’s WALL-E weather balloon program, and learning to fly.</p>
+          <p class="muted">I care about precision, long-term progress, and reducing friction for people who want to do interesting work. Currently grinding math, flying a bit, running cross country, and shipping software.</p>
+          <button type="button" class="copy-call" data-copy="KO6OGZ">
+            <span>KO6OGZ</span>
+            <span class="copy-label muted">Copy callsign</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="band">
+      <div class="wrap section">
+        <p class="kicker">Working on</p>
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-top"><span class="idx">01</span><span class="badge live">Live</span></div>
+            <h3>Centauri Academy</h3>
+            <p>Ham radio and aviation study app. Question pools, readiness scoring, AI tutor, analytics. The main thing.</p>
+            <a class="out" href="https://centauriacademy.app" target="_blank" rel="noreferrer">centauriacademy.app <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="idx">02</span><span class="badge">Spring 2027</span></div>
+            <h3>WALL-E</h3>
+            <p>High-altitude balloon program for SFWHS Space Club. Pico flight computer, BME280, LoRa telemetry, GoPro, parachute. First launch targeted for spring 2027.</p>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="idx">03</span><span class="badge">Parent</span></div>
+            <h3>Centauri</h3>
+            <p>Parent company and brand for Centauri Academy, future products, and related aerospace and education work. Centauri Shop (ham and aviation gear) coming later.</p>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="idx">04</span><span class="badge new">Side hustle</span></div>
+            <h3>Web Design</h3>
+            <p>Building clean, fast websites for small businesses and projects. Focused on performance, clarity, and sites that actually convert or communicate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="band">
+      <div class="wrap section">
+        <p class="kicker">Services</p>
+        <h2 class="narrow">Sites, study tools, and small sharp prototypes.</h2>
+        <ol class="rows">
+          <li><span>01</span><h3>Websites for businesses</h3><p>Landing pages, portfolios, and simple product sites. Fast, mobile-first, and designed to look intentional without unnecessary complexity.</p></li>
+          <li><span>02</span><h3>Centauri Academy</h3><p>FCC exam prep and study tools. Free tier live; premium features waiting on payment setup.</p></li>
+          <li><span>03</span><h3>Custom tools & prototypes</h3><p>Small internal tools, dashboards, or proof-of-concept apps when the problem is clear and the scope is tight.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills" class="band">
+      <div class="wrap section">
+        <p class="kicker">Skills</p>
+        <h2>What I use</h2>
+        <div class="skill-grid">
+          <div><h3>Programming & Web</h3><p>JavaScript, TypeScript, Python, React, Vite, Node.js/Express, HTML/CSS, REST APIs, PostgreSQL, Git/GitHub, AI integration</p></div>
+          <div><h3>Product & Software</h3><p>Full-stack web apps, UI/UX, deployment, debugging, testing, analytics, subscription systems</p></div>
+          <div><h3>Aerospace & Embedded</h3><p>Microcontrollers, sensor integration, LoRa telemetry, SD-card logging, flight-computer development, high-altitude balloon mission planning</p></div>
+          <div><h3>Other</h3><p>Amateur Radio (Technician), Aviation (Kitfox), Athletics (Cross Country), Technical writing & documentation</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="band">
+      <div class="wrap section">
+        <p class="kicker">Find me</p>
+        <h2 class="lead">Open to collaborations, website work, or interesting problems in aerospace and software.</h2>
+        <ul class="links">
+          <li><a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer"><span><strong>GitHub</strong><small>InterstellarNerd8760</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer"><span><strong>X / Twitter</strong><small>@rosch_weston</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="https://centauriacademy.app" target="_blank" rel="noreferrer"><span><strong>Centauri Academy</strong><small>centauriacademy.app</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <p>Weston Rosch · 2026</p>
+      <p>Software, radios, and things that go up.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
