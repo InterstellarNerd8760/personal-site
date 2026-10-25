@@ -80,7 +80,8 @@ h2 { margin: 0; font: 400 clamp(2.8rem, 5vw, 5rem)/.98 var(--display); letter-sp
 .project-visual { min-width: 0; min-height: 26rem; position: relative; padding: 1.2rem; overflow: hidden; border: 1px solid var(--line); background: #1a1d18; }
 .visual-topline { display: flex; justify-content: space-between; gap: .5rem; color: var(--dim); font: .56rem var(--mono); letter-spacing: .06em; }
 .academy-visual { background: radial-gradient(ellipse at 72% 75%, #374532 0, transparent 48%), #1a1d18; }
-.academy-screen { display: flex; position: absolute; top: 4rem; left: 9%; right: 9%; bottom: 3.4rem; border: 1px solid #b5c6a12e; background: #11140ff2; box-shadow: 0 1rem 3rem #0005; transform: rotate(-2deg); }
+.academy-screen { display: flex; position: absolute; top: 4rem; left: 9%; right: 9%; bottom: 3.4rem; border: 1px solid #38bdf84d; background: #0b1420; box-shadow: 0 1rem 3rem #0005; transform: rotate(-2deg); overflow: hidden; }
+.academy-shot { display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
 .screen-sidebar { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 3rem; flex-shrink: 0; padding: 1rem .5rem; border-right: 1px solid var(--line); }
 .screen-mark { font: 1.2rem var(--display); color: var(--accent); }.screen-sidebar i { width: .8rem; height: .8rem; border: 1px solid #555b4d; border-radius: 2px; }
 .screen-main { flex: 1; min-width: 0; padding: clamp(1rem, 3vw, 2.3rem); display: flex; flex-direction: column; }
