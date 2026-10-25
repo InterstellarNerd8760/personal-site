@@ -134,7 +134,7 @@ h2 { margin: 0; font: 400 clamp(2.8rem, 5vw, 5rem)/.98 var(--display); letter-sp
   .site-nav { display: none; position: absolute; top: 4rem; left: 0; right: 0; padding: .5rem 1rem 1rem; background: var(--bg); border-bottom: 1px solid var(--line); }
   .site-nav.is-open { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
   .site-nav a { padding: .9rem .2rem; border-bottom: 1px solid var(--line); }.site-nav .nav-contact { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
-  .hero { display: block; min-height: 0; padding-top: 4.5rem; }.hero::before { inset-bottom: 4rem; }
+  .hero { display: block; min-height: 0; padding-top: 4.5rem; }.hero::before { bottom: 4rem; }
   .hero-copy { padding-bottom: 1rem; }.hero .eyebrow { font-size: .58rem; margin-bottom: 1.7rem; }
   h1 { font-size: clamp(3.5rem, 15vw, 6rem); line-height: .9; }.mobile-break { display: initial; }
   .hero-bottom { margin-top: 2rem; }.hero-intro { max-width: 30rem; font-size: .92rem; }.hero-actions { gap: 1.2rem; }
