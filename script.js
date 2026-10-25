@@ -59,3 +59,23 @@ notes.forEach((note) => {
     });
   });
 });
+
+
+// Progressive scroll reveals, disabled when reduced motion is preferred.
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduceMotion && "IntersectionObserver" in window) {
+  document.documentElement.classList.add("js-motion");
+  const revealTargets = document.querySelectorAll(".section-heading, .project, .other-work-row, .console-intro, .console-panel, .note-entry, .direction-stamp, .direction-copy, .about-layout > div, .contact-layout > div");
+  revealTargets.forEach((element,index) => {
+    element.dataset.reveal = (element.matches(".other-work-row, .note-entry") ? "stagger" : "fade");
+    if (element.dataset.reveal === "stagger") element.style.setProperty("--reveal-delay", `${(index % 3) * 75}ms`);
+  });
+  const revealObserver = new IntersectionObserver((entries,observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {threshold:0.12,rootMargin:"0px 0px -35px 0px"});
+  revealTargets.forEach(element => revealObserver.observe(element));
+}
