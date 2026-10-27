@@ -129,7 +129,7 @@ section { position: relative; }
 .telemetry .grid path { stroke: var(--line); fill: none; }
 .telemetry .trace { stroke: var(--sky); stroke-width: 2; fill: none; }
 .telemetry .trace-dot { fill: var(--sage); }
-.telemetry-read { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+.telemetry-read { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; border-top: 1px solid var(--line); padding-top: .8rem; }
 .telemetry-read span { display: block; font: .75rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); }
 .telemetry-read b { font-weight: 500; font-size: .8rem; color: var(--white); }
 .telemetry-note { margin: 0; font: .75rem var(--mono); color: var(--text-3); }
@@ -182,7 +182,7 @@ section { position: relative; }
 .footer-inner { display: flex; justify-content: space-between; gap: 1rem; font: .75rem var(--mono); letter-spacing: .08em; color: var(--text-3); text-transform: uppercase; }
 
 /* Pre-animation states (only when JS motion is on) */
-.motion [data-hero], .motion [data-reveal], .motion [data-card], .motion [data-note] { opacity: 0; }
+.motion [data-hero], .motion [data-reveal], .motion [data-card] { opacity: 0; }
 .motion [data-hero-line] { transform: translateY(105%); }
 
 /* Responsive */
