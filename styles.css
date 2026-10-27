@@ -100,7 +100,7 @@ em { font-style: italic; color: var(--sky); }
 
 /* Sections */
 section { position: relative; }
-.work, .console, .notes, .about { padding: clamp(6rem, 13vw, 11rem) 0; }
+.work, .console, .about { padding: clamp(6rem, 13vw, 11rem) 0; }
 .section-head { margin-bottom: clamp(3rem, 6vw, 5rem); }
 .section-head h2, .about h2 { font: 400 clamp(2.6rem, 5.6vw, 5rem)/1 var(--serif); letter-spacing: -.02em; max-width: 16ch; }
 .lede { margin: 1.4rem 0 0; color: var(--text-2); max-width: 26rem; }
@@ -164,21 +164,6 @@ section { position: relative; }
 .milestones li { position: relative; font-size: .86rem; color: var(--text-2); }
 .milestones li::before { content: ""; position: absolute; top: calc(-1.6rem - 3px); left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--bg); border: 1px solid var(--sky); }
 .milestones span { display: block; font: 500 .75rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--sky); margin-bottom: .3rem; }
-
-/* Notes */
-.notes-list { border-top: 1px solid var(--line); }
-.note { border-bottom: 1px solid var(--line); }
-.note summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 8rem 1fr 1.5rem; gap: 1.5rem; align-items: center; padding: 1.8rem 0; }
-.note summary::-webkit-details-marker { display: none; }
-.note-tag { font: 500 .75rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--sky); }
-.note-title { font: 400 clamp(1.4rem, 2.4vw, 2rem)/1.15 var(--serif); color: var(--white); transition: color .3s; }
-.note summary:hover .note-title { color: var(--sky); }
-.note-plus { position: relative; width: 1rem; height: 1rem; }
-.note-plus::before, .note-plus::after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: var(--text-2); transition: transform .4s var(--ease); }
-.note-plus::after { transform: rotate(90deg); }
-.note[open] .note-plus::after { transform: rotate(0); }
-.note-body { padding: 0 0 2rem 9.5rem; max-width: 52rem; }
-.note-body p { margin: 0; color: var(--text-2); }
 
 /* About */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); }
