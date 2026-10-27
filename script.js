@@ -25,12 +25,6 @@
     });
   });
 
-  /* ---------- One open field note at a time ---------- */
-  const notes = [...document.querySelectorAll(".note")];
-  notes.forEach((n) => n.addEventListener("toggle", () => {
-    if (n.open) notes.forEach((o) => { if (o !== n) o.open = false; });
-  }));
-
   /* ---------- Header state + section index (works without GSAP) ---------- */
   const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 40);
   onScroll();
@@ -135,12 +129,6 @@
   });
   mm.add("(max-width: 900px)", () => {
     gsap.from(".long-inner > *", { opacity: 0, y: 30, stagger: 0.12, duration: 1.2, ease, scrollTrigger: { trigger: ".long-view", start: "top 70%" } });
-  });
-
-  // 05 Notes: rows rise in.
-  ScrollTrigger.batch("[data-note]", {
-    start: "top 90%",
-    onEnter: (batch) => gsap.fromTo(batch, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1.1, ease, stagger: 0.1 }),
   });
 
   // Side index progress bar tracks the whole page.
