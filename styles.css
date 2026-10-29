@@ -200,8 +200,8 @@ section { position: relative; }
 @media (max-width: 760px) {
   .menu-btn { display: flex; }
   .callsign { display: none; }
-  .site-nav { position: fixed; inset: 4.5rem 0 auto 0; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; background: rgba(5,8,15,.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); transform: translateY(-120%); transition: transform .5s var(--ease); }
-  .site-nav.is-open { transform: none; }
+  .site-nav { position: fixed; inset: 4.5rem 0 auto 0; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1.5rem; background: rgba(5,8,15,.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); transform: translateY(-120%); visibility: hidden; transition: transform .5s var(--ease), visibility 0s linear .5s; }
+  .site-nav.is-open { transform: none; visibility: visible; transition: transform .5s var(--ease), visibility 0s; }
   .site-nav a { padding: .9rem 0; font-size: 1rem; border-bottom: 1px solid var(--line); }
   .hero-shade { background: linear-gradient(0deg, var(--bg) 5%, rgba(5,8,15,.55) 55%, rgba(5,8,15,.35) 100%); }
   .hero-inner { align-self: flex-end; padding-bottom: 6rem; }
