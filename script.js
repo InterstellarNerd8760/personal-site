@@ -13,7 +13,9 @@
   };
   menuButton.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
   siteNav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && siteNav.classList.contains("is-open")) { setMenu(false); menuButton.focus(); }
+  });
 
   /* ---------- Callsign copy ---------- */
   document.querySelectorAll(".copy-call").forEach((btn) => {
@@ -63,6 +65,10 @@
         if (!target) return;
         e.preventDefault();
         lenis.scrollTo(target, { offset: a.getAttribute("href") === "#top" ? 0 : -72 });
+        // Keep keyboard focus and the URL in sync with the scroll (skip link, nav).
+        if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+        history.replaceState(null, "", a.getAttribute("href"));
       });
     });
   }
