@@ -46,7 +46,10 @@
 
   /* ---------- Motion ---------- */
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce || !window.gsap || !window.ScrollTrigger) { root.classList.remove("motion"); return; }
+  if (reduce || !window.gsap || !window.ScrollTrigger || !document.querySelector(".hero")) {
+    root.classList.remove("motion");
+    return;
+  }
 
   gsap.registerPlugin(ScrollTrigger);
   if (window.SplitText) gsap.registerPlugin(SplitText);
