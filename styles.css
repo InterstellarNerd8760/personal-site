@@ -209,8 +209,10 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .entry { max-width: 40rem; }
 .entry h1 { max-width: 16ch; font-size: clamp(2.5rem, 5.6vw, 4.4rem); }
 .entry .entry-meta { margin: 1.15rem 0 1.35rem; }
-.entry-photo { margin: 0 0 1.75rem; }
-.entry-photo img { display: block; width: 100%; max-width: 100%; height: 70vh; max-height: 70vh; object-fit: cover; object-position: center 28%; border-radius: 6px; }
+/* Inline on small screens. At 1024px and up the same image is fixed on the right,
+   like the homepage Earth plate. Override --entry-photo-position to recrop a later entry. */
+.entry-photo { --entry-photo-position: center 28%; margin: 0 0 1.75rem; }
+.entry-photo img { display: block; width: 100%; max-width: 100%; height: 70vh; max-height: 70vh; object-fit: cover; object-position: var(--entry-photo-position); border-radius: 6px; }
 .entry-photo figcaption { margin: .7rem 0 0; font: .8rem/1.45 var(--sans); color: var(--text-3); }
 .prose p { margin: 0 0 1.25rem; color: var(--text); font-size: 1.05rem; }
 .prose a { color: var(--sky); text-underline-offset: 3px; }
@@ -223,6 +225,49 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .motion [data-hero-line] { transform: translateY(105%); }
 
 /* Responsive */
+@media (min-width: 1024px) {
+  body.subpage .page { position: relative; z-index: 1; }
+  body.subpage .site-footer { position: relative; z-index: 2; background: var(--bg); }
+  .entry .entry-meta { margin-bottom: 2rem; }
+  .entry-photo {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: calc(max(1.5rem, (100vw - min(78rem, 100vw - 3rem)) / 2) + 42rem);
+    margin: 0;
+    pointer-events: none;
+  }
+  .entry-photo img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+    object-fit: cover;
+    object-position: var(--entry-photo-position);
+  }
+  .entry-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, var(--bg) 0%, rgba(5,8,15,.72) 16%, rgba(5,8,15,.15) 42%, rgba(5,8,15,0) 68%),
+      linear-gradient(180deg, rgba(5,8,15,.55) 0%, rgba(5,8,15,0) 14%),
+      linear-gradient(0deg, var(--bg) 0%, rgba(5,8,15,0) 22%);
+  }
+  .entry-photo figcaption {
+    position: absolute;
+    z-index: 1;
+    right: clamp(1.25rem, 3vw, 2.5rem);
+    bottom: 1.6rem;
+    margin: 0;
+    font: .75rem var(--mono);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+}
 @media (max-width: 1180px) { .section-index { display: none; } }
 @media (max-width: 900px) {
   .projects, .console-grid, .about-grid { grid-template-columns: 1fr; }
