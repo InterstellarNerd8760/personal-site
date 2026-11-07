@@ -120,9 +120,6 @@
     gsap.from(".trace-dot", { scale: 0, transformOrigin: "center", duration: 0.6, delay: 1.5, ease: "back.out(3)", scrollTrigger: { trigger: ".telemetry", start: "top 75%" } });
   }
 
-  // 03 Console: bars fill in sequence.
-  gsap.fromTo(".focus .bar b", { scaleX: 0 }, { scaleX: 1, duration: 1.6, ease, stagger: 0.18, scrollTrigger: { trigger: ".console-panel", start: "top 75%" } });
-
   // 04 Long view: pinned scene with slow push-in and staged copy.
   const mm = gsap.matchMedia();
   mm.add("(min-width: 901px)", () => {
