@@ -150,10 +150,7 @@ section { position: relative; }
 .focus-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .focus h3 { font: 500 1rem var(--sans); }
 .focus-row span { font: .75rem var(--mono); letter-spacing: .08em; color: var(--text-3); text-transform: uppercase; }
-.focus p { margin: .35rem 0 .9rem; font-size: .9rem; color: var(--text-2); }
-.bar { display: block; height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
-.p-20 { --p: .2; } .p-45 { --p: .45; } .p-60 { --p: .6; } .p-70 { --p: .7; }
-.bar b { display: block; height: 100%; width: calc(var(--p, 0) * 100%); background: linear-gradient(90deg, var(--sky), var(--sage)); transform-origin: left; }
+.focus p { margin: .35rem 0 0; font-size: .9rem; color: var(--text-2); }
 
 /* Long view */
 .long-view { min-height: 100svh; }
