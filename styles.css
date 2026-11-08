@@ -227,6 +227,23 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .prose dd { margin: 0; font-size: .97rem; line-height: 1.55; color: var(--text-2); }
 .fig-ref { margin: 1.6rem 0; padding: 2rem 1.2rem; border: 1px dashed var(--line-2); border-radius: 6px; text-align: center; font: 500 .72rem/1.7 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
 .fig-ref a { color: var(--sky); }
+
+/* Paper figures */
+.paper-fig { margin: 1.8rem 0; padding: 1.6rem 1.2rem 1.1rem; border: 1px solid var(--line); border-radius: 6px; background: linear-gradient(180deg, rgba(15,26,43,.7), rgba(10,18,32,.4)); }
+.paper-fig figcaption { margin: 1.1rem .5rem 0; font: 500 .68rem/1.6 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); text-align: center; }
+.paper-fig figcaption a { color: var(--sky); }
+.paper-fig-scroll { overflow-x: auto; }
+.kardashev { display: block; width: 100%; min-width: 620px; height: auto; }
+.kardashev .k-type { font: 500 12px var(--mono); letter-spacing: .25em; fill: var(--sky); text-anchor: middle; }
+.kardashev .k-name { font: 400 24px var(--serif); fill: var(--white); text-anchor: middle; }
+.kardashev .k-desc { font: 400 12.5px var(--sans); fill: var(--text-2); text-anchor: middle; }
+.kardashev .k-watt { font: 500 13px var(--mono); fill: var(--sage); text-anchor: middle; }
+.kardashev .k-tick { font: 500 11px var(--mono); fill: var(--text-3); text-anchor: middle; }
+.kardashev .k-mark { font: 500 11px var(--mono); fill: var(--sage); text-anchor: middle; }
+.code-fig { margin: 0; padding: 1.3rem 1.4rem; border: 1px solid var(--line); border-radius: 6px; background: #0a1220; overflow-x: auto; font: 400 .85rem/1.75 var(--mono); color: var(--text); }
+.code-fig .c { color: var(--text-3); }
+.code-fig .kw { color: var(--sky); }
+.code-fig .fn { color: var(--sage); }
 .works-cited li { font-size: .92rem; line-height: 1.6; color: var(--text-2); }
 @media (max-width: 640px) { .prose dl { grid-template-columns: 1fr; gap: .15rem 0; } .prose dd { margin-bottom: .5rem; } }
 
