@@ -217,6 +217,19 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .prose li { margin: 0 0 .8rem; padding-left: .2rem; }
 .prose li::marker { color: var(--sky); }
 
+/* Writing / paper pages */
+.prose h2 { font: 400 clamp(1.8rem, 3.4vw, 2.5rem)/1.08 var(--serif); letter-spacing: -.01em; color: var(--white); margin: 3rem 0 1.2rem; }
+.paper-note { margin: 0 0 2.5rem; padding: 1.1rem 1.35rem; border-left: 2px solid var(--sky); border-radius: 0 6px 6px 0; background: rgba(15,26,43,.55); }
+.paper-note p { margin: 0; font-size: .95rem; color: var(--text-2); }
+.paper-note a { color: var(--sky); text-underline-offset: 3px; }
+.prose dl { margin: 0 0 1.5rem; display: grid; grid-template-columns: max-content 1fr; gap: .5rem 1.5rem; }
+.prose dt { font: 500 .88rem/1.5 var(--mono); color: var(--sky); }
+.prose dd { margin: 0; font-size: .97rem; line-height: 1.55; color: var(--text-2); }
+.fig-ref { margin: 1.6rem 0; padding: 2rem 1.2rem; border: 1px dashed var(--line-2); border-radius: 6px; text-align: center; font: 500 .72rem/1.7 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+.fig-ref a { color: var(--sky); }
+.works-cited li { font-size: .92rem; line-height: 1.6; color: var(--text-2); }
+@media (max-width: 640px) { .prose dl { grid-template-columns: 1fr; gap: .15rem 0; } .prose dd { margin-bottom: .5rem; } }
+
 /* Pre-animation states (only when JS motion is on) */
 .motion [data-hero], .motion [data-reveal], .motion [data-card] { opacity: 0; }
 .motion [data-hero-line] { transform: translateY(105%); }
