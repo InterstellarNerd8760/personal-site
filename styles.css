@@ -102,7 +102,7 @@ em { font-style: italic; color: var(--sky); }
 section { position: relative; }
 .work, .console, .about { padding: clamp(6rem, 13vw, 11rem) 0; }
 .section-head { margin-bottom: clamp(3rem, 6vw, 5rem); }
-.section-head h2, .about h2 { font: 400 clamp(2.6rem, 5.6vw, 5rem)/1 var(--serif); letter-spacing: -.02em; max-width: 16ch; }
+.section-head h2, .about h2 { font: 400 clamp(2.6rem, 5.6vw, 5rem)/1.08 var(--serif); letter-spacing: -.02em; max-width: 16ch; padding-bottom: .06em; }
 .lede { margin: 1.4rem 0 0; color: var(--text-2); max-width: 26rem; }
 
 /* Projects */
@@ -114,7 +114,7 @@ section { position: relative; }
 .project:hover .project-media img { transform: scale(1.035); }
 .project-body { padding: clamp(1.5rem, 2.5vw, 2.2rem); }
 .project-meta { margin: 0 0 .9rem; display: flex; align-items: center; gap: .55rem; font: 500 .75rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--text-2); }
-.project h3, .project h2 { font: 400 clamp(1.8rem, 2.6vw, 2.4rem)/1.05 var(--serif); margin-bottom: 1rem; }
+.project h3, .project h2 { font: 400 clamp(1.6rem, 2.2vw, 2.15rem)/1.15 var(--serif); margin: 0 0 .8rem; overflow-wrap: break-word; }
 .project h2 a { color: inherit; text-decoration: none; }
 .project h2 a:hover { color: var(--sky); }
 a.project-media { display: block; color: inherit; text-decoration: none; }
@@ -221,20 +221,22 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .entry-photo { --entry-photo-position: center 28%; margin: 0 0 1.75rem; }
 .entry-photo img { display: block; width: 100%; max-width: 100%; height: 70vh; max-height: 70vh; object-fit: cover; object-position: var(--entry-photo-position); border-radius: 6px; }
 .entry-photo figcaption { margin: .7rem 0 0; font: .8rem/1.45 var(--sans); color: var(--text-3); }
+.entry.prose h2 { margin: 2.2rem 0 .8rem; font: 400 clamp(1.6rem, 2.4vw, 2.05rem)/1.15 var(--serif); color: var(--white); }
 .prose p { margin: 0 0 1.25rem; color: var(--text); font-size: 1.05rem; }
 .prose a { color: var(--sky); text-underline-offset: 3px; }
 .prose ul { margin: 0 0 1.25rem; padding: 0 0 0 1.2rem; }
 .prose li { margin: 0 0 .8rem; padding-left: .2rem; }
 .prose li::marker { color: var(--sky); }
 
-.feature-row, .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: stretch; }
-.project-grid { gap: 1.5rem; align-items: start; }
-.feature-card { display: flex; flex-direction: column; gap: .35rem; text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 1.25rem 1.3rem 1.35rem; background: linear-gradient(180deg, rgba(15,26,43,.7), rgba(10,18,32,.4)); transition: border-color .4s, transform .5s var(--ease); }
+.feature-row, .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; align-items: stretch; }
+.project-grid { gap: 1.5rem; align-items: start; margin-top: .5rem; }
+.project, .feature-card { min-width: 0; }
+.feature-card { display: flex; flex-direction: column; gap: .55rem; overflow: hidden; text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 1.35rem 1.4rem 1.5rem; background: linear-gradient(180deg, rgba(15,26,43,.7), rgba(10,18,32,.4)); transition: border-color .4s, transform .5s var(--ease); }
 .feature-card:hover { border-color: var(--line-2); transform: translateY(-3px); }
-.feature-card h3 { margin: .2rem 0 .35rem; font: 400 1.55rem/1.1 var(--serif); color: var(--white); }
+.feature-card h3 { margin: .15rem 0 .2rem; font: 400 clamp(1.35rem, 2vw, 1.7rem)/1.2 var(--serif); color: var(--white); overflow-wrap: break-word; }
 .feature-card p:last-child { margin: 0; color: var(--text-2); font-size: .95rem; }
 .project-grid .telemetry-read { grid-template-columns: 1fr 1fr; }
-.project-page h1 { max-width: 18ch; font-size: clamp(2.5rem, 5.4vw, 4.4rem); }
+.project-page h1 { max-width: 12em; line-height: 1.08; margin: 0 0 2rem; font-size: clamp(2.4rem, 4.6vw, 4rem); }
 .about-page h1 { max-width: 16ch; font: 400 clamp(2.6rem, 5.6vw, 5rem)/1 var(--serif); letter-spacing: -.02em; }
 .home-vault { max-width: 46rem; }
 .closer { padding: 0 0 clamp(4rem, 8vw, 6rem); }
