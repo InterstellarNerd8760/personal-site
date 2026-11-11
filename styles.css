@@ -229,6 +229,9 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .entry-photo img { display: block; width: 100%; max-width: 100%; height: 70vh; max-height: 70vh; object-fit: cover; object-position: var(--entry-photo-position); border-radius: 6px; }
 .entry-photo figcaption { margin: .7rem 0 0; font: .8rem/1.45 var(--sans); color: var(--text-3); }
 .entry.prose h2 { margin: 2.2rem 0 .8rem; font: 400 clamp(1.6rem, 2.4vw, 2.05rem)/1.15 var(--serif); color: var(--white); }
+.practice-fig { margin: 1.5rem 0 0; }
+.practice-fig img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.practice-fig figcaption { margin: .7rem 0 0; font: .85rem/1.45 var(--sans); color: var(--text-2); }
 .prose p { margin: 0 0 1.25rem; color: var(--text); font-size: 1.05rem; }
 .prose a { color: var(--sky); text-underline-offset: 3px; }
 .prose ul { margin: 0 0 1.25rem; padding: 0 0 0 1.2rem; }
