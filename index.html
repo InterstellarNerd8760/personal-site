@@ -50,28 +50,16 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="#top">Weston Rosch</a>
+    <a class="wordmark" href="/">Weston Rosch</a>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#console">Now</a>
-      <a href="#long-view">Long term</a>
-      <a href="#about">About</a>
+      <a href="/projects/">Projects</a>
       <a href="/vault/">Vault</a>
       <a href="/writing/">Writing</a>
-      <a href="resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
+      <a href="/about/">About</a>
     </nav>
     <span class="callsign">KO6OGZ<small>amateur radio</small></span>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
   </header>
-
-  <nav class="section-index" aria-label="Sections">
-    <a href="#top" data-index="top"><span>01</span>Home</a>
-    <a href="#work" data-index="work"><span>02</span>Work</a>
-    <a href="#console" data-index="console"><span>03</span>Now</a>
-    <a href="#long-view" data-index="long-view"><span>04</span>Long term</a>
-    <a href="#about" data-index="about"><span>05</span>About</a>
-    <i class="section-index-bar"><b></b></i>
-  </nav>
 
   <main id="main" tabindex="-1">
     <!-- 01 HERO -->
@@ -88,77 +76,44 @@
         </h1>
         <p class="hero-intro" data-hero>I'm Weston Rosch, a high school builder in San Francisco. I ship software, wire up radios, and send hardware toward the edge of space.</p>
         <div class="hero-actions" data-hero>
-          <a class="btn btn-solid" href="#work">See my work <span aria-hidden="true">→</span></a>
+          <a class="btn btn-solid" href="/projects/">See my work <span aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#work" aria-label="Scroll to work"><span></span></a>
+      <a class="scroll-cue" href="#work" aria-label="Scroll to featured projects"><span></span></a>
       <p class="photo-credit">Earth from the ISS · NASA</p>
     </section>
 
-    <!-- 02 WORK -->
     <section class="work" id="work" data-section aria-labelledby="work-title">
       <div class="wrap">
         <header class="section-head">
-          <p class="kicker" data-reveal>02 / Work</p>
+          <p class="kicker" data-reveal>Featured</p>
           <h2 id="work-title" data-split>Things I've made real.</h2>
         </header>
-
-        <div class="projects">
-          <article class="project" data-card>
-            <div class="project-media">
-              <picture>
-                <source srcset="img/centauri-academy.webp" type="image/webp">
-                <img src="centauri-academy.png" alt="Centauri Academy study mode on a Technician practice question" width="1100" height="780" loading="lazy" decoding="async">
-              </picture>
-            </div>
-            <div class="project-body">
-              <p class="project-meta"><span class="dot dot-live"></span>Live · Software</p>
-              <h3>Centauri Academy</h3>
-              <p>Free FCC ham radio exam prep built on the official Technician, General, and Extra question pools, with study mode, flashcards, and practice exams. I design it, build it, and run it.</p>
-              <p class="project-note">Centauri+, the paid tier with a fuller tutor and progress charts, is coming soon. <a href="https://centauriacademy.app/plus" target="_blank" rel="noopener">Join the waitlist</a></p>
-              <a class="arrow" href="https://centauriacademy.app/" target="_blank" rel="noopener" title="Centauri Academy: free ham radio exam prep">centauriacademy.app <span aria-hidden="true">↗</span></a>
-              <div class="subfeature" role="group" aria-labelledby="ext-title">
-                <p class="project-meta"><span class="dot dot-live"></span>Live since Nov 2026 · Chrome extension</p>
-                <h4 id="ext-title">Ham Question of the Day</h4>
-                <p>A daily ham exam question in your browser: pick Technician, General, or Extra, answer from your toolbar or new tab, and read a short explanation. No account, and your streak stays on your device.</p>
-                <p class="project-note">I ship on user feedback: auto-advance and an “I guessed” review option, both from a Reddit tester’s notes, are in development.</p>
-                <a class="arrow" href="https://chromewebstore.google.com/detail/centauri-academy-%E2%80%93-ham-qu/leknihoibcdahkjbngalcnbbodefboah" target="_blank" rel="noopener">Add to Chrome <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-card>
-            <div class="project-media telemetry" role="group" aria-label="Illustrative telemetry graphic for WALL-E">
-              <div class="telemetry-head"><span>WALL-E1 / Payload</span><span><span class="dot dot-dev"></span>In development</span></div>
-              <svg viewBox="0 0 520 220" role="img" aria-label="Illustrative altitude trace">
-                <g class="grid"><path d="M0 44H520M0 88H520M0 132H520M0 176H520"/><path d="M104 0V220M208 0V220M312 0V220M416 0V220"/></g>
-                <path class="trace" d="M0 205 C60 200 90 180 130 150 S210 80 260 52 S330 18 360 16 C372 15 380 16 386 22 C400 60 420 130 450 170 S500 200 520 204"/>
-                <circle class="trace-dot" r="4" cx="360" cy="16"/>
-              </svg>
-              <div class="telemetry-read">
-                <div><span>Flight computer</span><b>Raspberry Pi Pico</b></div>
-                <div><span>Sensor</span><b>BME280</b></div>
-                <div><span>Tracking</span><b>SpotTrace GPS</b></div>
-                <div><span>Telemetry</span><b>LoRa planned</b></div>
-              </div>
-              <p class="telemetry-note">Illustrative profile, not flight data.</p>
-            </div>
-            <div class="project-body">
-              <p class="project-meta"><span class="dot dot-dev"></span>In development · Hardware</p>
-              <h3>WALL-E high-altitude balloon</h3>
-              <p>My school Space Club’s planned near-space balloon flight combines a Raspberry Pi Pico flight computer, BME280 environmental sensing, SpotTrace GPS tracking, onboard data logging, and planned LoRa telemetry. First launch targeted for spring 2027.</p>
-            </div>
-          </article>
+        <div class="feature-row">
+          <a class="feature-card" data-card href="/projects/centauri-academy/">
+            <p class="project-meta"><span class="dot dot-live"></span>Live · Software</p>
+            <h3>Centauri Academy</h3>
+            <p>Free FCC ham radio exam prep, and the Ham Question of the Day Chrome extension.</p>
+          </a>
+          <a class="feature-card" data-card href="/projects/wall-e/">
+            <p class="project-meta"><span class="dot dot-dev"></span>In development · Hardware</p>
+            <h3>WALL-E</h3>
+            <p>A near-space balloon with a Raspberry Pi Pico flight computer. First launch targeted for spring 2027.</p>
+          </a>
+          <a class="feature-card" data-card href="/projects/lunar-atlas/">
+            <p class="project-meta"><span class="dot dot-dev"></span>Coming soon</p>
+            <h3>Centauri Lunar Atlas</h3>
+            <p>A 3D Moon browser for NASA Space Apps, Nov 14–15, 2026.</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- 03 CONSOLE -->
     <section class="console" id="console" data-section aria-labelledby="console-title">
       <div class="wrap console-grid">
         <header class="section-head">
-          <p class="kicker" data-reveal>03 / Now</p>
+          <p class="kicker" data-reveal>Right now</p>
           <h2 id="console-title" data-split>What I'm focused on.</h2>
           <p class="lede" data-reveal>A snapshot, updated by hand. No fake live metrics.</p>
         </header>
@@ -172,73 +127,46 @@
             <div class="focus-row"><h3>WALL-E</h3><span>Hardware integration</span></div>
             <p>Developing the sensor and tracking payload ahead of the planned spring 2027 launch.</p>
           </div>
-          <div class="focus" data-focus>
-            <div class="focus-row"><h3>Aviation</h3><span>Early experience</span></div>
-            <p>I’ve had an introductory flight in a Kitfox and plan to work toward a private pilot certificate.</p>
-          </div>
-          <div class="focus" data-focus>
-            <div class="focus-row"><h3>Cross country</h3><span>Varsity, SF Waldorf</span></div>
-            <p>Training and racing with varsity cross country at San Francisco Waldorf.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- 04 LONG VIEW (pinned) -->
-    <section class="long-view" id="long-view" data-section aria-labelledby="long-title">
-      <div class="long-stage">
-        <div class="long-media" aria-hidden="true"><img src="img/night-limb.webp" srcset="img/night-limb-1280.webp 1280w, img/night-limb.webp 1920w" sizes="100vw" alt="" width="1920" height="1314" loading="lazy" decoding="async"></div>
-        <div class="long-shade" aria-hidden="true"></div>
-        <div class="wrap long-inner">
-          <p class="kicker">04 / The long term</p>
-          <h2 id="long-title" class="long-title">
-            <span class="long-line">Build useful things here.</span>
-            <span class="long-line"><em>Help build a future out there.</em></span>
-          </h2>
-          <p class="long-copy">I want to work on the systems that make space more accessible: vehicles, orbital infrastructure, and the unglamorous engineering that makes big missions possible. I'm not there yet. I'm getting closer by shipping.</p>
-          <ol class="milestones">
-            <li><span>Licensed</span>Technician class, KO6OGZ</li>
-            <li><span>Jul 2026</span>Introductory Kitfox flight</li>
-            <li><span>Oct 2026</span>Centauri Academy v1 ships</li>
-            <li><span>Nov 2026</span>Chrome extension launches</li>
-            <li><span>Spring 2027</span>WALL-E first launch target</li>
-            <li><span>Next</span>Aerospace engineering</li>
-          </ol>
-        </div>
+    <section class="work" id="vault" aria-labelledby="vault-title">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Vault</p>
+        <article class="vault-card home-vault" data-reveal>
+          <img class="vault-thumb" src="/vault/img/week-1-og.jpg" alt="Sunset through the eucalyptus trees over the cross-country meet field, Nov 6, 2026" width="1200" height="630" loading="lazy" decoding="async">
+          <div class="vault-card-body">
+            <p class="entry-meta"><time datetime="2026-11-06">Nov 6, 2026</time> · Entry #1</p>
+            <h2 id="vault-title"><a href="/vault/week-1/">Starting the log</a></h2>
+            <p>I build a lot of stuff, and I hardly write any of it down.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-
-    <!-- 05 ABOUT / CONTACT -->
-    <section class="about" id="about" data-section aria-labelledby="about-title">
-      <div class="wrap about-grid">
-        <div>
-          <p class="kicker" data-reveal>05 / About</p>
-          <h2 id="about-title" data-split>Still learning. <em>Still building.</em></h2>
-        </div>
-        <div class="about-body">
-          <p data-reveal>I’m a high school student at San Francisco Waldorf, an amateur radio operator, and a varsity cross country runner. I’m also exploring aviation after an introductory Kitfox flight. Different fields, same pattern: find a real problem, learn what I don’t know, and make something that works.</p>
-          <dl class="facts" data-reveal>
-            <div><dt>Callsign</dt><dd><button class="copy-call" type="button" data-copy="KO6OGZ">KO6OGZ <small class="copy-label" aria-live="polite">Copy</small></button></dd></div>
-            <div><dt>Based in</dt><dd>San Francisco</dd></div>
-            <div><dt>Stack</dt><dd>TypeScript · React · Python · Node</dd></div>
-          </dl>
-          <div class="contact" data-reveal>
-            <a class="btn btn-solid" href="mailto:hello@westonrosch.com">hello@westonrosch.com</a>
-            <div class="contact-links">
-              <a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer">GitHub ↗</a>
-              <a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer">X ↗</a>
-              <a href="https://instagram.com/rosch_weston" target="_blank" rel="noreferrer">Instagram ↗</a>
-              <a href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
-            </div>
-          </div>
-        </div>
+    <section class="closer" id="long-view" data-section aria-labelledby="about">
+      <div class="wrap">
+        <h2 id="about" class="closer-title">
+          <span>Build useful things here.</span>
+          <span><em>Help build a future out there.</em></span>
+        </h2>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner"><span>© 2026 Weston Rosch</span><span>Earth imagery: NASA / ISS crew</span></div>
+    <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Weston Rosch</span>
+      <nav class="footer-links" aria-label="Contact">
+        <a href="mailto:hello@westonrosch.com">hello@westonrosch.com</a>
+        <a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer">X</a>
+        <a href="https://instagram.com/rosch_weston" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <span>Earth imagery: NASA / ISS crew</span>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
