@@ -1,0 +1,378 @@
+:root {
+  color-scheme: dark;
+  --bg: #070308;
+  --text: #f4e8e4;
+  --muted: #d9c2bb;
+  --dim: #b79a94;
+  --red: #ff5c48;
+  --red-soft: #ffc7ba;
+  --line: rgba(255, 96, 76, 0.28);
+  --panel: rgba(22, 8, 12, 0.78);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 72, 54, 0.38);
+  color: #fff8f6;
+}
+
+a {
+  color: var(--red-soft);
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(255, 150, 130, 0.75);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: #fff6f3;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--red-soft);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  top: -11rem;
+  right: -9rem;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 46% 46%,
+      rgba(255, 248, 244, 1) 0 2.5%,
+      rgba(255, 196, 160, 0.96) 7%,
+      rgba(255, 72, 48, 0.9) 15%,
+      rgba(176, 22, 30, 0.55) 32%,
+      rgba(90, 8, 18, 0.24) 50%,
+      transparent 70%);
+  animation: burn 9s ease-in-out infinite;
+}
+
+.haze {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 48% at 100% 0%, rgba(255, 42, 32, 0.2), transparent 52%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(60, 8, 16, 0.45), transparent 70%);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 90, 70, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 90, 70, 0.05) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse at 80% 0%, #000 10%, transparent 68%);
+}
+
+.boot {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  margin: 0;
+  padding: max(1.25rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(1.4rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+  color: #ffb2a4;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.boot p {
+  margin: 0.15rem 0;
+}
+
+.boot-last::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.95em;
+  margin-left: 0.35em;
+  background: #ff6a55;
+  vertical-align: text-bottom;
+  animation: blink 0.85s steps(1) infinite;
+}
+
+html.booting .boot {
+  display: flex;
+  animation: boot-exit 0.4s ease 0.95s forwards;
+}
+
+html.booting .boot p {
+  opacity: 0;
+  animation: line-in 0.22s ease forwards;
+}
+
+html.booting .boot p:nth-child(1) { animation-delay: 0.08s; }
+html.booting .boot p:nth-child(2) { animation-delay: 0.24s; }
+html.booting .boot p:nth-child(3) { animation-delay: 0.4s; }
+html.booting .boot p:nth-child(4) { animation-delay: 0.56s; }
+
+html.booting main,
+html.booting .signoff {
+  opacity: 0;
+  animation: arrive 0.45s ease 0.9s forwards;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(40rem, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: max(1.35rem, env(safe-area-inset-top)) 0 max(4.5rem, env(safe-area-inset-bottom));
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 2.4rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nominal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #ffb0a3;
+}
+
+.lamp {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffe7df, #ff5a42 45%, #9d140e 78%);
+  box-shadow: 0 0 10px 2px rgba(255, 60, 40, 0.75);
+  animation: burn 3.2s ease-in-out infinite;
+}
+
+.block {
+  margin: 0 0 2.75rem;
+}
+
+.kicker {
+  margin: 0 0 0.45rem;
+  color: var(--red);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+}
+
+h1,
+h2 {
+  margin: 0 0 0.9rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+}
+
+.dek {
+  margin-top: -0.35rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 3vw, 1.45rem);
+}
+
+p {
+  margin: 0 0 0.95rem;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.jobs,
+.logs {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jobs li,
+.logs li {
+  margin: 0;
+  padding: 0.55rem 0 0.55rem 0.85rem;
+  border-left: 2px solid rgba(255, 92, 72, 0.55);
+}
+
+.jobs li + li,
+.logs li + li {
+  margin-top: 0.45rem;
+}
+
+.take {
+  padding: 1.2rem 1.15rem 0.35rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow:
+    inset 0 0 48px rgba(255, 40, 30, 0.05),
+    0 16px 40px rgba(0, 0, 0, 0.22);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.take h2 {
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
+}
+
+.take p:last-child {
+  margin-bottom: 1.05rem;
+}
+
+.signoff {
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.astra {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+
+.found {
+  margin: 0;
+  color: var(--dim);
+  font-size: 0.82rem;
+}
+
+@keyframes line-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes boot-exit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes burn {
+  0%,
+  100% { opacity: 1; }
+  50% { opacity: 0.82; }
+}
+
+@media (max-width: 420px) {
+  .page {
+    width: min(40rem, calc(100% - 1.7rem));
+  }
+
+  .bar {
+    letter-spacing: 0.08em;
+  }
+
+  .take {
+    padding: 1rem 0.9rem 0.2rem;
+  }
+
+  .star {
+    top: -16rem;
+    right: -13rem;
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star,
+  .lamp,
+  .boot-last::after {
+    animation: none;
+  }
+
+  html.booting .boot {
+    display: none;
+  }
+
+  html.booting main,
+  html.booting .signoff,
+  html.booting .boot p {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
+@media print {
+  .sky,
+  .boot {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #1a1a1a;
+  }
+
+  a {
+    color: #1a1a1a;
+  }
+
+  .take {
+    border-color: #bbb;
+    background: transparent;
+    box-shadow: none;
+  }
+}
