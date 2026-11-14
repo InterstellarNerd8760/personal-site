@@ -13,5 +13,5 @@ Deployed by **Cloudflare Workers Builds** from the `main` branch: every push to 
 Before merging, validate the HTML and check links:
 
 ```sh
-npx html-validate index.html 404.html vault/index.html vault/week-1/index.html
+npx html-validate index.html 404.html vault/index.html vault/week-1/index.html vault/week-2/index.html
 ```
