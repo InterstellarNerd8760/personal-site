@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05080f">
-  <meta name="description" content="Centauri Lunar Atlas is a 3D Moon browser Weston is building at NASA Space Apps, Nov 14–15, 2026, for the Lunar Landing Site Navigator challenge.">
+  <meta name="description" content="Explore the Moon in 3D, visit lunar landing sites, and compare sunlight and Earth visibility. Built by Weston Rosch at NASA Space Apps 2026.">
   <title>Centauri Lunar Atlas · Weston Rosch</title>
   <meta name="author" content="Weston Rosch">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="Weston Rosch">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Centauri Lunar Atlas · Weston Rosch">
-  <meta property="og:description" content="A 3D Moon browser for the Lunar Landing Site Navigator challenge. Building it at NASA Space Apps, Nov 14–15, 2026.">
+  <meta property="og:description" content="Explore the Moon in 3D, visit lunar landing sites, and compare sunlight and Earth visibility. Built at NASA Space Apps 2026.">
   <meta property="og:image" content="https://westonrosch.com/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
   <meta name="twitter:creator" content="@rosch_weston">
   <meta name="twitter:image:alt" content="Weston Rosch, Building toward what comes next, over Earth seen from orbit">
   <meta name="twitter:title" content="Centauri Lunar Atlas · Weston Rosch">
-  <meta name="twitter:description" content="A 3D Moon browser for the Lunar Landing Site Navigator challenge. Building it at NASA Space Apps, Nov 14–15, 2026.">
+  <meta name="twitter:description" content="Explore the Moon in 3D, visit lunar landing sites, and compare sunlight and Earth visibility. Built at NASA Space Apps 2026.">
   <meta name="twitter:image" content="https://westonrosch.com/og.jpg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -56,13 +56,22 @@
     <div class="wrap entry prose">
       <p class="kicker"><a href="/projects/">Projects</a></p>
       <h1>Centauri Lunar Atlas</h1>
-      <p class="entry-meta"><span class="dot dot-dev"></span> Coming soon</p>
-      <p>I'm building Centauri Lunar Atlas at NASA Space Apps, Nov 14–15, 2026. It's a 3D Moon browser for the Lunar Landing Site Navigator challenge. The write-up and demo come after the weekend.</p>
+      <p class="entry-meta"><span class="dot dot-live"></span> Live · Software</p>
+      <p>I built Centauri Lunar Atlas as a solo project for the Lunar Landing Site Navigator challenge at NASA Space Apps on Nov 14–15, 2026. It lets you go from orbit to the lunar surface, then see how the terrain changes what you can see from a landing site.</p>
+      <p><a class="arrow" href="https://moon.westonrosch.com/">Open Lunar Atlas <span aria-hidden="true">↗</span></a></p>
+      <h2>Explore the Moon</h2>
+      <ul>
+        <li>Visit Apollo landing sites or explore terrain near the lunar south pole. Fly over the surface in Free flight or explore at eye level in Walk mode on desktop.</li>
+        <li>Move the time slider to watch the Sun and Earth move across the sky. A ridge can block sunlight or the direct line of sight to Earth.</li>
+        <li>Compare up to three sites and see how often each gets sunlight, has Earth in view, or has both at the same time.</li>
+      </ul>
+      <p>The globe uses elevation from the Lunar Orbiter Laser Altimeter (LOLA) and imagery from the Lunar Reconnaissance Orbiter Camera (LROC). Selected sites have higher-resolution terrain, and JPL Horizons provides Sun and Earth positions. See the <a href="https://github.com/InterstellarNerd8760/lunar-atlas/blob/main/docs/data-sources.md">data sources</a> and <a href="https://github.com/InterstellarNerd8760/lunar-atlas">source code</a>.</p>
+      <p>Desktop gives you more room for the map and site panels, and is the best way to try the surface controls.</p>
       <h2>Practice run</h2>
-      <p>To get familiar with what I'll be doing for my project, I rendered a single tile of the lunar surface in Google Colab with Python. It's the edge of Shackleton Crater, where NASA is eyeing landings and potentially a Moon Base, pulled from LOLA data from NASA's Lunar Reconnaissance Orbiter. This is just practice, not the project. I'll rebuild Shackleton from scratch for the final, more complicated lunar browser.</p>
+      <p>Before the hackathon I used Python in Google Colab to render one tile from LOLA data at the edge of Shackleton Crater. That gave me a small first test of the elevation data before I built the interactive globe.</p>
       <figure class="practice-fig">
         <img src="/img/shackleton-practice.webp" alt="Shackleton rim practice render from LOLA data, elevation on the left and hillshade on the right" width="1400" height="661" loading="lazy" decoding="async">
-        <figcaption>Practice render of the Shackleton rim from LOLA data, made in Google Colab. The real app gets built at Space Apps.</figcaption>
+        <figcaption>Practice render of the Shackleton rim from LOLA data, made in Google Colab.</figcaption>
       </figure>
     </div>
   </main>
