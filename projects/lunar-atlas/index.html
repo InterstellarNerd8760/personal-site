@@ -57,9 +57,10 @@
       <p class="kicker"><a href="/projects/">Projects</a></p>
       <h1>Centauri Lunar Atlas</h1>
       <p class="entry-meta"><span class="dot dot-live"></span> Live · Software</p>
-      <p>I built Lunar Atlas over a weekend at the NASA Space Apps 2026 event in Mountain View, as a solo entry for the Lunar Landing Site Navigator challenge. You pick a landing site and a date window, then see how the real terrain changes your sunlight and your line of sight back to Earth.</p>
+      <p>I built Lunar Atlas over a weekend at NASA Space Apps 2026 in Mountain View, as a solo entry for the Lunar Landing Site Navigator challenge. Explore a lunar site and step through a fixed 30-day observation window to see how terrain affects sunlight and the direct line of sight to Earth.</p>
       <p class="project-actions">
         <a class="btn btn-solid" href="https://moon.westonrosch.com/">Open Lunar Atlas <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="/projects/lunar-atlas/slides/">View 7-slide presentation</a>
         <a class="btn btn-ghost" href="https://github.com/InterstellarNerd8760/lunar-atlas" target="_blank" rel="noreferrer">GitHub</a>
       </p>
       <figure class="project-fig">
@@ -67,13 +68,13 @@
         <figcaption>The south pole, with landing sites and Artemis candidate regions marked on the globe.</figcaption>
       </figure>
       <h2>What you can do</h2>
-      <p>The globe has the Apollo landing sites, robotic landers such as Luna and Chang’e, NASA’s nine Artemis III candidate regions, and south pole spots like Connecting ridge and Shackleton. You can also fly to named features, or click anywhere on the surface.</p>
-      <p>Once you pick a site, the visibility panel shows where the Sun and Earth sit relative to the real terrain horizon. It reports how much of the date window is sunlit, how long the longest dark stretch lasts, and whether Earth is in view. It also gives a plain-language solar verdict: good; possible, with storage; daytime only; or won’t work.</p>
+      <p>The globe includes historic Apollo, Luna and Chang’e sites, CLPS mission locations, five mapped proxies from NASA’s 2024 south-polar Artemis candidate-region set, and targets such as Connecting ridge, Shackleton rim and Shackleton floor. You can also search named lunar features or select terrain directly. A mission pin is not necessarily a high-resolution terrain dataset, and candidate-region proxies are not officially selected landing coordinates.</p>
+      <p>Once you pick a site, the visibility panel estimates where the Sun and Earth sit relative to the LOLA terrain horizon. It reports the sunlit fraction of the window, the longest sampled dark stretch, and when Earth's center is in direct view. It also gives preliminary solar-availability categories: good; possible, with storage; daytime only; or won't work. Those labels do not calculate a mission's actual battery capacity or power consumption.</p>
       <figure class="project-fig">
         <img src="visibility.webp" alt="Connecting ridge in Lunar Atlas, with the visibility panel showing a solar verdict of possible, with storage, 78% sunlight, and a 6.8-day longest dark stretch" width="1600" height="1000" loading="lazy" decoding="async">
         <figcaption>Connecting ridge in a 30-day window: sunlit 78% of the time, with dark stretches up to 6.8 days. The app’s verdict is “possible, with storage.”</figcaption>
       </figure>
-      <p>Compare lets you put up to three sites side by side over the same dates. That’s the easiest way to see how a mid-latitude site with two-week nights differs from a south pole ridge, or from a crater floor that never gets the Sun. (Shackleton’s floor is 0% sunlit in the same kind of window; a smooth-sphere calculation would call that 100%.)</p>
+      <p>Compare puts up to three locations side by side over the same observation dates, so you can see how mid-latitude two-week nights differ from a sunlit polar ridge or a shadowed crater floor. The Shackleton-floor entry is a representative point at the official crater center, distinct from Shackleton rim; its visibility estimates use coarser available LOLA elevation rather than a dedicated fine-resolution floor DEM.</p>
       <figure class="project-fig">
         <img src="compare.webp" alt="Lunar Atlas compare view with three landing sites side by side, showing sunlight, Earth visibility, and longest dark stretch" width="1600" height="1000" loading="lazy" decoding="async">
         <figcaption>Compare view: the same date window for every site, with sunlight, Earth in view, and the longest dark stretch.</figcaption>
@@ -84,9 +85,11 @@
         <figcaption>Walk mode at Connecting ridge, at eye height on the surface.</figcaption>
       </figure>
       <h2>How it’s built</h2>
-      <p>The globe uses elevation from the Lunar Orbiter Laser Altimeter (LOLA) and imagery from the Lunar Reconnaissance Orbiter Camera (LROC). Selected south pole sites load 5 m LOLA grids from NASA Goddard’s PGDA; the Apollo sites use LROC NAC digital terrain models. Sun and Earth positions come from JPL Horizons, sampled every six hours over a fixed 30-day window. Product links and limits are in the <a href="https://github.com/InterstellarNerd8760/lunar-atlas/blob/main/docs/data-sources.md">data sources</a> notes, and the <a href="https://github.com/InterstellarNerd8760/lunar-atlas">source code</a> is public.</p>
+      <p>The globe uses elevation from the Lunar Orbiter Laser Altimeter (LOLA) and imagery from the Lunar Reconnaissance Orbiter Camera (LROC). Selected south-pole locations load 5 m LOLA site grids from NASA Goddard's PGDA, while Apollo locations use LROC NAC digital terrain models. Sun and Earth positions come from JPL Horizons, sampled every six hours from November 14 to December 14, 2026 UTC. Horizon calculations use the available terrain resolution and the centers of the Sun and Earth, so small obstacles, partial solar disks and transitions between samples may be missed. Product links and processing notes are documented in the <a href="https://github.com/InterstellarNerd8760/lunar-atlas/blob/main/docs/data-sources.md">data sources</a> and the <a href="https://github.com/InterstellarNerd8760/lunar-atlas">source code</a> is public.</p>
       <p>I built this with AI coding help. I directed the design and the decisions, and I reviewed what went into the app.</p>
-      <p>A short <a href="deck.pdf">slideshow</a> walks through the same points.</p>
+      <h2 id="presentation">Project presentation</h2>
+      <p>The <a href="/projects/lunar-atlas/slides/">updated seven-slide presentation</a> covers the problem, the Moon-wide viewer, terrain-horizon calculations, site comparison, Walk mode, and the NASA datasets used. It opens in your browser, supports keyboard navigation, and links back to the live explorer.</p>
+      <p class="project-actions"><a class="btn btn-ghost" href="/projects/lunar-atlas/slides/">Open presentation <span aria-hidden="true">↗</span></a></p>
       <h2>Practice run</h2>
       <p>Before the hackathon I used Python in Google Colab to render one tile from LOLA data at the edge of Shackleton Crater. That was a small first test of the elevation data, before the interactive globe existed.</p>
       <figure class="practice-fig">
