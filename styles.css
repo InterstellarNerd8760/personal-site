@@ -232,6 +232,10 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
 .practice-fig { margin: 1.5rem 0 0; }
 .practice-fig img { display: block; width: 100%; height: auto; border-radius: 6px; }
 .practice-fig figcaption { margin: .7rem 0 0; font: .85rem/1.45 var(--sans); color: var(--text-2); }
+.project-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 0 0 1.5rem; }
+.project-fig { margin: 1.6rem 0; }
+.project-fig img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.project-fig figcaption { margin: .7rem 0 0; font: .85rem/1.45 var(--sans); color: var(--text-2); }
 .prose p { margin: 0 0 1.25rem; color: var(--text); font-size: 1.05rem; }
 .prose a { color: var(--sky); text-underline-offset: 3px; }
 .prose ul { margin: 0 0 1.25rem; padding: 0 0 0 1.2rem; }
