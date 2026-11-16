@@ -1,24 +1,91 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lunar Atlas — Site Image Review</title>
-<meta name="description" content="Gallery of 37 included Lunar Atlas photos and six sourced proposals for missing sites.">
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05080f">
+<meta name="description" content="A source-credited photographic index of lunar landers, terrain regions and concept artwork for Centauri Lunar Atlas.">
+<meta name="author" content="Weston Rosch">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://westonrosch.com/projects/lunar-atlas/photos/">
+<title>Site Imagery · Centauri Lunar Atlas · Weston Rosch</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 <style>
-:root{color-scheme:dark;--bg:#070b12;--panel:#111824;--line:#293446;--text:#eef4fc;--muted:#a9b8cc;--accent:#79bafa}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -25%,#18314c 0%,var(--bg) 48%);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
-a{color:var(--accent)}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-header,.content{max-width:1220px;margin:auto;padding:0 20px}header{padding-top:38px;padding-bottom:20px}header>p:first-child{font-size:12px;letter-spacing:.17em;color:var(--accent);font-weight:700}
-h1{margin:0;font-size:clamp(28px,4.5vw,46px);line-height:1.15}header>p{max-width:920px;color:var(--muted)}.stat{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}.stat span{border:1px solid var(--line);border-radius:99px;padding:5px 11px;color:var(--muted);font-size:12px}.stat strong{color:var(--text)}
-.toolbar{position:sticky;top:0;z-index:10;background:#070b12eb;backdrop-filter:blur(12px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}.toolbar>div{max-width:1180px;margin:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:0 10px}.toolbar input{flex:1;min-width:200px;background:#141d2b;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:10px 12px;font-size:14px}.toolbar button{background:#101927;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:9px 13px;cursor:pointer}.toolbar button[aria-pressed=true]{background:#1a3a54;color:#e5f5ff;border-color:#3579aa}
-.content{padding-top:22px;padding-bottom:60px}#count{color:var(--muted);font-size:13px}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:18px;margin:18px 0 30px}
+/* Gallery page-specific layout; site-wide colors, fonts and navigation come from /styles.css. */
+.gallery-page{max-width:none}
+.gallery-intro{max-width:70rem;margin-bottom:3.2rem}
+.gallery-intro h1{max-width:16ch;font:400 clamp(3rem,7vw,5.8rem)/1.02 var(--serif);letter-spacing:-.025em}
+.gallery-intro h1 em{color:var(--sky);font-style:italic}
+.gallery-lede{max-width:50rem;margin:1.7rem 0;color:var(--text);font-size:clamp(1rem,1.35vw,1.16rem);font-weight:300}
+.gallery-meta{display:flex;gap:1rem 2rem;flex-wrap:wrap;padding:1.25rem 0;margin:2rem 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:500 .7rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--text-2)}
+.gallery-meta strong{font:400 1.45rem/1 var(--serif);color:var(--white);margin-right:.4rem}
+.gallery-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:1.7rem 0}
+.gallery-controls{position:sticky;top:4.5rem;z-index:20;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(5,8,15,.92);backdrop-filter:blur(14px);padding:.95rem 0}
+.gallery-toolbar{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap}
+.gallery-search{flex:1 1 280px;min-width:220px;min-height:2.8rem;padding:.6rem .9rem;color:var(--white);border:1px solid var(--line-2);border-radius:3px;background:var(--bg-2);font:400 .9rem var(--sans)}
+.gallery-search::placeholder{color:var(--text-3)}
+.gallery-filter{border:1px solid var(--line);border-radius:3px;background:transparent;color:var(--text-2);padding:.66rem .9rem;cursor:pointer;font:500 .7rem var(--mono);letter-spacing:.02em;transition:border-color .2s,color .2s}
+.gallery-filter:hover{color:var(--white);border-color:var(--line-2)}
+.gallery-filter[aria-pressed="true"]{color:var(--bg);background:var(--sky);border-color:var(--sky)}
+.gallery-content{padding-top:2.2rem}
+.gallery-count{font:500 .7rem/1.6 var(--mono);letter-spacing:.13em;color:var(--text-3);text-transform:uppercase}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin:1.4rem 0 3.4rem}
 .photo-card[hidden]{display:none!important}
-.photo-card{border-radius:14px;background:var(--panel);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;min-width:0}.photo-card__image{display:grid;place-items:center;aspect-ratio:1.6;background:linear-gradient(135deg,#122233,#0b1018);text-align:center;color:var(--muted);overflow:hidden}.photo-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .2s}.photo-card__image:hover img{transform:scale(1.025)}.photo-card__image--failed span{padding:14px}
-.photo-card__content{padding:15px;display:flex;flex-direction:column;flex:1}.eyebrow{color:#80bedf;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}h2{font-size:17px;line-height:1.25;margin:7px 0 5px}.phototitle{font-size:13px;color:#d4dfee;margin:0 0 8px}.caption{font-size:12px;color:var(--muted);margin:0 0 10px}.credit{color:#93a5bb;font-size:11px;margin:auto 0 8px}.links{display:flex;justify-content:space-between;gap:9px;border-top:1px solid var(--line);padding-top:10px;font-size:12px}.links a{white-space:nowrap}
-aside{border:1px solid var(--line);padding:18px;border-radius:12px;color:var(--muted);font-size:13px}aside strong{color:var(--text)}
-@media(max-width:550px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo-card__content{padding:10px}h2{font-size:14px}.links{flex-wrap:wrap}.toolbar button{font-size:11px;padding:7px 10px}}
-</style></head><body>
-<header><p>CENTAURI LUNAR ATLAS • REVIEW BOARD</p><h1>Site photo & concept-art gallery</h1><p>Browse every image already included in the Lunar Atlas mission-photo catalog alongside six researched proposals for missing photo panels. These proposed images are a <strong>review set</strong>, not automatically installed into the live lunar viewer. Actual orbital photographs, historical surface images and artists’ spacecraft renders are labeled separately.</p>
-<div class="stat"><span><strong>37</strong> existing site photos</span><span><strong>6</strong> new source-backed proposals</span><span><strong>43</strong> total images</span></div><p><a href="../">Back to Lunar Atlas project</a> · <a href="https://moon.westonrosch.com/">Open Moon explorer</a></p></header>
-<div class="toolbar"><div><input id="search" type="search" placeholder="Search mission, location or image credit…" aria-label="Search images"><button data-filter="all" aria-pressed="true">All 43</button><button data-filter="apollo" aria-pressed="false">Apollo</button><button data-filter="lander" aria-pressed="false">Robotic</button><button data-filter="failed" aria-pressed="false">Failed</button><button data-filter="future" aria-pressed="false">Future regions</button><button data-filter="terrain" aria-pressed="false">Terrain</button></div></div>
-<main class="content"><p id="count" aria-live="polite">Showing 43 images</p><div id="gallery" class="gallery">
+.photo-card{min-width:0;background:linear-gradient(180deg,rgba(15,26,43,.7),rgba(10,18,32,.4));border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .35s var(--ease)}
+.photo-card:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.photo-card__image{aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden;background:var(--bg-2);text-decoration:none;color:var(--text-3);text-align:center}
+.photo-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);filter:saturate(.8)}
+.photo-card:hover .photo-card__image img{transform:scale(1.035)}
+.photo-card__image--failed span{padding:1.2rem;font:.85rem var(--sans)}
+.photo-card__content{padding:1.35rem;display:flex;flex:1;flex-direction:column}
+.photo-card__content .eyebrow{margin:0 0 .75rem;font:500 .62rem/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sky)}
+.photo-card__content h2{margin:0 0 .4rem;color:var(--white);font:400 clamp(1.55rem,2.4vw,2rem)/1.12 var(--serif);overflow-wrap:break-word}
+.photo-card__content .phototitle{margin:0 0 .7rem;font:400 .91rem/1.45 var(--sans);color:var(--text)}
+.photo-card__content .caption{margin:0 0 1rem;font:.82rem/1.5 var(--sans);color:var(--text-2)}
+.photo-card__content .credit{margin:auto 0 .8rem;font:.68rem/1.5 var(--mono);color:var(--text-3)}
+.photo-card__content .links{display:flex;flex-wrap:wrap;gap:.6rem 1.1rem;border-top:1px solid var(--line);padding-top:1rem}
+.photo-card__content .links a{font:500 .74rem/1.4 var(--sans);text-decoration:none;color:var(--sky)}
+.photo-card__content .links a:hover{text-decoration:underline}
+.gallery-notes{border-top:1px solid var(--line);padding:2rem 0 0;margin-bottom:3rem;max-width:59rem;color:var(--text-2);font-size:.9rem}
+.gallery-notes h2{font:400 2rem/1 var(--serif);margin-bottom:.8rem}
+.gallery-notes strong{color:var(--white);font-weight:500}
+@media(max-width:1000px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.gallery-grid{grid-template-columns:1fr;gap:1.2rem}.gallery-content{padding-top:1.2rem}.gallery-filter{padding:.55rem .68rem}.photo-card__content{padding:1.25rem}.gallery-meta{gap:.7rem 1.4rem}.gallery-controls{top:4.5rem}.gallery-intro{margin-bottom:2rem}}
+</style>
+</head><body class="subpage">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <a class="wordmark" href="/">Weston Rosch</a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="https://moon.westonrosch.com">Moon</a>
+      <a href="/projects/" aria-current="page">Projects</a>
+      <a href="/vault/">Vault</a>
+      <a href="/writing/">Writing</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="callsign">KO6OGZ<small>amateur radio</small></span>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+<main id="main" class="page gallery-page" tabindex="-1">
+<div class="wrap"><section class="gallery-intro">
+<p class="kicker"><a href="/projects/">Projects</a> / <a href="/projects/lunar-atlas/">Lunar Atlas</a> / Imagery</p>
+<h1>Images from <em>the Moon.</em></h1>
+<p class="gallery-lede">A visual reference for Lunar Atlas: spacecraft photographs, orbital images of historical landing sites, south-polar terrain, and official concept artwork for proposed lunar missions. Every image links back to its source.</p>
+<div class="gallery-meta"><span><strong>48</strong> images</span><span>NASA / LROC / mission partners</span><span>Photographs + illustrative concepts</span></div>
+<div class="gallery-actions"><a class="btn btn-solid" href="https://moon.westonrosch.com/">Explore the Moon <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="/projects/lunar-atlas/">Back to the project</a></div>
+</section></div>
+<div class="gallery-controls"><div class="wrap gallery-toolbar">
+<input id="search" class="gallery-search" type="search" placeholder="Find a mission, spacecraft or feature…" aria-label="Search the photo collection">
+<button type="button" class="gallery-filter" data-filter="all" aria-pressed="true">All</button>
+<button type="button" class="gallery-filter" data-filter="apollo" aria-pressed="false">Apollo</button>
+<button type="button" class="gallery-filter" data-filter="lander" aria-pressed="false">Robotic</button>
+<button type="button" class="gallery-filter" data-filter="failed" aria-pressed="false">Impacts</button>
+<button type="button" class="gallery-filter" data-filter="future" aria-pressed="false">Future</button>
+<button type="button" class="gallery-filter" data-filter="terrain" aria-pressed="false">Terrain</button>
+</div></div>
+<div class="wrap gallery-content"><p class="gallery-count" id="count" aria-live="polite">Showing 48 images</p>
+<div id="gallery" class="gallery-grid">
 <article class="photo-card" data-group="lander" data-search="luna-9 luna 9 first photo from the lunar surface (luna 9) national space science data center / luna 9 (ussr), published by nasa existing site photo">
  <a class="photo-card__image" href="https://raw.githubusercontent.com/InterstellarNerd8760/lunar-atlas/main/public/data/site-photos/luna-9.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/InterstellarNerd8760/lunar-atlas/main/public/data/site-photos/luna-9.jpg" alt="First photo from the lunar surface (Luna 9)" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>Preview blocked by source; open original image</span>')"></a>
  <div class="photo-card__content"><div class="eyebrow">EXISTING REPOSITORY PHOTO · Existing site photo</div><h2>Luna 9</h2><p class="phototitle">First photo from the lunar surface (Luna 9)</p><p class="caption">The first photograph from the lunar surface, taken by Luna 9 in Oceanus Procellarum on 3 February 1966.</p><p class="credit">Credit: National Space Science Data Center / Luna 9 (USSR), published by NASA</p><div class="links"><a href="https://raw.githubusercontent.com/InterstellarNerd8760/lunar-atlas/main/public/data/site-photos/luna-9.jpg" target="_blank" rel="noopener">Full image</a><a href="https://science.nasa.gov/resource/first-photo-from-the-surface-of-the-moon/" target="_blank" rel="noopener">Original source & context</a></div></div></article>
@@ -148,9 +215,44 @@ aside{border:1px solid var(--line);padding:18px;border-radius:12px;color:var(--m
 <article class="photo-card" data-group="future" data-search="clps-blueghost3-gruithuisen blue ghost mission 3 / gruithuisen domes blue ghost mission 3 lander and rover rendering firefly aerospace; hosted by university of maryland official spacecraft rendering">
  <a class="photo-card__image" href="https://cmns.umd.edu/sites/default/files/articles/firefly-blue-ghost-mission-3-rendering_for_web.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="https://cmns.umd.edu/sites/default/files/articles/firefly-blue-ghost-mission-3-rendering_for_web.jpg" alt="Blue Ghost Mission 3 lander and rover rendering" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>Preview blocked by source; open original image</span>')"></a>
  <div class="photo-card__content"><div class="eyebrow">NEW PROPOSED IMAGE · Official spacecraft rendering</div><h2>Blue Ghost Mission 3 / Gruithuisen Domes</h2><p class="phototitle">Blue Ghost Mission 3 lander and rover rendering</p><p class="caption">Official Firefly Blue Ghost Mission 3 concept artwork featuring the lander and rover at the Gruithuisen Domes; future mission.</p><p class="credit">Credit: Firefly Aerospace; hosted by University of Maryland</p><div class="links"><a href="https://cmns.umd.edu/sites/default/files/articles/firefly-blue-ghost-mission-3-rendering_for_web.jpg" target="_blank" rel="noopener">Full image</a><a href="https://fireflyspace.com/missions/blue-ghost-elytra-gruithuisen-domes/" target="_blank" rel="noopener">Original source & context</a></div></div></article>
-</div><aside><strong>Accuracy and reuse notes.</strong> New planned-mission images are artist-rendered spacecraft concepts, not images taken on the Moon. The Shackleton composite contains LROC/ShadowCam observational data. The Luna 25 and HAKUTO-R images show probable impact evidence, not intact landed craft. Source sites may restrict embedding; each card links to the full image and its credit page. Existing photo assets are hosted in the official Lunar Atlas repository. Non-photo terrain datasets and thousands of searchable crater names are not represented by an individual photograph in this catalog. Check licensing and attribution before reusing any third-party spacecraft artwork.</aside></main>
+
+<article class="photo-card" data-group="lander" data-search="im-1 odysseus odysseus lunar lander spacecraft photograph intuitive machines, via tagesschau">
+<a class="photo-card__image" href="https://images.tagesschau.de/image/c9491552-d14a-4d92-853e-1dda33843c76/AAABleDbEZA/AAABnSSvgNE/16x9-1920/mondsonde-100.jpg" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://images.tagesschau.de/image/c9491552-d14a-4d92-853e-1dda33843c76/AAABleDbEZA/AAABnSSvgNE/16x9-1920/mondsonde-100.jpg" alt="Odysseus lunar lander" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>External image unavailable — open the original source</span>')"></a>
+<div class="photo-card__content"><p class="eyebrow">ADDITIONAL MISSION IMAGE · spacecraft photograph</p><h2>IM-1 Odysseus</h2><p class="phototitle">Odysseus lunar lander</p><p class="caption">Intuitive Machines Odysseus spacecraft image; mission imagery, not an orbital photograph of the final touchdown point.</p><p class="credit">Credit: Intuitive Machines, via Tagesschau</p><div class="links"><a href="https://images.tagesschau.de/image/c9491552-d14a-4d92-853e-1dda33843c76/AAABleDbEZA/AAABnSSvgNE/16x9-1920/mondsonde-100.jpg" target="_blank" rel="noopener noreferrer">View image ↗</a><a href="https://www.intuitivemachines.com/im-1" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+<article class="photo-card" data-group="lander" data-search="first look: chang'e 6 chang’e 6 view from the lunar far side surface photograph china national space administration (cnsa), distributed by phys.org">
+<a class="photo-card__image" href="https://scx2.b-cdn.net/gfx/news/hires/2024/craft-unfurls-chinas-f-3.jpg" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://scx2.b-cdn.net/gfx/news/hires/2024/craft-unfurls-chinas-f-3.jpg" alt="Chang’e 6 view from the lunar far side" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>External image unavailable — open the original source</span>')"></a>
+<div class="photo-card__content"><p class="eyebrow">ADDITIONAL MISSION IMAGE · surface photograph</p><h2>First look: Chang'e 6</h2><p class="phototitle">Chang’e 6 view from the lunar far side</p><p class="caption">Panoramic camera image from Chang’e 6 with the lander hardware in the foreground and actual lunar surface. Not an artist’s render.</p><p class="credit">Credit: China National Space Administration (CNSA), distributed by Phys.org</p><div class="links"><a href="https://scx2.b-cdn.net/gfx/news/hires/2024/craft-unfurls-chinas-f-3.jpg" target="_blank" rel="noopener noreferrer">View image ↗</a><a href="https://www.cnsa.gov.cn/n6758823/n6758838/c10543340/content.html" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+<article class="photo-card" data-group="lander" data-search="blue ghost blue ghost spacecraft above the lunar terrain mission photograph firefly aerospace, via the independent">
+<a class="photo-card__image" href="https://static.independent.co.uk/2025/03/02/10/54/The-moon-passes-by-Firefly-Aerospaces-Blue-Ghost-spaceship-ahead-of-its-landing-614aduu1.jpeg?crop=2018%2C2018%2Cx786%2Cy0&amp;height=1200&amp;width=1200" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://static.independent.co.uk/2025/03/02/10/54/The-moon-passes-by-Firefly-Aerospaces-Blue-Ghost-spaceship-ahead-of-its-landing-614aduu1.jpeg?crop=2018%2C2018%2Cx786%2Cy0&amp;height=1200&amp;width=1200" alt="Blue Ghost spacecraft above the lunar terrain" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>External image unavailable — open the original source</span>')"></a>
+<div class="photo-card__content"><p class="eyebrow">ADDITIONAL MISSION IMAGE · mission photograph</p><h2>Blue Ghost</h2><p class="phototitle">Blue Ghost spacecraft above the lunar terrain</p><p class="caption">Real Blue Ghost descent-view image showing the spacecraft underside and Moon. Mission imagery, not a landing-site terrain survey.</p><p class="credit">Credit: Firefly Aerospace, via The Independent</p><div class="links"><a href="https://static.independent.co.uk/2025/03/02/10/54/The-moon-passes-by-Firefly-Aerospaces-Blue-Ghost-spaceship-ahead-of-its-landing-614aduu1.jpeg?crop=2018%2C2018%2Cx786%2Cy0&amp;height=1200&amp;width=1200" target="_blank" rel="noopener noreferrer">View image ↗</a><a href="https://fireflyspace.com/news/blue-ghost-mission-1-live-updates/" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+<article class="photo-card" data-group="lander" data-search="im-2 athena on mons mouton im-2 athena lander prior to flight spacecraft photograph intuitive machines / globenewswire">
+<a class="photo-card__image" href="https://ml.globenewswire.com/Resource/Download/828e4f54-cedb-44df-bede-d914f08af23c" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://ml.globenewswire.com/Resource/Download/828e4f54-cedb-44df-bede-d914f08af23c" alt="IM-2 Athena lander prior to flight" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>External image unavailable — open the original source</span>')"></a>
+<div class="photo-card__content"><p class="eyebrow">ADDITIONAL MISSION IMAGE · spacecraft photograph</p><h2>IM-2 Athena on Mons Mouton</h2><p class="phototitle">IM-2 Athena lander prior to flight</p><p class="caption">Photograph of the Athena spacecraft on Earth before launch. NOT a photograph of its condition after lunar touchdown.</p><p class="credit">Credit: Intuitive Machines / GlobeNewswire</p><div class="links"><a href="https://ml.globenewswire.com/Resource/Download/828e4f54-cedb-44df-bede-d914f08af23c" target="_blank" rel="noopener noreferrer">View image ↗</a><a href="https://investors.intuitivemachines.com/news-releases/news-release-details/intuitive-machines-delivers-second-lunar-mission-lander-cape" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+<article class="photo-card" data-group="future" data-search="artemis — hls illustration blue origin blue moon hls — concept illustration artist’s concept blue origin (artist’s concept)">
+<a class="photo-card__image" href="https://d1o72l87sylvqg.cloudfront.net/blue-origin/BlueMoon_pagehero.png" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="https://d1o72l87sylvqg.cloudfront.net/blue-origin/BlueMoon_pagehero.png" alt="Blue Origin Blue Moon HLS — concept illustration" onerror="this.style.display='none';this.parentElement.classList.add('photo-card__image--failed');this.parentElement.insertAdjacentHTML('beforeend','<span>External image unavailable — open the original source</span>')"></a>
+<div class="photo-card__content"><p class="eyebrow">ADDITIONAL MISSION IMAGE · artist’s concept</p><h2>Artemis — HLS illustration</h2><p class="phototitle">Blue Origin Blue Moon HLS — concept illustration</p><p class="caption">Illustrative future human landing-system concept. NOT a selected spacecraft for this particular candidate region, a proposed Moon base, or a picture taken at this site.</p><p class="credit">Credit: Blue Origin (artist’s concept)</p><div class="links"><a href="https://d1o72l87sylvqg.cloudfront.net/blue-origin/BlueMoon_pagehero.png" target="_blank" rel="noopener noreferrer">View image ↗</a><a href="https://www.blueorigin.com/blue-moon" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article></div>
+<section class="gallery-notes"><h2>About the imagery</h2><p><strong>Not every image represents a completed landing.</strong> Orbital images show spacecraft locations and candidate terrain; mission photographs show hardware or descent perspectives. Artist concepts of future lunar landers, including the Blue Moon HLS, are illustrative only and do not identify the actual spacecraft, final landing site, or existence of a base at any candidate region.</p><p>Commercial mission photographs and concept art remain credited to their creators. Some images are externally hosted and may not support embedding; the source link is provided for each. The existing 37 lunar-site photographs are stored with the open-source project.</p></section></div>
+</main><footer class="site-footer">
+  <div class="footer-moon">
+    <img src="/img/moon-footer.webp" alt="" width="1600" height="280" loading="lazy" decoding="async">
+    <p class="footer-moon-credit">Moon: NASA</p>
+  </div>
+    <div class="wrap footer-inner">
+      <span>© 2026 Weston Rosch</span>
+      <nav class="footer-links" aria-label="Contact">
+        <a href="mailto:hello@westonrosch.com">hello@westonrosch.com</a>
+        <a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer">X</a>
+        <a href="https://instagram.com/rosch_weston" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <span>Earth imagery: NASA / ISS crew</span>
+    </div>
+  </footer>
 <script>
-const q=document.getElementById('search'),cards=[...document.querySelectorAll('.photo-card')],count=document.getElementById('count');
-let filter='all';function update(){const term=q.value.toLowerCase().trim();let n=0;for(const c of cards){const show=(filter==='all'||c.dataset.group===filter)&&c.dataset.search.includes(term);c.hidden=!show;if(show)n++}count.textContent='Showing '+n+' of '+cards.length+' images';}
-q.addEventListener('input',update);document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update()}));update();
-</script></body></html>
+const field=document.getElementById('search'),cards=[...document.querySelectorAll('.photo-card')],count=document.getElementById('count');
+let filter='all';
+function update(){let n=0;const term=field.value.toLowerCase().trim();for(const card of cards){const show=(filter==='all'||card.dataset.group===filter)&&card.dataset.search.includes(term);card.hidden=!show;if(show)n++;}count.textContent='Showing '+n+' of '+cards.length+' images';}
+field.addEventListener('input',update);document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===button)));update()}));
+update();
+</script><script src="/script.js" defer></script></body></html>
