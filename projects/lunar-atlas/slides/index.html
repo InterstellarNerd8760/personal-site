@@ -17,6 +17,10 @@ body.slides-page{margin:0;background:#080c14;color:#f5f6fa;font-family:"IBM Plex
 .deck-brand{font-size:15px;letter-spacing:.02em}.deck-brand strong{color:#3b82f6}
 .slide{position:relative;display:none;width:100%;aspect-ratio:16/9;overflow:hidden;padding:clamp(20px,5%,70px);background:#0b101b;border:1px solid #26344a;border-radius:12px;box-shadow:0 25px 80px #0009}
 .slide.is-active{display:block}
+.slide__backdrop{position:absolute;top:12%;right:0;width:42%;height:78%;object-fit:cover;opacity:.17;pointer-events:none;filter:grayscale(.4) saturate(.75);-webkit-mask-image:linear-gradient(to right,transparent 2%,black 70%);mask-image:linear-gradient(to right,transparent 2%,black 70%)}
+.slide > :not(.slide__backdrop){position:relative;z-index:1}
+@media(max-width:720px){.slide__backdrop{width:70%;opacity:.09}}
+
 .eyebrow{font:600 clamp(9px,1.2vw,14px)/1.4 ui-monospace,SFMono-Regular,monospace;letter-spacing:.16em;color:#9ec9ff;margin:0 0 24px}
 .slide h1{font-size:clamp(48px,8vw,112px);letter-spacing:-.055em;line-height:1;margin:0 0 20px}
 .slide h2{font-size:clamp(27px,3.75vw,54px);letter-spacing:-.04em;line-height:1.12;margin:0 0 25px;max-width:1000px}
@@ -74,6 +78,7 @@ body.slides-page{margin:0;background:#080c14;color:#f5f6fa;font-family:"IBM Plex
   <div class="deck-footer"><span>moon.westonrosch.com</span><span>01 / 07</span></div>
 </section>
 <section class="slide" aria-label="Slide 2 of 7" hidden>
+<img class="slide__backdrop" src="../visibility.webp" alt="Lunar Atlas sunlight and terrain-horizon calculations" loading="lazy">
   <p class="eyebrow">THE PROBLEM</p><h2>On the Moon, terrain is everything</h2>
   <p class="copy">Finding a viable landing site means knowing where the Sun and Earth sit relative to the local horizon—especially at the south pole, where small elevation changes can affect solar exposure and direct-to-Earth communication.</p>
   <div class="callouts"><div class="callout"><h3>Crater floors stay dark</h3><p>Shackleton's interior is deeply shadowed. A smooth-sphere model can substantially overestimate sunlight.</p></div><div class="callout"><h3>Nearby ridges catch the light</h3><p>Latitude alone is insufficient. Local elevation changes power and communications access.</p></div></div>
@@ -90,6 +95,7 @@ body.slides-page{margin:0;background:#080c14;color:#f5f6fa;font-family:"IBM Plex
   <div class="deck-footer"><span>Estimates, not mission-certified power calculations</span><span>04 / 07</span></div>
 </section>
 <section class="slide" aria-label="Slide 5 of 7" hidden>
+<img class="slide__backdrop" src="../compare.webp" alt="Lunar Atlas three-site comparison view" loading="lazy">
   <p class="eyebrow">COMPARE SITES</p><h2>Side-by-side under the exact same dates</h2><p class="copy">Compare up to three sites over the same 30-day window to examine sunlight, Earth visibility and the longest continuous darkness.</p>
   <table class="compare-table"><tbody><tr><td>Connecting ridge</td><td>78% sunlit</td><td>6.8 days dark</td></tr><tr><td>Haworth</td><td>38% sunlit</td><td>8.0 days dark</td></tr><tr><td>Apollo 11</td><td>49% sunlit</td><td>14.0 days dark</td></tr></tbody></table>
   <div class="deck-footer"><span>14 Nov–14 Dec 2026 UTC · six-hour samples</span><span>05 / 07</span></div>
@@ -100,6 +106,7 @@ body.slides-page{margin:0;background:#080c14;color:#f5f6fa;font-family:"IBM Plex
   <div class="deck-footer"><span>Interactive 3D terrain explorer</span><span>06 / 07</span></div>
 </section>
 <section class="slide" aria-label="Slide 7 of 7" hidden>
+<img class="slide__backdrop" src="../south-pole.webp" alt="Lunar Atlas south-pole rendering using NASA elevation data" loading="lazy">
   <p class="eyebrow">DATA AND HOW IT'S BUILT</p><h2>NASA datasets, running natively in the browser</h2>
   <div class="data-list">
     <div class="callout"><div class="section-title">Elevation</div><p>LRO LOLA global LDEM_16, south-polar elevation, and PGDA 5 m site grids</p></div>
