@@ -47,6 +47,7 @@
       <a href="/projects/" aria-current="page">Projects</a>
       <a href="/vault/">Vault</a>
       <a href="/writing/">Writing</a>
+      <a href="/experiments/">Experiments</a>
       <a href="/about/">About</a>
     </nav>
     <span class="callsign">KO6OGZ<small>amateur radio</small></span>
@@ -77,6 +78,17 @@
           <p>My school Space Club’s planned near-space balloon flight combines a Raspberry Pi Pico flight computer, BME280 environmental sensing, SpotTrace GPS tracking, onboard data logging, and planned LoRa telemetry. First launch targeted for spring 2027.</p>
         </div>
       </article>
+      <section class="project-detail-stack" aria-labelledby="wall-e-engineering">
+        <p class="kicker">Engineering notebook</p>
+        <h2 id="wall-e-engineering" class="band-title">From breadboard to <em>flight computer.</em></h2>
+        <p>The BME280 has responded at I²C address <code>0x76</code> with chip ID <code>0x60</code>. Repeated tests have also failed with <code>EIO</code> errors; the current loose breadboard contacts need attention. I am documenting the known connections separately from proposed telemetry and logging hardware.</p>
+        <p class="project-actions"><a class="btn btn-solid" href="/projects/wall-e/wiring/">View wiring diagrams and debug notes ↗</a></p>
+        <div class="feature-row">
+          <div class="feature-card"><p class="project-meta">Confirmed bench wiring</p><h3>Sensor interface</h3><p>Pico 3.3 V power and I²C0 on GP16/GP17. The next milestone is repeatable, stable measurements.</p></div>
+          <div class="feature-card"><p class="project-meta">Integration pending</p><h3>Telemetry and logging</h3><p>LoRa ground radio and onboard storage still need separate power, pinout, and end-to-end checks.</p></div>
+          <div class="feature-card"><p class="project-meta">Planned flight system</p><h3>Tracking and recovery</h3><p>SpotTrace GPS and the recovery hardware are part of the mission design, not yet a completed flight-readiness test.</p></div>
+        </div>
+      </section>
     </div>
   </main>
   <footer class="site-footer">

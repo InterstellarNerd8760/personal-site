@@ -363,3 +363,54 @@ body.subpage .site-header { background: rgba(5, 8, 15, .72); backdrop-filter: bl
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .project:hover, .project:hover .project-media img, .vault-card:hover, .feature-card:hover { transform: none; }
 }
+
+/* Project filters, experiments, engineering notes and writing — 2026-11 */
+.page-band{padding:clamp(4rem,8vw,7rem) 0;border-top:1px solid var(--line);background:linear-gradient(180deg,var(--bg-2),var(--bg))}
+.band-title{font:400 clamp(2.1rem,4.5vw,3.8rem)/1.08 var(--serif);letter-spacing:-.02em;margin:0 0 1.2rem;max-width:23ch}
+.band-lede{max-width:48rem;color:var(--text-2);font-size:1.07rem;margin:0 0 2.2rem}
+.band-links{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}
+.project-intro{max-width:46rem}
+.project-detail-stack{margin-top:clamp(3rem,6vw,5rem);padding-top:2rem;border-top:1px solid var(--line)}
+.project-detail-stack>p:not(.kicker):not(.project-actions){max-width:54rem;color:var(--text-2)}
+.project-detail-stack .feature-row{margin-top:1.5rem}
+.project-quicklinks{display:flex;flex-wrap:wrap;gap:.7rem 1.4rem;margin-top:.6rem}
+.project-quicklinks a{font:500 .77rem var(--mono);color:var(--sky);text-decoration:none}
+.project-quicklinks a:hover{text-decoration:underline;text-underline-offset:3px}
+.project-filter-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin:2rem 0 1.8rem}
+.project-filter{cursor:pointer;background:transparent;border:1px solid var(--line-2);border-radius:3px;padding:.54rem .82rem;color:var(--text-2);font:500 .76rem var(--mono);transition:color .2s,border-color .2s,background .2s}
+.project-filter:hover,.project-filter.is-selected{color:var(--bg);border-color:var(--sky);background:var(--sky)}
+.project-count{margin-left:auto;color:var(--text-3);font:400 .74rem var(--mono)}
+.project-grid .project[hidden]{display:none}
+.section-small-title{font:400 clamp(1.8rem,3vw,2.4rem)/1.1 var(--serif);margin:3rem 0 1rem}
+.writing-categories,.experiments-grid{margin-top:2.2rem}
+.feature-card .project-meta{margin:0 0 .35rem;font-size:.7rem}
+.feature-card .arrow{margin-top:auto}
+.quiet-note{color:var(--text-3)!important;font-size:.86rem}
+.engineering-page{max-width:100%}
+.engineering-page>.lede{max-width:50rem}
+.diagram-frame{margin:1.7rem 0;background:#080f1b;border:1px solid var(--line-2);border-radius:6px;padding:1rem;overflow-x:auto}
+.diagram-frame svg{display:block;width:100%;min-width:600px;height:auto}
+.diagram-caption{margin:.75rem 0 0;color:var(--text-3);font-size:.83rem;max-width:64rem}
+.table-wrap{overflow-x:auto;margin:1.6rem 0}
+.pin-table{border-collapse:collapse;width:100%;min-width:580px;text-align:left;font-size:.93rem}
+.pin-table th{font:500 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--sky)}
+.pin-table th,.pin-table td{padding:.85rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
+.pin-table tbody tr:hover{background:rgba(92,200,245,.04)}
+.system-block-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.8rem;margin:1.5rem 0}
+.system-block{display:flex;flex-direction:column;gap:.4rem;background:var(--bg-2);padding:1.2rem;border:1px solid var(--line);border-left:3px solid var(--sky);border-radius:4px}
+.system-block.known{border-left-color:var(--sage)}
+.system-block strong{font-weight:500;color:var(--white)}
+.system-block span{font-size:.88rem;color:var(--text-2)}
+pre.code-fig{white-space:pre;max-width:100%;font-size:clamp(.7rem,1.4vw,.85rem)}
+.debug-steps{max-width:55rem;padding-left:1.35rem}
+.debug-steps li{margin:0 0 .8rem;line-height:1.6}
+.debug-steps li::marker{color:var(--sky);font-family:var(--mono)}
+@media(max-width:760px){.project-count{width:100%;margin:.55rem 0 0}.diagram-frame{padding:.5rem}.band-links{gap:.9rem}.project-filter{font-size:.72rem}}
+
+/* Keep six navigation links readable on narrow laptop and tablet screens. */
+@media (min-width:761px) and (max-width:920px){
+  .site-header{gap:.8rem;padding-inline:1rem}
+  .site-nav{gap:.75rem}
+  .site-nav a{font-size:.75rem}
+  .callsign{display:none}
+}

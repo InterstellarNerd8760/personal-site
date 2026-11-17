@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://westonrosch.com/</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://westonrosch.com/projects/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://westonrosch.com/projects/centauri-academy/</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://westonrosch.com/projects/wall-e/</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://westonrosch.com/projects/lunar-atlas/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://westonrosch.com/about/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://westonrosch.com/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/about/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/centauri-academy/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/wall-e/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/wall-e/wiring/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/lunar-atlas/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/lunar-atlas/photos/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/lunar-atlas/slides/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/experiments/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://westonrosch.com/vault/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://westonrosch.com/vault/week-2/</loc><lastmod>2026-11-13</lastmod></url>
   <url><loc>https://westonrosch.com/vault/week-1/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://westonrosch.com/writing/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://westonrosch.com/writing/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://westonrosch.com/writing/poetry/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://westonrosch.com/writing/ai-and-the-future-of-humanity/</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://westonrosch.com/resume.pdf</loc><lastmod>2026-10-26</lastmod></url>
 </urlset>

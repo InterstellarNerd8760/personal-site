@@ -47,6 +47,7 @@
       <a href="/projects/" aria-current="page">Projects</a>
       <a href="/vault/">Vault</a>
       <a href="/writing/">Writing</a>
+      <a href="/experiments/">Experiments</a>
       <a href="/about/">About</a>
     </nav>
     <span class="callsign">KO6OGZ<small>amateur radio</small></span>
@@ -90,10 +91,12 @@
       <p>The Moon is built as a cube-sphere quadtree with 33 × 33 vertex tiles and seam skirts, using elevation from the Lunar Orbiter Laser Altimeter (LOLA) and imagery from the Lunar Reconnaissance Orbiter Camera (LROC). Selected south-pole locations load 5 m LOLA site grids from NASA Goddard's PGDA, while Apollo locations use LROC NAC digital terrain models. Sun and Earth positions come from JPL Horizons, sampled every six hours from November 14 to December 14, 2026 UTC. Horizon calculations use the available terrain resolution and the centers of the Sun and Earth, so small obstacles, partial solar disks and transitions between samples may be missed. Product links and processing notes are documented in the <a href="https://github.com/InterstellarNerd8760/lunar-atlas/blob/main/docs/data-sources.md">data sources</a> and the <a href="https://github.com/InterstellarNerd8760/lunar-atlas">source code</a> is public.</p>
       <p>I led the concept, design, dataset selection, integration, and testing. AI tools assisted with implementation, debugging, research, and documentation. The <a href="https://github.com/InterstellarNerd8760/lunar-atlas/blob/main/docs/SUBMISSION.md#ai--super-intelligence-disclosure">authorship and AI disclosure</a> documents that assistance. The <a href="/projects/lunar-atlas/photos/">image index</a> credits the mission photographs and illustrations.</p>
       <p>Visibility statistics are sampled estimates over November 14–December 14, 2026 UTC and depend on local DEM resolution. They are not certified power-system or mission-design predictions. For technical limitations, source URLs, image provenance and the <a href="https://github.com/InterstellarNerd8760/lunar-atlas/blob/main/docs/SUBMISSION.md">full submission methodology</a>, see the public repository. NASA’s official <a href="https://www.nasa.gov/commercial-lunar-payload-services/clps-landing-sites/" target="_blank" rel="noopener">CLPS destination listing</a> documents the planned future missions.</p>
+      <h2>What the weekend taught me</h2>
+      <p>Starting with a single Shackleton terrain test and ending with a full interactive Moon required tradeoffs. Data provenance, useful controls, and clearly stated scientific limits mattered more than claiming every location had the same terrain fidelity. Seam transitions and performance remain areas to improve. I'll revisit the roadmap after judging rather than portraying unfinished ideas as features.</p>
       <h2 id="presentation">Project presentation</h2>
       <p>The seven-slide demo submitted to NASA Space Apps covers the problem, the Moon-wide viewer, terrain-horizon calculations, site comparison, Walk mode, and the NASA datasets used. It opens in your browser, supports keyboard navigation, and links back to the live explorer.</p>
       <p class="project-actions"><a class="btn btn-ghost" href="/projects/lunar-atlas/slides/">View the submitted demo <span aria-hidden="true">↗</span></a></p>
-      <h2>Practice run</h2>
+      <h2 id="practice">Practice run</h2>
       <p>Before the hackathon, I used Python in Google Colab to render one tile from LOLA data at the edge of Shackleton Crater. That was a small first test of the elevation data, before the interactive globe existed.</p>
       <figure class="practice-fig">
         <img src="/img/shackleton-practice.webp" alt="Shackleton rim practice render from LOLA data, elevation on the left and hillshade on the right" width="1400" height="661" loading="lazy" decoding="async">
