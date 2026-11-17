@@ -15,3 +15,12 @@ Before merging, validate the HTML and check links:
 ```sh
 npx html-validate index.html 404.html vault/index.html vault/week-1/index.html vault/week-2/index.html
 ```
+
+## Public source dashboard
+
+The homepage source dashboard is a **read-only view of public GitHub metadata**, not site traffic or an X/Twitter analytics integration.
+
+- `source-dashboard.js` requests the current `main` file trees of `InterstellarNerd8760/personal-site` and `InterstellarNerd8760/lunar-atlas` using GitHub's unauthenticated public REST API. The total is the sum of blob sizes on those branches (decimal MB), excluding Git history, external hosted content, and other repositories. The page contains a dated fallback snapshot for offline/API-limit scenarios.
+- The contribution heatmap requests daily public-profile contribution counts from `https://github-contributions-api.jogruber.de/v4/InterstellarNerd8760?y=last`. The third-party endpoint is cached and may fail or be unavailable; visitors still have a link to the official GitHub profile. The site displays the provider's data, not fabricated or locally inferred contributions.
+- No access tokens, private analytics data, location details or X follower exports are embedded in the client code. Do not put Cloudflare/GA API credentials in browser JavaScript. Publishing aggregated visitor statistics would require a separate authenticated backend or curated snapshot.
+- The dashboard is designed to degrade gracefully when JavaScript is disabled. If the public API rate-limits requests, the static snapshot remains visible with a clear date.
