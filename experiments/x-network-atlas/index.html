@@ -155,29 +155,61 @@
 
       <section class="xa-section" id="network" aria-labelledby="xa-network-title">
         <div class="xa-section-heading">
-          <div><p class="kicker">04 / The network</p><h2 id="xa-network-title">Connections, <em>not guesses.</em></h2></div>
-          <p>Personal accounts and conversation-level relationships will appear only when they can be traced to real data.</p>
+          <div><p class="kicker">04 / The network</p><h2 id="xa-network-title">Actual nodes. <em>Observed links.</em></h2></div>
+          <p>A small, documented first-degree map around my X account. No invented mutuals, inferred friend groups, or links between other users.</p>
         </div>
-        <div class="xa-network">
-          <div class="xa-map" aria-label="Network map awaiting confirmed links; only the center account is shown">
-            <div class="xa-map-ring" aria-hidden="true"></div>
-            <span class="xa-map-core">@rosch_weston</span>
-            <span class="xa-map-caption">Verified named edges: 0 · No fictional nodes</span>
+        <div class="xa-net-shell">
+          <div class="xa-net-toolbar">
+            <div class="xa-net-filters" role="group" aria-label="Filter by type of recorded connection">
+              <button type="button" class="xa-net-button is-active" data-net-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="xa-net-button" data-net-filter="follower" aria-pressed="false">Follower snapshot</button>
+              <button type="button" class="xa-net-button" data-net-filter="interaction" aria-pressed="false">Interactions</button>
+              <button type="button" class="xa-net-button" data-net-filter="both" aria-pressed="false">Both</button>
+            </div>
+            <div class="xa-net-right-controls">
+              <label class="skip-link" for="xa-net-search">Search accounts in the map</label>
+              <input class="xa-net-search" type="search" id="xa-net-search" placeholder="Find @account" autocomplete="off" spellcheck="false" aria-label="Search included accounts">
+              <div class="xa-net-zoom" role="group" aria-label="Map zoom controls">
+                <button class="xa-net-button" data-net-zoom="out" type="button" aria-label="Zoom out">−</button>
+                <button class="xa-net-button" data-net-zoom="in" type="button" aria-label="Zoom in">+</button>
+                <button class="xa-net-button" data-net-zoom="reset" type="button">Fit</button>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 class="xa-empty-heading">One confirmed account.<br><em>More data to come.</em></h3>
-            <p>This is intentionally a single-node map for now. Aggregate follower totals tell us how many people are connected to an account, but not which profiles, how they interact, or whether they know one another.</p>
-            <dl><dt>Origin account</dt><dd>@rosch_weston</dd><dt>Named relationships</dt><dd>Not available</dd><dt>Measured communities</dt><dd>Not available</dd><dt>Invented relationships</dt><dd>None</dd></dl>
-            <p class="xa-panel-note">A future version could add documented follows, replies, and mentions without exposing private messages or assuming unsupported edges.</p>
+          <div class="xa-net-grid">
+            <div class="xa-net-figure">
+              <div class="xa-net-topline"><span>Network / First degree</span><strong id="xa-net-status" aria-live="polite">Loading documented connections...</strong></div>
+              <svg id="xa-net-svg" class="xa-net-svg" viewBox="-550 -425 1100 850" role="group" aria-label="Interactive graph centered on @rosch_weston. Select a node or use the account list for details. Drag to pan; scroll or pinch to zoom.">
+                <desc>Only documented connections between the owner and other X accounts. Node placement groups observation types, not social proximity.</desc>
+                <g id="xa-net-layer"></g>
+              </svg>
+              <span class="xa-net-caption">Drag to pan · Scroll or pinch to zoom · Select any node to inspect evidence</span>
+            </div>
+            <aside class="xa-net-detail" aria-label="Selected account details">
+              <p class="kicker">Selected account</p>
+              <h3 id="xa-net-name">@rosch_weston</h3>
+              <p class="xa-net-description" id="xa-net-description">Center account</p>
+              <div class="xa-net-facts" id="xa-net-facts"><p class="xa-net-evidence-intro">Select a node to inspect the historical observation behind its inclusion.</p></div>
+              <a class="xa-net-profile" id="xa-net-profile" href="https://x.com/rosch_weston" target="_blank" rel="noopener noreferrer" hidden>Open profile on X ↗</a>
+              <div class="xa-net-detail-footer">These are November 2026 observations, not live API lookups. “Follower” means listed in the supplied Sorsa snapshot, not confirmed to follow today.</div>
+            </aside>
           </div>
+          <div class="xa-net-legend" aria-label="Graph legend">
+            <span><i class="both"></i>Follower + public interaction</span>
+            <span><i class="follower"></i>Recorded follower</span>
+            <span><i class="interaction"></i>Public interaction</span>
+          </div>
+          <p class="xa-net-list-title">Accounts in this snapshot · <span id="xa-net-total">10</span></p>
+          <div id="xa-net-list" class="xa-net-list" aria-label="Accessible list of accounts"><p class="xa-net-empty">Loading accounts...</p></div>
+          <p class="xa-net-method">Connection evidence comes from a previously supplied Sorsa follower export and a prior review of public X activity. The graph is a curated sample, not all 172 reported followers. Its lines only connect accounts to @rosch_weston; positions are arranged for readability, not calculated social communities. The data is stored in <a href="network-nodes.json">network-nodes.json</a> and has no live API connection.</p>
         </div>
       </section>
 
       <section class="xa-section xa-method" aria-labelledby="xa-method-title">
         <p class="kicker">05 / Method &amp; scope</p>
         <h2 id="xa-method-title" style="font:400 clamp(2.35rem,4.7vw,4.4rem)/1.05 var(--serif)">Built from <em>what's known.</em></h2>
-        <p>This observatory covers my account only. The reported analytics and activity were supplied by me in November 2026; they are not retrieved live from X. Public display does not imply any official X integration. There are no visitor uploads, other people's accounts, or speculative network clusters.</p>
-        <p>For maintainability, the public numbers live in one small <a href="profile-data.json">source snapshot</a>. I can add future observations without replacing the entire design. Individual account relationships are omitted until a reliable dataset exists.</p>
+        <p>This observatory covers my account only. The reported analytics and activity were supplied by me in November 2026; they are not retrieved live from X. Public display does not imply any official X integration. The account nodes are selected historical observations, not a complete or live network.</p>
+        <p>For maintainability, the public numbers live in one small <a href="profile-data.json">source snapshot</a>. I can add future observations without replacing the entire design. A small set of documented account relationships is included; all other relationships remain unknown.</p>
         <a class="xa-source-link" href="/experiments/">← All experiments</a>
       </section>
     </div>
@@ -196,5 +228,6 @@
   </footer>
   <script src="/script.js" defer></script>
   <script src="account.js" defer></script>
+  <script src="network.js" defer></script>
 </body>
 </html>
