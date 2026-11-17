@@ -6,7 +6,7 @@
 
   const owner = "InterstellarNerd8760";
   const repos = [
-    { repo: "personal-site", size: "site-size", exact: "site-bytes", bytes: 2444431, refreshed: false },
+    { repo: "personal-site", size: "site-size", exact: "site-bytes", bytes: 2453509, refreshed: false },
     { repo: "lunar-atlas", size: "moon-size", exact: "moon-bytes", bytes: 494865280, refreshed: false }
   ];
   const SNAPSHOT_DATE = "Nov 16, 2026";
