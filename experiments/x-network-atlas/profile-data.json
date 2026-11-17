@@ -1,0 +1,99 @@
+{
+  "version": 2,
+  "handle": "rosch_weston",
+  "accountUrl": "https://x.com/rosch_weston",
+  "sourceType": "User-reported X analytics and activity; not connected to the X API",
+  "capturedDate": "2026-11-16",
+  "reportingWindow": "Approximately November 2025–November 2026",
+  "annual": {
+    "impressions": {
+      "value": 471400,
+      "display": "471.4K",
+      "qualifier": "Approximate",
+      "description": "Impressions during the year-long analytics window."
+    },
+    "engagements": {
+      "value": 8600,
+      "display": "8.6K",
+      "qualifier": "Approximate",
+      "description": "Engagements during the same analytics window."
+    },
+    "profileVisits": {
+      "value": 1200,
+      "display": "1.2K",
+      "qualifier": "Approximate",
+      "description": "Profile visits during the same analytics window."
+    }
+  },
+  "accountSnapshot": {
+    "followers": {
+      "value": 172,
+      "display": "172",
+      "qualifier": "As reported Nov 16, 2026"
+    },
+    "verifiedFollowers": {
+      "value": 52,
+      "display": "52",
+      "qualifier": "Shown in X analytics screenshot"
+    },
+    "posts": {
+      "value": 4800,
+      "display": "~4.8K",
+      "qualifier": "Approximate lifetime post count"
+    },
+    "following": null
+  },
+  "followerObservations": [
+    {
+      "date": "2026-11-12",
+      "value": 130,
+      "approximate": true,
+      "source": "Reported as around 130 followers"
+    },
+    {
+      "date": "2026-11-16",
+      "value": 172,
+      "approximate": false,
+      "source": "Reported in X analytics review"
+    }
+  ],
+  "reportedDailyImpressions": [
+    {
+      "period": "Several preceding weeks",
+      "low": 1000,
+      "high": 1000,
+      "approximate": true
+    },
+    {
+      "period": "Several recent days",
+      "low": 4000,
+      "high": 5000,
+      "approximate": true
+    },
+    {
+      "period": "Notable single day",
+      "low": 6000,
+      "high": 6000,
+      "approximate": true
+    }
+  ],
+  "reportedActivity": {
+    "followersGainedInOneDay": 27,
+    "followersGainedOnPriorDay": 5,
+    "recentDailyFollowerChange": -3,
+    "accountsRemovedAsBots": 24,
+    "typicalStandalonePostViews": "Dozens to several hundred, with some reaching about 1K",
+    "reachPattern": "Replies have driven much of the reported reach"
+  },
+  "network": {
+    "confirmedEdges": 0,
+    "detail": "No named followers, follows, or interaction pairs are included. No social graph has been inferred from aggregate counts."
+  },
+  "caveats": [
+    "These figures were supplied in conversation from the account owner's own X analytics; this page is not a live API feed.",
+    "Annual metrics are approximate and may use different counting definitions than account snapshots.",
+    "The two follower observations are not a continuously collected historical series.",
+    "Daily reach and follower-change anecdotes have no precise day-by-day dataset.",
+    "There are no identified individual account relationships available to publish responsibly."
+  ]
+}
