@@ -406,3 +406,11 @@ pre.code-fig{white-space:pre;max-width:100%;font-size:clamp(.7rem,1.4vw,.85rem)}
 .debug-steps li{margin:0 0 .8rem;line-height:1.6}
 .debug-steps li::marker{color:var(--sky);font-family:var(--mono)}
 @media(max-width:760px){.project-count{width:100%;margin:.55rem 0 0}.diagram-frame{padding:.5rem}.band-links{gap:.9rem}.project-filter{font-size:.72rem}}
+
+/* Keep six navigation links readable on narrow laptop and tablet screens. */
+@media (min-width:761px) and (max-width:920px){
+  .site-header{gap:.8rem;padding-inline:1rem}
+  .site-nav{gap:.75rem}
+  .site-nav a{font-size:.75rem}
+  .callsign{display:none}
+}
