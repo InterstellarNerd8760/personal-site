@@ -57,10 +57,10 @@
 
   <main id="main" class="page project-page" tabindex="-1"><div class="wrap engineering-page">
 <p class="kicker"><a href="/projects/wall-e/">WALL-E</a> / Engineering notebook</p><h1>Wiring &amp; <em>diagnostics.</em></h1>
-<p class="lede">Known BME280 bench wiring from November 2026. Not a complete or flight-qualified electrical schematic.</p>
-<section class="project-detail-stack" aria-labelledby="wiring-title"><p class="kicker">01 / Confirmed bench connection</p>
+<p class="lede"><strong>Current status: the wiring is not working reliably at all. It's a real pain in the ass.</strong> This is the latest attempted BME280 wiring, not a verified working circuit or a flight-qualified schematic.</p>
+<section class="project-detail-stack" aria-labelledby="wiring-title"><p class="kicker">01 / Latest attempted bench connection · Not working reliably</p>
 <h2 class="band-title" id="wiring-title">Pico → <em>BME280.</em></h2>
-<p>This is the wiring used when the sensor appeared at address <code>0x76</code> and returned chip ID <code>0x60</code>. An intermittent <code>[Errno 5] EIO</code> still occurs, especially with loose breadboard connections.</p>
+<p>This layout occasionally allowed the sensor to appear at address <code>0x76</code> and return chip ID <code>0x60</code>, but repeated communication still fails with <code>[Errno 5] EIO</code>. Those brief successes do not establish stable wiring. The circuit is still being debugged, and no dependable measurement stream has been demonstrated.</p>
 <div class="diagram-frame"><svg viewBox="0 0 840 314" role="img" aria-labelledby="pico-title pico-desc">
 <title id="pico-title">Raspberry Pi Pico to BME280 wiring</title>
 <desc id="pico-desc">Pico pin 36 3V3 OUT to BME280 VCC, Pico ground pin 23 to GND, Pico GP16 physical pin 21 to SDA, Pico GP17 physical pin 22 to SCL.</desc>
@@ -82,7 +82,7 @@
 <section class="project-detail-stack" aria-labelledby="system-title"><p class="kicker">02 / System blocks</p><h2 class="band-title" id="system-title">Known versus <em>planned.</em></h2>
 <div class="system-block-grid">
 <div class="system-block known"><strong>Raspberry Pi Pico</strong><span>Flight computer · bench-tested</span></div>
-<div class="system-block known"><strong>BME280</strong><span>Temperature / pressure / humidity · unstable I²C</span></div>
+<div class="system-block planned"><strong>BME280</strong><span>Temperature / pressure / humidity · connection not reliably working</span></div>
 <div class="system-block planned"><strong>915 MHz LoRa</strong><span>Telemetry · radio pinout not yet verified</span></div>
 <div class="system-block planned"><strong>Data logging</strong><span>SD module removed after overheating; inspect separately</span></div>
 <div class="system-block planned"><strong>SpotTrace GPS</strong><span>Independent tracking · no Pico interface confirmed</span></div>
