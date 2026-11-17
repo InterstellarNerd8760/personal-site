@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05080f">
+  <meta name="description" content="WALL-E1 Raspberry Pi Pico and BME280 I2C wiring reference and bench debugging notes.">
+  <title>WALL-E1 Wiring and Diagnostics · Weston Rosch</title>
+  <meta name="author" content="Weston Rosch">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://westonrosch.com/projects/wall-e/wiring/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://westonrosch.com/projects/wall-e/wiring/">
+  <meta property="og:site_name" content="Weston Rosch">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="WALL-E1 Wiring and Diagnostics · Weston Rosch">
+  <meta property="og:description" content="WALL-E1 Raspberry Pi Pico and BME280 I2C wiring reference and bench debugging notes.">
+  <meta property="og:image" content="https://westonrosch.com/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Weston Rosch, Building toward what comes next, over Earth seen from orbit">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rosch_weston">
+  <meta name="twitter:creator" content="@rosch_weston">
+  <meta name="twitter:image:alt" content="Weston Rosch, Building toward what comes next, over Earth seen from orbit">
+  <meta name="twitter:title" content="WALL-E1 Wiring and Diagnostics · Weston Rosch">
+  <meta name="twitter:description" content="WALL-E1 Raspberry Pi Pico and BME280 I2C wiring reference and bench debugging notes.">
+  <meta name="twitter:image" content="https://westonrosch.com/og.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="subpage">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Weston Rosch</a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="https://moon.westonrosch.com">Moon</a>
+      <a href="/projects/">Projects</a>
+      <a href="/vault/">Vault</a>
+      <a href="/writing/" aria-current="page">Writing</a>
+      <a href="/experiments/">Experiments</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="callsign">KO6OGZ<small>amateur radio</small></span>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+
+  <main id="main" class="page project-page" tabindex="-1"><div class="wrap engineering-page">
+<p class="kicker"><a href="/projects/wall-e/">WALL-E</a> / Engineering notebook</p><h1>Wiring &amp; <em>diagnostics.</em></h1>
+<p class="lede">Known BME280 bench wiring from November 2026. Not a complete or flight-qualified electrical schematic.</p>
+<section class="project-detail-stack" aria-labelledby="wiring-title"><p class="kicker">01 / Confirmed bench connection</p>
+<h2 class="band-title" id="wiring-title">Pico → <em>BME280.</em></h2>
+<p>This is the wiring used when the sensor appeared at address <code>0x76</code> and returned chip ID <code>0x60</code>. An intermittent <code>[Errno 5] EIO</code> still occurs, especially with loose breadboard connections.</p>
+<div class="diagram-frame"><svg viewBox="0 0 840 314" role="img" aria-labelledby="pico-title pico-desc">
+<title id="pico-title">Raspberry Pi Pico to BME280 wiring</title>
+<desc id="pico-desc">Pico pin 36 3V3 OUT to BME280 VCC, Pico ground pin 23 to GND, Pico GP16 physical pin 21 to SDA, Pico GP17 physical pin 22 to SCL.</desc>
+<rect x="20" y="38" width="322" height="252" rx="10" fill="#0a1220" stroke="#5cc8f5"/>
+<rect x="508" y="38" width="312" height="252" rx="10" fill="#0a1220" stroke="#8fd1ae"/>
+<g fill="#f2f5f8" font-size="22" font-family="sans-serif"><text x="40" y="75">Raspberry Pi Pico</text><text x="530" y="75">BME280 breakout</text></g>
+<g fill="#c9d3de" font-size="16" font-family="monospace">
+<text x="40" y="120">3V3(OUT) · pin 36</text><text x="530" y="120">VCC / 3.3V</text>
+<text x="40" y="170">GND · pin 23*</text><text x="530" y="170">GND</text>
+<text x="40" y="220">GP16 · pin 21</text><text x="530" y="220">SDA</text>
+<text x="40" y="270">GP17 · pin 22</text><text x="530" y="270">SCL</text></g>
+<g fill="none" stroke-width="5" stroke-linecap="round">
+<path d="M342 115 H508" stroke="#f2f5f8"/><path d="M342 165 H508" stroke="#d1ae68"/><path d="M342 215 H508" stroke="#9ca3af"/><path d="M342 265 H508" stroke="#b099e9"/></g>
+</svg><p class="diagram-caption">Latest wire colors: white = VCC, gold = ground, black = SDA (gray in the diagram for contrast), purple = SCL. *Any correctly identified Pico GND works; physical pin 23 is one example.</p></div>
+<div class="table-wrap"><table class="pin-table"><thead><tr><th>Pico label</th><th>Board pin</th><th>BME280</th><th>Wire</th></tr></thead>
+<tbody><tr><td>3V3(OUT)</td><td>36</td><td>VCC</td><td>White</td></tr><tr><td>GND</td><td>23 (or any GND)</td><td>GND</td><td>Gold</td></tr><tr><td>GP16 · I²C0 SDA</td><td>21</td><td>SDA</td><td>Black</td></tr><tr><td>GP17 · I²C0 SCL</td><td>22</td><td>SCL</td><td>Purple</td></tr></tbody></table></div>
+<p class="quiet-note">Disconnect power before changing wiring. Use the Pico's 3.3V output for the current sensor setup; don't assume the breakout accepts 5V.</p>
+</section>
+<section class="project-detail-stack" aria-labelledby="system-title"><p class="kicker">02 / System blocks</p><h2 class="band-title" id="system-title">Known versus <em>planned.</em></h2>
+<div class="system-block-grid">
+<div class="system-block known"><strong>Raspberry Pi Pico</strong><span>Flight computer · bench-tested</span></div>
+<div class="system-block known"><strong>BME280</strong><span>Temperature / pressure / humidity · unstable I²C</span></div>
+<div class="system-block planned"><strong>915 MHz LoRa</strong><span>Telemetry · radio pinout not yet verified</span></div>
+<div class="system-block planned"><strong>Data logging</strong><span>SD module removed after overheating; inspect separately</span></div>
+<div class="system-block planned"><strong>SpotTrace GPS</strong><span>Independent tracking · no Pico interface confirmed</span></div>
+<div class="system-block planned"><strong>Power and recovery</strong><span>Battery, insulation, parachute · full test pending</span></div>
+</div><p class="quiet-note">These are functional blocks, not a claim that all components are electrically connected. LoRa and SD pins are intentionally unspecified.</p>
+</section>
+<section class="project-detail-stack" aria-labelledby="diag-title"><p class="kicker">03 / Diagnostic</p><h2 class="band-title" id="diag-title">Scan first. <em>Then read.</em></h2>
+<pre class="code-fig"><code>from machine import I2C, Pin
+i2c = I2C(0, sda=Pin(16), scl=Pin(17), freq=100_000)
+print("I2C:", [hex(a) for a in i2c.scan()])
+print("Chip ID:", hex(i2c.readfrom_mem(0x76, 0xD0, 1)[0]))
+# Expected when responding: 0x76 and 0x60</code></pre>
+<ol class="debug-steps"><li>Disconnect power and check the labels on all four Pico and sensor connections.</li>
+<li>Replace or firmly secure questionable breadboard jumpers; don't rely on holding wires by hand.</li>
+<li>Reconnect, scan, read chip ID, and repeat measurements long enough to reveal intermittent failures.</li>
+<li>If read errors continue, isolate the sensor and connections before changing the software.</li>
+<li>Keep the formerly overheating SD module disconnected until its power and wiring have been inspected.</li></ol>
+<p class="quiet-note">A scan result alone does not prove the sensor is reliable. The next milestone is repeatable measurements on secure wiring.</p>
+</section></div></main>
+
+  <footer class="site-footer">
+  <div class="footer-moon">
+    <img src="/img/moon-footer.webp" alt="" width="1600" height="280" loading="lazy" decoding="async">
+    <p class="footer-moon-credit">Moon: NASA</p>
+  </div>
+    <div class="wrap footer-inner">
+      <span>© 2026 Weston Rosch</span>
+      <nav class="footer-links" aria-label="Contact">
+        <a href="mailto:hello@westonrosch.com">hello@westonrosch.com</a>
+        <a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer">X</a>
+        <a href="https://instagram.com/rosch_weston" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <span>Earth imagery: NASA / ISS crew</span>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
