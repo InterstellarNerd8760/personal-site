@@ -86,14 +86,16 @@
     "reachPattern": "Replies have driven much of the reported reach"
   },
   "network": {
-    "confirmedEdges": 0,
-    "detail": "No named followers, follows, or interaction pairs are included. No social graph has been inferred from aggregate counts."
+    "confirmedEdges": 10,
+    "detail": "Ten curated first-degree account links from a historical follower export and previously reviewed public interactions; no live verification or cross-account links.",
+    "sourcePath": "network-nodes.json",
+    "asOf": "2026-11-16"
   },
   "caveats": [
     "These figures were supplied in conversation from the account owner's own X analytics; this page is not a live API feed.",
     "Annual metrics are approximate and may use different counting definitions than account snapshots.",
     "The two follower observations are not a continuously collected historical series.",
     "Daily reach and follower-change anecdotes have no precise day-by-day dataset.",
-    "There are no identified individual account relationships available to publish responsibly."
+    "Ten identified account nodes are now shown as historical observations; they are not a complete list of followers, not current follow verification, and not a social community graph."
   ]
 }
