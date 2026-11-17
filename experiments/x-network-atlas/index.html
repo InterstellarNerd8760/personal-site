@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05080f">
+  <meta name="description" content="An experimental, interactive atlas of an X network. Explore a clearly labeled demo or import your own X archive files locally in your browser.">
+  <title>X Network Atlas · Weston Rosch</title>
+  <meta name="author" content="Weston Rosch">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://westonrosch.com/experiments/x-network-atlas/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://westonrosch.com/experiments/x-network-atlas/">
+  <meta property="og:site_name" content="Weston Rosch">
+  <meta property="og:title" content="X Network Atlas · Weston Rosch">
+  <meta property="og:description" content="An interactive network experiment. Demo relationships are illustrative; imported archive data stays in the browser.">
+  <meta property="og:image" content="https://westonrosch.com/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="X Network Atlas · Weston Rosch">
+  <meta name="twitter:description" content="Explore connections, imports, and interactions in an interactive X network visualization.">
+  <meta name="twitter:image" content="https://westonrosch.com/og.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="atlas.css">
+</head>
+<body class="subpage atlas-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/">Weston Rosch</a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="https://moon.westonrosch.com">Moon</a>
+      <a href="/projects/">Projects</a>
+      <a href="/vault/">Vault</a>
+      <a href="/writing/">Writing</a>
+      <a href="/experiments/" aria-current="page">Experiments</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="callsign">KO6OGZ<small>amateur radio</small></span>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+
+  <main id="main" class="page" tabindex="-1">
+    <div class="wrap atlas-wrap">
+      <p class="kicker"><a href="/experiments/">Experiments</a> / Network science</p>
+      <div class="atlas-heading">
+        <div>
+          <h1>X Network <em>Atlas.</em></h1>
+          <p class="atlas-intro">A map of connections, conversations, and the small communities that form around an account. Version 0.1 is a local-first explorer, not a claim to have mapped all of X.</p>
+        </div>
+        <span class="atlas-version">Experimental / 16 Nov 2026</span>
+      </div>
+
+      <div class="atlas-mode" id="atlas-mode" role="status">ILLUSTRATIVE DEMO — These are fictional accounts and relationships, not my real X network.</div>
+      <div class="atlas-stats" aria-live="polite">
+        <div><span>Accounts</span><strong id="stat-accounts">—</strong></div>
+        <div><span>Following</span><strong id="stat-following">—</strong></div>
+        <div><span>Followers</span><strong id="stat-followers">—</strong></div>
+        <div><span>Mutuals</span><strong id="stat-mutuals">—</strong></div>
+        <div><span>Outgoing mentions</span><strong id="stat-mentions">—</strong></div>
+      </div>
+
+      <div class="atlas-layout">
+        <aside class="atlas-sidebar" aria-label="Atlas controls">
+          <section class="atlas-panel">
+            <h2>Explore</h2>
+            <label class="atlas-label" for="atlas-search">Find an account</label>
+            <input class="atlas-field" id="atlas-search" type="search" placeholder="Handle or account ID" autocomplete="off" spellcheck="false">
+            <div id="atlas-results" class="atlas-results" role="list" aria-label="Search matches"></div>
+            <label class="atlas-label" for="atlas-filter">Show connections</label>
+            <select id="atlas-filter" class="atlas-field">
+              <option value="all">All connections</option>
+              <option value="mutual">Mutual follows</option>
+              <option value="following">Following</option>
+              <option value="follower">Followers</option>
+              <option value="interaction">Mentioned or replied to</option>
+            </select>
+            <label class="atlas-label" for="atlas-limit">Graph detail</label>
+            <select id="atlas-limit" class="atlas-field">
+              <option value="150">150 accounts</option>
+              <option value="300" selected>300 accounts</option>
+              <option value="600">600 accounts</option>
+              <option value="1200">1,200 accounts</option>
+            </select>
+            <div class="atlas-action-row">
+              <button id="atlas-fit" type="button" class="atlas-button">Fit graph</button>
+              <button id="atlas-demo" type="button" class="atlas-button">Load demo</button>
+            </div>
+            <p class="atlas-hint">Drag to pan. Scroll or pinch to zoom. Select a node for details.</p>
+          </section>
+          <section class="atlas-panel">
+            <h2>Your data</h2>
+            <p>Import selected files from your X archive. Files are processed in this browser, never sent to this site.</p>
+            <label class="atlas-upload" for="atlas-files">Choose archive files <span>↗</span></label>
+            <input id="atlas-files" type="file" accept=".js,.json,.csv,.txt" multiple>
+            <p class="atlas-hint">Supports <code>following.js</code>, <code>follower.js</code>, and <code>tweets.js</code> (or <code>tweet.js</code>). Extract the archive first; don't upload the ZIP or private messages.</p>
+            <form id="atlas-add" class="atlas-add-form">
+              <label class="atlas-label" for="atlas-handle">Add an account manually</label>
+              <input class="atlas-field" id="atlas-handle" name="handle" placeholder="@handle" maxlength="16" required>
+              <label class="atlas-label" for="atlas-relation">Relationship</label>
+              <select id="atlas-relation" class="atlas-field">
+                <option value="following">I follow them</option>
+                <option value="follower">They follow me</option>
+                <option value="mutual">Mutual follow</option>
+                <option value="interaction">Mentioned in my posts</option>
+              </select>
+              <button class="atlas-button atlas-primary" type="submit">Add account</button>
+            </form>
+            <div class="atlas-action-row atlas-data-actions">
+              <button id="atlas-export" class="atlas-button" type="button">Export JSON</button>
+              <button id="atlas-clear" class="atlas-button" type="button">Clear data</button>
+            </div>
+            <p id="atlas-status" class="atlas-hint" role="status" aria-live="polite">Ready to explore.</p>
+          </section>
+        </aside>
+
+        <section class="atlas-viewport" aria-label="Interactive network map">
+          <div class="atlas-viewport-head"><span>Network / Local view</span><span id="atlas-visible-count">—</span></div>
+          <canvas id="atlas-canvas" tabindex="0" aria-label="Interactive map of the central X account and linked accounts. Use the search box for keyboard navigation."></canvas>
+          <div id="atlas-tooltip" class="atlas-tooltip" hidden></div>
+          <div class="atlas-legend" aria-label="Color key">
+            <span><i class="atlas-swatch atlas-swatch-me"></i>Center</span>
+            <span><i class="atlas-swatch atlas-swatch-mutual"></i>Mutual</span>
+            <span><i class="atlas-swatch atlas-swatch-following"></i>Following</span>
+            <span><i class="atlas-swatch atlas-swatch-follower"></i>Follower</span>
+            <span><i class="atlas-swatch atlas-swatch-interaction"></i>Interaction</span>
+          </div>
+        </section>
+
+        <aside class="atlas-detail atlas-panel" aria-label="Selected account information">
+          <span class="atlas-detail-label">Selected signal</span>
+          <h2 id="atlas-selected-name">@rosch_weston</h2>
+          <p id="atlas-selected-meta">The center of this graph.</p>
+          <div id="atlas-selected-facts" class="atlas-selected-facts"></div>
+          <a id="atlas-selected-link" class="atlas-external" href="https://x.com/rosch_weston" target="_blank" rel="noopener noreferrer">View X profile ↗</a>
+          <div class="atlas-detail-note">A follow or a mention is a recorded connection to the center account. These links do not prove that two other accounts know one another.</div>
+        </aside>
+      </div>
+
+      <section class="atlas-notes" aria-labelledby="atlas-notes-title">
+        <div><p class="kicker">How to read this</p><h2 id="atlas-notes-title">An honest map starts with <em>honest data.</em></h2></div>
+        <div class="atlas-notes-body">
+          <p><strong>Demo mode</strong> uses fictional examples so you can explore the interface. Nothing about the demonstration represents my actual followers, interactions, or communities.</p>
+          <p><strong>Archive mode</strong> uses only files you explicitly select. X archives typically list followers/following by account ID, so some nodes display numeric identifiers until post mentions provide handles. A mention represents an outgoing mention in the imported posts, not a measured conversation or endorsement.</p>
+          <p><strong>Privacy and scope:</strong> processing and saved state run in your browser's local storage. No archive data is uploaded or published by this tool. Clear data to remove the local copy; browser storage may also be cleared automatically. This is a first-degree network, not a complete X social graph.</p>
+          <p><a href="https://help.x.com/en/managing-your-account/how-to-download-your-x-archive" target="_blank" rel="noopener noreferrer">How to download your X archive ↗</a> · <a href="/experiments/">Back to experiments ↗</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-moon"><img src="/img/moon-footer.webp" alt="" width="1600" height="280" loading="lazy" decoding="async"><p class="footer-moon-credit">Moon: NASA</p></div>
+    <div class="wrap footer-inner">
+      <span>© 2026 Weston Rosch</span>
+      <nav class="footer-links" aria-label="Contact">
+        <a href="mailto:hello@westonrosch.com">hello@westonrosch.com</a>
+        <a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer">X</a>
+        <a href="/experiments/">Experiments</a>
+      </nav><span>Earth imagery: NASA / ISS crew</span>
+    </div>
+  </footer>
+  <script src="/script.js" defer></script>
+  <script src="atlas.js" defer></script>
+</body>
+</html>
