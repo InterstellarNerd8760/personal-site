@@ -5,7 +5,7 @@
   "use strict";
   const owner = "InterstellarNerd8760";
   const repos = [
-    { repo: "personal-site", size: "site-size", exact: "site-bytes", bytes: 2376033 },
+    { repo: "personal-site", size: "site-size", exact: "site-bytes", bytes: 2390113 },
     { repo: "lunar-atlas", size: "moon-size", exact: "moon-bytes", bytes: 494865280 }
   ];
   const fmt = new Intl.NumberFormat("en-US");
