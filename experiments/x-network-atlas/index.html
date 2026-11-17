@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05080f">
-  <meta name="description" content="An experimental, interactive atlas of an X network. Explore a clearly labeled demo or import your own X archive files locally in your browser.">
+  <meta name="description" content="Personal X Network Atlas for @rosch_weston: year-long impressions, engagements, follower observations, daily reach, and an honest account-specific network view.">
   <title>X Network Atlas · Weston Rosch</title>
   <meta name="author" content="Weston Rosch">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -15,11 +15,11 @@
   <meta property="og:url" content="https://westonrosch.com/experiments/x-network-atlas/">
   <meta property="og:site_name" content="Weston Rosch">
   <meta property="og:title" content="X Network Atlas · Weston Rosch">
-  <meta property="og:description" content="An interactive network experiment. Demo relationships are illustrative; imported archive data stays in the browser.">
+  <meta property="og:description" content="A personal X account observatory showing reported impressions, engagements, growth snapshots, and network data limitations.">
   <meta property="og:image" content="https://westonrosch.com/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="X Network Atlas · Weston Rosch">
-  <meta name="twitter:description" content="Explore connections, imports, and interactions in an interactive X network visualization.">
+  <meta name="twitter:description" content="An X account observatory for @rosch_weston, with reported 2026 analytics and recorded history.">
   <meta name="twitter:image" content="https://westonrosch.com/og.jpg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="atlas.css">
+  <link rel="stylesheet" href="account.css">
 </head>
 <body class="subpage atlas-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -47,110 +47,138 @@
   </header>
 
   <main id="main" class="page" tabindex="-1">
-    <div class="wrap atlas-wrap">
-      <p class="kicker"><a href="/experiments/">Experiments</a> / Network science</p>
-      <div class="atlas-heading">
-        <div>
-          <h1>X Network <em>Atlas.</em></h1>
-          <p class="atlas-intro">A map of connections, conversations, and the small communities that form around an account. Version 0.1 is a local-first explorer, not a claim to have mapped all of X.</p>
+    <div class="wrap xa-wrap" data-atlas-data="profile-data.json">
+      <header class="xa-hero">
+        <div class="xa-topline">
+          <p class="kicker"><a href="/experiments/">Experiments</a> / Account observatory</p>
+          <span class="xa-date">Personal dataset / November 2026</span>
         </div>
-        <span class="atlas-version">Experimental / 16 Nov 2026</span>
-      </div>
-
-      <div class="atlas-mode" id="atlas-mode" role="status">ILLUSTRATIVE DEMO — These are fictional accounts and relationships, not my real X network.</div>
-      <div class="atlas-stats" aria-live="polite">
-        <div><span>Accounts</span><strong id="stat-accounts">—</strong></div>
-        <div><span>Following</span><strong id="stat-following">—</strong></div>
-        <div><span>Followers</span><strong id="stat-followers">—</strong></div>
-        <div><span>Mutuals</span><strong id="stat-mutuals">—</strong></div>
-        <div><span>Outgoing mentions</span><strong id="stat-mentions">—</strong></div>
-      </div>
-
-      <div class="atlas-layout">
-        <aside class="atlas-sidebar" aria-label="Atlas controls">
-          <section class="atlas-panel">
-            <h2>Explore</h2>
-            <label class="atlas-label" for="atlas-search">Find an account</label>
-            <input class="atlas-field" id="atlas-search" type="search" placeholder="Handle or account ID" autocomplete="off" spellcheck="false">
-            <div id="atlas-results" class="atlas-results" role="list" aria-label="Search matches"></div>
-            <label class="atlas-label" for="atlas-filter">Show connections</label>
-            <select id="atlas-filter" class="atlas-field">
-              <option value="all">All connections</option>
-              <option value="mutual">Mutual follows</option>
-              <option value="following">Following</option>
-              <option value="follower">Followers</option>
-              <option value="interaction">Mentioned or replied to</option>
-            </select>
-            <label class="atlas-label" for="atlas-limit">Graph detail</label>
-            <select id="atlas-limit" class="atlas-field">
-              <option value="150">150 accounts</option>
-              <option value="300" selected>300 accounts</option>
-              <option value="600">600 accounts</option>
-              <option value="1200">1,200 accounts</option>
-            </select>
-            <div class="atlas-action-row">
-              <button id="atlas-fit" type="button" class="atlas-button">Fit graph</button>
-              <button id="atlas-demo" type="button" class="atlas-button">Load demo</button>
+        <div class="xa-hero-grid">
+          <div>
+            <h1 class="xa-heading">X Network <em>Atlas.</em></h1>
+            <p class="xa-hero-copy">One account, one year of signal. A record of my reach, conversations, and evolving audience on X, built from actual reported statistics instead of invented connections.</p>
+            <div class="xa-links">
+              <a href="https://x.com/rosch_weston" target="_blank" rel="noopener noreferrer">View @rosch_weston ↗</a>
+              <a href="#metrics">Explore the numbers ↓</a>
+              <a href="#network">The network ↓</a>
             </div>
-            <p class="atlas-hint">Drag to pan. Scroll or pinch to zoom. Select a node for details.</p>
-          </section>
-          <section class="atlas-panel">
-            <h2>Your data</h2>
-            <p>Import selected files from your X archive. Files are processed in this browser, never sent to this site.</p>
-            <label class="atlas-upload" for="atlas-files">Choose archive files <span>↗</span></label>
-            <input id="atlas-files" type="file" accept=".js,.json,.csv,.txt" multiple>
-            <p class="atlas-hint">Supports <code>following.js</code>, <code>follower.js</code>, and <code>tweets.js</code> (or <code>tweet.js</code>). Extract the archive first; don't upload the ZIP or private messages.</p>
-            <form id="atlas-add" class="atlas-add-form">
-              <label class="atlas-label" for="atlas-handle">Add an account manually</label>
-              <input class="atlas-field" id="atlas-handle" name="handle" placeholder="@handle" maxlength="16" required>
-              <label class="atlas-label" for="atlas-relation">Relationship</label>
-              <select id="atlas-relation" class="atlas-field">
-                <option value="following">I follow them</option>
-                <option value="follower">They follow me</option>
-                <option value="mutual">Mutual follow</option>
-                <option value="interaction">Mentioned in my posts</option>
-              </select>
-              <button class="atlas-button atlas-primary" type="submit">Add account</button>
-            </form>
-            <div class="atlas-action-row atlas-data-actions">
-              <button id="atlas-export" class="atlas-button" type="button">Export JSON</button>
-              <button id="atlas-clear" class="atlas-button" type="button">Clear data</button>
-            </div>
-            <p id="atlas-status" class="atlas-hint" role="status" aria-live="polite">Ready to explore.</p>
-          </section>
-        </aside>
-
-        <section class="atlas-viewport" aria-label="Interactive network map">
-          <div class="atlas-viewport-head"><span>Network / Local view</span><span id="atlas-visible-count">—</span></div>
-          <canvas id="atlas-canvas" tabindex="0" aria-label="Interactive map of the central X account and linked accounts. Use the search box for keyboard navigation."></canvas>
-          <div id="atlas-tooltip" class="atlas-tooltip" hidden></div>
-          <div class="atlas-legend" aria-label="Color key">
-            <span><i class="atlas-swatch atlas-swatch-me"></i>Center</span>
-            <span><i class="atlas-swatch atlas-swatch-mutual"></i>Mutual</span>
-            <span><i class="atlas-swatch atlas-swatch-following"></i>Following</span>
-            <span><i class="atlas-swatch atlas-swatch-follower"></i>Follower</span>
-            <span><i class="atlas-swatch atlas-swatch-interaction"></i>Interaction</span>
           </div>
-        </section>
-
-        <aside class="atlas-detail atlas-panel" aria-label="Selected account information">
-          <span class="atlas-detail-label">Selected signal</span>
-          <h2 id="atlas-selected-name">@rosch_weston</h2>
-          <p id="atlas-selected-meta">The center of this graph.</p>
-          <div id="atlas-selected-facts" class="atlas-selected-facts"></div>
-          <a id="atlas-selected-link" class="atlas-external" href="https://x.com/rosch_weston" target="_blank" rel="noopener noreferrer">View X profile ↗</a>
-          <div class="atlas-detail-note">A follow or a mention is a recorded connection to the center account. These links do not prove that two other accounts know one another.</div>
-        </aside>
-      </div>
-
-      <section class="atlas-notes" aria-labelledby="atlas-notes-title">
-        <div><p class="kicker">How to read this</p><h2 id="atlas-notes-title">An honest map starts with <em>honest data.</em></h2></div>
-        <div class="atlas-notes-body">
-          <p><strong>Demo mode</strong> uses fictional examples so you can explore the interface. Nothing about the demonstration represents my actual followers, interactions, or communities.</p>
-          <p><strong>Archive mode</strong> uses only files you explicitly select. X archives typically list followers/following by account ID, so some nodes display numeric identifiers until post mentions provide handles. A mention represents an outgoing mention in the imported posts, not a measured conversation or endorsement.</p>
-          <p><strong>Privacy and scope:</strong> processing and saved state run in your browser's local storage. No archive data is uploaded or published by this tool. Clear data to remove the local copy; browser storage may also be cleared automatically. This is a first-degree network, not a complete X social graph.</p>
-          <p><a href="https://help.x.com/en/managing-your-account/how-to-download-your-x-archive" target="_blank" rel="noopener noreferrer">How to download your X archive ↗</a> · <a href="/experiments/">Back to experiments ↗</a></p>
+          <div class="xa-hub" aria-label="Illustrative orbital graphic centered on the X account @rosch_weston; rings do not represent real relationships">
+            <svg viewBox="0 0 440 440" aria-hidden="true" focusable="false">
+              <circle cx="220" cy="220" r="163"></circle>
+              <circle cx="220" cy="220" r="120"></circle>
+              <circle cx="220" cy="220" r="84"></circle>
+              <circle cx="220" cy="220" r="198" stroke-dasharray="3 12"></circle>
+              <path class="tick" d="M220 18V38 M220 402V422 M18 220H38 M402 220H422 M78 78L93 93 M347 347L362 362 M78 362L93 347 M347 93L362 78" fill="none"></path>
+            </svg>
+            <div class="xa-center"><strong>@rosch_weston</strong><span>origin node</span></div>
+            <span class="xa-hub-foot">Schematic only · No external accounts mapped</span>
+          </div>
         </div>
+        <p class="xa-caution" data-as-of>Source snapshot: 2026-11-16 · User-reported X analytics; not a live API feed. The orbit illustration is decorative, not a mapped network.</p>
+      </header>
+
+      <section class="xa-section" id="metrics" aria-labelledby="xa-metrics-title">
+        <div class="xa-section-heading">
+          <div><p class="kicker">01 / The big picture</p><h2 id="xa-metrics-title">A year of <em>signal.</em></h2></div>
+          <p>Figures reported from X analytics for approximately November 2025 through November 2026. Rounded values are not exact API records.</p>
+        </div>
+        <div class="xa-grid">
+          <div class="xa-stat xa-stat-primary"><span class="xa-stat-label">Post impressions</span><strong class="xa-stat-value" data-metric-value="impressions">471.4K</strong><small>Approx. one-year total</small></div>
+          <div class="xa-stat"><span class="xa-stat-label">Engagements</span><strong class="xa-stat-value" data-metric-value="engagements">8.6K</strong><small>Approx. one-year total</small></div>
+          <div class="xa-stat"><span class="xa-stat-label">Profile visits</span><strong class="xa-stat-value" data-metric-value="visits">1.2K</strong><small>Approx. one-year total</small></div>
+          <div class="xa-stat"><span class="xa-stat-label">Followers</span><strong class="xa-stat-value" data-metric-value="followers">172</strong><small>November 16 snapshot</small></div>
+        </div>
+        <div class="xa-secondary-stats" aria-label="Additional account snapshot metrics">
+          <div><strong data-metric-value="posts">~4.8K</strong> lifetime posts <span>· approximate</span></div>
+          <div><strong data-metric-value="verified">52</strong> verified followers <span>· reported in analytics</span></div>
+          <div><strong>Following: —</strong> <span>· not available in source</span></div>
+        </div>
+      </section>
+
+      <section class="xa-section" id="activity" aria-labelledby="xa-activity-title">
+        <div class="xa-section-heading">
+          <div><p class="kicker">02 / Activity</p><h2 id="xa-activity-title">When the <em>signal changes.</em></h2></div>
+          <p>These are approximate periods and standout observations reported on November 16, not a day-by-day export.</p>
+        </div>
+        <div class="xa-two-col">
+          <article class="xa-panel">
+            <h3>Daily impressions</h3>
+            <p>Recent reach increased substantially, with replies generating much of the attention.</p>
+            <div class="xa-bar-row">
+              <div class="xa-bar-head"><span>Several preceding weeks</span><strong>~1K/day</strong></div>
+              <div class="xa-bar-track"><div class="xa-bar-fill" style="--w:16.7%"></div></div>
+            </div>
+            <div class="xa-bar-row">
+              <div class="xa-bar-head"><span>Several recent days</span><strong>~4–5K/day</strong></div>
+              <div class="xa-bar-track"><div class="xa-bar-fill" style="--w:75%"></div></div>
+            </div>
+            <div class="xa-bar-row">
+              <div class="xa-bar-head"><span>Notable high day</span><strong>~6K</strong></div>
+              <div class="xa-bar-track"><div class="xa-bar-fill" style="--w:100%"></div></div>
+            </div>
+            <p class="xa-panel-note">Bars are illustrative comparisons of reported magnitudes, scaled to the ~6K high day. Exact dates and measured daily records are unavailable.</p>
+          </article>
+          <article class="xa-panel">
+            <h3>Audience movement</h3>
+            <p>Individual days can swing quickly, especially around high-visibility replies and account cleanup.</p>
+            <div class="xa-highlights">
+              <div class="xa-highlight"><strong>+27</strong><span>Followers gained in one reported day</span></div>
+              <div class="xa-highlight"><strong>+5</strong><span>Followers gained on the preceding reported day</span></div>
+              <div class="xa-highlight"><strong>−3</strong><span>Most recent reported daily change</span></div>
+              <div class="xa-highlight"><strong>24</strong><span>Accounts removed during a bot cleanup</span></div>
+            </div>
+            <p class="xa-panel-note">Changes come from personal observations, not a complete time-series dataset. They are not necessarily consecutive with the follower snapshots below.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="xa-section" id="history" aria-labelledby="xa-history-title">
+        <div class="xa-section-heading">
+          <div><p class="kicker">03 / Recorded snapshots</p><h2 id="xa-history-title">Two points in <em>time.</em></h2></div>
+          <p>Real observations are valuable, even when they don't yet form a complete history.</p>
+        </div>
+        <div class="xa-timeline" aria-label="Two reported follower observations">
+          <article class="xa-time" data-follower-date="2026-11-12">
+            <time datetime="2026-11-12">November 12, 2026</time>
+            <strong data-snapshot-value>~130</strong>
+            <p>Approximate followers, reported during a conversation about growing on X.</p>
+          </article>
+          <article class="xa-time" data-follower-date="2026-11-16">
+            <time datetime="2026-11-16">November 16, 2026</time>
+            <strong data-snapshot-value>172</strong>
+            <p>Follower count reported from the latest analytics review.</p>
+          </article>
+        </div>
+        <p class="xa-caution">These are discrete, differently sourced observations, not a continuous growth curve. The difference should not be interpreted as a verified four-day net growth rate.</p>
+      </section>
+
+      <section class="xa-section" id="network" aria-labelledby="xa-network-title">
+        <div class="xa-section-heading">
+          <div><p class="kicker">04 / The network</p><h2 id="xa-network-title">Connections, <em>not guesses.</em></h2></div>
+          <p>Personal accounts and conversation-level relationships will appear only when they can be traced to real data.</p>
+        </div>
+        <div class="xa-network">
+          <div class="xa-map" aria-label="Network map awaiting confirmed links; only the center account is shown">
+            <div class="xa-map-ring" aria-hidden="true"></div>
+            <span class="xa-map-core">@rosch_weston</span>
+            <span class="xa-map-caption">Verified named edges: 0 · No fictional nodes</span>
+          </div>
+          <div>
+            <h3 class="xa-empty-heading">One confirmed account.<br><em>More data to come.</em></h3>
+            <p>This is intentionally a single-node map for now. Aggregate follower totals tell us how many people are connected to an account, but not which profiles, how they interact, or whether they know one another.</p>
+            <dl><dt>Origin account</dt><dd>@rosch_weston</dd><dt>Named relationships</dt><dd>Not available</dd><dt>Measured communities</dt><dd>Not available</dd><dt>Invented relationships</dt><dd>None</dd></dl>
+            <p class="xa-panel-note">A future version could add documented follows, replies, and mentions without exposing private messages or assuming unsupported edges.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="xa-section xa-method" aria-labelledby="xa-method-title">
+        <p class="kicker">05 / Method &amp; scope</p>
+        <h2 id="xa-method-title" style="font:400 clamp(2.35rem,4.7vw,4.4rem)/1.05 var(--serif)">Built from <em>what's known.</em></h2>
+        <p>This observatory covers my account only. The reported analytics and activity were supplied by me in November 2026; they are not retrieved live from X. Public display does not imply any official X integration. There are no visitor uploads, other people's accounts, or speculative network clusters.</p>
+        <p>For maintainability, the public numbers live in one small <a href="profile-data.json">source snapshot</a>. I can add future observations without replacing the entire design. Individual account relationships are omitted until a reliable dataset exists.</p>
+        <a class="xa-source-link" href="/experiments/">← All experiments</a>
       </section>
     </div>
   </main>
@@ -167,6 +195,6 @@
     </div>
   </footer>
   <script src="/script.js" defer></script>
-  <script src="atlas.js" defer></script>
+  <script src="account.js" defer></script>
 </body>
 </html>
