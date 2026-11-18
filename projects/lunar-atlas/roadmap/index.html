@@ -80,7 +80,7 @@
     <article class="wrap entry prose">
       <p class="kicker"><a href="/projects/lunar-atlas/">Lunar Atlas</a> / Development roadmap</p>
       <h1>The future of Lunar Atlas</h1>
-      <p class="roadmap-meta">Working roadmap · November 17, 2026 · Post-hackathon</p>
+      <p class="roadmap-meta">Working roadmap · November 18, 2026 · Post-hackathon</p>
       <p class="roadmap-intro">The first release is a browser-based 3D Moon explorer built for NASA Space Apps 2026. The next goal is not just more features: it is a more accurate, more convincing, and more comprehensive atlas of lunar exploration—past, present, and future.</p>
       <p class="project-actions">
         <a class="btn btn-solid" href="https://moon.westonrosch.com/">Explore the current atlas <span aria-hidden="true">↗</span></a>
@@ -90,7 +90,7 @@
         <p><strong>Version boundary.</strong> This is a living plan for development after the November 2026 hackathon submission. Nothing on this page implies that an unfinished capability is already in the submitted viewer. The original Lunar Atlas repository and submission remain untouched by these notes.</p>
       </div>
       <nav class="roadmap-index" aria-label="Roadmap sections">
-        <a href="#priorities">Immediate priorities</a><a href="#history">Historical playback</a><a href="#science">Science layers</a><a href="#data">Data and accuracy</a><a href="#missions">Mission catalog</a><a href="#phases">Development phases</a>
+        <a href="#priorities">Immediate priorities</a><a href="#engineering">Engineering audit</a><a href="#history">Historical playback</a><a href="#science">Science layers</a><a href="#data">Data and accuracy</a><a href="#missions">Mission catalog</a><a href="#phases">Development phases</a>
       </nav>
       <section class="roadmap-section" id="priorities">
         <p class="roadmap-eyebrow">01 / Quality first</p>
@@ -104,6 +104,29 @@
           <div class="feature"><span class="flag">High priority · Content</span><h3>Complete the photo library</h3><p>Integrate missing site photographs, mission imagery, renders and historical pictures. Add credits, source links, captions, provenance and clear labeling for photographs versus illustrations.</p></div>
           <div class="feature"><span class="flag secondary">Incremental · Refinement</span><h3>Mobile and interface</h3><p>The mobile experience already works reasonably well. Improve touch-camera precision, control spacing, menus, performance, and panel handling selectively rather than rebuilding mobile support.</p></div>
         </div>
+      </section>
+
+      <section class="roadmap-section" id="engineering">
+        <p class="roadmap-eyebrow">02 / Repository-informed backlog · November 18, 2026</p>
+        <h2>Controls, rendering and performance: technical audit</h2>
+        <p>This backlog was prepared from the submitted <a href="https://github.com/InterstellarNerd8760/lunar-atlas">Lunar Atlas repository</a>, particularly <code>src/terrain.js</code>, <code>src/moon.js</code>, <code>src/flight.js</code>, and <code>docs/HANDOFF.md</code>. These are proposed changes, not claims that each issue has been reproduced in a browser. Keep the submitted application unchanged until post-review development is appropriate.</p>
+        <table class="roadmap-table">
+          <thead><tr><th scope="col">Priority / code</th><th scope="col">Proposed change and verification</th></tr></thead>
+          <tbody>
+            <tr><td>P0 · <code>src/terrain.js</code></td><td><strong>LOD-independent normals:</strong> The handoff identifies slope estimation based on tile spacing (<code>step = max(tile edge / GRID, 40 m)</code>) as a source of shading discontinuities. Select a normal sampling scale from the underlying DEM resolution rather than tile LOD, then check Apollo 11, 15, 16, 17 and Shackleton at relief ×1 and ×4.</td></tr>
+            <tr><td>P0 · <code>src/terrain.js</code></td><td><strong>Stop grain shimmer:</strong> Introduce derivative-aware, distance-aware filtering of procedural grain. Verify it does not flicker during low-altitude motion and explicitly distinguish synthetic micro-relief from source-measured elevation.</td></tr>
+            <tr><td>P0 · <code>src/terrain.js</code></td><td><strong>Terrain continuity:</strong> Inspect transitions from global LOLA to 125 m SLDEM regions and 2–5 m site DTMs. Tune blending based on actual visual tests, check height and normal continuity at seams, and ensure geometry and horizon calculations use documented data-resolution rules.</td></tr>
+            <tr><td>P0 · <code>src/moon.js</code>, <code>src/flight.js</code></td><td><strong>Unify movement behavior:</strong> Preserve orbit, free-flight and walk modes but add smooth acceleration/deceleration, adjustable sensitivity, clearer speed and altitude readouts, predictable surface-relative orientation, and consistent keyboard/touch handling. Re-test Shift run, moving jumps, drag look, pointer lock and mode exits.</td></tr>
+            <tr><td>P1 · <code>src/moon.js</code></td><td><strong>Walk refinement:</strong> Existing implementation uses 1.5 m/s walking, 4 m/s running and a lunar-gravity jump model. Add optional, subtle head-bob and footstep feedback, terrain-following improvements and slope/collision checks; respect reduced-motion preferences.</td></tr>
+            <tr><td>P1 · <code>src/terrain.js</code>, <code>src/moon.js</code></td><td><strong>Adaptive graphics presets:</strong> Current quadtree limits include <code>MAX_LEAVES = 210</code> and <code>PIXEL_TARGET = 8</code>, while renderer DPR is capped at 1.25. Investigate Low/Balanced/High settings for tile count, target pixel error, resolution scale, texture quality and optional shader effects. Benchmark rather than promising a fixed FPS.</td></tr>
+            <tr><td>P1 · <code>src/terrain.js</code></td><td><strong>Tile scheduling and caching:</strong> Profile geometry construction, level transitions, memory use and re-meshing after the higher-resolution LOLA grid loads. Consider worker-based meshing only if measurement demonstrates a benefit, accounting for DEM transfer and duplication costs. Check loading order when moving quickly across the Moon.</td></tr>
+            <tr><td>P1 · <code>src/terrain.js</code></td><td><strong>Visual fidelity without false precision:</strong> Improve WAC, polar-cap transitions and optional high-resolution imagery streaming; maintain a clear boundary between actual LROC/LOLA products and artistic procedural details. Test imagery-only and solar-lighting modes separately.</td></tr>
+            <tr><td>P1 · <code>src/moon.js</code>, <code>src/help.js</code></td><td><strong>Navigation usability:</strong> Expose a compact live control legend for each mode, allow sensitivity and keybinding customization, provide reset camera/return to orbit, and keep a clean UI-hidden cinematic view. Mobile controls must stay usable without obscuring the horizon.</td></tr>
+            <tr><td>P2 · <code>scripts/build_terrain_layers.py</code></td><td><strong>Broaden regional coverage:</strong> Extend the intermediate terrain layer beyond six Apollo regions where suitable source data exists, recording geographic limitations, resolution, processing pipeline and provenance. Do not label unprocessed locations as high-resolution coverage.</td></tr>
+            <tr><td>P2 · tests / documentation</td><td><strong>Regression harness:</strong> Add deterministic DEM-seam and normal tests, representative screenshots at fixed locations, performance measurements on desktop/mobile, and checks for walk/run/jump and high-speed camera motion. Keep the original NASA submission reproducible.</td></tr>
+          </tbody>
+        </table>
+        <p class="roadmap-note"><strong>Implementation order:</strong> (1) capture reproducible baseline screenshots and FPS; (2) fix normals and grain shimmer; (3) validate seam blending; (4) polish controls; (5) introduce quality presets; (6) expand terrain coverage. Reassess after each stage before adding heavier visual effects.</p>
       </section>
       <section class="roadmap-section" id="history">
         <p class="roadmap-eyebrow">02 / Signature future feature</p>
@@ -179,7 +202,7 @@
         </table>
         <p>This ordering is provisional. The first goal is to protect the existing working explorer and improve it incrementally after the hackathon review period.</p>
       </section>
-      <p class="roadmap-last">Last drafted November 17, 2026 · Aspirational features are not commitments or current capabilities.</p>
+      <p class="roadmap-last">Last revised November 18, 2026 · Aspirational features are not commitments or current capabilities.</p>
       <p class="project-actions"><a class="btn btn-ghost" href="/projects/lunar-atlas/">Back to the project</a><a class="btn btn-ghost" href="https://github.com/InterstellarNerd8760/lunar-atlas">View submitted source ↗</a></p>
     </article>
   </main>
