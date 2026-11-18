@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05080f">
+  <meta name="description" content="The post-hackathon roadmap for Centauri Lunar Atlas: higher-fidelity lunar terrain, spacecraft models, historical mission playback, scientific layers, and future lunar exploration.">
+  <meta name="author" content="Weston Rosch">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Lunar Atlas · Development roadmap · Weston Rosch</title>
+  <link rel="canonical" href="https://westonrosch.com/projects/lunar-atlas/roadmap/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Weston Rosch">
+  <meta property="og:url" content="https://westonrosch.com/projects/lunar-atlas/roadmap/">
+  <meta property="og:title" content="Lunar Atlas — Future development roadmap">
+  <meta property="og:description" content="Making Lunar Atlas more accurate, visually convincing, historically complete, and scientifically useful.">
+  <meta property="og:image" content="https://westonrosch.com/projects/lunar-atlas/south-pole.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  
+<style>
+.roadmap-page{padding-bottom:5rem}
+.roadmap-page .entry{max-width:68rem}
+.roadmap-page .roadmap-intro{max-width:49rem;font-size:1.13rem;color:var(--text-2);line-height:1.7}
+.roadmap-page .roadmap-meta{font:500 .69rem/1.7 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin:.7rem 0 2rem}
+.roadmap-page .roadmap-lede{padding:1.55rem 1.7rem;border:1px solid var(--line-2);background:linear-gradient(135deg,rgba(92,200,245,.07),rgba(92,200,245,0));margin:2.2rem 0}
+.roadmap-page .roadmap-lede p{margin:0}
+.roadmap-page .roadmap-index{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.75rem 0 3rem}
+.roadmap-page .roadmap-index a{text-decoration:none;color:var(--text);border:1px solid var(--line);padding:.4rem .7rem;font:400 .72rem/1.4 var(--mono);transition:border-color .2s,color .2s}
+.roadmap-page .roadmap-index a:hover{border-color:var(--sky);color:var(--sky)}
+.roadmap-page section.roadmap-section{border-top:1px solid var(--line-2);padding:2.7rem 0 1rem;scroll-margin-top:6rem}
+.roadmap-page .roadmap-section h2{font:400 clamp(1.7rem,3.5vw,2.5rem)/1.17 var(--serif);margin:0 0 1rem}
+.roadmap-page .roadmap-section>p{max-width:49rem}
+.roadmap-page .roadmap-eyebrow{color:var(--sky);text-transform:uppercase;letter-spacing:.14em;font:500 .65rem/1.5 var(--mono);margin:0 0 .7rem}
+.roadmap-page .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem;margin:1.5rem 0 2rem}
+.roadmap-page .feature{border:1px solid var(--line);background:rgba(15,26,43,.35);padding:1.1rem 1.2rem}
+.roadmap-page .feature h3{font:500 1rem/1.35 var(--sans);margin:0 0 .45rem}
+.roadmap-page .feature p{font-size:.91rem;color:var(--text-2);margin:0}
+.roadmap-page .feature .flag{display:inline-block;margin:0 0 .75rem;color:var(--sky);font:500 .62rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.roadmap-page .feature .flag.secondary{color:var(--text-3)}
+.roadmap-page .feature ul{font-size:.88rem;color:var(--text-2);padding-left:1.15rem;margin:.6rem 0 0}
+.roadmap-page .feature li+li{margin-top:.25rem}
+.roadmap-page .historic-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.3rem;margin:1.5rem 0}
+.roadmap-page .historic-track div{border-top:2px solid var(--sky);padding:.9rem .7rem;color:var(--text-2);font-size:.82rem}
+.roadmap-page .historic-track strong{display:block;color:var(--white);font:500 .83rem/1.4 var(--mono);margin-bottom:.35rem}
+.roadmap-page .roadmap-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:.87rem}
+.roadmap-page .roadmap-table th,.roadmap-page .roadmap-table td{text-align:left;vertical-align:top;padding:.8rem .7rem;border-bottom:1px solid var(--line)}
+.roadmap-page .roadmap-table th{color:var(--white);font:500 .72rem var(--mono)}
+.roadmap-page .roadmap-table td:first-child{width:21%;color:var(--white)}
+.roadmap-page .roadmap-note{border-left:2px solid var(--sky);padding:.1rem 1rem;color:var(--text-2);font-size:.92rem;margin:1.5rem 0}
+.roadmap-page .roadmap-status{color:var(--sky);font:500 .73rem var(--mono)}
+.roadmap-page .roadmap-last{font:400 .72rem var(--mono);color:var(--text-3)}
+@media(max-width:670px){.roadmap-page .feature-grid{grid-template-columns:1fr}.roadmap-page .historic-track{grid-template-columns:repeat(2,minmax(0,1fr))}.roadmap-page .roadmap-table td:first-child{width:32%}.roadmap-page .roadmap-lede{padding:1.1rem}}
+</style>
+</head>
+<body class="subpage roadmap-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/">Weston Rosch</a>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="https://moon.westonrosch.com">Moon</a>
+      <a href="/projects/" aria-current="page">Projects</a>
+      <a href="/vault/">Vault</a>
+      <a href="/writing/">Writing</a>
+      <a href="/experiments/">Experiments</a>
+      <a href="/about/">About</a>
+    </nav>
+    <span class="callsign">KO6OGZ<small>amateur radio</small></span>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+  <main id="main" class="page project-page" tabindex="-1">
+    <article class="wrap entry prose">
+      <p class="kicker"><a href="/projects/lunar-atlas/">Lunar Atlas</a> / Development roadmap</p>
+      <h1>The future of Lunar Atlas</h1>
+      <p class="roadmap-meta">Working roadmap · November 17, 2026 · Post-hackathon</p>
+      <p class="roadmap-intro">The first release is a browser-based 3D Moon explorer built for NASA Space Apps 2026. The next goal is not just more features: it is a more accurate, more convincing, and more comprehensive atlas of lunar exploration—past, present, and future.</p>
+      <p class="project-actions">
+        <a class="btn btn-solid" href="https://moon.westonrosch.com/">Explore the current atlas <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="/projects/lunar-atlas/">Read the original project write-up</a>
+      </p>
+      <div class="roadmap-lede">
+        <p><strong>Version boundary.</strong> This is a living plan for development after the November 2026 hackathon submission. Nothing on this page implies that an unfinished capability is already in the submitted viewer. The original Lunar Atlas repository and submission remain untouched by these notes.</p>
+      </div>
+      <nav class="roadmap-index" aria-label="Roadmap sections">
+        <a href="#priorities">Immediate priorities</a><a href="#history">Historical playback</a><a href="#science">Science layers</a><a href="#data">Data and accuracy</a><a href="#missions">Mission catalog</a><a href="#phases">Development phases</a>
+      </nav>
+      <section class="roadmap-section" id="priorities">
+        <p class="roadmap-eyebrow">01 / Quality first</p>
+        <h2>Make the Moon feel real</h2>
+        <p>Prioritize fidelity over unnecessary redesign. The existing terrain and mobile controls are usable foundations, but several parts of the experience should feel more polished and natural.</p>
+        <div class="feature-grid">
+          <div class="feature"><span class="flag">High priority · Planned</span><h3>Spacecraft and lander models</h3><p>Add carefully sourced 3D models of Apollo spacecraft, Luna and Surveyor landers, Chang’e missions, CLPS spacecraft, rovers, and relevant future vehicles. Show them only where and when appropriate; distinguish real models from artistic reconstructions.</p></div>
+          <div class="feature"><span class="flag">High priority · Refinement</span><h3>Camera and movement</h3><p>Improve flight, orbit and ground-level camera behavior; smooth transitions; KSP-like controls; stable terrain-relative orientation; intuitive pitch, yaw, roll and speed changes. Refine Walk mode, running and jumping without sacrificing usability.</p></div>
+          <div class="feature"><span class="flag">High priority · Refinement</span><h3>Better terrain and textures</h3><p>Reduce visible local-DEM seams, slab artifacts and projection issues. Improve terrain LOD, surface shading, close-up visual detail, high-resolution imagery streaming, and transitions between orbital and eye-level views.</p></div>
+          <div class="feature"><span class="flag">High priority · Refinement</span><h3>Sun and lighting</h3><p>Improve how the Sun looks while keeping its geometry and lighting physically meaningful. Refine surface shadows, glare, changing illumination and sunrise/sunset appearance; make visual effects optional when they are not scientifically literal.</p></div>
+          <div class="feature"><span class="flag">High priority · Content</span><h3>Complete the photo library</h3><p>Integrate missing site photographs, mission imagery, renders and historical pictures. Add credits, source links, captions, provenance and clear labeling for photographs versus illustrations.</p></div>
+          <div class="feature"><span class="flag secondary">Incremental · Refinement</span><h3>Mobile and interface</h3><p>The mobile experience already works reasonably well. Improve touch-camera precision, control spacing, menus, performance, and panel handling selectively rather than rebuilding mobile support.</p></div>
+        </div>
+      </section>
+      <section class="roadmap-section" id="history">
+        <p class="roadmap-eyebrow">02 / Signature future feature</p>
+        <h2>All of lunar exploration, through time</h2>
+        <p>A historical time machine for the Moon: move backward or forward in time and watch lunar exploration unfold. Landers appear when they arrive; spacecraft can be shown in lunar orbit or on approach where sufficiently reliable flight data exists; historical locations accumulate over decades.</p>
+        <div class="historic-track" aria-label="Illustrative historical periods">
+          <div><strong>1950s–1960s</strong>First probes, impacts, orbiters and soft landings</div>
+          <div><strong>1960s–1970s</strong>Apollo, Luna, Surveyor and lunar rovers</div>
+          <div><strong>1990s–2020s</strong>Modern orbital science and renewed international missions</div>
+          <div><strong>Future</strong>Artemis, commercial deliveries and missions as they occur</div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature"><h3>Historical mission timeline</h3><p>Scrub through dates, search missions and jump to milestones: launch, lunar arrival, orbit insertion, landing, surface operations and departure where applicable.</p></div>
+          <div class="feature"><h3>Spacecraft in motion</h3><p>Visualize lunar-orbiting craft, incoming trajectories, descent and landed state. Use documented ephemerides and mission events when available. Clearly label any approximate or reconstructed path; never invent precise flight tracks.</p></div>
+          <div class="feature"><h3>An evolving lunar map</h3><p>Show which missions had reached the Moon at a selected date. Add new successful and unsuccessful missions as their status and coordinates become known; preserve accurate historical states.</p></div>
+          <div class="feature"><h3>Time-aware mission information</h3><p>Open a spacecraft to see its mission chronology, national or organizational operator, photography, scientific objectives, artifacts and archived sources.</p></div>
+        </div>
+        <p class="roadmap-note">Long-range inspiration: a much larger space atlas showing satellites and missions across the Solar System through history. That is a potential separate expansion, not a promise that every Earth satellite belongs in the lunar viewer.</p>
+      </section>
+      <section class="roadmap-section" id="science">
+        <p class="roadmap-eyebrow">03 / Scientific exploration</p>
+        <h2>Layers that make the data useful</h2>
+        <p>Build on the existing terrain-horizon sunlight, Earth visibility and site-comparison work. Make each layer selectable and explain its source, spatial coverage, assumptions and uncertainty.</p>
+        <div class="feature-grid">
+          <div class="feature"><span class="flag secondary">Existing foundation · Expand</span><h3>Illumination and visibility</h3><p>More flexible date ranges, better solar-disk and terrain-shadow treatment, sunlit time, longest darkness, and line of sight to Earth.</p></div>
+          <div class="feature"><span class="flag">New layer · Research</span><h3>Water ice and volatiles</h3><p>Show permanently shadowed regions and available water-related observations, distinguishing detections, indirect indicators and modeled possibilities.</p></div>
+          <div class="feature"><span class="flag">New layer · Research</span><h3>Terrain and landing hazards</h3><p>Elevation, slopes, roughness, crater density, local horizon and potential traversability, with explicit resolution limits.</p></div>
+          <div class="feature"><span class="flag">New layer · Research</span><h3>Composition and resources</h3><p>Where scientifically supported, display relevant mineralogy, geology and prospective in-situ resource utilization information.</p></div>
+          <div class="feature"><span class="flag">New layer · Future</span><h3>Communications planning</h3><p>Compare Earth-visibility windows and evaluate candidate surface communications constraints. Later, examine relay-orbiter options when validated ephemerides are available.</p></div>
+          <div class="feature"><span class="flag">New layer · Future</span><h3>Mission and power planning</h3><p>Choose mission dates, site requirements, sunlight and communications constraints; estimate generation and storage needs from stated engineering assumptions.</p></div>
+        </div>
+        <p>Long-term aim: compare potential landing sites in a transparent mission-planning workspace, not just visually. Preliminary models must not be represented as certified landing or power-system assessments.</p>
+      </section>
+      <section class="roadmap-section" id="data">
+        <p class="roadmap-eyebrow">04 / Data fidelity</p>
+        <h2>Make accuracy a design requirement</h2>
+        <table class="roadmap-table">
+          <thead><tr><th scope="col">System</th><th scope="col">Improvement</th></tr></thead>
+          <tbody>
+            <tr><td>Terrain</td><td>Use NASA LOLA globally and high-resolution LROC NAC / PGDA grids where available; improve projection transforms, seams, tile streaming, memory and surface fidelity.</td></tr>
+            <tr><td>Imagery</td><td>Improve LROC WAC integration and localized site imagery; record imagery date, resolution, coverage, credits and processing.</td></tr>
+            <tr><td>Time and orbit</td><td>Generalize beyond the submitted 30-day JPL Horizons window. Use documented orbital state vectors or kernels when available; indicate uncertainty and model validity.</td></tr>
+            <tr><td>Scientific layers</td><td>Evaluate data from NASA, USGS, ESA, JAXA, ISRO and other credible mission archives by dataset suitability, resolution and licensing.</td></tr>
+            <tr><td>Validation</td><td>Automated geometry tests, independent horizon/ephemeris comparisons, site-coordinate checks, visual regression and provenance documentation.</td></tr>
+            <tr><td>Performance</td><td>Progressive data loading, tiling, caching, adjustable rendering quality and reliable operation on lower-power devices.</td></tr>
+          </tbody>
+        </table>
+        <p class="roadmap-note">Three kinds of information must always be visibly distinguishable: <strong>measured data</strong>, <strong>computed predictions</strong>, and <strong>illustrative reconstructions</strong>. Greater visual detail is not automatically greater scientific accuracy.</p>
+      </section>
+      <section class="roadmap-section" id="missions">
+        <p class="roadmap-eyebrow">05 / Living catalog</p>
+        <h2>Keep adding missions as the Moon changes</h2>
+        <p>Expand the catalog beyond the first release's Apollo, Luna, Surveyor, Chang’e, Artemis-region and CLPS entries. Fill gaps in historical and international lunar missions; add planned and future commercial landers, orbital spacecraft, rover missions and scientific targets as reliable public records appear.</p>
+        <div class="feature-grid">
+          <div class="feature"><h3>Complete landing-site records</h3><p>Coordinates and precision; confirmed, approximate or regional status; mission outcome; dates; images; spacecraft models; primary sources and historical notes.</p></div>
+          <div class="feature"><h3>Living mission updates</h3><p>Update timelines and map content as launches, flybys, orbit insertions, landings, failures and new missions occur. Keep historical archives rather than overwriting older states.</p></div>
+          <div class="feature"><h3>Future human exploration</h3><p>Track current Artemis planning and future surface activity without presenting candidate regions as final touchdown sites. Eventually visualize hypothetical infrastructure separately from real missions.</p></div>
+          <div class="feature"><h3>Explore in context</h3><p>From a mission page, move to its location, selected date, photo gallery, surface view and scientific layers; from the globe, open its detailed historical record.</p></div>
+        </div>
+      </section>
+      <section class="roadmap-section" id="phases">
+        <p class="roadmap-eyebrow">06 / Working order</p>
+        <h2>How development could proceed</h2>
+        <table class="roadmap-table">
+          <thead><tr><th scope="col">Phase</th><th scope="col">Scope</th></tr></thead>
+          <tbody>
+            <tr><td>1 · Polish</td><td>Camera and controls, Sun visuals, terrain seams, missing photographs, source quality and selective mobile refinements.</td></tr>
+            <tr><td>2 · Models</td><td>Accurate and clearly credited 3D spacecraft, more landing sites, richer historical mission profiles and improved terrain imagery.</td></tr>
+            <tr><td>3 · History</td><td>Mission-event database, historical timeline, orbital/approach playback where archival information permits and continuously updated mission states.</td></tr>
+            <tr><td>4 · Science</td><td>Additional data layers, extended time controls, improved horizon and illumination estimates, geographic comparison and uncertainty displays.</td></tr>
+            <tr><td>5 · Planning</td><td>Constraint-based site selection, communications and power estimates, infrastructure concepts and possible broader atlas expansion.</td></tr>
+          </tbody>
+        </table>
+        <p>This ordering is provisional. The first goal is to protect the existing working explorer and improve it incrementally after the hackathon review period.</p>
+      </section>
+      <p class="roadmap-last">Last drafted November 17, 2026 · Aspirational features are not commitments or current capabilities.</p>
+      <p class="project-actions"><a class="btn btn-ghost" href="/projects/lunar-atlas/">Back to the project</a><a class="btn btn-ghost" href="https://github.com/InterstellarNerd8760/lunar-atlas">View submitted source ↗</a></p>
+    </article>
+  </main>
+  <footer class="site-footer">
+  <div class="footer-moon">
+    <img src="/img/moon-footer.webp" alt="" width="1600" height="280" loading="lazy" decoding="async">
+    <p class="footer-moon-credit">Moon: NASA</p>
+  </div>
+    <div class="wrap footer-inner">
+      <span>© 2026 Weston Rosch</span>
+      <nav class="footer-links" aria-label="Contact">
+        <a href="mailto:hello@westonrosch.com">hello@westonrosch.com</a>
+        <a href="https://github.com/InterstellarNerd8760" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://x.com/rosch_weston" target="_blank" rel="noreferrer">X</a>
+        <a href="https://instagram.com/rosch_weston" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <span>Earth imagery: NASA / ISS crew</span>
+    </div>
+  </footer>
+  <script src="/script.js" defer></script>
+</body>
+</html>
