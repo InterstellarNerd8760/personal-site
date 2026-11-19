@@ -51,7 +51,7 @@
       <header class="xa-hero">
         <div class="xa-topline">
           <p class="kicker"><a href="/experiments/">Experiments</a> / Account observatory</p>
-          <span class="xa-date">Personal dataset / November 2026</span>
+          <span class="xa-date">Analytics: Nov 16 · Analysis: Nov 18, 2026</span>
         </div>
         <div class="xa-hero-grid">
           <div>
@@ -60,6 +60,7 @@
             <div class="xa-links">
               <a href="https://x.com/rosch_weston" target="_blank" rel="noopener noreferrer">View @rosch_weston ↗</a>
               <a href="#metrics">Explore the numbers ↓</a>
+              <a href="#analysis">Read the analysis ↓</a>
               <a href="#network">The network ↓</a>
             </div>
           </div>
@@ -205,8 +206,48 @@
         </div>
       </section>
 
+      <section class="xa-section" id="analysis" aria-labelledby="xa-analysis-title">
+        <div class="xa-section-heading">
+          <div><p class="kicker">05 / Interpretation</p><h2 id="xa-analysis-title">What the numbers <em>actually say.</em></h2></div>
+          <p>Two useful ratios from the approximate one-year totals. Neither describes unique people, follower conversion, or the performance of a specific post.</p>
+        </div>
+        <div class="xa-ratios">
+          <article class="xa-ratio-card">
+            <p class="xa-ratio-eyebrow">Engagements / impressions</p>
+            <strong data-derived-rate="engagements">~1.8%</strong>
+            <p>Approximately 8.6K engagements divided by 471.4K impressions in the reported period. An interaction-to-impression ratio, not a measure of distinct engaged people.</p>
+            <span class="xa-ratio-source">Same approximate annual window</span>
+          </article>
+          <article class="xa-ratio-card">
+            <p class="xa-ratio-eyebrow">Profile visits / impressions</p>
+            <strong data-derived-rate="visits">~0.25%</strong>
+            <p>Approximately 1.2K profile visits divided by 471.4K impressions. This is a descriptive ratio, not a verified click-through or visitor conversion rate.</p>
+            <span class="xa-ratio-source">Same approximate annual window</span>
+          </article>
+        </div>
+        <div class="xa-reading-grid">
+          <article class="xa-reading-panel">
+            <h3>Observed signal</h3>
+            <p>The reported daily reach rose from roughly 1K impressions to several days around 4–5K, with one day near 6K. Replies reportedly account for much of that reach. These are notable observations, but not a complete daily dataset.</p>
+          </article>
+          <article class="xa-reading-panel">
+            <h3>Unanswered questions</h3>
+            <p>Which original posts bring people back? How many profile visits lead to a meaningful conversation or a visit to my projects? Which connections persist? The present snapshot cannot answer these questions.</p>
+          </article>
+        </div>
+        <div class="xa-next-measure">
+          <div><p class="kicker">Next measurements</p><h3>From impressions to <em>impact.</em></h3></div>
+          <ul>
+            <li>Record weekly dated follower and engagement snapshots, with their sources.</li>
+            <li>Compare original posts and replies instead of treating all impressions alike.</li>
+            <li>Track visits to my projects separately from X analytics where measurement is available.</li>
+            <li>Expand the account map only with verifiable links and observations.</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="xa-section xa-method" aria-labelledby="xa-method-title">
-        <p class="kicker">05 / Method &amp; scope</p>
+        <p class="kicker">06 / Method &amp; scope</p>
         <h2 id="xa-method-title" style="font:400 clamp(2.35rem,4.7vw,4.4rem)/1.05 var(--serif)">Built from <em>what's known.</em></h2>
         <p>This observatory covers my account only. The reported analytics and activity were supplied by me in November 2026; they are not retrieved live from X. Public display does not imply any official X integration. The account nodes are selected historical observations, not a complete or live network.</p>
         <p>For maintainability, the public numbers live in one small <a href="profile-data.json">source snapshot</a>. I can add future observations without replacing the entire design. A small set of documented account relationships is included; all other relationships remain unknown.</p>
