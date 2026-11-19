@@ -12,6 +12,19 @@ fetch(source.getAttribute('data-atlas-data'),{cache:'no-store'}).then(r=>{if(!r.
    'verified':data.accountSnapshot.verifiedFollowers.display,
    'posts':data.accountSnapshot.posts.display
   };
+  // Ratios are derived only from same-window reported aggregates; never from follower snapshots.
+  const impressions = Number(data.annual.impressions.value);
+  const rates = {
+    engagements: Number(data.annual.engagements.value),
+    visits: Number(data.annual.profileVisits.value)
+  };
+  document.querySelectorAll('[data-derived-rate]').forEach(el => {
+    const kind = el.getAttribute('data-derived-rate');
+    const numerator = rates[kind];
+    if (Number.isFinite(impressions) && impressions > 0 && Number.isFinite(numerator) && numerator >= 0) {
+      el.textContent = '~' + (100 * numerator / impressions).toFixed(kind === 'visits' ? 2 : 1) + '%';
+    }
+  });
   document.querySelectorAll('[data-metric-value]').forEach(el=>{
     const key=el.getAttribute('data-metric-value');
     if(values[key]!==undefined)el.textContent=values[key];
