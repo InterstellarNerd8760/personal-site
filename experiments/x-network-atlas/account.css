@@ -156,3 +156,34 @@ repeating-linear-gradient(90deg,transparent 0 39px,rgba(92,200,245,.035) 40px),
 .xa-next-measure ul{margin:0;padding-left:1.2rem;color:var(--text-2);font-size:.87rem;line-height:1.75}
 .xa-next-measure li+li{margin-top:.4rem}
 @media(max-width:700px){.xa-ratios,.xa-reading-grid,.xa-next-measure{grid-template-columns:1fr}.xa-next-measure{padding:1.35rem}.xa-ratio-card>strong{font-size:3.5rem}}
+
+/* v0.5: live public metrics and counted interaction graph */
+.xa-grid-5{grid-template-columns:repeat(4,minmax(0,1fr))}
+.xa-activity-split{margin-top:1.6rem;align-items:start}
+.xa-daily{display:grid;gap:.42rem;margin-top:1.1rem}
+.xa-daily-row{display:grid;grid-template-columns:4.6rem minmax(0,1fr) 1.8rem;gap:.55rem;align-items:center}
+.xa-daily-label{font:500 .68rem var(--mono);color:var(--text-3)}
+.xa-daily-track{height:8px;border-radius:8px;background:rgba(92,200,245,.07);overflow:hidden}
+.xa-daily-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#206989,var(--sky))}
+.xa-daily-row strong{font:500 .72rem var(--mono);color:var(--white);text-align:right}
+.xa-top-posts{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.7rem}
+.xa-top-posts li{display:flex;flex-direction:column;gap:.2rem;padding:.85rem 0;border-top:1px solid var(--line)}
+.xa-top-posts li:first-child{border-top:none;padding-top:0}
+.xa-top-posts a{color:var(--white);font:500 .84rem/1.45 var(--sans);text-decoration:none}
+.xa-top-posts a:hover{color:var(--sky)}
+.xa-top-posts span{font:.7rem/1.5 var(--mono);color:var(--text-3)}
+.xa-net-edge-mutual{stroke:#8fd1ae}
+.xa-net-edge-outbound{stroke:#e8b970}
+.xa-net-edge-inbound{stroke:#5cc8f5}
+.xa-net-edge-amplify{stroke:#c4a0e8}
+.xa-net-cooc{stroke:rgba(200,214,230,.28);stroke-dasharray:3 7;stroke-linecap:round}
+.xa-net-legend .mutual{background:#8fd1ae}
+.xa-net-legend .outbound{background:#e8b970}
+.xa-net-legend .inbound{background:#5cc8f5}
+.xa-net-legend .amplify{background:#c4a0e8}
+.xa-net-profile-metrics{font:.74rem/1.6 var(--mono);color:var(--text-3);margin:.8rem 0 0!important}
+@media(max-width:1020px){.xa-grid-5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){
+  .xa-daily-row{grid-template-columns:3.8rem minmax(0,1fr) 1.5rem;gap:.4rem}
+  .xa-daily-label{font-size:.62rem}
+}

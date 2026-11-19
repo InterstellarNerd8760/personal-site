@@ -1,0 +1,2106 @@
+{
+  "version": 3,
+  "handle": "rosch_weston",
+  "userId": "1989871836725944320",
+  "accountUrl": "https://x.com/rosch_weston",
+  "asOf": "2026-11-19T12:20:00-08:00",
+  "asOfDisplay": "Nov 19, 2026, 12:20 PM PT",
+  "sourceType": "Public X profile and post lookups, stored as a static snapshot. Not a live on-page API, and not X Analytics.",
+  "window": {
+    "start": "2026-11-05T00:00:00-08:00",
+    "end": "2026-11-19T10:26:24-08:00",
+    "timezone": "America/Los_Angeles",
+    "label": "12:00 AM PT Nov 5 through 10:26 AM PT Nov 19, 2026",
+    "firstPostAt": "2026-11-05T07:45:13-08:00",
+    "lastPostAt": "2026-11-19T10:26:24-08:00"
+  },
+  "profile": {
+    "name": "Weston Rosch",
+    "username": "rosch_weston",
+    "createdAt": "2025-11-16T01:43:46.000Z",
+    "followers": 170,
+    "following": 964,
+    "posts": 4833,
+    "likesGiven": 18890,
+    "listed": 2,
+    "media": 445,
+    "verified": true,
+    "verifiedType": "blue",
+    "protected": false
+  },
+  "sample": {
+    "postsCollected": 304,
+    "byType": {
+      "original": 47,
+      "reply": 149,
+      "quote": 45,
+      "retweet": 63
+    },
+    "nonRetweet": {
+      "posts": 241,
+      "impressions": 71553,
+      "likes": 681,
+      "replies": 97,
+      "reposts": 12,
+      "quotes": 8,
+      "bookmarks": 11
+    },
+    "incomingPostsCollected": 90,
+    "accountsWithInteractions": 175,
+    "daily": [
+      {
+        "date": "2026-11-05",
+        "total": 12,
+        "original": 2,
+        "reply": 4,
+        "quote": 4,
+        "retweet": 2
+      },
+      {
+        "date": "2026-11-06",
+        "total": 13,
+        "original": 4,
+        "reply": 7,
+        "quote": 0,
+        "retweet": 2
+      },
+      {
+        "date": "2026-11-07",
+        "total": 6,
+        "original": 4,
+        "reply": 2,
+        "quote": 0,
+        "retweet": 0
+      },
+      {
+        "date": "2026-11-08",
+        "total": 9,
+        "original": 0,
+        "reply": 5,
+        "quote": 4,
+        "retweet": 0
+      },
+      {
+        "date": "2026-11-09",
+        "total": 8,
+        "original": 1,
+        "reply": 6,
+        "quote": 0,
+        "retweet": 1
+      },
+      {
+        "date": "2026-11-10",
+        "total": 8,
+        "original": 3,
+        "reply": 4,
+        "quote": 1,
+        "retweet": 0
+      },
+      {
+        "date": "2026-11-11",
+        "total": 12,
+        "original": 1,
+        "reply": 9,
+        "quote": 1,
+        "retweet": 1
+      },
+      {
+        "date": "2026-11-12",
+        "total": 33,
+        "original": 9,
+        "reply": 17,
+        "quote": 2,
+        "retweet": 5
+      },
+      {
+        "date": "2026-11-13",
+        "total": 23,
+        "original": 2,
+        "reply": 13,
+        "quote": 3,
+        "retweet": 5
+      },
+      {
+        "date": "2026-11-14",
+        "total": 54,
+        "original": 11,
+        "reply": 26,
+        "quote": 6,
+        "retweet": 11
+      },
+      {
+        "date": "2026-11-15",
+        "total": 38,
+        "original": 3,
+        "reply": 21,
+        "quote": 4,
+        "retweet": 10
+      },
+      {
+        "date": "2026-11-16",
+        "total": 27,
+        "original": 2,
+        "reply": 8,
+        "quote": 4,
+        "retweet": 13
+      },
+      {
+        "date": "2026-11-17",
+        "total": 20,
+        "original": 1,
+        "reply": 9,
+        "quote": 7,
+        "retweet": 3
+      },
+      {
+        "date": "2026-11-18",
+        "total": 34,
+        "original": 3,
+        "reply": 16,
+        "quote": 8,
+        "retweet": 7
+      },
+      {
+        "date": "2026-11-19",
+        "total": 7,
+        "original": 1,
+        "reply": 2,
+        "quote": 1,
+        "retweet": 3
+      }
+    ],
+    "topPosts": [
+      {
+        "id": "2120910722834280905",
+        "url": "https://x.com/rosch_weston/status/2120910722834280905",
+        "createdAt": "2026-11-12T16:04:55.000Z",
+        "kind": "reply",
+        "replyTo": "miss1oncontrol",
+        "impressions": 6130,
+        "likes": 136,
+        "replies": 0,
+        "reposts": 1,
+        "quotes": 0
+      },
+      {
+        "id": "2122499104291078200",
+        "url": "https://x.com/rosch_weston/status/2122499104291078200",
+        "createdAt": "2026-11-17T01:16:35.000Z",
+        "kind": "reply",
+        "replyTo": "hugh__mann",
+        "impressions": 5604,
+        "likes": 55,
+        "replies": 1,
+        "reposts": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2121046914489802985",
+        "url": "https://x.com/rosch_weston/status/2121046914489802985",
+        "createdAt": "2026-11-13T01:06:06.000Z",
+        "kind": "reply",
+        "replyTo": "winterbornn",
+        "impressions": 5101,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2118492006553129187",
+        "url": "https://x.com/rosch_weston/status/2118492006553129187",
+        "createdAt": "2026-11-05T23:53:48.000Z",
+        "kind": "reply",
+        "replyTo": "xdnibor",
+        "impressions": 4119,
+        "likes": 11,
+        "replies": 0,
+        "reposts": 1,
+        "quotes": 0
+      },
+      {
+        "id": "2122209333580877865",
+        "url": "https://x.com/rosch_weston/status/2122209333580877865",
+        "createdAt": "2026-11-16T06:05:08.000Z",
+        "kind": "reply",
+        "replyTo": "maxvoao",
+        "impressions": 3732,
+        "likes": 3,
+        "replies": 1,
+        "reposts": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2120740422465319186",
+        "url": "https://x.com/rosch_weston/status/2120740422465319186",
+        "createdAt": "2026-11-12T04:48:12.000Z",
+        "kind": "reply",
+        "replyTo": "bat_man_23",
+        "impressions": 3124,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2120541708249383166",
+        "url": "https://x.com/rosch_weston/status/2120541708249383166",
+        "createdAt": "2026-11-11T15:38:35.000Z",
+        "kind": "reply",
+        "replyTo": "astero9890_",
+        "impressions": 2945,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      {
+        "id": "2121061492598722885",
+        "url": "https://x.com/rosch_weston/status/2121061492598722885",
+        "createdAt": "2026-11-13T02:04:01.000Z",
+        "kind": "reply",
+        "replyTo": "ayeejuju",
+        "impressions": 2846,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "quotes": 0
+      }
+    ]
+  },
+  "network": {
+    "minWeight": 2,
+    "nodeLimit": 200,
+    "displayedAccounts": 69,
+    "nodes": [
+      {
+        "handle": "grok",
+        "name": "Grok",
+        "kind": "mutual",
+        "weight": 29,
+        "counts": {
+          "replyTo": 6,
+          "mentionOut": 12,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 10,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 9425743,
+          "following": 4,
+          "posts": 150636004,
+          "verified": true
+        },
+        "angle": -31.0,
+        "radius": 145.0
+      },
+      {
+        "handle": "spacex",
+        "name": "SpaceX",
+        "kind": "outbound",
+        "weight": 16,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 4,
+          "repost": 10,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 41956602,
+          "following": 128,
+          "posts": 11996,
+          "verified": true
+        },
+        "angle": 154.17,
+        "radius": 225.0
+      },
+      {
+        "handle": "miss1oncontrol",
+        "name": "MissionControl",
+        "kind": "mutual",
+        "weight": 15,
+        "counts": {
+          "replyTo": 10,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 4,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 2343,
+          "following": 348,
+          "posts": 5110,
+          "verified": false
+        },
+        "angle": -31.0,
+        "radius": 220.0
+      },
+      {
+        "handle": "boardyai",
+        "name": "Boardy",
+        "kind": "mutual",
+        "weight": 13,
+        "counts": {
+          "replyTo": 4,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 8,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 55797,
+          "following": 8167,
+          "posts": 379960,
+          "verified": true
+        },
+        "angle": -31.0,
+        "radius": 295.0
+      },
+      {
+        "handle": "apostructura",
+        "name": "ApoStructura",
+        "kind": "mutual",
+        "weight": 11,
+        "counts": {
+          "replyTo": 6,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 3,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 14369,
+          "following": 920,
+          "posts": 20462,
+          "verified": false
+        },
+        "angle": -13.0,
+        "radius": 155.0
+      },
+      {
+        "handle": "elonmusk",
+        "name": "Elon Musk",
+        "kind": "outbound",
+        "weight": 11,
+        "counts": {
+          "replyTo": 5,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 5,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 240504510,
+          "following": 1427,
+          "posts": 112482,
+          "verified": false
+        },
+        "angle": 154.55,
+        "radius": 320.0
+      },
+      {
+        "handle": "wall_guy01",
+        "name": "WallGuy\ud83d\udef0",
+        "kind": "mutual",
+        "weight": 10,
+        "counts": {
+          "replyTo": 3,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 6,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 620,
+          "following": 443,
+          "posts": 24260,
+          "verified": false
+        },
+        "angle": -13.0,
+        "radius": 230.0
+      },
+      {
+        "handle": "lukeleisher",
+        "name": "Luke",
+        "kind": "outbound",
+        "weight": 8,
+        "counts": {
+          "replyTo": 7,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 11144,
+          "following": 486,
+          "posts": 7995,
+          "verified": false
+        },
+        "angle": 154.55,
+        "radius": 415.0
+      },
+      {
+        "handle": "mathsboi42",
+        "name": "Mathsboi42\ud83c\udff3\ufe0f\u200d\ud83c\udf08",
+        "kind": "mutual",
+        "weight": 8,
+        "counts": {
+          "replyTo": 4,
+          "mentionOut": 0,
+          "quote": 1,
+          "repost": 1,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1337,
+          "following": 1696,
+          "posts": 40992,
+          "verified": false
+        },
+        "angle": -13.0,
+        "radius": 305.0
+      },
+      {
+        "handle": "echo5550",
+        "name": "Chandler G",
+        "kind": "outbound",
+        "weight": 7,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 2,
+          "quote": 2,
+          "repost": 2,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 4176,
+          "following": 496,
+          "posts": 10819,
+          "verified": false
+        },
+        "angle": 162.5,
+        "radius": 235.0
+      },
+      {
+        "handle": "erayhuman",
+        "name": "Daniel Ray",
+        "kind": "mutual",
+        "weight": 6,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 4,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1022,
+          "following": 928,
+          "posts": 16727,
+          "verified": false
+        },
+        "angle": 5.0,
+        "radius": 145.0
+      },
+      {
+        "handle": "jacks0npainter",
+        "name": "Jackson Painter \u2626\ufe0f",
+        "kind": "mutual",
+        "weight": 6,
+        "counts": {
+          "replyTo": 3,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 3,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 161,
+          "following": 654,
+          "posts": 5656,
+          "verified": false
+        },
+        "angle": 5.0,
+        "radius": 220.0
+      },
+      {
+        "handle": "maxvoao",
+        "name": "Max \u2726",
+        "kind": "mutual",
+        "weight": 6,
+        "counts": {
+          "replyTo": 3,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 219311,
+          "following": 739,
+          "posts": 11584,
+          "verified": false
+        },
+        "angle": 5.0,
+        "radius": 295.0
+      },
+      {
+        "handle": "space_jm_",
+        "name": "\u2728Space JM\ud83d\ude80",
+        "kind": "mutual",
+        "weight": 6,
+        "counts": {
+          "replyTo": 3,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 3,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 912,
+          "following": 1659,
+          "posts": 53171,
+          "verified": false
+        },
+        "angle": 23.0,
+        "radius": 155.0
+      },
+      {
+        "handle": "spaceapps",
+        "name": "NASA Space Apps Challenge",
+        "kind": "outbound",
+        "weight": 6,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 6,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 38635,
+          "following": 59,
+          "posts": 7707,
+          "verified": true
+        },
+        "angle": 163.64,
+        "radius": 330.0
+      },
+      {
+        "handle": "megagoose11",
+        "name": "Goose",
+        "kind": "outbound",
+        "weight": 5,
+        "counts": {
+          "replyTo": 4,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 2775,
+          "following": 226,
+          "posts": 16601,
+          "verified": false
+        },
+        "angle": 163.64,
+        "radius": 425.0
+      },
+      {
+        "handle": "stratospunky",
+        "name": "Spunky",
+        "kind": "mutual",
+        "weight": 5,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 893,
+          "following": 119,
+          "posts": 1489,
+          "verified": false
+        },
+        "angle": 23.0,
+        "radius": 230.0
+      },
+      {
+        "handle": "cb_doge",
+        "name": "DogeDesigner",
+        "kind": "outbound",
+        "weight": 4,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 1,
+          "quote": 2,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1909814,
+          "following": 1078,
+          "posts": 61558,
+          "verified": false
+        },
+        "angle": 170.83,
+        "radius": 225.0
+      },
+      {
+        "handle": "jackywacky_3",
+        "name": "Jackgonelol",
+        "kind": "outbound",
+        "weight": 4,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 2278,
+          "following": 579,
+          "posts": 28024,
+          "verified": false
+        },
+        "angle": 172.73,
+        "radius": 320.0
+      },
+      {
+        "handle": "proxima_cos",
+        "name": "Proxima",
+        "kind": "mutual",
+        "weight": 4,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 1
+        },
+        "profile": {
+          "followers": 4,
+          "following": 16,
+          "posts": 78,
+          "verified": false
+        },
+        "angle": 23.0,
+        "radius": 305.0
+      },
+      {
+        "handle": "sintropia_acc",
+        "name": "// \ud835\ude4e\ud835\ude44\ud835\ude49\ud835\ude4f\ud835\ude4d\ud835\ude4a\ud835\ude4b\ud835\ude44\ud835\ude3c | \ud83d\uddfd\ud83d\udfe8",
+        "kind": "mutual",
+        "weight": 4,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 654,
+          "following": 624,
+          "posts": 5582,
+          "verified": false
+        },
+        "angle": 41.0,
+        "radius": 145.0
+      },
+      {
+        "handle": "xdnibor",
+        "name": "Robin",
+        "kind": "outbound",
+        "weight": 4,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 3,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 23045,
+          "following": 3507,
+          "posts": 65991,
+          "verified": false
+        },
+        "angle": 172.73,
+        "radius": 415.0
+      },
+      {
+        "handle": "__abysmal",
+        "name": "Sun-like (Commissions Open)",
+        "kind": "mutual",
+        "weight": 3,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 882,
+          "following": 590,
+          "posts": 7867,
+          "verified": false
+        },
+        "angle": 41.0,
+        "radius": 220.0
+      },
+      {
+        "handle": "buildwithsid",
+        "name": "siddharth",
+        "kind": "mutual",
+        "weight": 3,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 12067,
+          "following": 445,
+          "posts": 10697,
+          "verified": false
+        },
+        "angle": 41.0,
+        "radius": 295.0
+      },
+      {
+        "handle": "cursor_ai",
+        "name": "Cursor",
+        "kind": "outbound",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 502051,
+          "following": 39,
+          "posts": 607,
+          "verified": true
+        },
+        "angle": 179.17,
+        "radius": 235.0
+      },
+      {
+        "handle": "eccorca",
+        "name": "eccorca",
+        "kind": "outbound",
+        "weight": 3,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1602,
+          "following": 1580,
+          "posts": 26074,
+          "verified": false
+        },
+        "angle": 181.82,
+        "radius": 330.0
+      },
+      {
+        "handle": "hugh__mann",
+        "name": "Hugh Mann",
+        "kind": "mutual",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 1,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 301,
+          "following": 819,
+          "posts": 12795,
+          "verified": false
+        },
+        "angle": 59.0,
+        "radius": 155.0
+      },
+      {
+        "handle": "reneromero08",
+        "name": "Ra\u00fal R Romero",
+        "kind": "mutual",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 576,
+          "following": 652,
+          "posts": 15874,
+          "verified": false
+        },
+        "angle": 59.0,
+        "radius": 230.0
+      },
+      {
+        "handle": "rookisaacman",
+        "name": "Jared Isaacman",
+        "kind": "outbound",
+        "weight": 3,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 1,
+          "quote": 1,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 422013,
+          "following": 458,
+          "posts": 8165,
+          "verified": false
+        },
+        "angle": 181.82,
+        "radius": 425.0
+      },
+      {
+        "handle": "spaceflorida",
+        "name": "Space Florida",
+        "kind": "outbound",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 1,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 15423,
+          "following": 1868,
+          "posts": 6303,
+          "verified": false
+        },
+        "angle": 187.5,
+        "radius": 225.0
+      },
+      {
+        "handle": "spaceghandour",
+        "name": "Ahmed El-Ghandour",
+        "kind": "mutual",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 6,
+          "following": 0,
+          "posts": 1473,
+          "verified": false
+        },
+        "angle": 59.0,
+        "radius": 305.0
+      },
+      {
+        "handle": "the_last_dip",
+        "name": "noob",
+        "kind": "mutual",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 143,
+          "following": 306,
+          "posts": 2115,
+          "verified": false
+        },
+        "angle": 77.0,
+        "radius": 145.0
+      },
+      {
+        "handle": "transtage05",
+        "name": "Transtage05\ud83d\udcf8\ud83d\udd2d",
+        "kind": "inbound",
+        "weight": 3,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 3,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 349,
+          "following": 345,
+          "posts": 6612,
+          "verified": false
+        },
+        "angle": 263.25,
+        "radius": 277.0
+      },
+      {
+        "handle": "truthful_ast",
+        "name": "Truthful\ud83d\udef0\ufe0f",
+        "kind": "outbound",
+        "weight": 3,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 2,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 28454,
+          "following": 1000,
+          "posts": 151724,
+          "verified": false
+        },
+        "angle": 190.91,
+        "radius": 320.0
+      },
+      {
+        "handle": "_maxq_",
+        "name": "Max Evans",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 29013,
+          "following": 500,
+          "posts": 11549,
+          "verified": false
+        },
+        "angle": 190.91,
+        "radius": 415.0
+      },
+      {
+        "handle": "amazonleo",
+        "name": "Amazon Leo",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 23449,
+          "following": 17,
+          "posts": 286,
+          "verified": true
+        },
+        "angle": 195.83,
+        "radius": 235.0
+      },
+      {
+        "handle": "anappl5",
+        "name": "an appl",
+        "kind": "inbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 4,
+          "following": 27,
+          "posts": 249,
+          "verified": false
+        },
+        "angle": 273.75,
+        "radius": 287.0
+      },
+      {
+        "handle": "andrewhard96304",
+        "name": "Andrew J. Harding",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 1,
+          "quote": 1,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1046,
+          "following": 245,
+          "posts": 16593,
+          "verified": false
+        },
+        "angle": 200.0,
+        "radius": 330.0
+      },
+      {
+        "handle": "antosh_1",
+        "name": "antosh",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 635,
+          "following": 826,
+          "posts": 13250,
+          "verified": false
+        },
+        "angle": 200.0,
+        "radius": 425.0
+      },
+      {
+        "handle": "artusspacejno",
+        "name": "ArtusSpace",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 14,
+          "following": 58,
+          "posts": 89,
+          "verified": false
+        },
+        "angle": 77.0,
+        "radius": 220.0
+      },
+      {
+        "handle": "astro_kep",
+        "name": "\ud835\udd42\ud835\udd56\ud835\udd61\ud835\udd5d\ud835\udd56\ud835\udd63",
+        "kind": "amplify",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 2,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 474,
+          "following": 1105,
+          "posts": 4644,
+          "verified": false
+        },
+        "angle": 324.0,
+        "radius": 353.0
+      },
+      {
+        "handle": "bat_man_23",
+        "name": "\ud835\ude44'\ud835\ude62 \ud835\ude4f\ud835\ude64\ud835\ude53\ud835\ude5e\ud835\ude3e",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 15720,
+          "following": 235,
+          "posts": 112753,
+          "verified": false
+        },
+        "angle": 204.17,
+        "radius": 225.0
+      },
+      {
+        "handle": "blobifie",
+        "name": "Blobifi",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 5217,
+          "following": 1098,
+          "posts": 74180,
+          "verified": false
+        },
+        "angle": 209.09,
+        "radius": 320.0
+      },
+      {
+        "handle": "c_s_skeptic",
+        "name": "CommonSenseSkeptic",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 16863,
+          "following": 3427,
+          "posts": 121174,
+          "verified": false
+        },
+        "angle": 209.09,
+        "radius": 415.0
+      },
+      {
+        "handle": "chrisbrunskill",
+        "name": "Chris Brunskill",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 0,
+          "following": 0,
+          "posts": 5,
+          "verified": false
+        },
+        "angle": 212.5,
+        "radius": 235.0
+      },
+      {
+        "handle": "cosmicnomad44",
+        "name": "CosmicNomad",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 558,
+          "following": 2181,
+          "posts": 17044,
+          "verified": false
+        },
+        "angle": 218.18,
+        "radius": 330.0
+      },
+      {
+        "handle": "crimsonlancer1",
+        "name": "Crimsonlancer",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 97,
+          "following": 1015,
+          "posts": 5642,
+          "verified": false
+        },
+        "angle": 77.0,
+        "radius": 295.0
+      },
+      {
+        "handle": "cuzcuz12345678",
+        "name": "cuzcuz",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 26,
+          "following": 197,
+          "posts": 817,
+          "verified": false
+        },
+        "angle": 95.0,
+        "radius": 155.0
+      },
+      {
+        "handle": "cyberwiz_yt",
+        "name": "CyberWizard",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 730,
+          "following": 914,
+          "posts": 13405,
+          "verified": false
+        },
+        "angle": 218.18,
+        "radius": 425.0
+      },
+      {
+        "handle": "danellisona",
+        "name": "Dan Ellison",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 10676,
+          "following": 779,
+          "posts": 8875,
+          "verified": false
+        },
+        "angle": 95.0,
+        "radius": 230.0
+      },
+      {
+        "handle": "hunter_peery",
+        "name": "Hunter Peery",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 245,
+          "following": 292,
+          "posts": 4204,
+          "verified": false
+        },
+        "angle": 95.0,
+        "radius": 305.0
+      },
+      {
+        "handle": "is_owenlewis",
+        "name": "Owen Lewis",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 12591,
+          "following": 5876,
+          "posts": 47156,
+          "verified": false
+        },
+        "angle": 113.0,
+        "radius": 145.0
+      },
+      {
+        "handle": "johnkrausphotos",
+        "name": "John Kraus",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 1,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 353779,
+          "following": 782,
+          "posts": 42812,
+          "verified": false
+        },
+        "angle": 220.83,
+        "radius": 225.0
+      },
+      {
+        "handle": "jrxcket",
+        "name": "jacobruh \ud83d\ude80",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 2978,
+          "following": 472,
+          "posts": 5839,
+          "verified": false
+        },
+        "angle": 227.27,
+        "radius": 320.0
+      },
+      {
+        "handle": "otherside_x42",
+        "name": "@otherside_x42",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 2,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": null,
+        "angle": 227.27,
+        "radius": 415.0
+      },
+      {
+        "handle": "peteriishak",
+        "name": "Peter",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 1,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1124,
+          "following": 296,
+          "posts": 5815,
+          "verified": false
+        },
+        "angle": 113.0,
+        "radius": 220.0
+      },
+      {
+        "handle": "poteto",
+        "name": "lauren",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 319668,
+          "following": 911,
+          "posts": 8211,
+          "verified": false
+        },
+        "angle": 229.17,
+        "radius": 235.0
+      },
+      {
+        "handle": "raptor3_",
+        "name": "Raptor 3",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 24,
+          "following": 120,
+          "posts": 3140,
+          "verified": false
+        },
+        "angle": 113.0,
+        "radius": 295.0
+      },
+      {
+        "handle": "rsms",
+        "name": "Rasmus Andersson",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 94566,
+          "following": 2996,
+          "posts": 48468,
+          "verified": false
+        },
+        "angle": 236.36,
+        "radius": 330.0
+      },
+      {
+        "handle": "schweitzer_wil",
+        "name": "Space Pirate",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 1102,
+          "following": 367,
+          "posts": 10602,
+          "verified": false
+        },
+        "angle": 131.0,
+        "radius": 155.0
+      },
+      {
+        "handle": "scottlikessls",
+        "name": "SLS",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 1,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 4377,
+          "following": 179,
+          "posts": 44389,
+          "verified": false
+        },
+        "angle": 236.36,
+        "radius": 425.0
+      },
+      {
+        "handle": "smolship1",
+        "name": "smolship",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 2835,
+          "following": 335,
+          "posts": 15592,
+          "verified": false
+        },
+        "angle": 131.0,
+        "radius": 230.0
+      },
+      {
+        "handle": "spacebasedfox",
+        "name": "Gene",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 9975,
+          "following": 1041,
+          "posts": 11450,
+          "verified": false
+        },
+        "angle": 237.5,
+        "radius": 225.0
+      },
+      {
+        "handle": "starship_block4",
+        "name": "RocketPLL \ud83d\ude80",
+        "kind": "inbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 2,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 48,
+          "following": 285,
+          "posts": 2447,
+          "verified": false
+        },
+        "angle": 284.25,
+        "radius": 277.0
+      },
+      {
+        "handle": "stubbylicktrons",
+        "name": "Aster \u26a6\ud83d\udef0\ud83d\ude80\ud83e\udd9b\ud83c\uddf3\ud83c\uddff",
+        "kind": "mutual",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 259,
+          "following": 195,
+          "posts": 10520,
+          "verified": false
+        },
+        "angle": 131.0,
+        "radius": 305.0
+      },
+      {
+        "handle": "thatoneguyxand",
+        "name": "Ship 42 (DON\u2019T PANIC)",
+        "kind": "inbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 0,
+          "quote": 0,
+          "repost": 1,
+          "replyFrom": 1,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 88,
+          "following": 237,
+          "posts": 482,
+          "verified": false
+        },
+        "angle": 294.75,
+        "radius": 287.0
+      },
+      {
+        "handle": "vardaspace",
+        "name": "Varda Space Industries",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 1,
+          "quote": 1,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 40051,
+          "following": 57,
+          "posts": 553,
+          "verified": true
+        },
+        "angle": 245.45,
+        "radius": 320.0
+      },
+      {
+        "handle": "vibechaserrr",
+        "name": "\ud83c\udf84VibeChaser\ud83c\udf84\u1bd3\u27a4\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f/\ud83c\uddec\ud83c\udde7/\u271d\ufe0f",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 1,
+          "mentionOut": 1,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 367,
+          "following": 705,
+          "posts": 13162,
+          "verified": false
+        },
+        "angle": 245.45,
+        "radius": 415.0
+      },
+      {
+        "handle": "zfellows",
+        "name": "Z Fellows",
+        "kind": "outbound",
+        "weight": 2,
+        "counts": {
+          "replyTo": 0,
+          "mentionOut": 2,
+          "quote": 0,
+          "repost": 0,
+          "replyFrom": 0,
+          "mentionFrom": 0,
+          "quoteFrom": 0
+        },
+        "profile": {
+          "followers": 45653,
+          "following": 16,
+          "posts": 4435,
+          "verified": false
+        },
+        "angle": 245.83,
+        "radius": 235.0
+      }
+    ],
+    "cooccurrenceEdges": [
+      {
+        "source": "amazonleo",
+        "target": "hugh__mann",
+        "weight": 2
+      },
+      {
+        "source": "chrisbrunskill",
+        "target": "spacex",
+        "weight": 2
+      }
+    ],
+    "sorsaSeedsInWindow": [
+      {
+        "handle": "space_jm_",
+        "weight": 6,
+        "counts": {
+          "reply_to": 3,
+          "reply_from": 3
+        }
+      },
+      {
+        "handle": "astro_kep",
+        "weight": 2,
+        "counts": {
+          "repost": 2
+        }
+      },
+      {
+        "handle": "mathsboi42",
+        "weight": 8,
+        "counts": {
+          "quote": 1,
+          "reply_to": 4,
+          "repost": 1,
+          "reply_from": 2
+        }
+      },
+      {
+        "handle": "miss1oncontrol",
+        "weight": 15,
+        "counts": {
+          "reply_to": 10,
+          "mention_out": 1,
+          "reply_from": 4
+        }
+      },
+      {
+        "handle": "hugh__mann",
+        "weight": 3,
+        "counts": {
+          "reply_to": 1,
+          "quote": 1,
+          "reply_from": 1
+        }
+      },
+      {
+        "handle": "apostructura",
+        "weight": 11,
+        "counts": {
+          "reply_to": 6,
+          "mention_out": 1,
+          "repost": 1,
+          "reply_from": 3
+        }
+      },
+      {
+        "handle": "echo5550",
+        "weight": 7,
+        "counts": {
+          "mention_out": 2,
+          "quote": 2,
+          "reply_to": 1,
+          "repost": 2
+        }
+      }
+    ],
+    "sorsaSeedsAbsent": [
+      "GoodAaron",
+      "RickAddante",
+      "farzyness"
+    ]
+  },
+  "method": {
+    "summary": "An interaction is one public post in the sample window that ties my account to another: I replied to, mentioned, quoted, or reposted them, or they replied to, mentioned, or quoted me. Each such post adds 1 to that account's weight. Additional people mentioned in the same post are also counted once. Self-replies are omitted. Likes, follows, and DMs are not counted. This is not a follower graph.",
+    "calls": "Looked up the public profile for @rosch_weston, then paged through every post and @mention in the window (25 results per request). Account metrics on the graph come from the user objects returned with those posts.",
+    "clusters": "mutual = replies, mentions, or quotes in both directions; outbound = I reached out and they did not reply in this window; inbound = they reached out and I did not reply in this window; amplify = I only reposted them. Thin links between accounts mean they appeared in the same public conversation as me at least twice, not that they follow each other.",
+    "seeds": "An earlier Sorsa follower snapshot listed 10 accounts. Those handles were used only as names to check against this window. Seven appear below. Three had no counted public interactions here and are not shown as live nodes."
+  },
+  "unavailable": [
+    "Verified follower count (the public lookup is not authorized for that field)",
+    "X Analytics private year-long totals such as profile visits",
+    "Follower and following lists",
+    "Likes, follows, and DMs as interactions"
+  ],
+  "ranking": [
+    {
+      "handle": "grok",
+      "weight": 29,
+      "counts": {
+        "mention_out": 12,
+        "reply_to": 6,
+        "repost": 1,
+        "reply_from": 10
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "spacex",
+      "weight": 16,
+      "counts": {
+        "repost": 10,
+        "quote": 4,
+        "mention_out": 1,
+        "reply_to": 1
+      },
+      "kind": "outbound"
+    },
+    {
+      "handle": "miss1oncontrol",
+      "weight": 15,
+      "counts": {
+        "reply_to": 10,
+        "mention_out": 1,
+        "reply_from": 4
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "boardyai",
+      "weight": 13,
+      "counts": {
+        "reply_to": 4,
+        "mention_out": 1,
+        "reply_from": 8
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "apostructura",
+      "weight": 11,
+      "counts": {
+        "reply_to": 6,
+        "mention_out": 1,
+        "repost": 1,
+        "reply_from": 3
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "elonmusk",
+      "weight": 11,
+      "counts": {
+        "reply_to": 5,
+        "repost": 5,
+        "mention_out": 1
+      },
+      "kind": "outbound"
+    },
+    {
+      "handle": "wall_guy01",
+      "weight": 10,
+      "counts": {
+        "reply_to": 3,
+        "mention_out": 1,
+        "reply_from": 6
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "lukeleisher",
+      "weight": 8,
+      "counts": {
+        "reply_to": 7,
+        "repost": 1
+      },
+      "kind": "outbound"
+    },
+    {
+      "handle": "mathsboi42",
+      "weight": 8,
+      "counts": {
+        "quote": 1,
+        "reply_to": 4,
+        "repost": 1,
+        "reply_from": 2
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "echo5550",
+      "weight": 7,
+      "counts": {
+        "mention_out": 2,
+        "quote": 2,
+        "reply_to": 1,
+        "repost": 2
+      },
+      "kind": "outbound"
+    },
+    {
+      "handle": "erayhuman",
+      "weight": 6,
+      "counts": {
+        "repost": 1,
+        "reply_to": 1,
+        "reply_from": 4
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "jacks0npainter",
+      "weight": 6,
+      "counts": {
+        "reply_to": 3,
+        "reply_from": 3
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "maxvoao",
+      "weight": 6,
+      "counts": {
+        "reply_to": 3,
+        "repost": 1,
+        "reply_from": 2
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "space_jm_",
+      "weight": 6,
+      "counts": {
+        "reply_to": 3,
+        "reply_from": 3
+      },
+      "kind": "mutual"
+    },
+    {
+      "handle": "spaceapps",
+      "weight": 6,
+      "counts": {
+        "mention_out": 6
+      },
+      "kind": "outbound"
+    }
+  ]
+}

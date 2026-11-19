@@ -1,6 +1,4 @@
-/* Personal X Network Atlas — snapshot graph, November 2026.
-   Only the center account and observed first-degree links are drawn.
-   No X API, visitor accounts, scraping, or inferred cross-account edges. */
+/* Personal X Network Atlas — counted interaction graph, November 2026. */
 (() => {
   "use strict";
   const ns = "http://www.w3.org/2000/svg";
@@ -15,9 +13,15 @@
   const search = document.getElementById("xa-net-search");
   if (!svg || !layer || !list || !search || !facts) return;
 
-  const colors = { both: "#8fd1ae", follower: "#5cc8f5", interaction: "#e8b970" };
-  const base = { width: 1100, height: 850 };
-  const state = { nodes: [], selected: "", filter: "all", query: "", zoom: 1, panX: 0, panY: 0 };
+  const colors = { mutual: "#8fd1ae", outbound: "#e8b970", inbound: "#5cc8f5", amplify: "#c4a0e8" };
+  const kindLabel = {
+    mutual: "Mutual conversation",
+    outbound: "I reached out",
+    inbound: "They reached out",
+    amplify: "I only reposted them"
+  };
+  const base = { width: 1300, height: 1100 };
+  const state = { nodes: [], edges: [], selected: "", filter: "all", query: "", zoom: 1, panX: 0, panY: 0 };
   const pointers = new Map();
   let movedDuringDrag = false;
   let lastPinch = 0;
@@ -38,13 +42,11 @@
     const angle = Number(n.angle) * Math.PI / 180;
     return { x: Math.cos(angle) * Number(n.radius), y: Math.sin(angle) * Number(n.radius) };
   };
-  const countKinds = (n) => n.kind === "both" ? "Follower + public interaction" :
-    n.kind === "follower" ? "Recorded follower" : "Public interaction";
+  const fmt = (value) => value == null ? "—" : Number(value).toLocaleString("en-US");
   const isShown = (n) => {
-    if (state.filter === "both" && n.kind !== "both") return false;
-    if (state.filter === "follower" && n.kind !== "follower" && n.kind !== "both") return false;
-    if (state.filter === "interaction" && n.kind !== "interaction" && n.kind !== "both") return false;
-    return !state.query || n.handle.toLowerCase().includes(state.query);
+    if (state.filter !== "all" && n.kind !== state.filter) return false;
+    return !state.query || n.handle.toLowerCase().includes(state.query) ||
+      (n.name || "").toLowerCase().includes(state.query);
   };
   const visible = () => state.nodes.filter(isShown);
   const updateView = () => {
@@ -52,7 +54,7 @@
     svg.setAttribute("viewBox", [state.panX - w / 2, state.panY - h / 2, w, h].join(" "));
   };
   const zoomBy = (factor) => {
-    state.zoom = Math.min(3.6, Math.max(.7, state.zoom * factor));
+    state.zoom = Math.min(3.6, Math.max(0.6, state.zoom * factor));
     updateView();
   };
   const resetView = () => {
@@ -60,27 +62,46 @@
     updateView();
   };
 
+  const lineItems = (counts) => {
+    const rows = [
+      [counts.replyTo, "replies from me"],
+      [counts.mentionOut, "mentions from me"],
+      [counts.quote, "quotes from me"],
+      [counts.repost, "reposts from me"],
+      [counts.replyFrom, "replies to me"],
+      [counts.mentionFrom, "mentions of me"],
+      [counts.quoteFrom, "quotes of me"]
+    ];
+    return rows.filter((row) => row[0] > 0);
+  };
+
   const select = (handle) => {
     const item = state.nodes.find(n => n.handle.toLowerCase() === String(handle).toLowerCase());
     if (!item) return;
     state.selected = item.handle;
     title.textContent = "@" + item.handle;
-    description.textContent = countKinds(item);
+    description.textContent = (item.name && item.name !== "@" + item.handle ? item.name + " · " : "") +
+      kindLabel[item.kind] + " · " + item.weight + " interaction" + (item.weight === 1 ? "" : "s");
     profile.href = "https://x.com/" + encodeURIComponent(item.handle);
     profile.hidden = false;
     facts.replaceChildren();
     const intro = textEl("p", "xa-net-evidence-intro",
-      "Recorded observations (November 2026). These are not live account relationships.");
+      "Counted public posts in the Nov 5–19, 2026 sample window.");
     facts.append(intro);
     const ul = document.createElement("ul");
-    for (const record of item.evidence) {
+    for (const [count, label] of lineItems(item.counts || {})) {
       const li = document.createElement("li");
-      const type = textEl("strong", "", record.type === "repost" ? "Repost" :
-        record.type === "follower" ? "Follower snapshot" : "Public interaction");
-      li.append(type, document.createTextNode(" — " + record.text));
+      const strong = textEl("strong", "", String(count));
+      li.append(strong, document.createTextNode(" " + label));
       ul.append(li);
     }
     facts.append(ul);
+    if (item.profile) {
+      const p = textEl("p", "xa-net-profile-metrics",
+        "Public profile: " + fmt(item.profile.followers) + " followers · " +
+        fmt(item.profile.following) + " following · " + fmt(item.profile.posts) + " posts");
+      facts.append(p);
+    }
     draw();
     renderList();
   };
@@ -88,36 +109,67 @@
   const draw = () => {
     layer.replaceChildren();
     const filtered = visible();
+    const shown = new Set(filtered.map(n => n.handle));
+    const maxWeight = Math.max(...state.nodes.map(n => n.weight), 1);
+
+    for (const edge of state.edges) {
+      if (!shown.has(edge.source) || !shown.has(edge.target)) continue;
+      const a = state.nodes.find(n => n.handle === edge.source);
+      const b = state.nodes.find(n => n.handle === edge.target);
+      if (!a || !b) continue;
+      const pa = pos(a), pb = pos(b);
+      layer.append(el("line", {
+        x1: pa.x.toFixed(2), y1: pa.y.toFixed(2),
+        x2: pb.x.toFixed(2), y2: pb.y.toFixed(2),
+        class: "xa-net-cooc",
+        "stroke-width": String(1 + edge.weight),
+        "aria-hidden": "true"
+      }));
+    }
+
     for (const n of filtered) {
       const p = pos(n);
+      const selected = state.selected.toLowerCase() === n.handle.toLowerCase();
+      const width = 1.4 + (n.weight / maxWeight) * 4.2;
       const path = el("path", {
         d: "M 0 0 Q " + (p.x * .36 - p.y * .07).toFixed(2) + " " +
           (p.y * .36 + p.x * .07).toFixed(2) + " " + p.x.toFixed(2) + " " + p.y.toFixed(2),
-        class: "xa-net-edge xa-net-edge-" + n.kind +
-          (state.selected.toLowerCase() === n.handle.toLowerCase() ? " is-selected" : ""),
+        class: "xa-net-edge xa-net-edge-" + n.kind + (selected ? " is-selected" : ""),
+        "stroke-width": width.toFixed(2),
         "aria-hidden": "true"
       });
       layer.append(path);
     }
+
     const origin = el("g", { class: "xa-net-origin", role: "img", "aria-label": "Origin account @rosch_weston" });
     origin.append(el("circle", { r: 39 }), el("circle", { r: 28, class: "xa-net-origin-core" }),
       el("text", { y: 5, "text-anchor": "middle" }, "WR"));
     layer.append(origin);
+
     for (const n of filtered) {
       const p = pos(n);
       const selected = state.selected.toLowerCase() === n.handle.toLowerCase();
+      const radius = 7 + Math.sqrt(n.weight) * 2.8 + (selected ? 3 : 0);
       const g = el("g", {
         transform: "translate(" + p.x.toFixed(2) + " " + p.y.toFixed(2) + ")",
         class: "xa-net-node xa-net-" + n.kind + (selected ? " is-selected" : ""),
         tabindex: "0",
         role: "button",
-        "aria-label": "@" + n.handle + ", " + countKinds(n) + ". Select for details."
+        "aria-label": "@" + n.handle + ", " + n.weight + " interactions, " + kindLabel[n.kind] + ". Select for details."
       });
       g.style.setProperty("--node-color", colors[n.kind]);
-      g.append(el("circle", { r: selected ? 31 : 27, class: "xa-net-node-halo" }),
-        el("circle", { r: 13, class: "xa-net-node-core" }),
-        el("circle", { r: 3.6, class: "xa-net-node-center" }),
-        el("text", { y: -42, "text-anchor": "middle", class: "xa-net-node-label" }, "@" + n.handle));
+      g.append(
+        el("circle", { r: (radius + 8).toFixed(1), class: "xa-net-node-halo" }),
+        el("circle", { r: radius.toFixed(1), class: "xa-net-node-core" }),
+        el("circle", { r: Math.max(2.2, radius * 0.22).toFixed(1), class: "xa-net-node-center" })
+      );
+      if (n.weight >= 4 || selected || state.zoom >= 1.45) {
+        g.append(el("text", {
+          y: -(radius + 14).toFixed(1),
+          "text-anchor": "middle",
+          class: "xa-net-node-label"
+        }, "@" + n.handle));
+      }
       g.addEventListener("click", () => { if (!movedDuringDrag) select(n.handle); });
       g.addEventListener("keydown", e => {
         if (e.key === "Enter" || e.key === " ") {
@@ -127,16 +179,17 @@
       layer.append(g);
     }
     status.textContent = filtered.length + " account" + (filtered.length === 1 ? "" : "s") +
-      " shown · snapshot observations · no inferred cross-links";
+      " shown · edge weight is counted interactions";
   };
 
   const renderList = () => {
     list.replaceChildren();
-    for (const n of visible()) {
+    const rows = visible().slice().sort((a, b) => b.weight - a.weight || a.handle.localeCompare(b.handle));
+    for (const n of rows) {
       const b = textEl("button", "xa-net-list-item" +
         (state.selected.toLowerCase() === n.handle.toLowerCase() ? " is-selected" : ""), "@" + n.handle);
       b.type = "button";
-      b.append(textEl("small", "", countKinds(n)));
+      b.append(textEl("small", "", n.weight + " · " + kindLabel[n.kind]));
       b.addEventListener("click", () => select(n.handle));
       list.append(b);
     }
@@ -162,9 +215,10 @@
   document.querySelectorAll("[data-net-zoom]").forEach(button => button.addEventListener("click", () => {
     if (button.dataset.netZoom === "reset") resetView();
     else zoomBy(button.dataset.netZoom === "in" ? 1.3 : 1 / 1.3);
+    draw();
   }));
   svg.addEventListener("wheel", e => {
-    e.preventDefault(); zoomBy(e.deltaY < 0 ? 1.12 : 1 / 1.12);
+    e.preventDefault(); zoomBy(e.deltaY < 0 ? 1.12 : 1 / 1.12); draw();
   }, { passive: false });
 
   const span = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -189,6 +243,7 @@
       const next = span(pp[0], pp[1]);
       if (lastPinch > 0 && next > 0) zoomBy(next / lastPinch);
       lastPinch = next;
+      draw();
       return;
     }
     if (Math.abs(dx) + Math.abs(dy) < 1) return;
@@ -202,29 +257,37 @@
     pointers.delete(e.pointerId);
     if (pointers.size < 2) lastPinch = 0;
     if (svg.hasPointerCapture(e.pointerId)) svg.releasePointerCapture(e.pointerId);
-    // Allow a subsequent ordinary click after the pointer event has completed.
     window.setTimeout(() => { movedDuringDrag = false; }, 0);
   };
   svg.addEventListener("pointerup", stopPointer);
   svg.addEventListener("pointercancel", stopPointer);
   svg.addEventListener("lostpointercapture", e => pointers.delete(e.pointerId));
 
-  fetch("network-nodes.json", { cache: "no-store" })
+  fetch("x-atlas.json", { cache: "no-store" })
     .then(response => { if (!response.ok) throw new Error("Network data unavailable"); return response.json(); })
     .then(data => {
-      if (data.center !== "rosch_weston" || !Array.isArray(data.nodes)) throw new Error("Invalid network data");
-      state.nodes = data.nodes.filter(n => /^[a-z0-9_]{1,15}$/i.test(n.handle) &&
-        ["both", "follower", "interaction"].includes(n.kind) && Array.isArray(n.evidence) &&
-        Number.isFinite(n.angle) && Number.isFinite(n.radius)).slice(0, 40);
+      if (data.handle !== "rosch_weston" || !data.network || !Array.isArray(data.network.nodes)) {
+        throw new Error("Invalid network data");
+      }
+      const kinds = ["mutual", "outbound", "inbound", "amplify"];
+      state.nodes = data.network.nodes.filter(n =>
+        /^[a-z0-9_]{1,15}$/i.test(n.handle) &&
+        kinds.includes(n.kind) &&
+        Number.isFinite(n.weight) && n.weight > 0 &&
+        Number.isFinite(n.angle) && Number.isFinite(n.radius)
+      );
+      state.edges = Array.isArray(data.network.cooccurrenceEdges) ? data.network.cooccurrenceEdges : [];
       resetView();
-      const first = state.nodes.find(n => n.handle === "space_jm_") || state.nodes[0];
+      const first = state.nodes.find(n => n.handle === "miss1oncontrol") || state.nodes[0];
       if (first) select(first.handle);
       else render();
       const count = document.getElementById("xa-net-total");
       if (count) count.textContent = String(state.nodes.length);
+      const universe = document.getElementById("xa-net-universe");
+      if (universe && data.sample) universe.textContent = String(data.sample.accountsWithInteractions);
     })
     .catch(() => {
-      status.textContent = "Network snapshot unavailable. Account analytics above remain readable.";
+      status.textContent = "Network snapshot unavailable. Account metrics above remain readable.";
       list.replaceChildren(textEl("p", "xa-net-empty", "The network data file could not be loaded."));
     });
 })();
