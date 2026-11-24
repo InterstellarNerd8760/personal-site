@@ -5,6 +5,33 @@
   const menuButton = document.querySelector(".menu-btn");
   const siteNav = document.querySelector("#site-nav");
 
+
+  /* Optional site appearance; shared across pages, no network or account required. */
+  const themeKey = "weston-site-theme";
+  let theme = "space";
+  try { if (localStorage.getItem(themeKey) === "rustic") theme = "rustic"; } catch {}
+  const themeButton = document.createElement("button");
+  themeButton.type = "button";
+  themeButton.className = "theme-toggle";
+  themeButton.setAttribute("aria-label", "Rustic appearance");
+  const applyTheme = () => {
+    root.dataset.theme = theme;
+    themeButton.setAttribute("aria-pressed", String(theme === "rustic"));
+    themeButton.textContent = theme === "rustic" ? "Theme: Rustic" : "Theme: Deep Space";
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme === "rustic" ? "#f3ede2" : "#05080f";
+  };
+  themeButton.addEventListener("click", () => {
+    theme = theme === "rustic" ? "space" : "rustic";
+    try { localStorage.setItem(themeKey, theme); } catch {}
+    applyTheme();
+  });
+  applyTheme();
+  const themeHost = document.querySelector(".footer-inner");
+  if (themeHost) themeHost.appendChild(themeButton);
+  else if (header) header.appendChild(themeButton);
+  if (!header || !menuButton || !siteNav) return;
+
   /* ---------- Mobile menu ---------- */
   const setMenu = (open) => {
     menuButton.setAttribute("aria-expanded", String(open));
