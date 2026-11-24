@@ -468,3 +468,44 @@ a.source-stat:hover{border-color:var(--line-2);transform:translateY(-3px)}
 .contribution-tooltip[hidden]{display:none}
 .contribution-day-detail{margin:.35rem 0 0;color:var(--text-3);font:.73rem/1.5 var(--mono);min-height:1.1rem}
 @media(hover:none) and (pointer:coarse){.contribution-day{width:13px;height:13px}.contribution-week{grid-template-rows:repeat(7,13px)}}
+
+
+/* Centauri Bloom: shared typography, distinct botanical accent. */
+.bloom-page .entry{max-width:60rem}
+.bloom-page{--sky:#8fd1ae}
+.bloom-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,15rem);align-items:center;gap:clamp(1rem,4vw,3rem);padding:2rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.bloom-page .bloom-tagline{font:400 clamp(1.5rem,3vw,2.1rem)/1.2 var(--serif);color:var(--white)}
+.bloom-mark,.bloom-card-media svg{width:100%;color:var(--sage)}
+.bloom-card-media{display:grid!important;place-items:center;background:radial-gradient(ellipse at center,rgba(67,119,87,.22),var(--bg-2) 75%)}
+.bloom-card-media svg{width:52%;max-height:85%}
+.bloom-spec,.bloom-roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0 1.5rem}
+.bloom-spec>div,.bloom-roles article{padding:1.2rem;border:1px solid var(--line);border-radius:6px;background:var(--bg-2)}
+.bloom-spec strong{display:block;font:400 clamp(1.7rem,4vw,2.8rem)/1.15 var(--serif);color:var(--sage)}
+.bloom-spec span{display:block;color:var(--text-2);font:.72rem/1.5 var(--mono)}
+.bloom-roles{grid-template-columns:repeat(2,minmax(0,1fr))}
+.bloom-roles h3{font:400 1.5rem/1.2 var(--serif);margin-bottom:.5rem}
+.bloom-roles p{font-size:.95rem;margin:0}
+.bloom-steps{padding-left:1.5rem}
+.bloom-page a.btn-solid{color:#10291e}
+@media(max-width:640px){.bloom-hero{grid-template-columns:1fr;padding-top:0}.bloom-mark{max-width:8rem;grid-row:1}.bloom-spec{grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.bloom-spec>div{padding:.65rem}.bloom-roles{grid-template-columns:1fr}}
+
+/* Optional rustic palette. Deep Space remains the default. */
+.theme-toggle{border:1px solid var(--line-2);background:var(--bg-2);color:var(--white);border-radius:4px;padding:.45rem .65rem;font:500 .7rem/1.2 var(--mono);white-space:nowrap;cursor:pointer}
+.theme-toggle:hover{border-color:var(--sky)}
+html[data-theme="rustic"]{color-scheme:light;--bg:#f3ede2;--bg-2:#e8dfd0;--surface:#fcf8f0;--slate:#73675a;--line:rgba(75,60,43,.19);--line-2:rgba(75,60,43,.34);--sky:#285a43;--sage:#326247;--text:#3c342a;--text-2:#51483d;--text-3:#61574b;--white:#28251e}
+html[data-theme="rustic"] .bloom-page{--sky:#285a43}
+html[data-theme="rustic"] .site-header,html[data-theme="rustic"] body.subpage .site-header{background:rgba(243,237,226,.94);backdrop-filter:blur(16px);border-color:var(--line)}
+html[data-theme="rustic"] .project,html[data-theme="rustic"] .vault-card,html[data-theme="rustic"] .feature-card,html[data-theme="rustic"] .paper-fig,html[data-theme="rustic"] .source-stat{background:linear-gradient(180deg,var(--surface),var(--bg-2))}
+html[data-theme="rustic"] .console-panel,html[data-theme="rustic"] .paper-note,html[data-theme="rustic"] .source-activity,html[data-theme="rustic"] .code-fig,html[data-theme="rustic"] .contribution-tooltip{background:var(--surface)}
+html[data-theme="rustic"] .btn-solid,html[data-theme="rustic"] .prose a.btn-solid{color:#fffaf2}
+html[data-theme="rustic"] .btn-solid:hover{background:#183d2b}
+html[data-theme="rustic"] .hero-shade{background:linear-gradient(90deg,var(--bg) 0%,rgba(243,237,226,.96) 34%,rgba(243,237,226,.65) 63%,rgba(243,237,226,.15) 100%),linear-gradient(0deg,var(--bg),transparent 30%)}
+html[data-theme="rustic"] .hero-media img{filter:saturate(.72)}
+html[data-theme="rustic"] .footer-moon::after{background:linear-gradient(180deg,var(--bg),rgba(243,237,226,.25) 38%,rgba(243,237,226,.65) 75%,var(--bg))}
+html[data-theme="rustic"] .diagram-frame{background:#080f1b;color:#e3edf7;--white:#f2f5f8;--text:#c9d3de;--text-2:#b6c5d4;--sky:#5cc8f5;--line:rgba(160,185,215,.2)}
+html[data-theme="rustic"] .contribution-day.level-0,html[data-theme="rustic"] .contribution-legend .level-0{background:#d9cfbd}
+html[data-theme="rustic"] .contribution-day.level-1,html[data-theme="rustic"] .contribution-legend .level-1{background:#b7caab}
+html[data-theme="rustic"] .contribution-day.level-2,html[data-theme="rustic"] .contribution-legend .level-2{background:#7b9e77}
+html[data-theme="rustic"] .contribution-day.level-3,html[data-theme="rustic"] .contribution-legend .level-3{background:#467950}
+html[data-theme="rustic"] .contribution-day.level-4,html[data-theme="rustic"] .contribution-legend .level-4{background:#28543b}
+@media(max-width:900px){html[data-theme="rustic"] .site-nav{background:var(--bg)}html[data-theme="rustic"] .hero-shade{background:linear-gradient(0deg,var(--bg) 5%,rgba(243,237,226,.96) 48%,rgba(243,237,226,.35) 100%)}}
