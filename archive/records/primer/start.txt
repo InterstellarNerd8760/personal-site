@@ -1,0 +1,35 @@
+CENTAURI ARCHIVE / DIGITAL DEVELOPMENT EDITION 0.2.0
+READ THIS FIRST — HUMAN TEST PACKAGE
+
+This package is a development exercise, not a complete interstellar decoding system.
+
+CURRENT READER ASSUMPTIONS:
+1. You already have a device capable of reading the complete byte stream.
+2. You know how to extract an unencrypted ZIP archive.
+3. You can read UTF-8 text, mostly its ASCII subset, in English.
+4. You know conventional numbers, directory paths, and common science notation.
+
+These assumptions are inappropriate for an unknown extraterrestrial reader. A
+separate physical primer must teach a route from observable patterns to data
+framing, images, symbols, units and meaning. No such primer has been manufactured
+or independently decoded.
+
+ORDER FOR A HUMAN REVIEWER:
+1. primer/mathematics.txt       Numbers and repeated patterns
+2. primer/format.txt            How this trial package encodes bytes and files
+3. earth/solar-system.txt       Our location and planet
+4. biology/foundations.txt      What biological life is on Earth
+5. biology/genetics.txt         DNA, inheritance, and change
+6. biology/diversity.txt        The diversity of terrestrial organisms
+7. humanity/civilization.txt   Human life and communication
+8. humanity/history.txt        Selected milestones, not a complete history
+9. messages/draft.txt           An editorial placeholder, not an approved message
+
+Each listed file has a corresponding path beginning with content/ in the
+manifest.json at the ZIP root. Each listed byte count and SHA-256 digest helps
+humans check for changed bytes. A matching digest is not proof of authenticity
+without a trusted reference, and a mismatch does not reconstruct lost data.
+
+The core problem is still open: how to make information intelligible when the
+reader knows neither our language nor our technology. The companion
+docs/physical-primer.md provides a research plan, NOT a completed solution.

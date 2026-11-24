@@ -1,0 +1,19 @@
+PRIMER 01 / NUMBERS AND REPEATED STRUCTURE
+Human-readable explanation of ideas planned for a physical, language-independent primer.
+
+COUNTING: zero, one, two, three, four, five, six, seven, eight.
+DECIMAL: 0 1 2 3 4 5 6 7 8.
+BINARY:  0 1 10 11 100 101 110 111 1000.
+TWO IS REPRESENTED BY ONE GROUP OF TWO OBJECTS.
+THREE IS REPRESENTED BY ONE GROUP OF THREE OBJECTS.
+
+In the future physical primer, these relationships must be demonstrated through
+repeated geometric marks and correspondences, not English or our digit symbols.
+
+Some properties are independent of the arbitrary names we use:
+2 + 3 = 5; 2 x 3 = 6; 2 x 2 = 4.
+2, 3, 5, 7, 11 and 13 are the first six prime numbers.
+An asymmetric marker can distinguish the beginning and orientation of a grid.
+
+This human-readable file documents the mathematical concepts; it does not
+establish that a future observer will interpret the marks as intended.

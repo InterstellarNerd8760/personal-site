@@ -1,0 +1,76 @@
+/* Personal-site chrome for the embedded Centauri Archive at /archive/.
+   Loaded after archive style.css. Shared color tokens follow the site theme toggle. */
+
+body.archive-page {
+  padding-top: 4.5rem;
+}
+
+body.archive-page .skip,
+body.archive-page .skip-link {
+  z-index: 200;
+}
+
+.archive-subnav {
+  position: sticky;
+  top: 4.5rem;
+  z-index: 95;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .15rem 1.15rem;
+  align-items: center;
+  padding: .7rem clamp(1.25rem, 3vw, 2.5rem);
+  background: rgba(5, 8, 15, .88);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+html[data-theme="rustic"] .archive-subnav {
+  background: rgba(243, 237, 226, .94);
+}
+
+.archive-subnav a {
+  color: var(--text-2);
+  text-decoration: none;
+  font: 500 .78rem/1.4 var(--mono);
+  letter-spacing: .04em;
+}
+
+.archive-subnav a:hover,
+.archive-subnav a[aria-current="page"] {
+  color: var(--white);
+}
+
+.archive-subnav .archive-source {
+  margin-left: auto;
+  color: var(--sky);
+}
+
+@media (max-width: 760px) {
+  .archive-subnav {
+    top: 4.5rem;
+    gap: .45rem 1rem;
+    padding: .75rem 1.5rem;
+  }
+  .archive-subnav .archive-source {
+    margin-left: 0;
+  }
+}
+
+/* Personal-site .hero is a full-viewport homepage block. Reset it on archive pages
+   so the archive overview hero keeps its own spacing. */
+body.archive-page .hero {
+  position: static;
+  min-height: 0;
+  display: block;
+  overflow: visible;
+  align-items: stretch;
+}
+
+/* Personal-site .section-head h2 is narrower and more specific than archive h2. */
+body.archive-page .section-head h2 {
+  max-width: 48rem;
+  font: 400 clamp(2.7rem, 5vw, 5rem)/1.07 var(--serif);
+  letter-spacing: -.02em;
+  padding-bottom: 0;
+  color: var(--white);
+}

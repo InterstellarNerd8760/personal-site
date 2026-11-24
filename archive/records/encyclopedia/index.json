@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "edition": "0.1",
+  "title": "Centauri Encyclopedia",
+  "status": "Development drafts; not a validated universal encoding",
+  "categories": [
+    {
+      "id": "01",
+      "title": "Mathematics",
+      "description": "Numbers, logic, geometry, algebra, computation",
+      "symbol": "∑"
+    },
+    {
+      "id": "02",
+      "title": "Physical universe",
+      "description": "Particles, elements, forces, astronomy, cosmology",
+      "symbol": "◎"
+    },
+    {
+      "id": "03",
+      "title": "Earth",
+      "description": "Geology, oceans, atmosphere, geography, climate",
+      "symbol": "◉"
+    },
+    {
+      "id": "04",
+      "title": "Life",
+      "description": "Biochemistry, DNA, evolution, biodiversity",
+      "symbol": "⌘"
+    },
+    {
+      "id": "05",
+      "title": "Humanity",
+      "description": "Anatomy, cognition, language, reproduction, society",
+      "symbol": "♙"
+    },
+    {
+      "id": "06",
+      "title": "Civilization",
+      "description": "History, cultures, institutions, economics, philosophy",
+      "symbol": "▥"
+    },
+    {
+      "id": "07",
+      "title": "Technology",
+      "description": "Agriculture, engineering, medicine, computing, spaceflight",
+      "symbol": "▣"
+    },
+    {
+      "id": "08",
+      "title": "Culture and experience",
+      "description": "Art, music, literature, everyday life",
+      "symbol": "♪"
+    },
+    {
+      "id": "09",
+      "title": "The archive and mission",
+      "description": "Origins, creators, purpose, spacecraft and historical context",
+      "symbol": "↗"
+    }
+  ],
+  "articles": [
+    {
+      "id": "CA-01.001",
+      "category": "01",
+      "title": "Quantity and counting",
+      "subcategory": "Numbers",
+      "prerequisites": [],
+      "images": [
+        "IMG-001",
+        "IMG-006"
+      ],
+      "records": [
+        "primer/mathematics.txt"
+      ],
+      "body": [
+        "Distinct objects can be grouped and counted. Two groups have the same cardinality when every member of one can be paired with exactly one member of the other. Numbers express this abstract relationship independently of the objects counted."
+      ],
+      "limitations": "The written numerals and reading direction are human conventions.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-01.002",
+      "category": "01",
+      "title": "Arithmetic and relationships",
+      "subcategory": "Numbers",
+      "prerequisites": [
+        "CA-01.001"
+      ],
+      "images": [],
+      "records": [
+        "primer/mathematics.txt"
+      ],
+      "body": [
+        "Addition describes combining disjoint finite collections; multiplication describes repeated equal groupings. Equality states that two expressions describe the same value. Subtraction and division reverse these operations when defined."
+      ],
+      "limitations": "Notation does not establish meaning without examples.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-01.003",
+      "category": "01",
+      "title": "Geometry and measurement",
+      "subcategory": "Geometry",
+      "prerequisites": [
+        "CA-01.001",
+        "CA-01.002"
+      ],
+      "images": [
+        "IMG-002",
+        "IMG-003",
+        "IMG-004"
+      ],
+      "records": [],
+      "body": [
+        "Geometry describes relationships among positions, shapes, distances and angles. A length ratio compares two distances without needing a particular unit. Coordinate systems assign numerical descriptions to positions relative to chosen references."
+      ],
+      "limitations": "Ideal Euclidean geometry is a mathematical model, not a guarantee about physical spacetime.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-01.004",
+      "category": "01",
+      "title": "Binary and information",
+      "subcategory": "Computation",
+      "prerequisites": [
+        "CA-01.001",
+        "CA-01.002"
+      ],
+      "images": [
+        "IMG-007"
+      ],
+      "records": [
+        "primer/binary-conventions.txt",
+        "primer/raster-example.txt",
+        "primer/format.txt"
+      ],
+      "body": [
+        "A binary alphabet has two distinguishable symbols. In positional base-two notation successive places have weights that are powers of two. A sequence of symbols can encode other structures only when a mapping and boundaries are defined."
+      ],
+      "limitations": "Two physical states do not intrinsically specify orientation, ordering or meaning.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-02.001",
+      "category": "02",
+      "title": "Matter and atoms",
+      "subcategory": "Particles and elements",
+      "prerequisites": [
+        "CA-01.001",
+        "CA-01.003"
+      ],
+      "images": [
+        "IMG-041",
+        "IMG-042"
+      ],
+      "records": [
+        "science/atoms.txt"
+      ],
+      "body": [
+        "Ordinary matter contains atoms, with nuclei and electrons. The number of protons in a nucleus identifies a chemical element. Isotopes of an element differ in neutron number."
+      ],
+      "limitations": "Atomic images are instrument measurements, not ordinary visible-light photographs.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-02.002",
+      "category": "02",
+      "title": "Energy and physical interactions",
+      "subcategory": "Physics",
+      "prerequisites": [
+        "CA-01.002",
+        "CA-02.001"
+      ],
+      "images": [
+        "IMG-008",
+        "IMG-012"
+      ],
+      "records": [
+        "science/energy.txt"
+      ],
+      "body": [
+        "Energy is a measurable quantity that can be transferred and transformed. Interactions govern how matter and radiation change. In suitable isolated systems total energy is conserved."
+      ],
+      "limitations": "A complete physical description requires units, models and domain-specific assumptions.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-02.003",
+      "category": "02",
+      "title": "Molecules and chemical bonds",
+      "subcategory": "Chemistry",
+      "prerequisites": [
+        "CA-02.001",
+        "CA-02.002"
+      ],
+      "images": [
+        "IMG-045",
+        "IMG-046"
+      ],
+      "records": [
+        "science/atoms.txt",
+        "visuals/water-molecule.svg"
+      ],
+      "body": [
+        "Atoms can form bound structures through electromagnetic interactions. Molecular composition and arrangement influence chemical properties. Water molecules contain two hydrogen atoms and one oxygen atom."
+      ],
+      "limitations": "A molecular drawing simplifies a quantum physical system.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-02.004",
+      "category": "02",
+      "title": "Stars, galaxies and the Solar System",
+      "subcategory": "Astronomy",
+      "prerequisites": [
+        "CA-01.003",
+        "CA-02.001",
+        "CA-02.002"
+      ],
+      "images": [
+        "IMG-009",
+        "IMG-010",
+        "IMG-011",
+        "IMG-012",
+        "IMG-013",
+        "IMG-005",
+        "IMG-014",
+        "IMG-015",
+        "IMG-016",
+        "IMG-017",
+        "IMG-018"
+      ],
+      "records": [
+        "earth/solar-system.txt",
+        "visuals/solar-system.svg"
+      ],
+      "body": [
+        "Stars are luminous astronomical bodies powered for much of their lives by nuclear fusion. Galaxies contain stars, gas, dust and other matter. Earth orbits the Sun, one star in the Milky Way galaxy."
+      ],
+      "limitations": "Astronomical images may combine wavelengths or represent different scales.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-03.001",
+      "category": "03",
+      "title": "Earth as a planet",
+      "subcategory": "Planetary science",
+      "prerequisites": [
+        "CA-02.004"
+      ],
+      "images": [
+        "IMG-019",
+        "IMG-021",
+        "IMG-022",
+        "IMG-020",
+        "IMG-023",
+        "IMG-024",
+        "IMG-025",
+        "IMG-026",
+        "IMG-027",
+        "IMG-028",
+        "IMG-029"
+      ],
+      "records": [
+        "earth/planetary-profile.txt",
+        "earth/geography.txt"
+      ],
+      "body": [
+        "Earth is a rocky planet with a solid interior structure, liquid surface water and a surrounding atmosphere. Its rotation produces a repeating day-night cycle; its orbit and axial tilt influence seasonal illumination."
+      ],
+      "limitations": "Geographic coordinates are conventions; the planet itself provides physical reference features.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-03.002",
+      "category": "03",
+      "title": "Water and the water cycle",
+      "subcategory": "Oceans and rivers",
+      "prerequisites": [
+        "CA-02.003",
+        "CA-03.001"
+      ],
+      "images": [
+        "IMG-033",
+        "IMG-035",
+        "IMG-043",
+        "IMG-044"
+      ],
+      "records": [
+        "earth/water.txt"
+      ],
+      "body": [
+        "Water circulates through oceans, land, organisms and the atmosphere. Evaporation, condensation, precipitation, runoff and freezing transfer water between reservoirs. These processes depend on energy and environmental conditions.",
+        "At a pressure of approximately 101,325 pascals, pure water freezes near 273.15 kelvin and boils near 373.15 kelvin. Pressure and dissolved substances affect these transitions. Water dissolves many substances and participates in the chemistry of known terrestrial life; this does not establish that all possible life requires water."
+      ],
+      "limitations": "Clouds and fog consist of droplets or ice; water vapor is invisible.",
+      "revision": 3,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-03.003",
+      "category": "03",
+      "title": "Atmosphere, climate and geology",
+      "subcategory": "Earth systems",
+      "prerequisites": [
+        "CA-02.002",
+        "CA-03.001",
+        "CA-03.002"
+      ],
+      "images": [
+        "IMG-030",
+        "IMG-031",
+        "IMG-034",
+        "IMG-037",
+        "IMG-032",
+        "IMG-036",
+        "IMG-040"
+      ],
+      "records": [
+        "earth/atmosphere.txt",
+        "earth/geography.txt"
+      ],
+      "body": [
+        "Earth's atmosphere exchanges energy with the surface and space. Climate describes statistical patterns of weather over time. Geological processes reshape the solid surface, while water and organisms also alter it."
+      ],
+      "limitations": "A single photograph cannot establish a long-term climate trend.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-04.001",
+      "category": "04",
+      "title": "Cells and metabolism",
+      "subcategory": "Biochemistry",
+      "prerequisites": [
+        "CA-02.003",
+        "CA-03.002"
+      ],
+      "images": [
+        "IMG-047",
+        "IMG-048",
+        "IMG-049",
+        "IMG-050",
+        "IMG-052"
+      ],
+      "records": [
+        "biology/cells.txt",
+        "visuals/cell.svg"
+      ],
+      "body": [
+        "Cells are the fundamental units of known cellular life. Their boundaries separate internal chemistry from the surrounding environment. Metabolism includes the reactions by which organisms obtain materials and energy and maintain their organization.",
+        "Bacteria and archaea generally lack a membrane-enclosed nucleus, whereas eukaryotic cells contain a nucleus and often other membrane-bound structures. Mitochondria in most eukaryotes and chloroplasts in plants and algae have bacterial evolutionary origins. Enzymes accelerate reactions; ribosomes build proteins using genetic instructions. Multicellular organisms contain specialized cells that communicate and form tissues."
+      ],
+      "limitations": "Viruses and other noncellular replicators complicate definitions of life.",
+      "revision": 3,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-04.002",
+      "category": "04",
+      "title": "DNA and inheritance",
+      "subcategory": "Genetics",
+      "prerequisites": [
+        "CA-04.001",
+        "CA-02.003"
+      ],
+      "images": [
+        "IMG-051"
+      ],
+      "records": [
+        "biology/genetics.txt"
+      ],
+      "body": [
+        "DNA stores heritable information in sequences of chemical bases. Cellular machinery copies and interprets portions of those sequences. Variation can arise through mutation, recombination and other processes."
+      ],
+      "limitations": "Genes operate within cells and environments; they do not determine every trait independently.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-04.003",
+      "category": "04",
+      "title": "Evolution and biodiversity",
+      "subcategory": "Evolution",
+      "prerequisites": [
+        "CA-04.001",
+        "CA-04.002"
+      ],
+      "images": [
+        "IMG-055",
+        "IMG-057",
+        "IMG-065",
+        "IMG-066",
+        "IMG-063",
+        "IMG-064"
+      ],
+      "records": [
+        "biology/diversity.txt",
+        "biology/foundations.txt"
+      ],
+      "body": [
+        "Populations change across generations as inherited variation changes in frequency. Natural selection, genetic drift, mutation and gene flow contribute to evolution. Common ancestry connects the diversity of known terrestrial organisms."
+      ],
+      "limitations": "Evolution is not a progression toward a single predetermined goal.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-04.004",
+      "category": "04",
+      "title": "Ecosystems and food webs",
+      "subcategory": "Ecology",
+      "prerequisites": [
+        "CA-03.003",
+        "CA-04.001",
+        "CA-04.003"
+      ],
+      "images": [
+        "IMG-053",
+        "IMG-054",
+        "IMG-060",
+        "IMG-061",
+        "IMG-062",
+        "IMG-038",
+        "IMG-039",
+        "IMG-056",
+        "IMG-058",
+        "IMG-059",
+        "IMG-098",
+        "IMG-099"
+      ],
+      "records": [
+        "biology/diversity.txt"
+      ],
+      "body": [
+        "An ecosystem includes organisms and their physical surroundings. Energy enters many ecosystems through photosynthesis or chemical reactions and passes among organisms. Matter cycles through living and nonliving reservoirs."
+      ],
+      "limitations": "Food webs are variable and interdependent, not simple linear chains.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-05.001",
+      "category": "05",
+      "title": "Human anatomy and physiology",
+      "subcategory": "Anatomy",
+      "prerequisites": [
+        "CA-04.001",
+        "CA-04.003"
+      ],
+      "images": [
+        "IMG-067",
+        "IMG-068",
+        "IMG-069"
+      ],
+      "records": [
+        "humanity/civilization.txt"
+      ],
+      "body": [
+        "Humans are multicellular mammals whose bodies contain specialized tissues and organ systems. Circulation transports materials, respiration exchanges gases, digestion supplies nutrients, and nervous and endocrine systems coordinate functions."
+      ],
+      "limitations": "Teaching models show selected anatomy and do not represent all individual variation.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-05.002",
+      "category": "05",
+      "title": "Human development and inheritance",
+      "subcategory": "Development",
+      "prerequisites": [
+        "CA-04.002",
+        "CA-05.001"
+      ],
+      "images": [
+        "IMG-073",
+        "IMG-102"
+      ],
+      "records": [],
+      "body": [
+        "Human development includes prenatal growth, infancy, childhood, adolescence and adulthood. Cells divide and differentiate as tissues form and mature. Aging is a variable biological process affected by inherited and environmental factors."
+      ],
+      "limitations": "This summary is biological, not a complete account of individual experience or health.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-05.003",
+      "category": "05",
+      "title": "Cognition and language",
+      "subcategory": "Cognition",
+      "prerequisites": [
+        "CA-05.001",
+        "CA-01.004"
+      ],
+      "images": [
+        "IMG-070",
+        "IMG-071",
+        "IMG-072",
+        "IMG-095",
+        "IMG-079",
+        "IMG-082"
+      ],
+      "records": [
+        "humanity/languages.txt"
+      ],
+      "body": [
+        "Human nervous systems process sensory information and support memory, learning and action. Languages use shared symbolic systems to communicate meaning; spoken, signed and written forms differ in their physical signals."
+      ],
+      "limitations": "Language does not map one-to-one onto universal concepts; cognition is still an active field of research.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-06.001",
+      "category": "06",
+      "title": "Human history and communities",
+      "subcategory": "History",
+      "prerequisites": [
+        "CA-05.001",
+        "CA-05.003"
+      ],
+      "images": [
+        "IMG-075",
+        "IMG-076",
+        "IMG-078",
+        "IMG-080",
+        "IMG-081"
+      ],
+      "records": [
+        "humanity/history.txt"
+      ],
+      "body": [
+        "Human communities have changed over long periods through migration, cooperation, conflict, environmental changes and invention. Archaeology, historical records and oral traditions provide different evidence about the past.",
+        "The existing archive chronology traces the emergence of Homo sapiens in Africa hundreds of thousands of years ago, independent agricultural traditions beginning roughly twelve thousand years ago, early writing systems in several societies more than five thousand years ago, and industrialization in parts of the world beginning in the eighteenth century. These are approximate milestones, not a universal timeline. Sputnik 1 orbited Earth in 1957; humans first landed on the Moon in 1969."
+      ],
+      "limitations": "No single region or linear timeline adequately represents human history.",
+      "revision": 3,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-06.002",
+      "category": "06",
+      "title": "Institutions, exchange and ideas",
+      "subcategory": "Society",
+      "prerequisites": [
+        "CA-06.001",
+        "CA-05.003"
+      ],
+      "images": [
+        "IMG-074",
+        "IMG-088",
+        "IMG-104"
+      ],
+      "records": [
+        "humanity/civilization.txt"
+      ],
+      "body": [
+        "Humans form institutions to coordinate activity, transmit knowledge, allocate resources and resolve disputes. Communities use diverse political, economic, ethical and philosophical systems. These systems change over time."
+      ],
+      "limitations": "Descriptions of institutions must distinguish documented practice from ideals and contested judgments.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-07.001",
+      "category": "07",
+      "title": "Agriculture and engineering",
+      "subcategory": "Engineering",
+      "prerequisites": [
+        "CA-03.002",
+        "CA-04.003",
+        "CA-06.001"
+      ],
+      "images": [
+        "IMG-077",
+        "IMG-083",
+        "IMG-090"
+      ],
+      "records": [],
+      "body": [
+        "Agriculture involves managing organisms and environments to produce food and other resources. Engineering applies knowledge and design to create systems that serve specified purposes under constraints."
+      ],
+      "limitations": "Technological development brings benefits, costs and unequal impacts.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-07.002",
+      "category": "07",
+      "title": "Computing and artificial intelligence",
+      "subcategory": "Computation",
+      "prerequisites": [
+        "CA-01.004",
+        "CA-06.002"
+      ],
+      "images": [
+        "IMG-007"
+      ],
+      "records": [],
+      "body": [
+        "Computers transform encoded information according to specified operations. Artificial intelligence includes computational methods for tasks such as pattern recognition, prediction and planning. Some systems learn statistical relationships from data."
+      ],
+      "limitations": "Capabilities and limitations vary by system; machine output is not automatically correct or conscious.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-07.003",
+      "category": "07",
+      "title": "Flight and space exploration",
+      "subcategory": "Spaceflight",
+      "prerequisites": [
+        "CA-02.002",
+        "CA-02.004",
+        "CA-07.001"
+      ],
+      "images": [
+        "IMG-084",
+        "IMG-101",
+        "IMG-103"
+      ],
+      "records": [],
+      "body": [
+        "Aircraft use aerodynamic forces to travel through an atmosphere. Spacecraft operate beyond much of Earth's atmosphere and can use propulsion to change their motion. Human missions and robotic instruments have extended observation beyond Earth."
+      ],
+      "limitations": "Historical mission photographs document particular achievements, not a general measure of technological capability.",
+      "revision": 1,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-08.001",
+      "category": "08",
+      "title": "Art, music and daily experience",
+      "subcategory": "Expression",
+      "prerequisites": [
+        "CA-05.003",
+        "CA-06.001"
+      ],
+      "images": [
+        "IMG-085",
+        "IMG-091",
+        "IMG-092",
+        "IMG-093",
+        "IMG-094",
+        "IMG-096",
+        "IMG-086",
+        "IMG-087",
+        "IMG-089"
+      ],
+      "records": [
+        "experiences/sound.txt",
+        "humanity/everyday-life.txt"
+      ],
+      "body": [
+        "Humans express experience through visual forms, sound, movement, stories, craft and play. Everyday practices communicate cultural knowledge as well as serving practical needs.",
+        "People live in cities, towns, villages, farms and mobile settlements. Homes, meals, clothing and relationships differ with environment, resources and social practices. Knowledge is transmitted by speech, signing, writing, teaching, observation and performance. Cultures continue to change; no country's customs represent humanity as a whole. Cooperation coexists with inequality and conflict. Communities should be able to describe their own practices, and restrictions on sensitive cultural materials deserve respect."
+      ],
+      "limitations": "Meaning and aesthetic experience vary across people and cultures; an image or sound is only a partial record.",
+      "revision": 3,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    },
+    {
+      "id": "CA-09.001",
+      "category": "09",
+      "title": "Centauri Archive and interstellar messages",
+      "subcategory": "Mission and purpose",
+      "prerequisites": [
+        "CA-01.004",
+        "CA-02.004",
+        "CA-07.003",
+        "CA-08.001"
+      ],
+      "images": [
+        "IMG-097",
+        "IMG-100"
+      ],
+      "records": [
+        "primer/start.txt",
+        "messages/draft.txt"
+      ],
+      "body": [
+        "Centauri Archive is an independent research project developing a durable, intelligible record of Earth. Its development package and photographic collection are not a flight-qualified artifact. Voyager's Golden Record provides a historical precedent for interstellar messages."
+      ],
+      "limitations": "Fermi Explorer integration is proposed, not approved. Physical survival and interpretation by unknown readers remain open engineering and research questions.",
+      "revision": 2,
+      "language": "en",
+      "status": "draft — independent source and editorial review pending",
+      "credit": "Centauri Archive editorial draft",
+      "rights": "Original project text; publication license pending",
+      "sources": []
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+EARTH / A PLANETARY PROFILE
+
+Earth is the third major planet from the Sun. It is a roughly spherical, rotating, rocky world whose surface includes continents, islands and a connected global ocean. It has one large natural satellite, the Moon. The Sun provides most of the energy for weather, photosynthesis and many environmental cycles. Gravity holds the atmosphere and oceans to the planet and helps determine its shape.
+
+SIZE AND MOTION
+
+Earth's mean radius is about 6,371 kilometers. Its equatorial radius is slightly greater than its polar radius because rotation produces an equatorial bulge. Its mass is about 5.97 times 10 to the 24th kilograms. The average distance to the Sun is about 150 million kilometers. Earth's orbit is not a perfect circle, so this distance changes over the year.
+
+An orbital revolution takes approximately 365.25 ordinary Earth days. A rotation relative to distant stars lasts approximately 23 hours and 56 minutes, slightly shorter than the average solar day. Earth's rotational axis is tilted relative to the plane of its orbit, creating seasonal changes in sunlight. Time units used in this description are human conventions and would have to be grounded in reproducible physical references in a final archive.
+
+WATER AND ROCK
+
+Liquid water covers approximately 71 percent of Earth's surface, largely in a single global ocean. The rest includes continents and islands with a wide range of elevations and climates. Water also occurs in solid ice, vapor, rivers, lakes, underground aquifers, clouds and living organisms. Much of the ocean floor is shaped by ridges, trenches and sediment. Earth's outer rigid shell is divided into slowly moving tectonic plates. Their interactions cause many earthquakes, volcanoes and mountain ranges.
+
+AIR AND CLIMATE
+
+Near the surface, dry air consists mainly of nitrogen (about 78 percent by volume) and oxygen (about 21 percent), with argon, carbon dioxide and other gases in smaller amounts. Water vapor is variable and essential to clouds, precipitation and the climate system. The atmosphere absorbs and redistributes energy, protects the surface from many incoming objects, and provides the medium through which familiar sounds travel.
+
+LIFE AND HUMANITY
+
+Earth is the only world for which life has been confirmed. Its organisms include bacteria, archaea and eukaryotes, a group containing animals, plants, fungi and many single-celled organisms. Life is distributed across oceans, soils, air and even environments with extreme heat, salt, pressure or cold. Humans are one species among this diversity. We use technology to modify environments, store knowledge and investigate the world beyond Earth.
+
+LIMITATIONS AND REPRESENTATION
+
+The word Earth is a human name. The north-up orientation of many maps, the borders between countries and the convention of splitting the world into continents are not inevitable physical properties. A robust visual record should show a globe, scales, ocean and land relationships, and multiple types of observation rather than relying on one political map. Every photograph or map must distinguish measured observations from composites, false colors or projections.
+
+This is an original summary based on cited planetary references, not a universal-language flight record. Quantities are approximate, units human-defined, and expert review is pending.

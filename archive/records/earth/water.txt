@@ -1,0 +1,27 @@
+EARTH / WATER
+ID: EARTH-WATER-001
+Edition: 0.3 editorial draft
+Review: UNREVIEWED
+Language: English development text; not self-decoding.
+
+Water is a chemical compound. Each water molecule ordinarily consists of
+two hydrogen atoms bonded to one oxygen atom: H2O.
+
+Water exists naturally on Earth as liquid, solid ice and vapor. At a pressure
+of about 101325 pascals, pure water freezes near 273.15 kelvin and boils
+near 373.15 kelvin. Phase changes depend on pressure and dissolved material.
+The physical primer must independently define these human measurement units.
+
+Liquid water covers most of Earth's surface, especially in the oceans.
+Water also occurs in clouds, groundwater, rivers, lakes, ice and organisms.
+Evaporation, condensation, precipitation and runoff transport water and
+energy through Earth's environment.
+
+Water is a solvent for many substances and participates in essential
+chemical reactions in known terrestrial life. Its importance here does not
+prove that all possible extraterrestrial life requires water.
+
+Prerequisites: atoms, molecules, temperature, pressure, Earth.
+Next: oceans, atmosphere, cells.
+Missing media: molecular illustration and phase diagram.
+Scientific sources and expert review: pending.

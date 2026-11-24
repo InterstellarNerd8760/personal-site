@@ -1,0 +1,792 @@
+{
+  "archive_version": "0.6.1",
+  "files": [
+    {
+      "media_type": "text/plain",
+      "path": "content/biology/cells.txt",
+      "sha256": "755c0f3044cf750cdf4611e72baffd64f7a6cdf35446903e7e9e54c8495d8ab9",
+      "size": 2598
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/biology/diversity.txt",
+      "sha256": "6d62337f6b4a1a8d93004deea93a0365be701385fd44fbd51a5f05fe38716b15",
+      "size": 1171
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/biology/foundations.txt",
+      "sha256": "97881f9e5c8cbfb7d223358c588eb4f54b0dd206575c0a2289d7c750eddacf77",
+      "size": 1334
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/biology/genetics.txt",
+      "sha256": "e9dc962000b57979a3fd16fb60e66a3f6669cf5d71d25dace15e6485e8245e9e",
+      "size": 1109
+    },
+    {
+      "media_type": "application/json",
+      "path": "content/catalog.json",
+      "sha256": "d04228813227b0bab679e31c155ad389dfe15da0b6b7543f730198cb40921559",
+      "size": 176928
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/earth/atmosphere.txt",
+      "sha256": "7cd881b01e12271c262d0320a729f43c90b2f5874f72b1eae31281333ce5ca75",
+      "size": 2154
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/earth/geography.txt",
+      "sha256": "5553977b2462f31bea6f830e29192a8ba0d009144ce2398b1cbb62e517083621",
+      "size": 2149
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/earth/planetary-profile.txt",
+      "sha256": "69a636d19b134c56d32b35945ea08f7bf050a9ce960f2a9eec262d67082af1d3",
+      "size": 3363
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/earth/solar-system.txt",
+      "sha256": "684d702c7b2601e3f88ca2464033afd74a6b22abbb052bebb4bfa82fa207f9d7",
+      "size": 1076
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/earth/water.txt",
+      "sha256": "0f3c2ebe33a51c3409ee488642fcef930b7767bce992806beb9febc22ed6df91",
+      "size": 1232
+    },
+    {
+      "media_type": "application/json",
+      "path": "content/encyclopedia/index.json",
+      "sha256": "9419d765e26caf0dc3761824d40472c40473c4b1c65b9217a7b45720994eff23",
+      "size": 29053
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/experiences/sound.txt",
+      "sha256": "29784abb257be7383b5c54af438a50fecb039d05bcec363f50e3c870147bfb2b",
+      "size": 2363
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/humanity/civilization.txt",
+      "sha256": "8ce174bdeb5f74488af727fed7a88fea1e1fdc15a04cc8e72f144070e625a7f0",
+      "size": 1070
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/humanity/everyday-life.txt",
+      "sha256": "c7c4115fcac58868a0f45ce4b8bee4b05cbf788fb28215353ae76ecb624f313e",
+      "size": 3361
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/humanity/history.txt",
+      "sha256": "35ec724080fac5cd6ab3c7466ad7013c4933f53ce6fbcd65a743e61cf5c3f8a1",
+      "size": 1215
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/humanity/languages.txt",
+      "sha256": "8b89d32178ac27b78bc5395794028daa5b269440c91f2eef3bc16a9efe449efe",
+      "size": 2523
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/messages/draft.txt",
+      "sha256": "b8873a038d99444cb432fa22c78e586efe1dfa269a27ec8b3f353f50dbbeed83",
+      "size": 877
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/adriatic-sailboat.jpg",
+      "sha256": "eb6b48fe0093fdffe6e2c3c3ad3daffec5a6c83b5e3f70e8598834d1e85ef177",
+      "size": 300380
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/afm-dna-double-crossover-array.jpg",
+      "sha256": "fcc8f0bd229e73f628d5bd060745e8fa66ec5b1775510bd7994503390457c2f8",
+      "size": 76195
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/agulhas-benguela-ocean-currents.jpg",
+      "sha256": "c6217d522b81e8db4e53047bba58b1a751b728e3d498c6f91e534bffeb75496a",
+      "size": 713845
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/alaska-kobuk-sand-dunes.jpg",
+      "sha256": "b6af9a179798fc39a43f99b62335892d3aa14a00ad84748b37eb58090d1e4d6f",
+      "size": 392949
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/alpha-centauri-ab-hubble-eso.jpg",
+      "sha256": "712ce282491f156453d6661c7971fb4fbdfa6613242608fc534265f1c13b0459",
+      "size": 139057
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/amazon-river-sunglint-iss.jpg",
+      "sha256": "d6d1d9b3ee29f801d063a268329ef7196ff589a5e4bdff05215aff910573c312",
+      "size": 363457
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/amazon-transpiration-popcorn-clouds.jpg",
+      "sha256": "037509f18bd480e3fbb9d026412a34ec218fdce733e7659bf12b1dbab6b1e54b",
+      "size": 685704
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/antarctica-modis-2009.jpg",
+      "sha256": "06fdb00049a87b981985c32952b382206d73e50e88ddb4b4c11d73e172a3a621",
+      "size": 593788
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/apollo11-launch.jpg",
+      "sha256": "b20273c07558f0eb07499cba227f3b9c093b5b30524a012c3e02d6c0d611bfc1",
+      "size": 225474
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/australian-football-match-adelaide-1915.jpg",
+      "sha256": "4014ab3ee8b04312c9cbe54b26399ec3371bf4849316dc168e116aa26a8a173b",
+      "size": 408535
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/bees-hexagonal-honeycomb.jpg",
+      "sha256": "ad5f02696b9f52b5db1b198e646dee4fbed2e3ff8fb9defaca229f0d5f87525f",
+      "size": 806419
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/bentley-snow-crystal.jpg",
+      "sha256": "b4a79af8e638db5770677ead449dfc493a3fa63ee4d58ca623db960d0750205e",
+      "size": 416268
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/big-momma-coral.jpg",
+      "sha256": "461e8da3677439aa07ec8e91f47307df573f457680091b872cd81b21adac4e05",
+      "size": 171407
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/botswana-egyptian-geese-crocodile.jpg",
+      "sha256": "eb87e6385c50085bd0dece38356e76098c75e7ac1ea3666167658f3bbe4aa91d",
+      "size": 408159
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/brown-human-iris-closeup.jpg",
+      "sha256": "d880f91afd5422ca2dced337f8b312dd8015eeb48e1c9d9ad450eedd3492a949",
+      "size": 282419
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/bumblebee-zinnia-pollination.jpg",
+      "sha256": "f3db38b6ae1fc524ad48cd202ba33ac6d6ce8cc066b0ada0726cdd8d79357059",
+      "size": 395463
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/butterfly-on-flowering-plant.jpg",
+      "sha256": "1606434cf721cfd8a060ae65285c8738ce76b10bf3e6210dd86fe6f94a4c9e3f",
+      "size": 431077
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/chlorosome-microscopy.jpg",
+      "sha256": "587944fd4fa6242b13f9ea1e198182c6b2ff8aae5662e5e41997d23ec7c9fcce",
+      "size": 195581
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/community-media-conference.jpg",
+      "sha256": "23054b60183ff0b8230399883b3cee25473ce56f427c491757a1f6754eef5ca3",
+      "size": 347231
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/dandi-salt.jpg",
+      "sha256": "e9bff1de9aa555b6535c3e8cdc2bbb84ac25eeaf09a02a9a44d81fe3e5bf5a72",
+      "size": 240625
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/diamond-and-graphite-photographic-composite.jpg",
+      "sha256": "6594be031e2c8bb4a50b88f39a212216d4339376ebf5a7d2b895478740a625a7",
+      "size": 48982
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/earth-apollo17.jpg",
+      "sha256": "de918d9a6f1794c219c869f805fcdc0ec34289d04b71407b6980843ebb2446d5",
+      "size": 331562
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/earth-blue-marble-2005-africa.jpg",
+      "sha256": "67bb674661fa2a755e785a8a5ffe5e5c992e0ab5f2a922b90e3b1b3bdff21e4a",
+      "size": 174578
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/earthrise-apollo8.jpg",
+      "sha256": "afd43435343d298604a7d28f8904dc320a811d26051e5e554919013943d30adb",
+      "size": 64801
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/east-african-rift-topography.jpg",
+      "sha256": "db1c23b34165afa193458c4f0a3aa4ba8e7d4552650d5bd9133a4121c9413bc5",
+      "size": 467931
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/elodea-leaf.jpg",
+      "sha256": "08f2f30e717f55dc4a47b3e04df9cf28ad8fd1e6dd81e2700514944988272a25",
+      "size": 232954
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/entebbe-animal-size-comparison.jpg",
+      "sha256": "020040403daaefcfe45a0b1dc53c1f8c477b2a3286ed4908f52e0b8008ec5333",
+      "size": 406210
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/esselte-analog-oscilloscope.jpg",
+      "sha256": "2294ab4978839cddb10b5bac5f26a9e6dc11b8bbef52f95501a5776a1d61c630",
+      "size": 268896
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/family-kitchen-nci.jpg",
+      "sha256": "1ff5af8d80d9f15f15b985488fef45511c66c43b68885bf27815234d519b5c58",
+      "size": 457870
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/fern-frond-san-francisco.jpg",
+      "sha256": "04bce74bdde8c8f426e8ef14e65187646741d6a2e7cd9cc1a3b51f8c0ba57cb7",
+      "size": 644926
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/frog-in-wetland-pond.jpg",
+      "sha256": "dc2f1c1c90f2d0132432ed486a55242d440229c8f717be177154c5ce95780cce",
+      "size": 392292
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/grain-tablet.jpg",
+      "sha256": "11780b22776104d0dbdac52f7d282ba3484e8c70e8f51f62b9b2ab11bf5dbf0d",
+      "size": 123431
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/gram-positive-bacteria-micrograph.jpg",
+      "sha256": "3257750d8cbe74030d42abb998a29dff6e5c40b76661798d8f881282e7af2720",
+      "size": 182238
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/grand-prismatic-spring.jpg",
+      "sha256": "3ba651cccc46d311874c097d69dd7770c2b8a4adaad4d2427cbfe47a60987f55",
+      "size": 285676
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/great-barrier-reef-whitsundays-iss.jpg",
+      "sha256": "7f7cd6eb95f2ff8f8dbd8c682e986641a21674e3481f1c848ba4732e8dbd0e57",
+      "size": 211526
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/greenland-kong-oscar-glacier.jpg",
+      "sha256": "e90e3f5971061da16257a9f5aa07075cdf2d1959e84cf952fdf47188e22454f8",
+      "size": 282451
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/hawaii-puako-petroglyph-2011.jpg",
+      "sha256": "45bac9825559867035f984b1b42544535077c595da15d2084c78b7de27a9129c",
+      "size": 803168
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/hela-ii-fluorescence-nih.jpg",
+      "sha256": "edfa314d7aaad531e4e415c7495e83d4cb059cc4fcc008a81261c96d2f4faec2",
+      "size": 967492
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/hubble-ultra-deep-field-2014.jpg",
+      "sha256": "d1280bf25b2f861a4c01c3b163ad5506739d460c3c244a47c02cf75d69113264",
+      "size": 357123
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/human-ear-teaching-model-fmvz.jpg",
+      "sha256": "da84ea1398d65a14ed90d68314e6e40d754c4102f7b62bfc400aedc95e503b2d",
+      "size": 192550
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/human-hands-shaping-pottery.jpg",
+      "sha256": "d51ebebe567067513425f7cf870d38a6703fa6911abef05cd21c70850836c448",
+      "size": 258998
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/human-head-torso-model.jpg",
+      "sha256": "ac958c898a9755a6db103b5b3071d8187ad05cd57b14cc03fba2272860975733",
+      "size": 313167
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/hurricane-dorian-from-aqua-2019.jpg",
+      "sha256": "48dc68b1cc250c6426c141a70ca8820e2d60534f8d11fbb3d8b72e55c717dea1",
+      "size": 448656
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/hypersaline-microbial-habitats.jpg",
+      "sha256": "2e405b2cc2d77eadadc5c2a640a444d6449bdab47bc9756e915d96445f1de7de",
+      "size": 367472
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/ibm-80-column-punched-card.jpg",
+      "sha256": "a10760a9c506efad2347e8447de61daa95df7e4441d467944ad6e2469d07eca7",
+      "size": 365817
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/iceland-foggy-iceberg-glacier-lagoon.jpg",
+      "sha256": "15f8f8a7ee922c71354ce25b58f4c331905158897ba815f60b03971b2481da08",
+      "size": 96450
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/india-western-ghats-buttress-roots.jpg",
+      "sha256": "dcd54198bc35b0c19264d4acfe4816838bb8c39c5441d749c650e602fe80315d",
+      "size": 432705
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/iss-atmosphere-limb-crescent-moon.jpg",
+      "sha256": "aa25fe9bcce158034f86e87d5d6973631b23aabf8783a1f2d71564477645cd68",
+      "size": 39420
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/iss-aurora-2026.jpg",
+      "sha256": "ce54277e04706942eaefc5c19cd0e44532945e9fb9f8a1221d1bdefd5b4e6b37",
+      "size": 201020
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/iss-star-trails-christina-koch.jpg",
+      "sha256": "ab0a7b4ee74d75f4a22e6c624643606c29f61320382249d3510a35ede54e84e2",
+      "size": 307103
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/jpl-planetary-montage-pia00545.jpg",
+      "sha256": "08ff48e63ea0741653bf24e197929e9a6e2128346b4f5121f2118598e24ef9ae",
+      "size": 116314
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/kalbelia-dance-chandigarh-2023.jpg",
+      "sha256": "08f8a758ace79c80326cbe9b97fdcbd3d350f1d4b54a92d292ad58333077b61e",
+      "size": 589593
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/kenya-smallholder-field-farming-2017.jpg",
+      "sha256": "681575f17826ed26401fd3ed9dfdb9a0bdec1a1c4cbb67616467f8a1d4762e10",
+      "size": 1136763
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/lahore-astrolabe-1666.jpg",
+      "sha256": "60a8bb320efcc001244b32fbcd29f5736a0b071359e079f02a59abd2831263f6",
+      "size": 395536
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/lviv-city-tram-and-pedestrians.jpg",
+      "sha256": "bf8aa0039dbf0e4e6acb138dd92784181497d49c5cd37f54fd28a349ce0c98c1",
+      "size": 740253
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/mesa-verde-cliff-palace-2014.jpg",
+      "sha256": "f4f822b200b6c0864642878f6426016eb5273668041af6430ddf9e1b0385b813",
+      "size": 411983
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/methanococcus-maripaludis-electron-micrograph.jpg",
+      "sha256": "dcdfe3cd6ccc5b5502308a50c846575f33add8214cbb78c845860fe0d9487729",
+      "size": 140818
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/metropolitan-museum-indian-sitar.jpg",
+      "sha256": "8be42b8a7cde5b6b54e799beac63dd87ad4e85471fb39387d73057e282cd9769",
+      "size": 194572
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/milky-way-2mass-allsky-pia04250.jpg",
+      "sha256": "ac7c54562b5271179ae8bbe7aecdbfe8364c93a7af254dc678ad0ea2c553af6c",
+      "size": 271075
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/mississippi-delta.jpg",
+      "sha256": "98cb70d53ba71e08661d80d43537d21dc44e0ac8894dc965e76e25fa9bb90124",
+      "size": 368009
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/mount-everest-ali-2011.jpg",
+      "sha256": "4ab2ff8ec61e77f5d1b1432b157bd727e3d5396367bed75f296ebf35c9fc4cee",
+      "size": 561368
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/munich-deutsches-museum-steam-flywheel.jpg",
+      "sha256": "709339ae45eb81b8135e6c392911eb4565c9c9ad88c541e8782465d4ac8af2c8",
+      "size": 378946
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/museum-human-skeleton.jpg",
+      "sha256": "e46f378cda9f20603eb5a1cd99e06d53917e653a612570fd89f94683f8ca1b5f",
+      "size": 133398
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/mushrooms-forest-floor.jpg",
+      "sha256": "e64bfe6bce2b276252f36114a9f82f84d64c060d2de2476b4e7f22be226d67f8",
+      "size": 328853
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/namib-desert-landsat.jpg",
+      "sha256": "bb953e368a3f693a5a4e810955cba82687fd4a5479da049a516474c2b3c42c1e",
+      "size": 646747
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/namibia-mahangu-porridge-communal-cooking.jpg",
+      "sha256": "279782ff71e7ee76b9403d61aaa9401c6ae763828821597e9d82c44669c80a54",
+      "size": 581528
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/nasa-earth-topography-bathymetry-2004.jpg",
+      "sha256": "bb96f61456f4587dae157f17d843a3ad6ff8d8ed1d7f065192c4635173c769b5",
+      "size": 310681
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/navajo-weavers.jpg",
+      "sha256": "7f94e108d9b22638964d62caeeb6082d79f4994bfc54f10fa2b40e6999caf024",
+      "size": 233805
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/noaa-shelf-cloud-rain-shaft.jpg",
+      "sha256": "6db4e0f2ee51cba8cbee70576c792cf5c8a760b15c856738cf084dcfdd56a8ac",
+      "size": 310770
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/noaa-star-stick-diatom.jpg",
+      "sha256": "c8d9412aec66836379b1b40feb86223de065f13ab05aec3b4546bcaf1f148c7f",
+      "size": 170888
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/north-sea-beach-pebbles.jpg",
+      "sha256": "14067622b1675125ca8c859107dde875ad1cd5245ffba036792936e6eb6b602e",
+      "size": 601997
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/oldowan-toolkit-museum.jpg",
+      "sha256": "ea8799228d7c934b7e2e30d2e50058822bf964326a58e8b9c2c3b3ed1e0c8480",
+      "size": 243866
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/onitsha-market-nigeria.jpg",
+      "sha256": "30d145da317ac1defc2ae8d1f7bb8fe852fc7e3632dccd8f499db94567e1b1ca",
+      "size": 681915
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/paramecium-bursaria-picturepest.jpg",
+      "sha256": "8d2917da15011b914ceb2582bc61fe13a565f7e00b77ca22d2f9f2da8cc3d00b",
+      "size": 415027
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/person-petting-brown-white-dog.jpg",
+      "sha256": "18ae903e708cce707bc8649a791e6ab48a6939ffe25f4f058974f9989efde772",
+      "size": 125186
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/pia00407.jpg",
+      "sha256": "3b21eb0c9110763b77023993f9d3e7a280aec7dd791493f7e477cf0e4a0b7b42",
+      "size": 448471
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/pia00437.jpg",
+      "sha256": "e4f56bf8c386cb549dd154fd83f02354f693ce287be7eca80dd2dbc7b18ae671",
+      "size": 234856
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/polarized-micrograph-ice-crystals.jpg",
+      "sha256": "c0f821984292e3f9661514e89d9d65523ab1e62e364c8f59ed970af3ae3538c2",
+      "size": 369413
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/polarized-salt-microscopy-fonseca.jpg",
+      "sha256": "cb62af0814b4744b9e1418739a732b8e463172591af1a2b91ee182a90ce033cd",
+      "size": 180346
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/prenatal-ultrasound.jpg",
+      "sha256": "261241aeea38004d71130d518e3c21ad9eae0d2f321f255f4a88f5b45043c6c6",
+      "size": 86029
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/printing-press-chinese-writing-museum.jpg",
+      "sha256": "488c3c03a21d9e89e48be624c1ebc001592c5cba30feca9ea706e19a271daf08",
+      "size": 342481
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/rat-neuronal-network-holotomography.jpg",
+      "sha256": "84f1a6b318fb223c6a13b11b769c7d98b5df92f59ccd54d5889f77c2b484e53d",
+      "size": 162752
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/real-element-specimens-periodic-table.jpg",
+      "sha256": "296c65587bce363012b5334e75281d72e05440d7f180e1972579d0d5d9f9d80a",
+      "size": 480297
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/red-bead-abacus.jpg",
+      "sha256": "abc339178ce413a8d919b89e337b1f6034d1256cb0aa65912d5531333d311544",
+      "size": 243552
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/river-fish-underwater.jpg",
+      "sha256": "4405a873cf310da80c21888a445041c63995ea4bf089509839265762e557037c",
+      "size": 72490
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/ship-42-catch.jpg",
+      "sha256": "a97d09eee80f612f834394cd24e09b9542ecc229f634171614772583da1e0655",
+      "size": 374893
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/stm-gold-atoms-au100.jpg",
+      "sha256": "7da0d42678fc1984623953601484cd1c8a9180c629118d1f853754b49d9fb801",
+      "size": 40522
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/sun-sdo-pia26681.jpg",
+      "sha256": "e3e997317bcaa69c9ee995912c9740d33dafc11baa49568f309d475edc32f9dd",
+      "size": 454736
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/swiss-alps-aletsch-glacier-2024.jpg",
+      "sha256": "33c5bc8ef4697b75e3f74e4b9b3af6bd87642d9b782ac255c9e9230286c78dbc",
+      "size": 244197
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/tanzania-sign-language-wiki4inclusion-2024.jpg",
+      "sha256": "e4c70623a9a59e4df09f30bea7baa21d058c4106e188a9dba59ee3145bc8b1e7",
+      "size": 339104
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/terrestrial-globe-coordinate-grid.jpg",
+      "sha256": "a72812c81a0dca35a9374795e26e8691c5a237845232c486aae615a0816344ae",
+      "size": 395725
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/texas-classroom-leakey-1973.jpg",
+      "sha256": "8f013bae6558947708c3f9da8e7584892dec79e7fad842684269ed7f3121aac0",
+      "size": 92280
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/three-generations-family-nci.jpg",
+      "sha256": "85499ac96157107dab0f2becdfabb7ac6b074e76a94baf399892afbbabe12e39",
+      "size": 432653
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/uganda-kidepo-elephants-savannah.jpg",
+      "sha256": "9ca055cf29abfab7d37a7c3316a5245a16080ce6c35633c360d26894cdc7860c",
+      "size": 291450
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/university-saskatchewan-astronomy-telescope.jpg",
+      "sha256": "f546ce8eafb6e183e49cea4d9e1e07e3efb765d35f0e911e9aac6f70506f89d9",
+      "size": 316725
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/usda-texas-rice-harvest.jpg",
+      "sha256": "be845c4059f78d7ca2393f6266a0989313b9a43f3902135f3e5d1fa16e45ea91",
+      "size": 443505
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/usfws-native-stream-restoration-2018.jpg",
+      "sha256": "6600b8e6b333d9724b4cb4e7fd0b98c8968ae145cd0328ee3917e62f6fc6c08f",
+      "size": 798286
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/vatican-stone-vase-sculpture.jpg",
+      "sha256": "e412ead069227c8d6abe9b3b88b89fd11854032a166171df8be000ca4d17bcfe",
+      "size": 336574
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/venus-magellan-radar-pia00478.jpg",
+      "sha256": "32d00e2f977f76e9d5c57fdbf1916cc796e2aa7a685472379c40b821ea88bc0c",
+      "size": 368076
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/voyager-family-portrait-1990.jpg",
+      "sha256": "71a31321f292c3c3f42c2c6ccf7fb084eef8a9db1d69c8ea7515753e86a69fe8",
+      "size": 58557
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/voyager-golden-record-preparation-1977.jpg",
+      "sha256": "ee075f9aca9d6f54f21284a7228097e4d1f9f9ad92c57451436b072695b0e5b9",
+      "size": 237988
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/wright-flyer.jpg",
+      "sha256": "d0f2f55517d84a393dc2e1b0e6b3a4e43719e0f1f09f565d5d37ab2b9547abe9",
+      "size": 338277
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/yellowstone-bacterial-mats.jpg",
+      "sha256": "e5ca1675fc3c3e34b6fbb7705f308dfa164314c713261c6dd43dd36cc21231a3",
+      "size": 561616
+    },
+    {
+      "media_type": "image/jpeg",
+      "path": "content/photos/zambezi-victoria-falls-iss.jpg",
+      "sha256": "4cddc6d6774acb074a6778584a0f0b055cfe08c50878a963f7fb0f7d1e737c75",
+      "size": 294288
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/primer/binary-conventions.txt",
+      "sha256": "a6e6b7143ceda00b608aa9c5b5170397f8ee3010abd4f674c4c5df310d02c74b",
+      "size": 3599
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/primer/format.txt",
+      "sha256": "86257e9251d4bf87685b3ebf9568bb01ce0e0a8256e0939f668c93a999f3058a",
+      "size": 1006
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/primer/mathematics.txt",
+      "sha256": "017b087fa4fe244c98785579fb6cc5b4c73acd4969cfe6797863f886036069d5",
+      "size": 902
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/primer/raster-example.txt",
+      "sha256": "83d1f25a86af9f535235996268d55cb860a4c13dbe35922b9abff0524e2673e9",
+      "size": 72
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/primer/start.txt",
+      "sha256": "dd468bf64abea49d992f0d7710d9e69ec29b45d8da07599ee2b6790f298be2f4",
+      "size": 1915
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/science/atoms.txt",
+      "sha256": "e767d24376b11ca8f35e0282cb09a9480b7fc9abac9b58b02631bc7f09259e68",
+      "size": 2439
+    },
+    {
+      "media_type": "text/plain",
+      "path": "content/science/energy.txt",
+      "sha256": "4ce760f1402527e532e2606c927bb8acc3b074f1e35348e0c1562409fd5ec61b",
+      "size": 2232
+    },
+    {
+      "media_type": "image/svg+xml",
+      "path": "content/visuals/cell.svg",
+      "sha256": "13c9928dbb32b670829d5f8f43dae1895d6bafe9ad48ce347346bfe206f05e40",
+      "size": 2442
+    },
+    {
+      "media_type": "image/svg+xml",
+      "path": "content/visuals/solar-system.svg",
+      "sha256": "556d9d48a3b40335ec36a97548f67523bfe33b15c6f283becf637d1f008e6772",
+      "size": 2905
+    },
+    {
+      "media_type": "image/svg+xml",
+      "path": "content/visuals/water-molecule.svg",
+      "sha256": "97c9b351287a18cc59071dbf4fc568f2ea053ad8ae0fbcb1463438107b489d34",
+      "size": 2148
+    }
+  ],
+  "format_version": 1
+}

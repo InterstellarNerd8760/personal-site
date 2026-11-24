@@ -1,0 +1,10 @@
+/* Photograph details; the numbered gallery layout is unchanged. */
+.image-detail{width:min(48rem,calc(100% - 2rem));max-height:90vh;overflow:auto;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:clamp(1rem,3vw,2rem);font:inherit}
+.image-detail::backdrop{background:rgba(0,0,0,.8)}
+.image-detail-toolbar{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.image-detail-toolbar button{background:var(--bg-2);color:var(--white);border:1px solid var(--line);border-radius:4px;padding:.6rem 1rem;font:inherit;cursor:pointer}
+.image-detail h2{font-size:clamp(2rem,4vw,3rem);margin:.7rem 0 1rem}
+.image-detail img{display:block;width:100%;max-height:55vh;object-fit:contain;background:var(--bg-2);margin-bottom:1rem}
+.image-detail h3{font-size:1rem;margin:1rem 0 .3rem}
+.image-detail-credit{font-size:.85rem;color:var(--soft)}
+.image-detail a{color:var(--sky)}

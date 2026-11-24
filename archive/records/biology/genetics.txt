@@ -1,0 +1,20 @@
+BIOLOGY / HEREDITY AND THE GENETIC CODE
+
+DNA (deoxyribonucleic acid) is commonly a double-stranded molecule built
+from four nucleotide types designated A, T, C and G. In ordinary DNA
+base-pairing, A pairs with T and C pairs with G. RNA commonly uses U instead
+of T and serves diverse roles in cells.
+
+An organism's genome is its hereditary genetic material. Genes are regions
+of nucleic acid that contribute to functional products, often RNA or proteins.
+In many organisms, three-nucleotide codons in messenger RNA specify amino
+acids during protein synthesis. Not all DNA is a protein-coding gene.
+
+Mutation alters genetic sequences. Recombination and reproduction can rearrange
+inherited variants. Natural selection, drift and other evolutionary processes
+change variant frequencies in populations across generations.
+
+The symbols A/T/C/G and the English labels are arbitrary human conventions.
+A recoverable biochemical diagram would need to show actual molecular
+structures and relationships before these symbols could carry meaning.
+No diagrams or raw genome sequences are included in this first edition.

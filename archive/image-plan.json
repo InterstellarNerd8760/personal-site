@@ -1,0 +1,1110 @@
+{
+  "version": 1,
+  "title": "Centauri Archive photographic collection",
+  "status": "photographic acquisition list; acquired and planned photographs, project SVG diagrams tracked separately",
+  "categories": [
+    {
+      "id": "primer",
+      "name": "Reading guide & mathematics",
+      "target": 8,
+      "description": "Build a shared interpretation of quantity, scale, encoding and image reconstruction."
+    },
+    {
+      "id": "cosmos",
+      "name": "Cosmos & Solar System",
+      "target": 10,
+      "description": "Establish where Earth is, from the Milky Way to its neighboring planets."
+    },
+    {
+      "id": "geography",
+      "name": "Geography & Earth from space",
+      "target": 12,
+      "description": "Show Earth's form, land, ocean, continents and connected terrain."
+    },
+    {
+      "id": "systems",
+      "name": "Earth systems & climate",
+      "target": 10,
+      "description": "Show dynamic processes in the atmosphere, water, geology and ecosystems."
+    },
+    {
+      "id": "molecules",
+      "name": "Matter, chemistry & cells",
+      "target": 12,
+      "description": "Build from particles and molecules toward living cells and inheritance."
+    },
+    {
+      "id": "life",
+      "name": "Biodiversity & ecosystems",
+      "target": 14,
+      "description": "Represent life beyond charismatic mammals, including microscopic and marine worlds."
+    },
+    {
+      "id": "body",
+      "name": "Human body & life",
+      "target": 9,
+      "description": "Describe humans biologically without implying one appearance or culture represents everyone."
+    },
+    {
+      "id": "civilization",
+      "name": "History, science & technology",
+      "target": 13,
+      "description": "Describe selected technological and social transformations without claiming a single linear history."
+    },
+    {
+      "id": "culture",
+      "name": "Culture & everyday life",
+      "target": 12,
+      "description": "Show ordinary human lives and diverse contemporary communities with consent and context."
+    },
+    {
+      "id": "messages",
+      "name": "Messages, stewardship & questions",
+      "target": 4,
+      "description": "End with attributed human perspectives and openly acknowledged uncertainties."
+    }
+  ],
+  "records": [
+    {
+      "id": "IMG-001",
+      "category": "primer",
+      "title": "Documented one-to-ten objects photograph",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/red-bead-abacus.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_Bead_Abacus_Display.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-002",
+      "category": "primer",
+      "title": "Honeycomb with repeating hexagonal cells",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/bees-hexagonal-honeycomb.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Italian_honeybee_honey_frame_from_Langstroth_hive.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-003",
+      "category": "primer",
+      "title": "Snowflake crystals under magnification",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/bentley-snow-crystal.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:-Snow_Crystal-_MET_DP351890.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-004",
+      "category": "primer",
+      "title": "Natural size comparisons among animals",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/entebbe-animal-size-comparison.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elephants%2C_antelope_and_zebras_living_peaceful_together.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-005",
+      "category": "primer",
+      "title": "Star trails photographed over time",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/iss-star-trails-christina-koch.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/a-trail-of-night-lights-145750/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-006",
+      "category": "primer",
+      "title": "Black-and-white beach stones photographed",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/north-sea-beach-pebbles.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beach_rocks_and_pebbles.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-007",
+      "category": "primer",
+      "title": "Physical information encoding: historical punched card",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/ibm-80-column-punched-card.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Punch_card_80_columns_(2).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-008",
+      "category": "primer",
+      "title": "Photographed analog oscilloscope waveform",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/esselte-analog-oscilloscope.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Esselte_oscilloscope.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-009",
+      "category": "cosmos",
+      "title": "The observable universe and cosmic distance",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/hubble-ultra-deep-field-2014.jpg",
+      "source_url": "https://science.nasa.gov/image-detail/hubble-ultra-deep-field/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-010",
+      "category": "cosmos",
+      "title": "Milky Way and the Sun's approximate location",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/milky-way-2mass-allsky-pia04250.jpg",
+      "source_url": "https://science.nasa.gov/photojournal/point-source-all-sky/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-011",
+      "category": "cosmos",
+      "title": "Nearby stars and Alpha Centauri",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/alpha-centauri-ab-hubble-eso.jpg",
+      "source_url": "https://www.eso.org/public/images/eso1629v/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-012",
+      "category": "cosmos",
+      "title": "The Sun and its apparent surface",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/sun-sdo-pia26681.jpg",
+      "source_url": "https://science.nasa.gov/photojournal/image-of-sun-from-nasas-solar-dynamics-observatory/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-013",
+      "category": "cosmos",
+      "title": "Solar System orbital order",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/jpl-planetary-montage-pia00545.jpg",
+      "source_url": "https://science.nasa.gov/photojournal/solar-system-montage/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-014",
+      "category": "cosmos",
+      "title": "Mercury's surface",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/pia00437.jpg",
+      "source_url": "https://science.nasa.gov/photojournal/planet-mercury/",
+      "curation_note": "Mariner 10 photographed Mercury in 1974. Along the boundary between daylight and darkness, shadows reveal the relief of the cratered surface."
+    },
+    {
+      "id": "IMG-015",
+      "category": "cosmos",
+      "title": "Venus's cloud deck and mapped surface",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/venus-magellan-radar-pia00478.jpg",
+      "source_url": "https://science.nasa.gov/photojournal/venus-global-view-centered-at-180-degrees/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-016",
+      "category": "cosmos",
+      "title": "Earth and the Moon together",
+      "kind": "historical or scientific photograph",
+      "status": "included",
+      "asset": "photos/earthrise-apollo8.jpg",
+      "source_url": null,
+      "curation_note": "Actual credited photograph included as a JPEG derivative. See file metadata in the archive catalog."
+    },
+    {
+      "id": "IMG-017",
+      "category": "cosmos",
+      "title": "Mars: global view and terrain",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/pia00407.jpg",
+      "source_url": "https://science.nasa.gov/photojournal/global-color-views-of-mars/",
+      "curation_note": "This color mosaic combines Viking Orbiter images. The bright northern polar cap, the Tharsis volcanoes and the long canyon system Valles Marineris are visible in one projected view."
+    },
+    {
+      "id": "IMG-018",
+      "category": "cosmos",
+      "title": "Jupiter, Saturn, Uranus, Neptune and smaller bodies",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/voyager-family-portrait-1990.jpg",
+      "source_url": "https://science.nasa.gov/resource/solar-system-portrait-60-frame-mosaic/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-019",
+      "category": "geography",
+      "title": "Full-disk Earth photograph (Apollo or equivalent)",
+      "kind": "historical or scientific photograph",
+      "status": "included",
+      "asset": "photos/earth-apollo17.jpg",
+      "source_url": null,
+      "curation_note": "Actual credited photograph included as a JPEG derivative. See file metadata in the archive catalog."
+    },
+    {
+      "id": "IMG-020",
+      "category": "geography",
+      "title": "Complete color globe mosaic with processing explained",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/earth-blue-marble-2005-africa.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation-5935/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-021",
+      "category": "geography",
+      "title": "Topographic globe, ocean floors and elevation",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/nasa-earth-topography-bathymetry-2004.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-topography-bathymetry/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-022",
+      "category": "geography",
+      "title": "Earth's latitude, longitude and polar orientation",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/terrestrial-globe-coordinate-grid.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:GEO_Globe_Image.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-023",
+      "category": "geography",
+      "title": "African landscapes and major regions",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/zambezi-victoria-falls-iss.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/victoria-falls-zambezi-river-3813/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-024",
+      "category": "geography",
+      "title": "Asian landscapes and major regions",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/mount-everest-ali-2011.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/the-worlds-tallest-mountain-82578/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-025",
+      "category": "geography",
+      "title": "European landscapes and major regions",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/swiss-alps-aletsch-glacier-2024.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/glacial-losses-in-the-swiss-alps-154043/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-026",
+      "category": "geography",
+      "title": "North American landscapes and major regions",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/alaska-kobuk-sand-dunes.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/an-unexpected-expanse-of-sand-in-alaska-147600/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-027",
+      "category": "geography",
+      "title": "South American landscapes and major regions",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/amazon-river-sunglint-iss.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/amazon-meanders-in-sunglint-92370/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-028",
+      "category": "geography",
+      "title": "Antarctic ice sheet and surrounding ocean",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/antarctica-modis-2009.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/antarctica-36839/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-029",
+      "category": "geography",
+      "title": "Australian and Pacific island landscapes",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/great-barrier-reef-whitsundays-iss.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/great-barrier-reef-near-whitsunday-islands-88109/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-030",
+      "category": "geography",
+      "title": "Plate tectonics and continental movement",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/east-african-rift-topography.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/crater-highlands-tanzania-6316/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-031",
+      "category": "systems",
+      "title": "Atmosphere layers and vertical structure",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/iss-atmosphere-limb-crescent-moon.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/earths-limb-with-a-crescent-moon-150240/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-032",
+      "category": "systems",
+      "title": "Cloud systems viewed from orbit",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/hurricane-dorian-from-aqua-2019.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/hurricane-dorian-pounds-the-bahamas-145555/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-033",
+      "category": "systems",
+      "title": "Rainfall, evaporation and the water cycle",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/noaa-shelf-cloud-rain-shaft.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nssl0389_-_Flickr_-_NOAA_Photo_Library.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-034",
+      "category": "systems",
+      "title": "Ocean currents and the global ocean",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/agulhas-benguela-ocean-currents.jpg",
+      "source_url": "https://oceancolor.gsfc.nasa.gov/gallery/531/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-035",
+      "category": "systems",
+      "title": "River drainage from mountains to the sea",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/mississippi-delta.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/winter-transforms-the-mississippi-river-delta-154838/",
+      "curation_note": "Snow outlines the branching channels at the mouth of the Mississippi. Here the river divides as it carries water and sediment out to sea."
+    },
+    {
+      "id": "IMG-036",
+      "category": "systems",
+      "title": "Grand Prismatic Spring and geothermal ecosystems",
+      "kind": "historical or scientific photograph",
+      "status": "included",
+      "asset": "photos/grand-prismatic-spring.jpg",
+      "source_url": null,
+      "curation_note": "Actual credited photograph included as a JPEG derivative. See file metadata in the archive catalog."
+    },
+    {
+      "id": "IMG-037",
+      "category": "systems",
+      "title": "Glaciers, snow and polar ice",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/greenland-kong-oscar-glacier.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/kong-oscar-glacier-greenland-45431/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-038",
+      "category": "systems",
+      "title": "Desert and arid ecosystem",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/namib-desert-landsat.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/namib-naukluft-national-park-namibia-2804/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-039",
+      "category": "systems",
+      "title": "Tropical forest canopy and rainfall",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/amazon-transpiration-popcorn-clouds.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/afternoon-clouds-over-the-amazon-rainforest-39936/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-040",
+      "category": "systems",
+      "title": "Aurora and Earth's magnetic environment",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/iss-aurora-2026.jpg",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/purple-haze-aurora/",
+      "curation_note": "NASA source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-041",
+      "category": "molecules",
+      "title": "Physical samples of chemical elements",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/real-element-specimens-periodic-table.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:PeriodicTable-RealElements.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-042",
+      "category": "molecules",
+      "title": "Atomic-resolution microscope image",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/stm-gold-atoms-au100.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Atomic_resolution_Au100.JPG",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-043",
+      "category": "molecules",
+      "title": "Ice, water and water vapor in natural settings",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/iceland-foggy-iceberg-glacier-lagoon.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Foggy_Iceberg_at_Glacier_Lagoon.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-044",
+      "category": "molecules",
+      "title": "Frozen water crystals under microscopy",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/polarized-micrograph-ice-crystals.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ice_crystals_in_the_ice_cream_2.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-045",
+      "category": "molecules",
+      "title": "Carbon crystals: diamond and graphite",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/diamond-and-graphite-photographic-composite.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Diamond-and-graphite-with-scale.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-046",
+      "category": "molecules",
+      "title": "Crystal structure under polarized light",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/polarized-salt-microscopy-fonseca.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Polarized_light_microscopy_-_01.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-047",
+      "category": "molecules",
+      "title": "Photomicrograph of bacterial cells",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/gram-positive-bacteria-micrograph.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Microscopic_Image_of_Gram_Postive_Bacteria.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-048",
+      "category": "molecules",
+      "title": "Photomicrograph of archaeal cells",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/methanococcus-maripaludis-electron-micrograph.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Electron_micrograph_of_Methanococcus_maripaludis.png",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-049",
+      "category": "molecules",
+      "title": "Fluorescent microscopy of an animal cell",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/hela-ii-fluorescence-nih.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HeLa-II.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-050",
+      "category": "molecules",
+      "title": "Plant cells and chloroplasts under microscopy",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/elodea-leaf.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cloroplasti_Elodea.jpg",
+      "curation_note": "The green bodies inside these leaf cells are chloroplasts. Within them, the plant uses light energy to make sugars from carbon dioxide and water."
+    },
+    {
+      "id": "IMG-051",
+      "category": "molecules",
+      "title": "Microscopic image of DNA structure",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/afm-dna-double-crossover-array.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DX_DNA_array.png",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-052",
+      "category": "molecules",
+      "title": "High-resolution microscopy of molecular machinery",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/chlorosome-microscopy.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Organization_and_structure_overview_of_the_chlorosome_and_the_carotenosome.webp",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-053",
+      "category": "life",
+      "title": "Bacterial habitat paired with a documented specimen",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/yellowstone-bacterial-mats.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bacteria_mats_near_Grand_Prismatic_Spring_in_Yellowstone.JPG",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-054",
+      "category": "life",
+      "title": "Archaeal habitat paired with a documented specimen",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/hypersaline-microbial-habitats.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hypersaline_environments_and_extremely_halophilic_microbes.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-055",
+      "category": "life",
+      "title": "Single-celled eukaryotes in water",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/paramecium-bursaria-picturepest.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Paramecium_bursaria_-_400x_(13263096305).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-056",
+      "category": "life",
+      "title": "Fungi and decomposition",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/mushrooms-forest-floor.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Forest_Mushroom.JPG",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-057",
+      "category": "life",
+      "title": "Mosses and ferns",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/fern-frond-san-francisco.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fern_-_San_Francisco,_CA_-_DSC02378.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-058",
+      "category": "life",
+      "title": "Flowering plant and pollination",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/bumblebee-zinnia-pollination.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bee_pollinating_flower.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-059",
+      "category": "life",
+      "title": "Mature forest tree and its roots",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/india-western-ghats-buttress-roots.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Buttress_Roots001.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-060",
+      "category": "life",
+      "title": "Coral reef ecosystem",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/big-momma-coral.jpg",
+      "source_url": "https://americansamoa.noaa.gov/science/corals.html",
+      "curation_note": "A boulder coral called Big Momma rises above the reef in American Samoa. The colony and the smaller corals around it provide habitat for fish."
+    },
+    {
+      "id": "IMG-061",
+      "category": "life",
+      "title": "Marine plankton and food webs",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/noaa-star-stick-diatom.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Star_stick_diatom.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-062",
+      "category": "life",
+      "title": "Insect on a flower",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/butterfly-on-flowering-plant.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_butterfly_on_a_flower.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-063",
+      "category": "life",
+      "title": "Fish in its habitat",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/river-fish-underwater.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fish_under_water.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-064",
+      "category": "life",
+      "title": "Amphibian at a wetland",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/frog-in-wetland-pond.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2013-09-05-frog-in-pond-1.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-065",
+      "category": "life",
+      "title": "Reptile and bird in natural habitats",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/botswana-egyptian-geese-crocodile.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Egyptian_Geese_family_behind_a_Crocodile,_Chobe_National_Park,_Botswana.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-066",
+      "category": "life",
+      "title": "Mammals in contrasting ecosystems",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/uganda-kidepo-elephants-savannah.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Elephants_Finding_Respite_in_the_Vast_Savannah.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-067",
+      "category": "body",
+      "title": "Human anatomy: full body with organs",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/human-head-torso-model.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Anatomical_moulage_of_human_torso_(Realistic_lifelike_model_of_bodily_organs_Made_in_GDR_Deutsches_Hygiene_Museum_Dresden_Photo_Norway_2020-01-22_DSC02499.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-068",
+      "category": "body",
+      "title": "Skeleton and joints",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/museum-human-skeleton.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Human-Skeleton.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-069",
+      "category": "body",
+      "title": "Hands and fine motor function",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/human-hands-shaping-pottery.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Making_pottery_(Unsplash).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-070",
+      "category": "body",
+      "title": "Brain, nerves and sensory systems",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/rat-neuronal-network-holotomography.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Live_Neuronal_Nettwork.png",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-071",
+      "category": "body",
+      "title": "Eye and visual perception",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/brown-human-iris-closeup.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_human_male_brown_eye.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-072",
+      "category": "body",
+      "title": "Ear, hearing and sound",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/human-ear-teaching-model-fmvz.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Human_ear_(teaching_model_showing_internal_mechanisms).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-073",
+      "category": "body",
+      "title": "Human life stages across generations",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/three-generations-family-nci.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Three_generations_of_a_family.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-074",
+      "category": "body",
+      "title": "Humans together: varied ages and appearances",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/community-media-conference.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Group_Photo_Conference_Morning.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-075",
+      "category": "civilization",
+      "title": "Stone tools and early human technologies",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/oldowan-toolkit-museum.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Oldowan_toolkit.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-076",
+      "category": "civilization",
+      "title": "Rock art and early symbolic expression",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/hawaii-puako-petroglyph-2011.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Petroglyphs_in_Puako_Petroglyph_Archaeological_District_1346.JPG",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-077",
+      "category": "civilization",
+      "title": "Agriculture and domesticated crops",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/usda-texas-rice-harvest.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20200724-NRCS-LSC-0032-Rice_Harvesting.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-078",
+      "category": "civilization",
+      "title": "Settlements, architecture and early cities",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/mesa-verde-cliff-palace-2014.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mesa_Verde_Public_Domain.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-079",
+      "category": "civilization",
+      "title": "Independent writing systems across cultures",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/grain-tablet.jpg",
+      "source_url": "https://www.metmuseum.org/art/collection/search/327384",
+      "curation_note": "Someone pressed and drew marks into this clay about five thousand years ago. The Met interprets them as a probable account of barley and emmer wheat deliveries or distributions."
+    },
+    {
+      "id": "IMG-080",
+      "category": "civilization",
+      "title": "Mathematics, astronomy and observation instruments",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/lahore-astrolabe-1666.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Astrolabe_by_Jamal_al-Din_ibn_Muqim,_Lahore,_1666_AD_-_Science_Museum,_London_-_DSC05549.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-081",
+      "category": "civilization",
+      "title": "Ocean navigation and seafaring",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/adriatic-sailboat.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_sailboat_on_Adriatic_sea.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-082",
+      "category": "civilization",
+      "title": "Printing, books and knowledge transmission",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/printing-press-chinese-writing-museum.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Printing_Press_(10194330985).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-083",
+      "category": "civilization",
+      "title": "Industrial machines, power and transportation",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/munich-deutsches-museum-steam-flywheel.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Stationary_steam_engine_flywheel,_Deutsches_Museum.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-084",
+      "category": "civilization",
+      "title": "The launch of Apollo 11",
+      "kind": "historical or scientific photograph",
+      "status": "included",
+      "asset": "photos/apollo11-launch.jpg",
+      "source_url": null,
+      "curation_note": "Actual credited photograph included as a JPEG derivative. See file metadata in the archive catalog."
+    },
+    {
+      "id": "IMG-085",
+      "category": "culture",
+      "title": "People cooking and sharing food",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/namibia-mahangu-porridge-communal-cooking.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kitchen_Companions,_Cooking_Together.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-086",
+      "category": "culture",
+      "title": "Daily life in a household",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/family-kitchen-nci.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Family_in_a_kitchen.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-087",
+      "category": "culture",
+      "title": "Children learning in a classroom",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/texas-classroom-leakey-1973.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:EPA18LeakeyStudents.png",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-088",
+      "category": "culture",
+      "title": "Open-air market and exchange",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/onitsha-market-nigeria.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Open_air_market_in_Onitsha_02.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-089",
+      "category": "culture",
+      "title": "Urban streets and public transit",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/lviv-city-tram-and-pedestrians.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Street_scene_with_tram_in_Lwiw.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-090",
+      "category": "culture",
+      "title": "Rural communities and land stewardship",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/kenya-smallholder-field-farming-2017.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Subsistence_farming_between_rocks.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-091",
+      "category": "culture",
+      "title": "Music and traditional instruments",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/metropolitan-museum-indian-sitar.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sitar_MET_259651.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-092",
+      "category": "culture",
+      "title": "Dance and communal celebration",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/kalbelia-dance-chandigarh-2023.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kalbelia_traditional_Dance.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-093",
+      "category": "culture",
+      "title": "Painting, sculpture and handmade art",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/vatican-stone-vase-sculpture.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Vase_sculpture_in_the_Vatican_museum.JPG",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-094",
+      "category": "culture",
+      "title": "Clothing, weaving and textiles",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/navajo-weavers.jpg",
+      "source_url": "https://www.loc.gov/item/90708127/",
+      "curation_note": "Three Navajo women weave beneath a ledge where sheep are gathered. The frame brings the animals, the makers, and their work into a single view."
+    },
+    {
+      "id": "IMG-095",
+      "category": "culture",
+      "title": "Spoken and signed languages in use",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/tanzania-sign-language-wiki4inclusion-2024.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_sign_language_interpreter_with_a_deaf_participant.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-096",
+      "category": "culture",
+      "title": "Games, sports and recreation",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/australian-football-match-adelaide-1915.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Football_Match(GN05078).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-097",
+      "category": "messages",
+      "title": "Humanity's interstellar message: preparation of Voyager's Golden Record",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/voyager-golden-record-preparation-1977.jpg",
+      "source_url": "https://science.nasa.gov/image-detail/the-golden-record-30269492703-o/",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-098",
+      "category": "messages",
+      "title": "Humanity's relationship with other living species",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/person-petting-brown-white-dog.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Petting_my_dog.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-099",
+      "category": "messages",
+      "title": "Conservation, restoration and planetary stewardship",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/usfws-native-stream-restoration-2018.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Planting_native_plants_(49305794546).jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-100",
+      "category": "messages",
+      "title": "Unanswered questions and the open future",
+      "kind": "photograph, instrument image or photomicrograph",
+      "status": "included",
+      "asset": "photos/university-saskatchewan-astronomy-telescope.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Observatory_Telescope_at_the_University_of_Saskatchewan.jpg",
+      "curation_note": "Source and acquisition documented; independent editorial review pending."
+    },
+    {
+      "id": "IMG-101",
+      "category": "civilization",
+      "title": "Ship 42’s tower catch on Flight 15",
+      "kind": "photograph",
+      "status": "included",
+      "asset": "photos/ship-42-catch.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Starship_Flight_15.jpg",
+      "curation_note": "After returning from orbit on 14 November 2026, Ship 42 descends beside the launch tower at Starbase, Texas. Its engines are still firing as the arms reach underneath the spacecraft."
+    },
+    {
+      "id": "IMG-102",
+      "category": "body",
+      "title": "Before birth, seen with sound",
+      "kind": "ultrasound",
+      "status": "included",
+      "asset": "photos/prenatal-ultrasound.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eco_-_12_semanas.jpg",
+      "curation_note": "Two ultrasound views show a human fetus at 12 weeks, as identified by the contributor. The bright outlines come from returning sound waves."
+    },
+    {
+      "id": "IMG-103",
+      "category": "civilization",
+      "title": "Twelve seconds at Kitty Hawk",
+      "kind": "photograph",
+      "status": "included",
+      "asset": "photos/wright-flyer.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wrightflyer.jpg",
+      "curation_note": "Orville Wright lies at the controls as the Flyer lifts off on 17 December 1903. Wilbur runs beside it. This first flight covered 120 feet in 12 seconds."
+    },
+    {
+      "id": "IMG-104",
+      "category": "civilization",
+      "title": "Gandhi picks up salt at Dandi",
+      "kind": "photograph",
+      "status": "included",
+      "asset": "photos/dandi-salt.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gandhi_picking_up_salt_at_Dandi.JPG",
+      "curation_note": "On 6 April 1930, Gandhi gathered salt at Dandi in defiance of British salt law. This surviving slide pairs the scene with a written title."
+    }
+  ],
+  "editorial_goal": 100
+}

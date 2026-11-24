@@ -1,0 +1,21 @@
+THE ATMOSPHERE AND CLIMATE OF EARTH
+
+Earth is surrounded by a layer of gases held by gravity. Near the surface, dry air is primarily nitrogen and oxygen, with smaller amounts of argon, carbon dioxide and other gases. Water vapor varies strongly with location and weather. Atmospheric pressure decreases with altitude because less overlying air remains above.
+
+The atmosphere is not a single uniform shell. In its lowest region, the troposphere, most weather occurs. Above it lie other layers defined by how temperature changes with height and by interactions with radiation. Ultraviolet radiation from the Sun affects atmospheric chemistry; ozone in the stratosphere absorbs much of the Sun's biologically damaging ultraviolet radiation.
+
+The Sun supplies energy to Earth's surface and atmosphere. Different amounts of sunlight reach different latitudes and seasons because of planetary geometry and axial tilt. Rotation, temperature differences, oceans and terrain help shape winds, storms and circulation. Weather describes short-term conditions. Climate describes statistical patterns over longer times and large areas.
+
+Certain gases absorb and emit infrared radiation, which affects Earth's energy balance. This natural greenhouse effect makes the surface warmer than it would otherwise be, but increasing greenhouse-gas concentrations also changes the climate system. Measurements from thermometers, satellites, ocean instruments, ice cores and other records reveal long-term warming and associated changes.
+
+Earth's atmosphere has changed over geological time. Biological activity, volcanism, weathering and solar evolution all contribute to its history. Today's oxygen-rich atmosphere is strongly connected to the history of photosynthetic life.
+
+HOW DO WE KNOW?
+
+- Instruments measure gas composition, pressure, humidity and temperature.
+- Satellites observe clouds, radiation and global circulation.
+- Ancient ice, sediments and fossils provide evidence of past conditions.
+
+Prerequisites: gravity, energy, water, chemistry.
+Next: photosynthesis, oceans, ecosystems.
+Editorial status: Original provisional summary; expert verification pending.
