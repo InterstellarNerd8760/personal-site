@@ -28,16 +28,19 @@ The source dashboard on the [Experiments](https://westonrosch.com/experiments/#s
 
 ## Centauri Archive (`/archive/`)
 
-The public Centauri Archive site is embedded at `/archive/` (encyclopedia, image library, decoding lab, project brief, and records). It is generated from the separate [`centauri-archive`](https://github.com/InterstellarNerd8760/centauri-archive) repository. The development ZIP is built during the sync so records can be verified, but the ZIP itself is not published on this site.
+The public Centauri Archive site at `/archive/` comes from the [`centauri-archive`](https://github.com/InterstellarNerd8760/centauri-archive) repository. The sync builds the verified development ZIP and copies the public records, manifest and small format examples. It excludes ZIP files from the personal site and directs links to the development ZIP to the source repository.
 
-The pinned source commit is in `tools/centauri-archive.lock`. To regenerate the embedded pages after a reviewable change in that repo:
+The approved source commit is in `tools/centauri-archive.lock`. The sync builds the exact committed tree in a temporary checkout and fails if the requested ref cannot be resolved. A local clone can supply that commit without reading the clone's uncommitted changes.
 
 ```sh
-# From a local clone of centauri-archive (optional, faster):
-python3 tools/sync_centauri_archive.py --repo /path/to/centauri-archive --ref <sha>
+# Preview a review commit without touching the published copy or pin.
+preview_dir=$(mktemp -d)
+python3 tools/sync_centauri_archive.py --repo /path/to/centauri-archive --ref <sha> --output "$preview_dir/archive"
 
-# Or clone the locked commit automatically:
+# Regenerate the in-repository copy from the approved pin.
 python3 tools/sync_centauri_archive.py
 ```
 
-Then update `tools/centauri-archive.lock` if you intend to move the pin, and commit the resulting `archive/` files together with the lockfile. Do not add `centauri.zip` to this repository. A short project writeup lives at `/projects/centauri-archive/`.
+For a browser preview, serve the output under `/archive/` alongside the personal site's root `styles.css`, `script.js`, favicon files and `img/`. The shared headers, nav and footer follow the personal-site theme, while archive content retains its deep-space palette. Cloudflare Workers serves individual HTML files at extensionless URLs and directory indexes with trailing slashes. The generated canonical and social URLs follow those routes. [Cloudflare Workers HTML handling](https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/)
+
+Once an archive commit is approved for publication, update the lockfile and review the regenerated `archive/` files and affected sitemap entries together. Run `python3 -m unittest discover -s tools -p 'test_*.py'` for the sync checks. A short project writeup lives at `/projects/centauri-archive/`.
