@@ -41,6 +41,6 @@ Start with public pull requests and review before execution. Use least-privilege
 
 ## Getting started
 
-The standalone source repository and model hosting are not established yet. Propose a technical task through the public [website issue tracker](https://github.com/InterstellarNerd8760/personal-site/issues), with “Centauri Bloom” in its title. Keep discussions focused on the project and avoid posting personal information. An independently hosted site or domain is welcome as a proposal; no purchase is needed to participate.
+The [public source repository](https://github.com/InterstellarNerd8760/centauri-bloom) and [project Discord](https://discord.gg/mThAEaEgWf) are established. Propose a task in the [Bloom issue tracker](https://github.com/InterstellarNerd8760/centauri-bloom/issues). Model hosting is not yet live. Keep discussions focused on the project and avoid posting personal information. An independently hosted site or domain is welcome as a proposal; no purchase is needed to participate.
 
 Reference: [DiLoCo: Distributed Low-Communication Training of Language Models](https://arxiv.org/abs/2311.08105).
