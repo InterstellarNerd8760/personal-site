@@ -1,0 +1,23 @@
+ATOMS, ELEMENTS, AND MOLECULES
+
+Ordinary matter is made from atoms. An atom has a compact nucleus containing protons and, for most atomic species, neutrons. Electrons occupy quantum states associated with the nucleus. The positive electric charge of the protons and negative charge of electrons make an electrically neutral atom when their numbers are equal. Atoms are small: the typical dimensions of atomic electron clouds are measured in fractions of a billionth of a meter.
+
+The number of protons determines the chemical element. A nucleus with one proton is hydrogen, one with six protons is carbon, and one with eight is oxygen. Atoms of the same element can have different neutron counts; these are isotopes. Some isotopes are stable, while others undergo radioactive decay. The periodic table groups elements according to recurring chemical properties, which arise from electron structure.
+
+Atoms can form bonds and produce molecules or extended structures. Two hydrogen atoms and one oxygen atom form one water molecule, H2O. Carbon can form several covalent bonds and is central to the complex organic chemistry of known life. Chemical bonds involve electrons and quantum interactions; drawn sticks between colored spheres are useful diagrams, not literal pictures of bonds.
+
+Ordinary chemical reactions rearrange atomic connections without changing which chemical elements are present. In nuclear reactions, nuclei themselves can change, releasing or absorbing much larger amounts of energy per event. Both processes are constrained by conservation laws. Matter also occurs as plasmas, liquids, solids and gases, depending on conditions.
+
+HOW DO WE KNOW?
+
+- Different elements emit and absorb characteristic spectra of light.
+- Chemical composition can be inferred from experiments involving mass, electric charge and reactions.
+- Scattering experiments, microscopy and spectroscopy constrain atomic structure.
+
+WHAT REMAINS UNEXPLAINED HERE?
+
+A proper archival explanation needs diagrams of charge, waves, spectra and scales, plus reproducible units. This document uses Earth-based names and conventions; it is not the opening page of a universal primer. Real atoms cannot be fully described by the classical orbit diagrams often used in schools.
+
+Prerequisites: counting, ratios, units, physical measurements.
+Next: molecules, water, energy, cells.
+Editorial status: Original provisional summary; expert verification pending.

@@ -1,0 +1,25 @@
+ENERGY AND PHYSICAL CHANGE
+
+Energy is a measurable property of physical systems. It can be transferred between systems or transformed between forms. In a closed system, total energy is conserved. Energy is not a physical substance that is consumed; when a useful process occurs, energy often spreads into forms that are harder to use for further work.
+
+Motion is associated with kinetic energy. The configuration of objects interacting through gravity or electric fields can carry potential energy. Atoms and molecules store energy in their motions and arrangements. Electromagnetic radiation transports energy through space. Stars shine because of processes in which nuclear reactions convert some mass into energy and other forms of matter.
+
+Temperature characterizes thermal states, while heat refers to energy transferred because of temperature differences. Heat can move by radiation, conduction and fluid motion. The distinction matters: a thermometer reading is not the total thermal energy of a large or small object.
+
+The second law of thermodynamics constrains how energy moves and changes. Entropy in an isolated macroscopic system tends not to decrease. Biological life does not violate this law: organisms maintain local organization by using energy and matter from their environments and releasing heat and waste.
+
+On Earth, sunlight powers photosynthesis and influences weather and the water cycle. Chemical energy stored in food supports metabolism. Human technologies convert among electrical, chemical, mechanical and thermal forms, with losses and environmental consequences.
+
+HOW DO WE KNOW?
+
+- Repeatable measurements link changes in motion, temperature and other physical quantities.
+- Spectroscopy and experiments reveal how light interacts with matter.
+- Astronomical observations show energy transport from stars and other sources.
+
+WHAT REMAINS TO BE ADDED?
+
+A durable primer must define time, distance, mass, and energy units in a way a reader can reproduce. Equations alone are insufficient without teaching the meaning of their symbols.
+
+Prerequisites: numbers, measurement, matter.
+Next: light, stars, chemistry, metabolism.
+Editorial status: Original provisional summary; expert verification pending.

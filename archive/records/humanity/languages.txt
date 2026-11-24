@@ -1,0 +1,23 @@
+HUMAN LANGUAGE AND EXPRESSION
+
+Humans use languages to communicate information, intentions, memories, questions and imaginative ideas. Spoken languages use patterns of sound, signed languages use visual and bodily gestures, and writing represents language through systems of marks. Signed languages are complete natural languages with their own grammars, not merely gestures that accompany spoken languages.
+
+Human languages vary in their sounds, signs, word structures, grammar and social practices. They also change across generations. Communities borrow words, invent expressions, and develop new ways of speaking. No single language can adequately represent the complete cultural or intellectual diversity of humanity.
+
+Writing was invented in multiple forms over human history. Some writing systems encode relatively small units of sound; others represent syllables, words or combinations of these. Writing and language are not the same thing. Humans communicated through language long before many societies developed writing, and many spoken languages have never had a widespread standard written form.
+
+Language is deeply connected to culture but does not rigidly determine thought. Poetry, conversation, storytelling, jokes, songs and scientific explanations all use communication in different ways. People often speak more than one language. Language loss can also mean the loss of community knowledge, historical memory and cultural expression.
+
+For an interstellar archive, a single recording of a greeting is not a translation system. A useful language collection needs consented speakers, careful recording metadata, phonetic and contextual explanations, multiple examples, and ideally synchronized pictures of people and objects. The physical decoding primer must first teach sound sampling and the relation between symbols and observations.
+
+An archive should not appoint one person's speech as the authorized voice of Earth. Contributions must be attributed to individuals, with informed permission and safeguards for sensitive cultural material.
+
+OBSERVATIONS
+
+- Comparative linguistics examines changes and relationships among languages.
+- Acoustic measurements describe properties of spoken sound.
+- Researchers document signed, spoken and written languages with community participation.
+
+Prerequisites: humans, sound, time, symbols, counting.
+Next: audio recordings, cultural history, attributed personal messages.
+Editorial status: Original provisional summary; cultural and linguistic review pending.

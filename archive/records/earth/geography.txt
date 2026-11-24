@@ -1,0 +1,21 @@
+THE SURFACE OF EARTH
+
+Earth is a rocky planet with extensive liquid oceans and an atmosphere. Its surface is divided into land and water, but the boundary changes through time with tectonics, sea level, erosion and climate. Continents and ocean basins are not permanent features; Earth's geological history spans billions of years.
+
+The outer rigid layer is broken into moving tectonic plates. Their interactions create mountain ranges, ocean trenches, earthquakes, volcanic regions, and new or recycled crust. Plate motion is generally slow on a human lifetime, but its cumulative effects reshape the planet. The mantle below is largely solid rock that deforms over long periods; it is not a global underground ocean of liquid magma.
+
+The planet has oceans, seas, rivers, lakes, glaciers, groundwater and atmospheric water. Water moves among these reservoirs through evaporation, condensation, precipitation, infiltration, runoff and transport through living organisms. The Sun and gravity provide much of the energy and direction driving these cycles.
+
+Earth's landscapes include deserts, forests, grasslands, tundra, wetlands, reefs and coastal environments. Such categories are simplified; real ecosystems vary continuously and are altered by seasons, disturbances, and life. Human settlements and land use have transformed large areas of the surface.
+
+Maps require conventions. A globe approximates Earth's shape, while a flat map distorts at least some distances, areas, angles or directions. Latitude and longitude are human-chosen coordinates, not universal properties of the land itself. An interstellar archive should provide at least one globe-like projection together with a clear description of its scale and orientation.
+
+HOW DO WE KNOW?
+
+- Satellite imaging and ground surveys document surface changes.
+- Geological layers, fossils and radiometric dating record deep history.
+- Direct measurements of water, atmosphere and ice test Earth-system models.
+
+Prerequisites: Earth, gravity, water, energy.
+Next: atmosphere, climate, ecosystems, human settlement.
+Editorial status: Original provisional summary; expert verification pending.

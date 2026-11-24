@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 520" role="img" aria-labelledby="title desc">
+<title id="title">The Solar System</title><desc id="desc">Original schematic showing the Sun and planets in orbital order. Neither positions nor sizes are to scale.</desc>
+<defs><radialGradient id="bg"><stop stop-color="#17334b"/><stop offset="1" stop-color="#06111e"/></radialGradient><radialGradient id="sun"><stop stop-color="#fff0bb"/><stop offset=".55" stop-color="#ffbe56"/><stop offset="1" stop-color="#ca6035"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="14"/></filter></defs>
+<rect width="840" height="520" fill="url(#bg)"/>
+<g fill="#cce6f5" opacity=".65"><circle cx="33" cy="62" r="1"/><circle cx="610" cy="39" r="1.5"/><circle cx="720" cy="95" r="1"/><circle cx="539" cy="469" r="1"/><circle cx="376" cy="48" r="1"/><circle cx="762" cy="453" r="1"/></g>
+<text x="45" y="62" fill="#9ac7d5" font-family="monospace" font-size="13" letter-spacing="3">CENTAURI ARCHIVE / 01 — LOCATION</text>
+<text x="45" y="110" fill="#f1f6fa" font-family="Georgia,serif" font-size="49">A planetary system.</text>
+<text x="45" y="142" fill="#b4cbd9" font-family="sans-serif" font-size="16">One star. Eight planets. Countless smaller bodies.</text>
+<path d="M48 290H795" stroke="#567084" stroke-width="1" stroke-dasharray="4 6"/>
+<circle cx="93" cy="290" r="62" fill="#e4ac4c" opacity=".17" filter="url(#glow)"/><circle cx="93" cy="290" r="45" fill="url(#sun)"/>
+<circle cx="213" cy="290" r="5" fill="#9c9ea4"/><circle cx="276" cy="290" r="9" fill="#e6b487"/><circle cx="350" cy="290" r="11" fill="#3f93c7"/><path d="M344 282Q350 287 354 294L345 298" fill="#74ad72"/><circle cx="423" cy="290" r="7.2" fill="#cc8067"/>
+<circle cx="517" cy="290" r="25" fill="#c3a58b"/><path d="M498 282H535M495 291H539M503 301H532" stroke="#9d7564" stroke-width="3" opacity=".65"/>
+<circle cx="622" cy="290" r="20" fill="#cfb895"/><ellipse cx="622" cy="290" rx="34" ry="11" fill="none" stroke="#c4b29b" stroke-width="5" transform="rotate(-17 622 290)"/>
+<circle cx="710" cy="290" r="15" fill="#90cbd1"/><circle cx="782" cy="290" r="15" fill="#4578b6"/>
+<g fill="#d7e5ef" font-family="monospace" font-size="12" text-anchor="middle">
+<text x="93" y="376">SUN</text><text x="213" y="376">MERCURY</text><text x="276" y="408">VENUS</text><text x="350" y="376">EARTH</text><text x="423" y="408">MARS</text><text x="517" y="376">JUPITER</text><text x="622" y="408">SATURN</text><text x="710" y="376">URANUS</text><text x="782" y="408">NEPTUNE</text></g>
+<g stroke="#68869b" opacity=".7"><path d="M213 300V354M276 302V389M350 303V355M423 299V389M517 315V355M622 314V388M710 306V355M782 306V388"/></g>
+<path d="M45 446H795" stroke="#466074"/><text x="45" y="472" fill="#9bb2c5" font-family="monospace" font-size="11" letter-spacing="1">ORBITAL ORDER ONLY · NOT TO SCALE · ORIGINAL EDUCATIONAL DIAGRAM</text>
+</svg>

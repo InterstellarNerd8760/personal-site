@@ -1,0 +1,2755 @@
+{
+  "catalog_version": 1,
+  "description": "Editorial metadata for the human-facing prototype. This JSON is not extraterrestrial-readable.",
+  "groups": [
+    {
+      "id": "earth",
+      "label": "01 / Earth & the Solar System"
+    },
+    {
+      "id": "science",
+      "label": "02 / Matter & physical science"
+    },
+    {
+      "id": "biology",
+      "label": "03 / Life & evolution"
+    },
+    {
+      "id": "humanity",
+      "label": "04 / Humanity"
+    },
+    {
+      "id": "photos",
+      "label": "05 / Photography of the living world"
+    },
+    {
+      "id": "visuals",
+      "label": "06 / Images & diagrams"
+    },
+    {
+      "id": "experiences",
+      "label": "07 / Sounds & experiences"
+    },
+    {
+      "id": "primer",
+      "label": "08 / Reading experiments"
+    },
+    {
+      "id": "messages",
+      "label": "09 / Messages"
+    },
+    {
+      "id": "encyclopedia",
+      "label": "10 / Centauri Encyclopedia dataset"
+    }
+  ],
+  "records": [
+    {
+      "path": "earth/solar-system.txt",
+      "title": "Our Solar System",
+      "summary": "A star, planets and the location of Earth.",
+      "group": "earth",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "earth/water.txt",
+      "title": "Water on Earth",
+      "summary": "Water's molecular structure, phases, and place in Earth's systems.",
+      "group": "earth",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "biology/foundations.txt",
+      "title": "The nature of life",
+      "summary": "Cells, chemical processes, energy, and reproduction.",
+      "group": "biology",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "biology/genetics.txt",
+      "title": "DNA and heredity",
+      "summary": "The information carried across biological generations.",
+      "group": "biology",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "biology/diversity.txt",
+      "title": "The diversity of life",
+      "summary": "Microbes, plants, animals and other living lineages.",
+      "group": "biology",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "humanity/civilization.txt",
+      "title": "Human civilizations",
+      "summary": "Societies, technologies and ways of living.",
+      "group": "humanity",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "humanity/history.txt",
+      "title": "A brief human history",
+      "summary": "Selected developments in human history.",
+      "group": "humanity",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "primer/start.txt",
+      "title": "Start here",
+      "summary": "Assumptions and limitations of this digital collection.",
+      "group": "primer",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "primer/mathematics.txt",
+      "title": "Counting and mathematics",
+      "summary": "Early ideas for a shared quantitative vocabulary.",
+      "group": "primer",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "primer/format.txt",
+      "title": "Digital format",
+      "summary": "The existing storage format and the decoding problem.",
+      "group": "primer",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "primer/raster-example.txt",
+      "title": "Eight-by-eight raster",
+      "summary": "Known input data for an image reconstruction example.",
+      "group": "primer",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "messages/draft.txt",
+      "title": "Unapproved message draft",
+      "summary": "Provisional text, not an authorized message from a person or humanity.",
+      "group": "messages",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "science/atoms.txt",
+      "title": "Atoms, elements and molecules",
+      "summary": "How matter is structured, how elements differ, and how molecules form.",
+      "group": "science",
+      "sources": [
+        {
+          "label": "NIST / Atomic Spectra Database",
+          "url": "https://physics.nist.gov/asd"
+        },
+        {
+          "label": "NCBI / The Chemical Components of a Cell",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26883/"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "science/energy.txt",
+      "title": "Energy and physical change",
+      "summary": "Motion, thermal energy, light and transformations in physical systems.",
+      "group": "science",
+      "sources": [
+        {
+          "label": "OpenStax / Physics",
+          "url": "https://openstax.org/details/books/college-physics-2e"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "earth/geography.txt",
+      "title": "The surface of Earth",
+      "summary": "Geology, oceans, water cycles, ecosystems, and the limits of maps.",
+      "group": "earth",
+      "sources": [
+        {
+          "label": "USGS / The water cycle",
+          "url": "https://www.usgs.gov/water-science-school/water-cycle-diagrams"
+        },
+        {
+          "label": "NASA / Earth science",
+          "url": "https://science.nasa.gov/earth/"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "earth/atmosphere.txt",
+      "title": "Atmosphere and climate",
+      "summary": "Air, weather, greenhouse gases and planetary climate.",
+      "group": "earth",
+      "sources": [
+        {
+          "label": "NASA / Earth's atmosphere",
+          "url": "https://science.nasa.gov/earth/earths-atmosphere/"
+        },
+        {
+          "label": "NASA / Climate science",
+          "url": "https://science.nasa.gov/climate-change/"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "biology/cells.txt",
+      "title": "Cells: the units of life",
+      "summary": "Membranes, nuclei, microbes, and life's microscopic machinery.",
+      "group": "biology",
+      "sources": [
+        {
+          "label": "NCBI Bookshelf / Origin and Evolution of Cells",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9841/"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "humanity/languages.txt",
+      "title": "Human languages",
+      "summary": "Speech, sign, writing, cultural meaning, and language diversity.",
+      "group": "humanity",
+      "sources": [
+        {
+          "label": "Smithsonian / Language and Symbols",
+          "url": "https://humanorigins.si.edu/human-characteristics/language-symbols"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "experiences/sound.txt",
+      "title": "What is sound?",
+      "summary": "Pressure waves, sound perception and a plan for reproducible recordings.",
+      "group": "experiences",
+      "sources": [
+        {
+          "label": "NOAA / Sound in the Sea",
+          "url": "https://dosits.org/science/what-is-sound/"
+        }
+      ],
+      "status": "Unreviewed original synthesis",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "visuals/solar-system.svg",
+      "title": "The Solar System — visual study",
+      "summary": "The Sun and eight planets, shown in orbital order.",
+      "group": "visuals",
+      "alt": "Schematic Sun and eight planets, ordered Mercury through Neptune",
+      "caption": "Original project schematic. Sizes, distances and locations are not to scale.",
+      "sources": [
+        {
+          "label": "NASA / Solar System facts",
+          "url": "https://science.nasa.gov/solar-system/solar-system-facts/"
+        }
+      ],
+      "status": "Original concept illustration",
+      "rights": "Original project SVG; open-reuse license not yet assigned"
+    },
+    {
+      "path": "visuals/water-molecule.svg",
+      "title": "Water — molecular diagram",
+      "summary": "A schematic of two hydrogen atoms bonded to one oxygen atom.",
+      "group": "visuals",
+      "alt": "One oxygen atom and two hydrogen atoms linked at an angle",
+      "caption": "Original project illustration. Relative atomic size and bond appearance are schematic.",
+      "sources": [
+        {
+          "label": "USGS / Water Science School",
+          "url": "https://www.usgs.gov/water-science-school"
+        }
+      ],
+      "status": "Original concept illustration",
+      "rights": "Original project SVG; open-reuse license not yet assigned"
+    },
+    {
+      "path": "visuals/cell.svg",
+      "title": "A living cell — visual study",
+      "summary": "Generalized animal eukaryotic cell with selected structures.",
+      "group": "visuals",
+      "alt": "Simplified animal cell, nucleus, mitochondrion and membrane",
+      "caption": "Original schematic, not to scale; no single image represents all cell types.",
+      "sources": [
+        {
+          "label": "NCBI Bookshelf / Origin and Evolution of Cells",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9841/"
+        }
+      ],
+      "status": "Original concept illustration",
+      "rights": "Original project SVG; open-reuse license not yet assigned"
+    },
+    {
+      "path": "primer/binary-conventions.txt",
+      "title": "Binary is not a universal language",
+      "summary": "Two physical states are simple; the rules of interpreting them must be demonstrated.",
+      "group": "primer",
+      "sources": [
+        {
+          "label": "NASA / Voyager Golden Record cover",
+          "url": "https://science.nasa.gov/mission/voyager/golden-record-cover/"
+        },
+        {
+          "label": "NASA / Instructions for aliens",
+          "url": "https://www.nasa.gov/image-article/instructions-for-aliens/"
+        }
+      ],
+      "status": "Unreviewed original editorial synthesis",
+      "rights": "Original project text; reuse license not yet assigned"
+    },
+    {
+      "path": "earth/planetary-profile.txt",
+      "title": "Earth: a planetary profile",
+      "summary": "Earth's structure, oceans, atmosphere, rotation, life and measurement conventions.",
+      "group": "earth",
+      "sources": [
+        {
+          "label": "NASA / Earth facts",
+          "url": "https://science.nasa.gov/earth/facts/"
+        },
+        {
+          "label": "NASA / Earth fact sheet",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+        }
+      ],
+      "status": "Unreviewed original editorial synthesis",
+      "rights": "Original project text; reuse license not yet assigned"
+    },
+    {
+      "path": "humanity/everyday-life.txt",
+      "title": "Everyday human life",
+      "summary": "Homes, families, work, communication and cultural diversity, with an ethical image-selection approach.",
+      "group": "humanity",
+      "sources": [
+        {
+          "label": "UNESCO / Intangible cultural heritage",
+          "url": "https://ich.unesco.org/en/what-isintangible-heritage-00003"
+        },
+        {
+          "label": "UNESCO / Cultural heritage and community",
+          "url": "https://ich.unesco.org/en/faq-01058"
+        }
+      ],
+      "status": "Unreviewed original editorial synthesis",
+      "rights": "Original project text; reuse license not yet assigned"
+    },
+    {
+      "path": "photos/earth-apollo17.jpg",
+      "title": "Earth, photographed by Apollo 17",
+      "summary": "One sunlit face of Earth, captured by the Apollo 17 crew on 7 December 1972.",
+      "group": "photos",
+      "alt": "Full disk Earth surrounded by black space, Africa and oceans visible.",
+      "caption": "Our planet seen from space. The frame shows Africa, oceans, and swirling cloud systems.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal government photograph, public domain in the United States; verify conditions internationally",
+      "photographer": "NASA / Apollo 17 crew",
+      "date": "1972-12-07",
+      "derivative": "Processed 1400px-class JPEG copied without re-encoding from WebKit/Speedometer's public photo test assets; source original is available at the Wikimedia Commons file page.",
+      "sources": [
+        {
+          "label": "Source photograph and file rights — Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
+        },
+        {
+          "label": "Documented derivative provenance — WebKit/Speedometer",
+          "url": "https://github.com/WebKit/Speedometer/blob/main/suites-experimental/pdf-viewer/assets/README.md"
+        }
+      ]
+    },
+    {
+      "path": "photos/earthrise-apollo8.jpg",
+      "title": "Earthrise over the Moon",
+      "summary": "Earth rising above the Moon's horizon, photographed by William Anders during Apollo 8 on 24 December 1968.",
+      "group": "photos",
+      "alt": "Blue-and-white Earth above a stark gray lunar horizon.",
+      "caption": "The curved lunar foreground and distant Earth reveal two distinct worlds in a single frame.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal government photograph, public domain in the United States; verify conditions internationally",
+      "photographer": "NASA / William Anders / Apollo 8",
+      "date": "1968-12-24",
+      "derivative": "Processed 1400px-class JPEG copied without re-encoding from WebKit/Speedometer's public photo test assets; source original is available at the Wikimedia Commons file page.",
+      "sources": [
+        {
+          "label": "Source photograph and file rights — Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg"
+        },
+        {
+          "label": "Documented derivative provenance — WebKit/Speedometer",
+          "url": "https://github.com/WebKit/Speedometer/blob/main/suites-experimental/pdf-viewer/assets/README.md"
+        }
+      ]
+    },
+    {
+      "path": "photos/apollo11-launch.jpg",
+      "title": "The launch of Apollo 11",
+      "summary": "A Saturn V rocket lifting off on 16 July 1969 to carry humans toward their first lunar landing.",
+      "group": "photos",
+      "alt": "Apollo 11 Saturn V rocket lifting off beneath a plume of exhaust.",
+      "caption": "Apollo 11 lifts off from Earth, demonstrating engineering and human exploration beyond the home planet.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal government photograph, public domain in the United States; verify conditions internationally",
+      "photographer": "NASA / Kennedy Space Center",
+      "date": "1969-07-16",
+      "derivative": "Processed 1400px-class JPEG copied without re-encoding from WebKit/Speedometer's public photo test assets; source original is available at the Wikimedia Commons file page.",
+      "sources": [
+        {
+          "label": "Source photograph and file rights — Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Apollo_11_Launch_-_GPN-2000-000630.jpg"
+        },
+        {
+          "label": "Documented derivative provenance — WebKit/Speedometer",
+          "url": "https://github.com/WebKit/Speedometer/blob/main/suites-experimental/pdf-viewer/assets/README.md"
+        }
+      ]
+    },
+    {
+      "path": "photos/grand-prismatic-spring.jpg",
+      "title": "Grand Prismatic Spring",
+      "summary": "Aerial photograph of Yellowstone's geothermal hot spring and its colored microbial environments, 22 June 2006.",
+      "group": "photos",
+      "alt": "Aerial view of a deep blue geothermal pool surrounded by orange, yellow and rust-colored margins.",
+      "caption": "The colors surrounding the geothermal spring include microbial communities adapted to different temperatures.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal government photograph, public domain in the United States; verify conditions internationally",
+      "photographer": "US National Park Service / Jim Peaco",
+      "date": "2006-06-22",
+      "derivative": "Processed 1400px-class JPEG copied without re-encoding from WebKit/Speedometer's public photo test assets; source original is available at the Wikimedia Commons file page.",
+      "sources": [
+        {
+          "label": "Source photograph and file rights — Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Excelsior_Geyser_and_Grand_Prismatic_Spring_(23320428202).jpg"
+        },
+        {
+          "label": "Documented derivative provenance — WebKit/Speedometer",
+          "url": "https://github.com/WebKit/Speedometer/blob/main/suites-experimental/pdf-viewer/assets/README.md"
+        }
+      ]
+    },
+    {
+      "path": "photos/mississippi-delta.jpg",
+      "title": "The Mississippi meets the sea",
+      "summary": "Snow outlines the branching channels at the mouth of the Mississippi. Here the river divides as it carries water and sediment out to sea.",
+      "group": "photos",
+      "alt": "Pale snow follows branching strips of land surrounded by dark coastal water.",
+      "caption": "Snow outlines the branching channels at the mouth of the Mississippi. Here the river divides as it carries water and sediment out to sea.",
+      "photographer": "NASA / Expedition 72 crew",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA astronaut photography, public domain in the United States.",
+      "derivative": "NASA cropped the image, enhanced contrast and removed lens artifacts. Uncropped archive JPEG, maximum edge 1800 pixels.",
+      "sources": [
+        {
+          "label": "NASA Earth Observatory · original description by Elysia Viengkham",
+          "url": "https://science.nasa.gov/earth/earth-observatory/winter-transforms-the-mississippi-river-delta-154838/"
+        },
+        {
+          "label": "Source image",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/154000/154838/iss072e575684_lrg.jpg"
+        }
+      ],
+      "date": "2025-01-24"
+    },
+    {
+      "path": "photos/elodea-leaf.jpg",
+      "title": "Inside an Elodea leaf",
+      "summary": "The green bodies inside these leaf cells are chloroplasts. Within them, the plant uses light energy to make sugars from carbon dioxide and water.",
+      "group": "photos",
+      "alt": "Green chloroplasts cluster inside adjoining cells of a waterweed leaf.",
+      "caption": "The green bodies inside these leaf cells are chloroplasts. Within them, the plant uses light energy to make sugars from carbon dioxide and water.",
+      "photographer": "Cimice50",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, including this resized JPEG.",
+      "derivative": "Uncropped archive JPEG, maximum edge 1800 pixels.",
+      "sources": [
+        {
+          "label": "Wikimedia Commons · photographer’s description",
+          "url": "https://commons.wikimedia.org/wiki/File:Cloroplasti_Elodea.jpg"
+        },
+        {
+          "label": "Source image",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Cloroplasti_Elodea.jpg"
+        },
+        {
+          "label": "Creative Commons Attribution-ShareAlike 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ],
+      "date": "2015-01-16"
+    },
+    {
+      "path": "photos/big-momma-coral.jpg",
+      "title": "A coral colony off Taʻū",
+      "summary": "A boulder coral called Big Momma rises above the reef in American Samoa. The colony and the smaller corals around it provide habitat for fish.",
+      "group": "photos",
+      "alt": "A large boulder coral towers above smaller corals on the seafloor.",
+      "caption": "A boulder coral called Big Momma rises above the reef in American Samoa. The colony and the smaller corals around it provide habitat for fish.",
+      "photographer": "Matt McIntosh / NOAA",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NOAA photograph, public domain in the United States.",
+      "derivative": "Uncropped archive JPEG, maximum edge 1800 pixels.",
+      "sources": [
+        {
+          "label": "National Marine Sanctuary of American Samoa · Big Corals",
+          "url": "https://americansamoa.noaa.gov/science/corals.html"
+        },
+        {
+          "label": "Source image",
+          "url": "https://americansamoa.noaa.gov/media/img/20170401-tau-valley-of-the-giants-1000.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/grain-tablet.jpg",
+      "title": "Grain accounted for in clay",
+      "summary": "Someone pressed and drew marks into this clay about five thousand years ago. The Met interprets them as a probable account of barley and emmer wheat deliveries or distributions.",
+      "group": "photos",
+      "alt": "A clay tablet divided into fields with incised signs and impressed marks.",
+      "caption": "Someone pressed and drew marks into this clay about five thousand years ago. The Met interprets them as a probable account of barley and emmer wheat deliveries or distributions.",
+      "photographer": "The Metropolitan Museum of Art, accession 1988.433.2",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Public domain image, The Met Open Access (CC0).",
+      "derivative": "Subject dates to ca. 3100–2900 BCE. Uncropped archive JPEG, maximum edge 1800 pixels.",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · object description",
+          "url": "https://www.metmuseum.org/art/collection/search/327384"
+        },
+        {
+          "label": "Source image",
+          "url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/327384/1315127/main-image"
+        }
+      ]
+    },
+    {
+      "path": "photos/navajo-weavers.jpg",
+      "title": "Navajo weavers",
+      "summary": "Three Navajo women weave beneath a ledge where sheep are gathered. The frame brings the animals, the makers, and their work into a single view.",
+      "group": "photos",
+      "alt": "Three women working at looms below a flock of sheep.",
+      "caption": "Three Navajo women weave beneath a ledge where sheep are gathered. The frame brings the animals, the makers, and their work into a single view.",
+      "photographer": "Pennington & Rowland / Library of Congress",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Public domain in the United States. U.S. copyright registered in 1914.",
+      "derivative": "Uncropped archive JPEG, maximum edge 1800 pixels.",
+      "sources": [
+        {
+          "label": "Library of Congress · catalog description and attribution",
+          "url": "https://www.loc.gov/item/90708127/"
+        },
+        {
+          "label": "Source image",
+          "url": "https://tile.loc.gov/storage-services/service/pnp/ppmsc/00100/00135v.jpg"
+        }
+      ],
+      "date": "1914"
+    },
+    {
+      "path": "photos/ship-42-catch.jpg",
+      "title": "Ship 42’s tower catch on Flight 15",
+      "summary": "After returning from orbit on 14 November 2026, Ship 42 descends beside the launch tower at Starbase, Texas. Its engines are still firing as the arms reach underneath the spacecraft.",
+      "group": "photos",
+      "alt": "Ship 42 upright beside the tower arms, with a bright plume beneath its engines.",
+      "caption": "After returning from orbit on 14 November 2026, Ship 42 descends beside the launch tower at Starbase, Texas. Its engines are still firing as the arms reach underneath the spacecraft.",
+      "photographer": "SpaceX",
+      "status": "Acquired; editorial review pending",
+      "rights": "Wikimedia Commons lists this SpaceX photograph under CC BY 4.0.",
+      "derivative": "Full composition retained. Resized to 1200 × 1800 pixels and encoded as JPEG.",
+      "sources": [
+        {
+          "label": "Photograph, description and license · Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Starship_Flight_15.jpg"
+        },
+        {
+          "label": "SpaceX · original post",
+          "url": "https://x.com/SpaceX/status/2122352509721190612"
+        },
+        {
+          "label": "Creative Commons Attribution 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "date": "2026-11-14"
+    },
+    {
+      "path": "photos/prenatal-ultrasound.jpg",
+      "title": "Before birth, seen with sound",
+      "summary": "Two ultrasound views show a human fetus at 12 weeks, as identified by the contributor. The bright outlines come from returning sound waves.",
+      "group": "photos",
+      "alt": "Two grayscale ultrasound sections of a fetus.",
+      "caption": "Two ultrasound views show a human fetus at 12 weeks, as identified by the contributor. The bright outlines come from returning sound waves.",
+      "photographer": "Isis, contributor",
+      "status": "Acquired; editorial review pending",
+      "rights": "Released into the public domain by contributor Isis.",
+      "derivative": "Cropped the equipment annotations from the upper and lower edges. Both scan views are retained.",
+      "sources": [
+        {
+          "label": "Source image, description and rights",
+          "url": "https://commons.wikimedia.org/wiki/File:Eco_-_12_semanas.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/wright-flyer.jpg",
+      "title": "Twelve seconds at Kitty Hawk",
+      "summary": "Orville Wright lies at the controls as the Flyer lifts off on 17 December 1903. Wilbur runs beside it. This first flight covered 120 feet in 12 seconds.",
+      "group": "photos",
+      "alt": "The Wright Flyer just above a sandy field with Wilbur Wright to the side.",
+      "caption": "Orville Wright lies at the controls as the Flyer lifts off on 17 December 1903. Wilbur runs beside it. This first flight covered 120 feet in 12 seconds.",
+      "photographer": "John T. Daniels / Wright Brothers Collection, Library of Congress",
+      "status": "Acquired; editorial review pending",
+      "rights": "Public domain in the United States.",
+      "derivative": "Resized to fit 1800 pixels and encoded as JPEG.",
+      "sources": [
+        {
+          "label": "Source image, description and rights",
+          "url": "https://commons.wikimedia.org/wiki/File:Wrightflyer.jpg"
+        }
+      ],
+      "date": "1903-12-17"
+    },
+    {
+      "path": "photos/dandi-salt.jpg",
+      "title": "Gandhi picks up salt at Dandi",
+      "summary": "On 6 April 1930, Gandhi gathered salt at Dandi in defiance of British salt law. This surviving slide pairs the scene with a written title.",
+      "group": "photos",
+      "alt": "A black-and-white slide shows Gandhi bending to the ground beside the title Breaking the Salt Law at Dandi.",
+      "caption": "On 6 April 1930, Gandhi gathered salt at Dandi in defiance of British salt law. This surviving slide pairs the scene with a written title.",
+      "photographer": "Photographer unidentified. Slide scanned by Yann.",
+      "status": "Acquired; editorial review pending",
+      "rights": "Public domain in India as identified by the source. The 1930 published work is also public domain in the United States.",
+      "derivative": "Resized to fit 1800 pixels and encoded as JPEG.",
+      "sources": [
+        {
+          "label": "Source image, description and rights",
+          "url": "https://commons.wikimedia.org/wiki/File:Gandhi_picking_up_salt_at_Dandi.JPG"
+        }
+      ],
+      "date": "1930-04-06"
+    },
+    {
+      "path": "photos/pia00437.jpg",
+      "title": "Mercury through Mariner 10",
+      "summary": "Mariner 10 photographed Mercury in 1974. Along the boundary between daylight and darkness, shadows reveal the relief of the cratered surface.",
+      "group": "photos",
+      "alt": "A narrow sunlit portion of Mercury shows overlapping impact craters.",
+      "caption": "Mariner 10 photographed Mercury in 1974. Along the boundary between daylight and darkness, shadows reveal the relief of the cratered surface.",
+      "photographer": "NASA/JPL",
+      "status": "Acquired; editorial review pending",
+      "rights": "NASA Photojournal image, credited to NASA/JPL. See JPL Image Use Policy.",
+      "derivative": "Uncropped JPEG resized to fit 1600 pixels.",
+      "sources": [
+        {
+          "label": "NASA Photojournal PIA00437",
+          "url": "https://science.nasa.gov/photojournal/planet-mercury/"
+        },
+        {
+          "label": "Original JPEG",
+          "url": "https://images-assets.nasa.gov/image/PIA00437/PIA00437~orig.jpg"
+        },
+        {
+          "label": "JPL image use policy",
+          "url": "https://www.jpl.nasa.gov/jpl-image-use-policy/"
+        }
+      ]
+    },
+    {
+      "path": "photos/pia00407.jpg",
+      "title": "Mars from the Viking orbiters",
+      "summary": "This color mosaic combines Viking Orbiter images. The bright northern polar cap, the Tharsis volcanoes and the long canyon system Valles Marineris are visible in one projected view.",
+      "group": "photos",
+      "alt": "A rust-colored globe has a bright northern cap and a dark canyon system below center.",
+      "caption": "This color mosaic combines Viking Orbiter images. The bright northern polar cap, the Tharsis volcanoes and the long canyon system Valles Marineris are visible in one projected view.",
+      "photographer": "NASA/JPL/USGS",
+      "status": "Acquired; editorial review pending",
+      "rights": "NASA Photojournal image, credited to NASA/JPL/USGS. See JPL Image Use Policy.",
+      "derivative": "Uncropped JPEG resized to fit 1600 pixels.",
+      "sources": [
+        {
+          "label": "NASA Photojournal PIA00407",
+          "url": "https://science.nasa.gov/photojournal/global-color-views-of-mars/"
+        },
+        {
+          "label": "Original JPEG",
+          "url": "https://images-assets.nasa.gov/image/PIA00407/PIA00407~orig.jpg"
+        },
+        {
+          "label": "JPL image use policy",
+          "url": "https://www.jpl.nasa.gov/jpl-image-use-policy/"
+        }
+      ]
+    },
+    {
+      "path": "photos/sun-sdo-pia26681.jpg",
+      "title": "The Sun in extreme ultraviolet",
+      "summary": "NASA's Solar Dynamics Observatory imaged the Sun on September 10, 2025. The golden color represents ultraviolet intensity rather than the Sun's visible-light color.",
+      "group": "photos",
+      "alt": "Detailed glowing yellow-gold solar disk with active regions and wisps of corona against black space.",
+      "caption": "A view of the Sun in a 171-angstrom extreme-ultraviolet band. This instrument image is rendered in false color, allowing hot solar structures to be seen.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA science image; generally not subject to U.S. copyright, subject to NASA Media Usage Guidelines.",
+      "photographer": "NASA / GSFC / Solar Dynamics Observatory",
+      "date": "2025-09-10",
+      "derivative": "NASA false-color 171-angstrom scientific image; resized to maximum edge 1800 pixels and saved as quality-87 JPEG without additional color remapping. NASA source original is linked.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/photojournal/image-of-sun-from-nasas-solar-dynamics-observatory/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia26/pia26681/PIA26681.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/antarctica-modis-2009.jpg",
+      "title": "Antarctica in summer, from orbit",
+      "summary": "NASA Aqua MODIS imagery acquired January 27, 2009 depicts the continent's ice, surrounding seas and clouds. Several orbital passes were combined to form this mosaic.",
+      "group": "photos",
+      "alt": "Large ice-white Antarctic continent surrounded by dark southern ocean and pale swirling cloud systems.",
+      "caption": "A satellite mosaic shows Antarctica during the continuous summer daylight. This is a composite of several overpasses, not a single camera exposure.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA Earth Observatory imagery; generally not subject to U.S. copyright, subject to NASA Media Usage Guidelines.",
+      "photographer": "NASA Earth Observatory / MODIS Rapid Response Team, NASA GSFC",
+      "date": "2009-01-27",
+      "derivative": "NASA MODIS composite of multiple orbital passes. Downsampled to maximum edge 1800 pixels and saved as quality-87 JPEG; original acquisition link retained.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/antarctica-36839/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/36000/36839/Antarctica_AMO_2009027_lrg.jpg?crop=faces%2Cfocalpoint&fit=crop&h=1536&w=1536"
+        }
+      ]
+    },
+    {
+      "path": "photos/iss-aurora-2026.jpg",
+      "title": "Aurora over Earth's night side",
+      "summary": "Photographed from the International Space Station on September 7, 2026, auroral light glows above Earth's limb. Atmospheric atoms and molecules radiate after excitation associated with the solar wind.",
+      "group": "photos",
+      "alt": "Thin green and purple auroral arcs above the dark curve of Earth, with distant city lights visible.",
+      "caption": "An ISS view of a green and purple aurora. NASA cropped the photograph, enhanced contrast and removed lens artifacts.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA astronaut photograph; generally not subject to U.S. copyright, subject to NASA Media Usage Guidelines.",
+      "photographer": "NASA / Expedition 75 crew / ISS Crew Earth Observations Facility",
+      "date": "2026-09-07",
+      "derivative": "NASA cropped image, enhanced contrast and removed lens artifacts; the NASA derivative is resized to maximum edge 1800 pixels and saved as quality-87 JPEG.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/purple-haze-aurora/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/iotd/2026/purple-haze-aurora/ISS075-E-88592_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/jpl-planetary-montage-pia00545.jpg",
+      "title": "Spacecraft views of the planets",
+      "summary": "NASA/JPL combined observations from Mariner 10, Magellan, Galileo, Viking and Voyager into a Solar System portrait. This is an edited montage, not one camera exposure; planet sizes are not consistently to scale.",
+      "group": "photos",
+      "alt": "Montage of planets including Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, and the Moon against black space.",
+      "caption": "The Solar System as observed by multiple spacecraft, assembled in a NASA/JPL montage; the inner and outer groups use different scales.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA / Jet Propulsion Laboratory",
+      "date": "1997-01-15",
+      "derivative": "Composite of archival NASA planetary images; relative planetary sizes are not uniformly to scale. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/photojournal/solar-system-montage/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia00/pia00545/PIA00545.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/venus-magellan-radar-pia00478.jpg",
+      "title": "Venus's radar-mapped surface",
+      "summary": "NASA's Magellan spacecraft mapped Venus beneath its opaque clouds using radar. Radar observations were projected onto a simulated globe centered at 180 degrees east longitude.",
+      "group": "photos",
+      "alt": "Grayscale hemisphere of Venus showing radar texture, surface structures and a coordinate grid against black space.",
+      "caption": "Venus's solid surface is hidden from conventional visible-light cameras by thick clouds, so radar mapping was used here; this is not a natural-color photograph.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA / JPL / Magellan Science Team",
+      "date": "1996-11-26",
+      "derivative": "Magellan radar mosaics mapped to a simulated globe, with data gaps filled by other radar observations or neutral tone. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/photojournal/venus-global-view-centered-at-180-degrees/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia00/pia00478/PIA00478.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/earth-blue-marble-2005-africa.jpg",
+      "title": "Earth as a global satellite mosaic",
+      "summary": "A hemisphere of Earth centered on Africa in NASA's Blue Marble Next Generation product, assembled from observations collected across time, not a single photograph.",
+      "group": "photos",
+      "alt": "Full circular view of Earth centered on Africa with the Sahara, tropical forests and oceans visible.",
+      "caption": "An Earth hemisphere from the Blue Marble Next Generation dataset; the image combines remote-sensing observations rather than capturing one instant.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA Earth Observatory / Reto Stöckli and Robert Simmon",
+      "date": "2005-03-01",
+      "derivative": "NASA Blue Marble Next Generation multitemporal composite, March 2005 view of Africa. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation-5935/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/5000/5935/BlueMarble_2005_Afr_03_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/zambezi-victoria-falls-iss.jpg",
+      "title": "Victoria Falls and the Zambezi Gorge",
+      "summary": "From the International Space Station, the Zambezi River turns sharply through successive basalt gorges near the border of Zambia and Zimbabwe.",
+      "group": "photos",
+      "alt": "Rust-brown terrain crossed by the blue-gray Zambezi River and a jagged series of narrow gorges.",
+      "caption": "A specific African landscape rather than a representation of the whole continent: the river erosion and faults that shape Victoria Falls.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA / ISS astronaut Edward Lu / Johnson Space Center",
+      "date": "2003-09-04",
+      "derivative": "ISS astronaut photograph; NASA annotation/crop may be visible in the supplied original. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/victoria-falls-zambezi-river-3813/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/3000/3813/ISS007-E-14361_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/mount-everest-ali-2011.jpg",
+      "title": "Mount Everest and the Himalayan glaciers",
+      "summary": "The Earth Observing-1 Advanced Land Imager photographed a region of the Himalaya centered on Mount Everest, illustrating Asia's immense tectonically uplifted mountain landscape.",
+      "group": "photos",
+      "alt": "High rocky ridges and white Himalayan glaciers with deep branching valleys in a satellite image.",
+      "caption": "Satellite view of Everest and the surrounding Himalaya; one example of Asian geography, not an overview of every Asian region.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA Earth Observatory / Jesse Allen and Robert Simmon / EO-1 ALI",
+      "date": "2011-10-25",
+      "derivative": "NASA Earth Observatory natural-color satellite mosaic or enhanced scene, source processing retained. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/the-worlds-tallest-mountain-82578/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/82000/82578/everest_ali_2012290_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/amazon-river-sunglint-iss.jpg",
+      "title": "Amazon River bends in sunlight",
+      "summary": "Sunlight reflects from the meandering Amazon River in a 2017 ISS astronaut photograph, revealing channels and surrounding South American forest.",
+      "group": "photos",
+      "alt": "Bright silver river bends and channels meandering through a dark green forest landscape seen from orbit.",
+      "caption": "The Amazon River in sunglint, photographed from orbit on 9 August 2017; NASA cropped, adjusted contrast and removed lens artifacts.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA / Expedition 52 crew / ISS Crew Earth Observations Facility",
+      "date": "2017-08-09",
+      "derivative": "NASA ISS image cropped, contrast enhanced and lens artifacts removed by NASA. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/amazon-meanders-in-sunglint-92370/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/92000/92370/ISS052-E-39523_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/great-barrier-reef-whitsundays-iss.jpg",
+      "title": "Three Great Barrier Reef islands from orbit",
+      "summary": "An ISS astronaut documented interlocking reefs, shallow turquoise lagoons, and dark channels off Queensland, Australia.",
+      "group": "photos",
+      "alt": "Brilliant turquoise coral reef lagoons and shallow islands in dark blue tropical water.",
+      "caption": "Three Great Barrier Reef reefs near the Whitsunday Islands, Australia, photographed on 12 October 2015.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA / Expedition 45 crew / ISS Crew Earth Observations Facility",
+      "date": "2015-10-12",
+      "derivative": "NASA ISS photograph cropped and enhanced to improve contrast; lens artifacts removed. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/great-barrier-reef-near-whitsunday-islands-88109/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88109/iss045e056257_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/greenland-kong-oscar-glacier.jpg",
+      "title": "Kong Oscar Glacier and ice mélange",
+      "summary": "An Earth Observing-1 natural-color view shows a heavily crevassed glacier terminus and icebergs in northwestern Greenland.",
+      "group": "photos",
+      "alt": "Bright white glacier with broken crevasses and scattered icebergs at the edge of dark rocky Greenland land.",
+      "caption": "Ice from Kong Oscar Glacier drains toward Davis Strait. The image was observed on 14 May 2010.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA Earth Observatory / Jesse Allen and Robert Simmon / EO-1 ALI",
+      "date": "2010-05-14",
+      "derivative": "NASA natural-color Earth-observation image; no additional false-color rendering introduced here. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/kong-oscar-glacier-greenland-45431/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/45000/45431/kongoscar_ali_2010134_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/namib-desert-landsat.jpg",
+      "title": "Dunes in Namibia's Namib Desert",
+      "summary": "Landsat 7 captured repeating dunes and salt-plain terrain in Namib-Naukluft National Park in 2000. The orange and cyan appearance is a false-color composite.",
+      "group": "photos",
+      "alt": "Intricate parallel orange sand dunes next to blue-gray ground and mineral flats.",
+      "caption": "Landsat false-color composite of the Namib Desert, using near-infrared, green and blue bands; these are not natural visible-light colors.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "USGS EROS Data Center / NASA / Landsat 7 ETM+",
+      "date": "2000-08-12",
+      "derivative": "NASA/USGS Landsat false-color composite sharpened with the panchromatic band. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/namib-naukluft-national-park-namibia-2804/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/2000/2804/landsat_art_namib_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/amazon-transpiration-popcorn-clouds.jpg",
+      "title": "Amazon rainforest and convective clouds",
+      "summary": "Small cumulus clouds form over the forested Amazon Basin in an Aqua MODIS satellite scene, showing the connection between tropical vegetation, heat and moisture.",
+      "group": "photos",
+      "alt": "Dark green Amazon forest covered by many tiny white popcorn-like cumulus clouds, with clearer ribbons over rivers.",
+      "caption": "On 19 August 2009, NASA's Aqua satellite observed small cumulus clouds forming over the Amazon rainforest, likely aided by transpiration and afternoon convection.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA / US-government mission media; reuse subject to NASA Media Usage Guidelines and any third-party credit notices; verify independently before external flight selection.",
+      "photographer": "NASA / Jeff Schmaltz / MODIS Rapid Response Team, NASA GSFC",
+      "date": "2009-08-19",
+      "derivative": "Aqua MODIS observational image; no cloud artwork or generated illustration. NASA-supplied observational image; downsampled to at most 1800 pixels on each axis and re-encoded as quality-87 JPEG for the development archive; linked source retains the higher-resolution original.",
+      "sources": [
+        {
+          "label": "NASA source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/afternoon-clouds-over-the-amazon-rainforest-39936/"
+        },
+        {
+          "label": "NASA image file (acquired bytes)",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/39000/39936/Brazil_AMO_2009231_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/iss-star-trails-christina-koch.jpg",
+      "title": "Star trails from the space station",
+      "summary": "A composite of more than 200 exposures taken by NASA astronaut Christina Koch aboard the ISS traces apparent stellar movement during a six-minute orbital passage.",
+      "group": "photos",
+      "alt": "Curving white star trails above Earth and colorful streaks of city lights near a silhouette of spacecraft hardware.",
+      "caption": "These curved paths result from the relative motion of the International Space Station and stars during stacked long exposures, not from stars moving rapidly.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/USGS observational imagery, generally reusable as US government mission media subject to NASA media-use guidance and any partner credits; final rights audit pending.",
+      "photographer": "NASA / Expedition 60 astronaut Christina Koch / ISS Crew Earth Observations Facility",
+      "date": "2019-07-05",
+      "derivative": "Time-lapse composite of over 200 astronaut photographs; NASA crop and contrast adjustments retained. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/a-trail-of-night-lights-145750/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/145000/145750/startrailtimelapse_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/hubble-ultra-deep-field-2014.jpg",
+      "title": "A deep field of distant galaxies",
+      "summary": "Hubble exposures gathered between 2002 and 2012 reveal thousands of galaxies in one tiny observed patch of sky. The mosaic reaches across immense spans of cosmic history.",
+      "group": "photos",
+      "alt": "Black field densely populated with small differently colored and differently shaped galaxies, some spirals and some faint red smudges.",
+      "caption": "The Hubble Ultra Deep Field is a very small patch of the observable sky; it does not depict the entire observable universe.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/ESA collaboration; preserve the full multi-author NASA credits and verify reuse conditions for ESA partner imagery.",
+      "photographer": "NASA / ESA / H. Teplitz / M. Rafelski / A. Koekemoer / R. Windhorst / Z. Levay",
+      "date": "2002–2012",
+      "derivative": "Multiple Hubble exposures composited and rendered into representative colors; source WebP converted to JPEG. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/image-detail/hubble-ultra-deep-field/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://science.nasa.gov/wp-content/uploads/2023/04/hubble-ultra-deep-field-jpg.webp"
+        }
+      ]
+    },
+    {
+      "path": "photos/milky-way-2mass-allsky-pia04250.jpg",
+      "title": "Milky Way across the infrared sky",
+      "summary": "The Two Micron All-Sky Survey maps half a billion stellar sources in three infrared wavelengths. Our Solar System lies within this galaxy, viewed from Earth's location.",
+      "group": "photos",
+      "alt": "Oval panoramic map of the star-dense Milky Way in a dark infrared color composite, with the galactic center as the brightest band.",
+      "caption": "A full-sky infrared map produced from 2MASS observations; blue, green and red represent wavelengths 1.2, 1.6 and 2.2 micrometers, not naked-eye colors.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/USGS observational imagery, generally reusable as US government mission media subject to NASA media-use guidance and any partner credits; final rights audit pending.",
+      "photographer": "Two Micron All-Sky Survey / NASA-JPL / University of Massachusetts / IPAC",
+      "date": "2003-03-27",
+      "derivative": "Stitched all-sky observational map with added explanatory labels; not a camera photograph of the Milky Way from outside. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/photojournal/point-source-all-sky/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia04/pia04250/PIA04250.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/alpha-centauri-ab-hubble-eso.jpg",
+      "title": "The nearby double stars Alpha Centauri A and B",
+      "summary": "A Hubble Space Telescope view resolves Alpha Centauri A and B, the nearby binary stars orbiting each other. Proxima Centauri, the third system member, is out of frame.",
+      "group": "photos",
+      "alt": "Two brilliant orange-white stars against dark space, each showing long telescope diffraction spikes, with a 17-arcsecond scale bar.",
+      "caption": "Alpha Centauri A and B as imaged by Hubble; the brilliant spikes are optical artifacts, not real jets from the stars.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "ESO image distributed under CC BY 4.0 International (https://www.eso.org/public/outreach/copyright/); preserve exact credit ESA/Hubble & NASA visibly; indicate resizing.",
+      "photographer": "ESA/Hubble & NASA",
+      "date": "2016-08-24",
+      "derivative": "ESO published image with scale annotation; max 1800px re-encoding for development edition. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://www.eso.org/public/images/eso1629v/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://cdn.eso.org/images/large/eso1629v.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/swiss-alps-aletsch-glacier-2024.jpg",
+      "title": "Aletsch Glacier and Swiss Alps",
+      "summary": "A Landsat 8 view shows the Great Aletsch Glacier threading through the ridges and valleys of the European Alps. The NASA study compares its extent with 1984.",
+      "group": "photos",
+      "alt": "Pale white glacier winding through complex jagged green and brown Alpine mountains from above.",
+      "caption": "Swiss Alps photographed by Landsat 8 on August 6, 2024; the long glacier reveals alpine ice and the surrounding mountainous landscape.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/USGS observational imagery, generally reusable as US government mission media subject to NASA media-use guidance and any partner credits; final rights audit pending.",
+      "photographer": "NASA Earth Observatory / Michala Garrison / USGS Landsat",
+      "date": "2024-08-06",
+      "derivative": "NASA Earth Observatory processed Landsat satellite image; the present frame is the 2024 observation. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/glacial-losses-in-the-swiss-alps-154043/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/154000/154043/aletschglacier_oli_20240806_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/alaska-kobuk-sand-dunes.jpg",
+      "title": "Kobuk Valley dunes in Alaska",
+      "summary": "Golden sand dunes stand out within green boreal forest in Alaska's Kobuk Valley National Park, illustrating North America's contrasting landscapes.",
+      "group": "photos",
+      "alt": "Light-colored dune field beside a winding river amid vast green forest and dark green hills.",
+      "caption": "Landsat scene of the Great Kobuk Sand Dunes in Alaska; one example among North America's varied natural environments.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/USGS observational imagery, generally reusable as US government mission media subject to NASA media-use guidance and any partner credits; final rights audit pending.",
+      "photographer": "NASA Earth Observatory / USGS Landsat 8",
+      "date": "2020-08-16",
+      "derivative": "Natural-color or processed Landsat Earth-observation image; no synthetic dunes or generated content. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/an-unexpected-expanse-of-sand-in-alaska-147600/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/147000/147600/kobukdunes_oli_2020229_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/iss-atmosphere-limb-crescent-moon.jpg",
+      "title": "Earth's thin atmospheric layers",
+      "summary": "An ISS astronaut photograph catches the curved edge of the atmosphere in layers of warm light and blue haze beneath a crescent Moon.",
+      "group": "photos",
+      "alt": "Thin red-orange atmospheric layer topped by blue and black space, with a small Moon crescent above.",
+      "caption": "The atmospheric limb provides a natural cross-section: reddish scattering in the lower atmosphere, blues higher up, and space beyond.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/USGS observational imagery, generally reusable as US government mission media subject to NASA media-use guidance and any partner credits; final rights audit pending.",
+      "photographer": "NASA / Expedition 66 crew / ISS Crew Earth Observations Facility",
+      "date": "2021-12-06",
+      "derivative": "NASA ISS photograph cropped and contrast enhanced, with lens artifacts removed. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/earths-limb-with-a-crescent-moon-150240/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/150000/150240/iss066e086970_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/hurricane-dorian-from-aqua-2019.jpg",
+      "title": "Spiral clouds of Hurricane Dorian",
+      "summary": "NASA's Aqua MODIS sensor imaged the broad white spiral cloud bands of Hurricane Dorian as it crossed the northern Bahamas on September 1, 2019.",
+      "group": "photos",
+      "alt": "Huge white cyclonic cloud system with a distinct eye over blue ocean and islands near Florida and the Bahamas.",
+      "caption": "A planetary-scale cloud system viewed in natural color from orbit; the structured spiral reveals the dynamics of a tropical cyclone.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/USGS observational imagery, generally reusable as US government mission media subject to NASA media-use guidance and any partner credits; final rights audit pending.",
+      "photographer": "NASA Earth Observatory / Aqua MODIS / NASA GSFC",
+      "date": "2019-09-01",
+      "derivative": "Aqua MODIS natural-color satellite composite; source rendering retains NASA's original adjustments. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/hurricane-dorian-pounds-the-bahamas-145555/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/145000/145555/dorian_amo_2019244_lrg.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/bees-hexagonal-honeycomb.jpg",
+      "title": "Bees on a hexagonal wax honeycomb",
+      "summary": "Honeybees cluster on a wax comb inside a beekeeper's Langstroth frame. The repeating cells offer an accessible example of hexagonal organization in the natural world.",
+      "group": "photos",
+      "alt": "A vertical wooden beehive frame full of hexagonal wax cells, with many honeybees crawling across the comb.",
+      "caption": "Honeybees and their wax construction; a managed hive and human-made wooden frame are visible, but the hexagonal comb itself was built by insects.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0); link https://creativecommons.org/licenses/by-sa/4.0/ . Photo © Benlisquare; this re-encoded derivative is likewise CC BY-SA 4.0, attribution and modification notice required.",
+      "photographer": "Benlisquare",
+      "date": "2023-10-22",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Italian_honeybee_honey_frame_from_Langstroth_hive.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Italian_honeybee_honey_frame_from_Langstroth_hive.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/bentley-snow-crystal.jpg",
+      "title": "A snow crystal under magnification",
+      "summary": "Wilson Alwyn Bentley documented the intricate sixfold form of one natural snow crystal using photomicrography. The original historic image is preserved by the Metropolitan Museum of Art.",
+      "group": "photos",
+      "alt": "An intricate six-armed white snow crystal with branching internal patterns, centered in a black circle on cream photographic paper.",
+      "caption": "Snow crystals reflect the molecular organization of frozen water and environmental growth conditions. One real crystal is shown rather than an idealized diagram.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "Wilson Alwyn Bentley / The Metropolitan Museum of Art",
+      "date": "circa 1900 (exact year not established)",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:-Snow_Crystal-_MET_DP351890.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/-Snow_Crystal-_MET_DP351890.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/gram-positive-bacteria-micrograph.jpg",
+      "title": "Cultured bacteria viewed through an optical microscope",
+      "summary": "An amateur microscopy photograph, taken at a stated 100×, shows numerous violet-stained bacteria from a sample cultured from fermented pickles. Gram-stain interpretation is reported by the photographer and awaits specialist verification.",
+      "group": "photos",
+      "alt": "Dense small violet rodlike forms scattered across a bright circular microscope field.",
+      "caption": "This microscope image demonstrates cellular organisms too small to observe individually unaided. The specimen identification, staining and magnification are reported by the uploader, not independently validated.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "Habeebat08",
+      "date": "2025-03-12",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Microscopic_Image_of_Gram_Postive_Bacteria.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Microscopic_Image_of_Gram_Postive_Bacteria.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/mushrooms-forest-floor.jpg",
+      "title": "Mushrooms on a forest floor",
+      "summary": "Several unidentified mushrooms are photographed among trees and leaf litter in a forest. Their fruiting bodies represent one visible stage in a fungal life cycle.",
+      "group": "photos",
+      "alt": "Brown mushrooms with broad overlapping caps growing from the leaf-covered forest floor beneath trees.",
+      "caption": "Mushrooms are reproductive fruiting bodies of fungi. Although many fungi decompose organic material, the exact identity and ecological role of these mushrooms is unverified.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "MarkBuckawicki",
+      "date": "2013-05-24",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Forest_Mushroom.JPG"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Forest_Mushroom.JPG"
+        }
+      ]
+    },
+    {
+      "path": "photos/fern-frond-san-francisco.jpg",
+      "title": "Fern fronds in sunlight",
+      "summary": "Feathery green fern leaves photographed in San Francisco exemplify the complex fronds of spore-bearing vascular plants. Mosses, a different major lineage, are not shown in this particular frame.",
+      "group": "photos",
+      "alt": "Detailed green fern fronds with delicate branching leaflets brightly lit by sunlight, in front of dark brown wooden boards.",
+      "caption": "A fern specimen illustrates a lineage of vascular plants that reproduces by spores. The broader image slot also calls for mosses, which remain to be documented separately.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "Daderot",
+      "date": "2017-12-08",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original. A Wikimedia 1280-pixel derivative was the source for local JPEG processing.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Fern_-_San_Francisco,_CA_-_DSC02378.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Fern_-_San_Francisco%2C_CA_-_DSC02378.jpg/1280px-Fern_-_San_Francisco%2C_CA_-_DSC02378.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/butterfly-on-flowering-plant.jpg",
+      "title": "A butterfly visits flowering plants",
+      "summary": "A large yellow-and-black butterfly rests on a group of flowers, illustrating the ecological relationship between insects and flowering plants. Whether pollen transfer occurred in this instant cannot be established from the photograph alone.",
+      "group": "photos",
+      "alt": "Yellow and black butterfly perched on red flowers in front of many white blossoms.",
+      "caption": "An insect feeding or resting on a flowering plant can visit multiple flowers and, for some species, transfer pollen. This photograph does not prove a particular pollination event.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "Bruce Emmerling",
+      "date": "2010-08-03",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:A_butterfly_on_a_flower.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/A_butterfly_on_a_flower.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/river-fish-underwater.jpg",
+      "title": "Fish beneath the water surface",
+      "summary": "Several fish are photographed in shallow river water, illustrating the aquatic context in which these animals move and feed. The particular location and fish species are not identified.",
+      "group": "photos",
+      "alt": "Several pale fish swimming above a light sandy riverbed in clear blue-tinted water.",
+      "caption": "Photographed fish underwater in a river. The uploader did not establish a precise species identification or river location.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "Goforgold23",
+      "date": "2014-05-18",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Fish_under_water.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Fish_under_water.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/frog-in-wetland-pond.jpg",
+      "title": "Frog in a freshwater pond",
+      "summary": "A frog partly submerged amid aquatic vegetation illustrates amphibian adaptations to wetland environments.",
+      "group": "photos",
+      "alt": "Green and mottled frog with eyes above shallow pond water, surrounded by long green aquatic plants.",
+      "caption": "Amphibians occupy environments that connect land and water; many species depend on aquatic habitats during their life cycles. The species pictured here was not independently identified.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication; see individual Wikimedia Commons file page for license declaration. Attribution retained as archival provenance.",
+      "photographer": "I13Robin",
+      "date": "2013-09-05",
+      "derivative": "The original photograph was sourced from Wikimedia Commons and resized to a maximum side length of 1800 pixels; its colors were retained and a JPEG quality-87 derivative was made for the development ZIP. The source page links to the uploaded original.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:2013-09-05-frog-in-pond-1.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/2013-09-05-frog-in-pond-1.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/lahore-astrolabe-1666.jpg",
+      "title": "Astrolabe from Lahore, 1666",
+      "summary": "A richly engraved brass astrolabe made by Jamal al-Din ibn Muqim in Lahore in 1666, now in the Science Museum in London. This instrument exemplifies historic astronomical observation and mathematical craftsmanship.",
+      "group": "photos",
+      "alt": "Intricate round golden-brass astrolabe with ring, engraved circles and patterned cutouts, photographed in a museum display case.",
+      "caption": "The astrolabe embodies mathematical and astronomical practices. Its markings and components require additional explanations for a reader unfamiliar with historical instrument design.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, verified on the individual Wikimedia Commons file page; uploader credit and original link retained as provenance.",
+      "photographer": "Daderot / Science Museum London (artifact by Jamal al-Din ibn Muqim)",
+      "date": "Photographed circa 2024; artifact dated 1666",
+      "derivative": "Resized to a maximum 1800-pixel edge and re-encoded at JPEG quality 87 for the development archive; no synthetic elements added. Original source is linked.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Astrolabe_by_Jamal_al-Din_ibn_Muqim,_Lahore,_1666_AD_-_Science_Museum,_London_-_DSC05549.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Astrolabe_by_Jamal_al-Din_ibn_Muqim%2C_Lahore%2C_1666_AD_-_Science_Museum%2C_London_-_DSC05549.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/adriatic-sailboat.jpg",
+      "title": "Sailboat on the Adriatic Sea",
+      "summary": "A modern sailing vessel appears against sunlit open water in the Adriatic Sea. Sailing demonstrates one means by which humans traverse bodies of water using wind and maritime navigation.",
+      "group": "photos",
+      "alt": "A dark sailboat silhouette on sparkling silver sea beneath an overcast sky.",
+      "caption": "A modern example of wind-powered ocean travel. It does not represent the diversity of vessels or seafaring traditions across history.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, verified on the individual Wikimedia Commons file page; uploader credit and original link retained as provenance.",
+      "photographer": "Altitonantis",
+      "date": "2023-04-30",
+      "derivative": "Resized to a maximum 1800-pixel edge and re-encoded at JPEG quality 87 for the development archive; no synthetic elements added. Original source is linked.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:A_sailboat_on_Adriatic_sea.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/A_sailboat_on_Adriatic_sea.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/printing-press-chinese-writing-museum.jpg",
+      "title": "Historic printing press at the Chinese Writing Museum",
+      "summary": "A printing press displayed in the Chinese Writing Museum in Anyang, China. Mechanical reproduction of text enabled books and other written materials to be copied repeatedly.",
+      "group": "photos",
+      "alt": "Large dark metal printing machine displayed in museum, with Chinese character panels behind it.",
+      "caption": "A historical printing machine exhibited in Anyang; this is an example of text reproduction, rather than a claim that printing originated with this specific machine.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, verified on the individual Wikimedia Commons file page; uploader credit and original link retained as provenance.",
+      "photographer": "Gary Lee Todd",
+      "date": "2011-12-13",
+      "derivative": "Resized to a maximum 1800-pixel edge and re-encoded at JPEG quality 87 for the development archive; no synthetic elements added. Original source is linked.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Printing_Press_(10194330985).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Printing_Press_%2810194330985%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/onitsha-market-nigeria.jpg",
+      "title": "Street market in Onitsha, Nigeria",
+      "summary": "A street market in Onitsha, Anambra State, Nigeria, photographed in 2026. Stalls, customers and fish sellers illustrate everyday local trade and exchange.",
+      "group": "photos",
+      "alt": "Several round basins filled with fresh fish and people beside them at a daytime street market in Onitsha.",
+      "caption": "Trading and food distribution at a specific urban market in southeastern Nigeria. The image should be understood as one local scene, not as a proxy for all African marketplaces.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, verified on the individual Wikimedia Commons file page; uploader credit and original link retained as provenance.",
+      "photographer": "Ngostary2k",
+      "date": "2026-03-14",
+      "derivative": "Resized to a maximum 1800-pixel edge and re-encoded at JPEG quality 87 for the development archive; no synthetic elements added. Original source is linked.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Open_air_market_in_Onitsha_02.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Open_air_market_in_Onitsha_02.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/vatican-stone-vase-sculpture.jpg",
+      "title": "Decorative stone vase in a museum",
+      "summary": "A sculpted ornamental vase on display in the Vatican Museums shows intentional shaping and surface patterning of stone into a decorative object.",
+      "group": "photos",
+      "alt": "Large pale gray and cream marble-like urn with curved handles and organic banded patterns on a stone pedestal.",
+      "caption": "A photographed sculptural object in the Vatican Museums; its exact maker, historical period and stone composition have not been independently established.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, verified on the individual Wikimedia Commons file page; uploader credit and original link retained as provenance.",
+      "photographer": "Alf van Beem",
+      "date": "2012-05-02",
+      "derivative": "Resized to a maximum 1800-pixel edge and re-encoded at JPEG quality 87 for the development archive; no synthetic elements added. Original source is linked.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Vase_sculpture_in_the_Vatican_museum.JPG"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Vase_sculpture_in_the_Vatican_museum.JPG"
+        }
+      ]
+    },
+    {
+      "path": "photos/polarized-salt-microscopy-fonseca.jpg",
+      "title": "Salt crystals in polarized light",
+      "summary": "Crystalline salt specimens photographed through a polarized-light microscope by Juan Carlos Fonseca Mata in Mexico in 2020. Different optical properties produce vivid interference colors.",
+      "group": "photos",
+      "alt": "Small salt crystals appearing iridescent green, blue and orange against a pale peach microscope field.",
+      "caption": "Real polarized-light micrograph of crystalline salts. The vivid optical colors come from specimen-light interactions under polarization, not the natural naked-eye colors of table salt.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0 International. © Juan Carlos Fonseca Mata. https://creativecommons.org/licenses/by-sa/4.0/ . This resized JPEG derivative is shared under CC BY-SA 4.0; modification disclosed.",
+      "photographer": "Juan Carlos Fonseca Mata / Universidad de Guanajuato",
+      "date": "2020-12-20",
+      "derivative": "Original observational image converted to a development JPEG, maximum edge 1800 px, quality 87, source image URL and photographer retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Polarized_light_microscopy_-_01.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Polarized_light_microscopy_-_01.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/hela-ii-fluorescence-nih.jpg",
+      "title": "Fluorescent microscopy of human HeLa cells",
+      "summary": "A multiphoton fluorescence micrograph from the US National Institutes of Health reveals the actin cytoskeleton, microtubules and nuclei in cultured HeLa cells.",
+      "group": "photos",
+      "alt": "Interlocking cells with bright cyan microtubule networks, red actin filaments and blue-violet nuclei on black.",
+      "caption": "Human-derived HeLa cells, named after Henrietta Lacks, imaged in culture. Red staining marks actin, cyan marks microtubules and blue marks nuclei. These are fluorescence label colors.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal government official work, public domain in the United States per Wikimedia Commons file documentation; review partner contribution rights separately.",
+      "photographer": "US National Institutes of Health / National Center for Microscopy and Imaging Research",
+      "date": "2011-04-28",
+      "derivative": "Original observational image converted to a development JPEG, maximum edge 1800 px, quality 87, source image URL and photographer retained. No AI generation. NIH multiphoton microscopy false-color channels preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:HeLa-II.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/HeLa-II.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/paramecium-bursaria-picturepest.jpg",
+      "title": "A unicellular ciliate with green algal symbionts",
+      "summary": "A light-microscope photograph at a stated 400× magnification shows Paramecium bursaria, a free-living aquatic ciliate that commonly contains green algal cells inside its body.",
+      "group": "photos",
+      "alt": "Single oblong translucent ciliate surrounded by fine cilia, containing many small green algal symbionts.",
+      "caption": "Paramecium bursaria, a single-celled eukaryote photographed with light microscopy. Internal green algal symbionts share space within this ciliate.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY 2.0 Generic (https://creativecommons.org/licenses/by/2.0/). Photograph © Picturepest; credited and linked, with resizing declared.",
+      "photographer": "Picturepest (Flickr), CC BY 2.0; license reviewed by FlickreviewR in 2015",
+      "date": "2014-03-18",
+      "derivative": "Original observational image converted to a development JPEG, maximum edge 1800 px, quality 87, source image URL and photographer retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Paramecium_bursaria_-_400x_(13263096305).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Paramecium_bursaria_-_400x_%2813263096305%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/museum-human-skeleton.jpg",
+      "title": "An articulated human skeleton",
+      "summary": "An articulated human skeleton on exhibit at the Museum of Osteology in Oklahoma City, photographed in March 2010, demonstrates how bones form a structural framework.",
+      "group": "photos",
+      "alt": "Pale beige articulated human skull, rib cage, spine, pelvis, arms and upper legs on a dark gray background.",
+      "caption": "Exhibit skeleton photographed in Oklahoma City. Major features visible include skull, clavicles, ribs, vertebrae, pelvis and limb bones; this is a prepared display specimen.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, as recorded on the linked Commons file page. Photographer credited for provenance.",
+      "photographer": "Sklmsta / Museum of Osteology",
+      "date": "2010-03",
+      "derivative": "Original observational image converted to a development JPEG, maximum edge 1800 px, quality 87, source image URL and photographer retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Human-Skeleton.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Human-Skeleton.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/human-hands-shaping-pottery.jpg",
+      "title": "Human hands shape a rotating clay vessel",
+      "summary": "Hands control and shape wet clay on a spinning potter's wheel in Springdale, Arkansas, photographed by Jared Sluyter in March 2017.",
+      "group": "photos",
+      "alt": "Close view from above of two clay-covered human hands shaping the opening of a spinning pottery vessel.",
+      "caption": "The coordinated movement of fingers and thumbs lets people manipulate material precisely. This photograph shows pottery production using a rotating wheel.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 dedication by photographer on Unsplash before June 5, 2017 license change; Wikimedia Commons original record documents historic CC0 publication.",
+      "photographer": "Jared Sluyter",
+      "date": "2017-03-29",
+      "derivative": "Original observational image converted to a development JPEG, maximum edge 1800 px, quality 87, source image URL and photographer retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Making_pottery_(Unsplash).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Making_pottery_%28Unsplash%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/brown-human-iris-closeup.jpg",
+      "title": "A human iris and pupil",
+      "summary": "An intimate close-up photograph of a person's brown iris, black pupil, white sclera and surrounding eyelids and eyelashes. These visible structures participate in vision.",
+      "group": "photos",
+      "alt": "Extreme close-up of a brown human iris surrounding a black round pupil, with reflection on the eye and eyelashes visible.",
+      "caption": "The iris regulates how much light reaches the lens by changing the pupil's diameter. Eye coloration and anatomy vary among individuals; this is one example.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, as recorded on the linked Commons file page. Photographer credited for provenance.",
+      "photographer": "Bobbyphotographer (Wikimedia Commons)",
+      "date": "2025-06-05",
+      "derivative": "Original observational image converted to a development JPEG, maximum edge 1800 px, quality 87, source image URL and photographer retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:A_human_male_brown_eye.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/A_human_male_brown_eye.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/voyager-family-portrait-1990.jpg",
+      "title": "Voyager 1's distant portrait of the Solar System",
+      "summary": "From approximately 6.4 billion kilometers away, Voyager 1 looked back on 14 February 1990 and made a 60-frame mosaic. Jupiter, Saturn, Uranus and Neptune appear as tiny lights in enlarged image insets.",
+      "group": "photos",
+      "alt": "Black space with a sweeping arc of pale gray Voyager camera frames and labeled small insets of six planets, including four giant planets.",
+      "caption": "This is the Solar System as actually seen by Voyager 1, with multiple exposures arranged in a mosaic. The enlarged inset planets and gray-frame layout are a NASA presentation, not natural scale or a single shot.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/JPL space mission product generally public domain in the US under NASA image use policy; confirm NASA/JPL credits and caption before flight use.",
+      "photographer": "NASA / JPL / Voyager 1 Imaging Team",
+      "date": "1990-02-14",
+      "derivative": "NASA Voyager mosaic composed of 60 photographic frames and enlargements, not a single exposure. NASA source pixels resized to a maximum 1800-pixel side and saved as quality-87 JPEG without adding or generating structures. Original source link preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/resource/solar-system-portrait-60-frame-mosaic/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia00/pia00451/PIA00451.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/nasa-earth-topography-bathymetry-2004.jpg",
+      "title": "Earth's mountains and seafloor from space-based data",
+      "summary": "NASA Blue Marble: Next Generation combines a February 2004 surface image with digital elevation shading over continents and bathymetric shading beneath oceans.",
+      "group": "photos",
+      "alt": "A map of Earth with land cover, snow and ice, dark blue seafloor relief, and the continents in naturalistic colors.",
+      "caption": "A global map with topographic and seafloor relief. The underlying view combines many satellite observations and elevation datasets; it is not a single full-disk photograph.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA Earth Observatory composite based on US-government and partner bathymetry data; upstream partner reuse terms require final review.",
+      "photographer": "NASA Earth Observatory / Reto Stöckli / Robert Simmon; bathymetry and topography data providers",
+      "date": "2004-02",
+      "derivative": "NASA multi-observation Blue Marble data product incorporating shaded land and ocean elevation; resampled for display. NASA source pixels resized to a maximum 1800-pixel side and saved as quality-87 JPEG without adding or generating structures. Original source link preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-topography-bathymetry/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography-bathymetry/february/world.topo.bathy.200402.3x5400x2700.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/east-african-rift-topography.jpg",
+      "title": "East African Rift in the Crater Highlands",
+      "summary": "Shuttle Radar Topography Mission data depict the Crater Highlands of northern Tanzania, where movement between the African and Somali crustal plates, volcanism and erosion shape a dramatic landscape.",
+      "group": "photos",
+      "alt": "Scientific three-dimensional perspective image of cratered highlands and volcanic cones in northern Tanzania with green valleys and tan mountain slopes.",
+      "caption": "Computer-rendered terrain from the SRTM elevation dataset, February 2000; elevation color is coded and vertical relief is exaggerated twofold. This visualization is measured data, not a natural-color aerial photograph.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/JPL/NGA scientific data rendering; official mission-source attribution provided; partner rights must be checked.",
+      "photographer": "NASA / JPL / NGA Shuttle Radar Topography Mission team",
+      "date": "2000-02",
+      "derivative": "SRTM elevation rendering with color-coded height and 2x vertical exaggeration by NASA/JPL. NASA source pixels resized to a maximum 1800-pixel side and saved as quality-87 JPEG without adding or generating structures. Original source link preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/earth/earth-observatory/crater-highlands-tanzania-6316/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/6000/6316/PIA06669_lrg.jpg?fit=clip&h=1600&w=1600"
+        }
+      ]
+    },
+    {
+      "path": "photos/agulhas-benguela-ocean-currents.jpg",
+      "title": "Ocean currents and blooms off southern Africa",
+      "summary": "Suomi-NPP VIIRS satellite imagery from 5 February 2018 shows swirling phytoplankton-rich water off South Africa, where warm and cold currents interact near the Cape of Good Hope.",
+      "group": "photos",
+      "alt": "Wide satellite view of southern Africa with turquoise and green ribbons swirling through dark blue ocean water, and a long white cloud band offshore.",
+      "caption": "The interaction of the Agulhas and Benguela ocean-current systems becomes visible through phytoplankton and water-color differences in this satellite composite; the image does not directly measure water speed.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA Ocean Biology/NOAA-NASA mission observation; verify US government publication terms and instrument partner credits.",
+      "photographer": "NASA Goddard Ocean Biology Processing Group / NOAA-NASA Suomi NPP VIIRS",
+      "date": "2018-02-05",
+      "derivative": "Processed multi-band ocean-color satellite imagery, not a view of ocean current velocity. NASA source pixels resized to a maximum 1800-pixel side and saved as quality-87 JPEG without adding or generating structures. Original source link preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://oceancolor.gsfc.nasa.gov/gallery/531/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://oceancolor.gsfc.nasa.gov/gallery/feature/images/V2018036.SouthAfrica.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/bumblebee-zinnia-pollination.jpg",
+      "title": "A bumblebee among the flowers",
+      "summary": "A macro photograph shows a furry bee foraging among the pollen-bearing structures of a magenta zinnia in Pennsylvania in 2023.",
+      "group": "photos",
+      "alt": "Close-up of a black and pale yellow fuzzy bee standing on the yellow center of a vivid magenta zinnia blossom.",
+      "caption": "Flowering plants and insects often exchange food and pollen. This photograph shows a bee visiting a zinnia; pollen transfer between flowers was not directly observed.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, as stated on the individual Wikimedia Commons file page. Photographer credited as provenance.",
+      "photographer": "Jmurphy042000",
+      "date": "2023-09-06",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Bee_pollinating_flower.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Bee_pollinating_flower.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/india-western-ghats-buttress-roots.jpg",
+      "title": "Buttress roots in a Western Ghats forest",
+      "summary": "A tree in the evergreen Western Ghats of India shows large, flared buttress roots extending from the base of its trunk.",
+      "group": "photos",
+      "alt": "Wide fluted green-gray roots rise from damp brown leaf litter and converge at the broad base of a rainforest tree.",
+      "caption": "The base of a living tree displays its outward-spreading support structures. The full forest canopy and underground root system are not visible.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, as stated on the individual Wikimedia Commons file page. Photographer credited as provenance.",
+      "photographer": "Forestowlet",
+      "date": "2017-07-16",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Buttress_Roots001.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Buttress_Roots001.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/noaa-star-stick-diatom.jpg",
+      "title": "A marine diatom at microscopic scale",
+      "summary": "An observational photomicrograph of a star-stick diatom acquired by John R. Dolan for the NOAA Photo Library, with a 50-micrometer scale bar.",
+      "group": "photos",
+      "alt": "Transparent elongated diatom cell with patterned yellow-orange star-shaped structures against slate-blue microscope field and 50-micrometer scale marker.",
+      "caption": "Diatoms are photosynthetic single-celled algae and important members of marine phytoplankton. This image shows one diatom, not the entire marine food web.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Public-domain NOAA official-duty photograph in the United States. Commons also records an earlier Flickr CC BY 2.0 mark and notes its uncertain applicability; author and NOAA credit retained.",
+      "photographer": "John R. Dolan / NOAA Photo Library",
+      "date": "2014-07-24",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Star_stick_diatom.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Star_stick_diatom.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/uganda-kidepo-elephants-savannah.jpg",
+      "title": "Elephants gather in the Ugandan savannah",
+      "summary": "Elephants shelter under a large tree in Kidepo Valley National Park in northern Uganda, within a broad grassland and woodland landscape.",
+      "group": "photos",
+      "alt": "Several African elephants gather beneath the canopy of a large savannah tree amid open golden grass and scattered trees.",
+      "caption": "A group of elephants in their savannah ecosystem. Other mammals and ecosystems are not shown in this single frame.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). Original photo by Chapelle Musa 2; 1280px Commons derivative locally resized and re-encoded; derivative licensed CC BY-SA 4.0.",
+      "photographer": "Chapelle Musa 2",
+      "date": "2023-06-26",
+      "derivative": "Uses Wikimedia Commons 1280-pixel thumbnail (the 29.65 MB source master remains on Commons), re-encoded at quality 87 for local archive; no content additions.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Elephants_Finding_Respite_in_the_Vast_Savannah.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Elephants_Finding_Respite_in_the_Vast_Savannah.jpg/1280px-Elephants_Finding_Respite_in_the_Vast_Savannah.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/usda-texas-rice-harvest.jpg",
+      "title": "People and machines harvest rice",
+      "summary": "At a family farm near El Campo, Texas, agricultural machinery harvests rice while workers move crops and coordinate the work, photographed July 2020.",
+      "group": "photos",
+      "alt": "Large green agricultural harvester moves through golden rice with tractor and grain trailer further behind on the same broad field.",
+      "caption": "Modern mechanical crop harvesting helps humans produce and distribute food. This is a specific contemporary Texas rice farm, not a universal representation of agriculture.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "U.S. Department of Agriculture federal employee photograph, public domain in the United States; credit Lance Cheung / USDA.",
+      "photographer": "Lance Cheung / USDA Natural Resources Conservation Service",
+      "date": "2020-07-24",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:20200724-NRCS-LSC-0032-Rice_Harvesting.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/20200724-NRCS-LSC-0032-Rice_Harvesting.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/munich-deutsches-museum-steam-flywheel.jpg",
+      "title": "An industrial engine's flywheel",
+      "summary": "A stationary steam engine's cylinder and flywheel in the Deutsches Museum, Munich, photographed in 2024. The flywheel smooths variations in rotational motion.",
+      "group": "photos",
+      "alt": "Large historic steam machinery with a broad dark metal flywheel and cylinder visible in a museum hall.",
+      "caption": "Stationary steam-engine technology converted heat energy into mechanical rotation. A flywheel stores kinetic energy and smooths the output cycle.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons CC0 1.0 Universal Public Domain Dedication, as stated on the individual Wikimedia Commons file page. Photographer credited as provenance.",
+      "photographer": "Wilfredor / Deutsches Museum, Munich",
+      "date": "2024-02-01",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Stationary_steam_engine_flywheel,_Deutsches_Museum.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Stationary_steam_engine_flywheel%2C_Deutsches_Museum.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/hawaii-puako-petroglyph-2011.jpg",
+      "title": "Petroglyph at Puako, Hawaiʻi",
+      "summary": "An engraved lava-rock petroglyph at the Puako Petroglyph Archaeological District on Hawaiʻi Island, photographed in 2011.",
+      "group": "photos",
+      "alt": "Incised symbolic lines cut into a dark porous volcanic rock, surrounded by pebbles and dry vegetation.",
+      "caption": "A historic Hawaiian rock engraving. Its makers' intended meanings and chronology are not established by the photo alone; respect for indigenous cultural interpretation remains important.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Photographic representation licensed CC0 1.0 by Wmpearl. This license concerns the photograph, not ownership of underlying Native Hawaiian cultural heritage or interpretation; cultural review pending.",
+      "photographer": "Wmpearl (photographer); original cultural makers unattributed",
+      "date": "2011",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Petroglyphs_in_Puako_Petroglyph_Archaeological_District_1346.JPG"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Petroglyphs_in_Puako_Petroglyph_Archaeological_District_1346.JPG"
+        }
+      ]
+    },
+    {
+      "path": "photos/usfws-native-stream-restoration-2018.jpg",
+      "title": "Hands-on habitat restoration",
+      "summary": "United States Fish and Wildlife Service staff and partner volunteers planted roughly 300 native plants as part of a stream-restoration project in southern California in 2018.",
+      "group": "photos",
+      "alt": "One man kneels by newly planted shrubs and earth as another worker in high-visibility clothing digs in the background.",
+      "caption": "A cooperative native-plant restoration project carried out by conservation teams and local partners, illustrating active human stewardship of a landscape.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Official-duty US Fish and Wildlife Service photograph, public domain in United States; photographer Jonathan Snapp-Cook credited.",
+      "photographer": "Jonathan Snapp-Cook / U.S. Fish and Wildlife Service",
+      "date": "2018-11-28",
+      "derivative": "Source image resized to maximum side 1800px and re-encoded as quality-87 JPEG for development archive, without synthesizing or adding content; original source URL retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Planting_native_plants_(49305794546).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Planting_native_plants_%2849305794546%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/esselte-analog-oscilloscope.jpg",
+      "title": "An analog oscilloscope shows changing voltage",
+      "summary": "An Esselte Type D-5 oscilloscope photographed on 20 December 2023 displays a blue trace across its cathode-ray-tube screen. An oscilloscope maps electrical signal voltage against time.",
+      "group": "photos",
+      "alt": "Beige analog oscilloscope with control knobs and a blue oscillating voltage trace on the gridded central screen.",
+      "caption": "A real oscilloscope displaying a changing electrical signal. The horizontal axis represents elapsed time at a user-selected scale; vertical deflection corresponds to voltage.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 Universal Public Domain Dedication by Unnerving duck, documented at https://commons.wikimedia.org/wiki/File:Esselte_oscilloscope.jpg .",
+      "photographer": "Unnerving duck",
+      "date": "2023-12-20",
+      "derivative": "Resized from the Commons source JPEG to maximum 1800 pixels and re-encoded at JPEG quality 87 for the development archive; no synthetic content.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Esselte_oscilloscope.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Esselte_oscilloscope.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/real-element-specimens-periodic-table.jpg",
+      "title": "Real samples of chemical elements arranged in a periodic table",
+      "summary": "A physical acrylic display contains selected actual element specimens arranged by atomic number, with labels and symbols. It was photographed by Achituv in October 2020.",
+      "group": "photos",
+      "alt": "Grid of individually labeled acrylic element display blocks across a large pale background, with some blocks containing visible metal or mineral samples.",
+      "caption": "A human-created physical periodic-table display contains many element samples. Some hazardous, unstable or gaseous elements are represented by symbols or empty blocks rather than loose specimens. The written labels are not a self-decoding alien primer.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). Original photograph by Achituv; edited development JPEG derivative is also CC BY-SA 4.0 with attribution and modification indicated.",
+      "photographer": "Achituv",
+      "date": "2020-10-21",
+      "derivative": "Original Commons photograph (perspective-corrected 2022 version) downsampled to maximum 1800px and encoded at JPEG quality 87; attribution retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:PeriodicTable-RealElements.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/PeriodicTable-RealElements.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/polarized-micrograph-ice-crystals.jpg",
+      "title": "Ice crystals revealed in polarized light",
+      "summary": "A real polarized-light microscopy image of ice crystals growing in ice cream after six months in storage; the sample contained added antifreeze protein. The geometric crystalline structures are physically observed.",
+      "group": "photos",
+      "alt": "Bright microscopic crystalline geometric forms in several vivid polarized-light interference colors.",
+      "caption": "Microscopy of actual frozen-water crystals in an ice-cream sample. The false-looking vivid interference colors arise from crossed polarization and are not the naked-eye colors of ice.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). Photograph © Maxim Bilovitskiy; resized and re-encoded derivative shared under same license.",
+      "photographer": "Maxim Bilovitskiy",
+      "date": "2015-11-03",
+      "derivative": "Source 6000x4000 polarized-light image reduced to maximum 1800px and quality-87 JPEG; optical colors preserved, no generated image.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Ice_crystals_in_the_ice_cream_2.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Ice_crystals_in_the_ice_cream_2.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/diamond-and-graphite-photographic-composite.jpg",
+      "title": "Diamond and graphite: two forms of carbon",
+      "summary": "Two separate mineral specimen photographs by Rob Lavinsky are displayed together in a Commons comparative composite edited by Jynto. Diamond and graphite have the same chemical element but different crystal arrangements.",
+      "group": "photos",
+      "alt": "A small translucent octahedral diamond crystal on the left and a dark black lustrous graphite mineral fragment on the right, against a white background.",
+      "caption": "Diamond (left) and graphite (right) are both carbon but have different atomic structures and properties. This is a photographic composite of different specimens; the two objects are not shown at one reliable physical scale.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 3.0 Unported (https://creativecommons.org/licenses/by-sa/3.0/). © Rob Lavinsky / iRocks.com, composite by Jynto; re-encoded derivative shared under compatible CC BY-SA 3.0 with credit and modification notice.",
+      "photographer": "Rob Lavinsky / iRocks.com; comparison composite edited by Jynto",
+      "date": "before 2010-03",
+      "derivative": "Photographic comparison assembled from two mineral photos by Jynto; scale is approximate. Development image locally re-encoded quality-87, not AI-generated.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Diamond-and-graphite-with-scale.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Diamond-and-graphite-with-scale.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/mesa-verde-cliff-palace-2014.jpg",
+      "title": "Ancestral Pueblo architecture at Mesa Verde",
+      "summary": "Stone masonry rooms built into an overhanging cliff alcove are part of the Ancestral Pueblo archaeological complex at Mesa Verde in Colorado. This 2014 photograph shows a protected architectural landscape.",
+      "group": "photos",
+      "alt": "Warm sandstone cliff alcove enclosing multi-story tan stone and reddish mortar buildings with square windows and a series of walls.",
+      "caption": "Historic cliff dwellings at Mesa Verde, built by Ancestral Pueblo peoples. Their long-lived cultural descendants include contemporary Pueblo communities; descriptions of the site need relevant cultural review.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 Universal Public Domain Dedication for photographer Lisafern's image; cultural heritage is not rendered ownerless by its photo copyright status. Commons source file verified.",
+      "photographer": "Lisafern, photographer; Ancestral Pueblo architects and makers",
+      "date": "2014-06-20",
+      "derivative": "The original Commons-sourced photograph was resized to a maximum of 1800 pixels on each axis and saved as quality-87 JPEG; no objects were created or removed. Original source and credit retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Mesa_Verde_Public_Domain.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Mesa_Verde_Public_Domain.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/lviv-city-tram-and-pedestrians.jpg",
+      "title": "A tram moves through central Lviv",
+      "summary": "A yellow-and-black electric tram shares a cobbled street in central Lviv, Ukraine with walkers, outdoor tables and older city buildings. The tram connects dense urban neighborhoods.",
+      "group": "photos",
+      "alt": "Yellow and dark street tram traveling beneath overhead power lines down a cobblestone street among pedestrians and tall historic shopfronts.",
+      "caption": "Public transport and daily life in the center of Lviv, Ukraine. This single street view cannot characterize every city or time period.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). Photograph © Tobias1984, derivative also offered under CC BY-SA 4.0; author and Commons source credited, resizing disclosed.",
+      "photographer": "Tobias1984",
+      "date": "2018-10-12 (file publication; exact exposure date not listed)",
+      "derivative": "The original Commons-sourced photograph was resized to a maximum of 1800 pixels on each axis and saved as quality-87 JPEG; no objects were created or removed. Original source and credit retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Street_scene_with_tram_in_Lwiw.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Street_scene_with_tram_in_Lwiw.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/metropolitan-museum-indian-sitar.jpg",
+      "title": "Indian sitar made in the eighteenth century",
+      "summary": "A long-necked Indian plucked-string instrument of painted wood and gourds, made in the eighteenth century, preserved as Metropolitan Museum of Art accession 1994.63.",
+      "group": "photos",
+      "alt": "A historic black-and-white museum photograph of a long Indian sitar, with many tuning pegs on the neck and two large polished gourd resonators.",
+      "caption": "A sitar in the Metropolitan Museum of Art. Its strings vibrate to produce sound; the instrument represents one regional music-making tradition among many globally.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Metropolitan Museum of Art Open Access image CC0 1.0 Universal Public Domain Dedication, documented on the Commons source page.",
+      "photographer": "The Metropolitan Museum of Art / accession 1994.63; original maker unknown",
+      "date": "18th century (object); photographed date unspecified",
+      "derivative": "The original Commons-sourced photograph was resized to a maximum of 1800 pixels on each axis and saved as quality-87 JPEG; no objects were created or removed. Original source and credit retained. Museum photograph itself is monochrome.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Sitar_MET_259651.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Sitar_MET_259651.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/australian-football-match-adelaide-1915.jpg",
+      "title": "Crowds watch an Australian football match, circa 1915",
+      "summary": "An archival glass-plate negative from South Australia shows players and spectators gathered around a football field at Adelaide Oval in approximately 1915. Team identities are unconfirmed.",
+      "group": "photos",
+      "alt": "Black-and-white wide view of a grassy oval with scattered football players and large crowds filling stands and the near field perimeter.",
+      "caption": "Organized team sport as part of social life in South Australia approximately 1915. The exact game and teams cannot be confirmed from the archival photograph.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "History Trust of South Australia release under CC0 1.0 Universal Public Domain Dedication, confirmed on individual Commons file page.",
+      "photographer": "State Government Photographer / History Trust of South Australia, accession GN05078",
+      "date": "circa 1915",
+      "derivative": "Archival black-and-white glass-negative scan reproduced in a resized quality-87 JPEG for development display; no invented color. The original Commons-sourced photograph was resized to a maximum of 1800 pixels on each axis and saved as quality-87 JPEG; no objects were created or removed. Original source and credit retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Football_Match(GN05078).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Football_Match%28GN05078%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/namibia-mahangu-porridge-communal-cooking.jpg",
+      "title": "Two cooks prepare mahangu porridge together",
+      "summary": "Two women in Namibia cook mahangu porridge over an outdoor fire, working together as one stirs and the other adds flour to the large pot. This photo was taken in 2023.",
+      "group": "photos",
+      "alt": "Two women in dark blue clothing prepare porridge together in a large black pot over a wood fire in an outdoor cooking area.",
+      "caption": "Shared cooking as part of everyday human life. The people are preparing mahangu porridge, a meal associated with millet in Namibia; the photographer documents this one specific scene.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Wikimedia Commons photo originally released as CC0 1.0 Universal Public Domain Dedication by its photographer. Photographer credited in record; identifiable subjects' individual consent is not independently documented; review required before interstellar-flight selection.",
+      "photographer": "Gwasheya",
+      "date": "2023-12-02",
+      "derivative": "Original source image resized to maximum 1800px and saved as JPEG quality 87 for development archive, with original URL retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Kitchen_Companions,_Cooking_Together.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Kitchen_Companions%2C_Cooking_Together.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/kalbelia-dance-chandigarh-2023.jpg",
+      "title": "Kalbelia dance performance in Chandigarh",
+      "summary": "A performer in elaborate colorful clothing executes a turning movement during a Kalbelia dance at a craft fair in Chandigarh, India in 2023.",
+      "group": "photos",
+      "alt": "Kalbelia performer in vibrant green, pink, orange and gold costume dancing with a dramatically twirling translucent fabric skirt on a dark stage.",
+      "caption": "A documented Kalbelia cultural performance at a Chandigarh craft fair, photographed December 2023. One specific dance tradition cannot represent all music or dance worldwide.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Wikimedia Commons photo originally released as CC0 1.0 Universal Public Domain Dedication by its photographer. Photographer credited in record; identifiable subjects' individual consent is not independently documented; review required before interstellar-flight selection.",
+      "photographer": "YashinderBahga",
+      "date": "2023-12-05",
+      "derivative": "Original source image resized to maximum 1800px and saved as JPEG quality 87 for development archive, with original URL retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Kalbelia_traditional_Dance.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kalbelia_traditional_Dance.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/tanzania-sign-language-wiki4inclusion-2024.jpg",
+      "title": "Tanzanian Sign Language in conversation",
+      "summary": "An interpreter communicates with a deaf participant at a Wiki4Inclusion training event in Dar es Salaam, Tanzania in July 2024. The image illustrates visual-spatial language in use.",
+      "group": "photos",
+      "alt": "Two adults standing face-to-face at an inclusion training event; one person uses a signed gesture while the other watches attentively.",
+      "caption": "A documented Tanzanian Sign Language (TSL) interaction. Sign languages are full natural languages with their own grammars, not hand-rendered versions of one global spoken language.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Wikimedia Commons photo originally released as CC0 1.0 Universal Public Domain Dedication by its photographer. Photographer credited in record; identifiable subjects' individual consent is not independently documented; review required before interstellar-flight selection.",
+      "photographer": "Rwebogora",
+      "date": "2024-07-20",
+      "derivative": "Original source image resized to maximum 1800px and saved as JPEG quality 87 for development archive, with original URL retained. No AI generation.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:A_sign_language_interpreter_with_a_deaf_participant.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/A_sign_language_interpreter_with_a_deaf_participant.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/kenya-smallholder-field-farming-2017.jpg",
+      "title": "Farmer cultivates a rocky smallholding in Kenya",
+      "summary": "A farmer stands among his planted field and rocky terrain in western Kenya in August 2017. Small-scale food growing adapts to local soil, water and landscape conditions.",
+      "group": "photos",
+      "alt": "A farmer stands beside young green crops and large rocks on reddish earth with trees and village houses beyond the field.",
+      "caption": "One photographed smallholder agricultural landscape in Kenya. This image does not represent all rural communities or claim a particular conservation practice.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). Photograph © Georg.Israel; resized derivative under same share-alike license. Subject's personal image-use consent was not independently confirmed; editorial review pending.",
+      "photographer": "Georg.Israel",
+      "date": "2017-08-25",
+      "derivative": "Source photograph resized to a maximum dimension of 1800 pixels and encoded as a JPEG at quality 87 for the development archive. Original source image and author preserved; no synthetic content.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Subsistence_farming_between_rocks.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Subsistence_farming_between_rocks.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/person-petting-brown-white-dog.jpg",
+      "title": "Human companionship with a domestic dog",
+      "summary": "The photographer's hand pets a brown-and-white domestic dog, illustrating one personal relationship between humans and other living species.",
+      "group": "photos",
+      "alt": "Close-up looking downward at a human hand gently touching the neck and head of a brown-and-white dog beside a fabric-covered object.",
+      "caption": "People and domestic dogs have longstanding relationships that include work, care and companionship. This is one ordinary interaction photographed in November 2025.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 Universal Public Domain Dedication by the photographer as stated on the linked Commons file page.",
+      "photographer": "JaredMcKenzie",
+      "date": "2025-11-21",
+      "derivative": "Source photograph resized to a maximum dimension of 1800 pixels and encoded as a JPEG at quality 87 for the development archive. Original source image and author preserved; no synthetic content.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Petting_my_dog.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Petting_my_dog.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/university-saskatchewan-astronomy-telescope.jpg",
+      "title": "A telescope oriented toward the unknown",
+      "summary": "An observatory telescope at the University of Saskatchewan sits under its open dome, showing a real instrument used to gather evidence about objects beyond Earth.",
+      "group": "photos",
+      "alt": "Large blue-and-gray astronomical telescope inside a white ribbed domed observatory, with the roof slit open to the sky.",
+      "caption": "Humanity still has many unanswered questions about the universe. This real telescope is one example of how observations can test hypotheses; the image does not itself demonstrate any specific discovery.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 Universal Public Domain Dedication granted by the photographer on the linked Wikimedia Commons file page.",
+      "photographer": "SSPWXR",
+      "date": "2022-05-10",
+      "derivative": "Source photograph resized to a maximum dimension of 1800 pixels and encoded as a JPEG at quality 87 for the development archive. Original source image and author preserved; no synthetic content.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Observatory_Telescope_at_the_University_of_Saskatchewan.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Observatory_Telescope_at_the_University_of_Saskatchewan.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/stm-gold-atoms-au100.jpg",
+      "title": "Atomic structure on a gold surface",
+      "summary": "A scanning tunneling microscopy measurement of the reconstructed Au(100) surface reveals individual gold atoms in closely spaced ridges, observed by Erwin Rossen at Eindhoven University of Technology.",
+      "group": "photos",
+      "alt": "Gold and rust-toned banded image consisting of parallel elevated rows with a granular pattern at atomic scale.",
+      "caption": "An STM electronic measurement visualizes the atomic lattice on clean gold, with contrast and shading assigned by the instrument. It is not a visible-light photograph or a literal picture taken with an ordinary camera.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Photographer/experimenter Erwin Rossen released this image to the public domain worldwide as documented at the Commons file page.",
+      "photographer": "Erwin Rossen / Eindhoven University of Technology",
+      "date": "2006",
+      "derivative": "Observed source image converted to a maximum 1800-pixel-wide quality-87 JPEG for the development archive. Source original retained by URL; no generated imagery or edits of scientific structures. Original instrument color mapping preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Atomic_resolution_Au100.JPG"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Atomic_resolution_Au100.JPG"
+        }
+      ]
+    },
+    {
+      "path": "photos/methanococcus-maripaludis-electron-micrograph.jpg",
+      "title": "Electron micrograph of a methane-producing archaeon",
+      "summary": "A single Methanococcus maripaludis archaeal cell with thin surface filaments, or archaella, observed by electron microscopy. The original includes a 500-nanometer scale bar.",
+      "group": "photos",
+      "alt": "Gray electron micrograph showing one roughly round dark cell with many very thin hairlike filaments extending from its surface.",
+      "caption": "An archaeon is neither a bacterium nor a eukaryote. This real electron micrograph shows Methanococcus maripaludis and its motility structures. The bright-and-dark contrast is an electron imaging signal, not natural color.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 dedication recorded on Commons for this contributed research image. The named researchers are credited; independently verify downstream rights before any hardware archival publication.",
+      "photographer": "Dr. Ken F. Jarrell and Dr. Shin-Ichi Aizawa",
+      "date": "2007-09-19",
+      "derivative": "Observed source image converted to a maximum 1800-pixel-wide quality-87 JPEG for the development archive. Source original retained by URL; no generated imagery or edits of scientific structures. Electron microscope grayscale retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Electron_micrograph_of_Methanococcus_maripaludis.png"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Electron_micrograph_of_Methanococcus_maripaludis.png"
+        }
+      ]
+    },
+    {
+      "path": "photos/afm-dna-double-crossover-array.jpg",
+      "title": "DNA molecules in a nanotechnology array",
+      "summary": "Atomic force microscopy measurement of DNA double-crossover structures arranged on mica; the field width is 150 nanometers. Individual DX molecules are visible in the array.",
+      "group": "photos",
+      "alt": "Gold-orange rectangular field containing repeated small DNA-structure signals against dark rust-red background.",
+      "caption": "DNA molecular structures measured using atomic force microscopy, arranged as an artificial nanotechnology lattice on mica. This is not a direct microscope photograph of the entire genetic molecule inside a living cell.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0), © Antony-22. https://creativecommons.org/licenses/by-sa/3.0/ . Re-encoded archive derivative licensed identically with attribution and processing disclosed.",
+      "photographer": "Antony-22 / Wikimedia Commons",
+      "date": "2007-08",
+      "derivative": "Observed source image converted to a maximum 1800-pixel-wide quality-87 JPEG for the development archive. Source original retained by URL; no generated imagery or edits of scientific structures. Original false-color instrument visualization retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:DX_DNA_array.png"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/DX_DNA_array.png"
+        }
+      ]
+    },
+    {
+      "path": "photos/rat-neuronal-network-holotomography.jpg",
+      "title": "Cultured neurons forming a network",
+      "summary": "A label-free holotomography observation of rat cortical neurons on day 14 in a laboratory culture, visualizing cell bodies and connecting neurites.",
+      "group": "photos",
+      "alt": "Gray and black microscopy field showing a complex web of slender neuron projections connecting numerous round cellular bodies, with a small 20-micrometer scale bar.",
+      "caption": "Live cultured rat neurons observed by holotomography without fluorescent labeling. This illustrates neural tissue at a cellular scale, not the human brain or a complete nervous system.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC0 1.0 Universal Public Domain Dedication by the creator, documented on the Wikimedia Commons file page.",
+      "photographer": "YUKI ONNA DESU",
+      "date": "2024-03-08",
+      "derivative": "Observed source image converted to a maximum 1800-pixel-wide quality-87 JPEG for the development archive. Source original retained by URL; no generated imagery or edits of scientific structures. Holotomography grayscale and 20-micrometer scale retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Live_Neuronal_Nettwork.png"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Live_Neuronal_Nettwork.png"
+        }
+      ]
+    },
+    {
+      "path": "photos/human-ear-teaching-model-fmvz.jpg",
+      "title": "The ear's sound pathway shown in a teaching model",
+      "summary": "A real photograph of a large anatomical teaching model of the human ear at the Museum of Veterinary Anatomy, University of São Paulo, showing the outer ear, ear canal, eardrum, ossicles, cochlea and semicircular canals.",
+      "group": "photos",
+      "alt": "A physical sectional model of an ear on a table, showing the outer pinna at left, internal ossicle parts in the middle and a spiral cochlea on the right.",
+      "caption": "A photographed educational model, not living tissue. Sound vibration normally travels from the outer ear to the eardrum and middle-ear bones, then the fluid-filled cochlea; actual anatomy is more complex than this representation.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), institution-approved. Credit must read Museum of Veterinary Anatomy FMVZ USP / Wagner Souza e Silva, https://creativecommons.org/licenses/by-sa/4.0/. Resized derivative remains CC BY-SA 4.0.",
+      "photographer": "Museum of Veterinary Anatomy FMVZ USP / Wagner Souza e Silva",
+      "date": "2017-05-29",
+      "derivative": "Observed source image converted to a maximum 1800-pixel-wide quality-87 JPEG for the development archive. Source original retained by URL; no generated imagery or edits of scientific structures.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Human_ear_(teaching_model_showing_internal_mechanisms).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Human_ear_%28teaching_model_showing_internal_mechanisms%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/texas-classroom-leakey-1973.jpg",
+      "title": "Students participate in a Texas classroom",
+      "summary": "A 1973 US Environmental Protection Agency DOCUMERICA photograph by Marc St. Gil shows students in a classroom in Leakey, Texas. Two students raise their hands while another student is shown from behind.",
+      "group": "photos",
+      "alt": "A warm-toned color archival image of two school students raising hands beside wooden desks in a classroom with books and papers.",
+      "caption": "An ordinary classroom interaction in Leakey, Texas, 1973, documented by EPA photographer Marc St. Gil. This is one historic educational setting; publication does not establish whether the subjects gave separate model-release consent.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal employee work, public domain in the United States under 17 USC 105, recorded on Wikimedia Commons source page. Subjects were minors; editorial/privacy review is still required before additional promotional use.",
+      "photographer": "Marc St. Gil / US Environmental Protection Agency, DOCUMERICA",
+      "date": "1973",
+      "derivative": "Observed source image converted to a maximum 1800-pixel-wide quality-87 JPEG for the development archive. Source original retained by URL; no generated imagery or edits of scientific structures. The original archival color balance and composition are preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:EPA18LeakeyStudents.png"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/EPA18LeakeyStudents.png"
+        }
+      ]
+    },
+    {
+      "path": "photos/noaa-shelf-cloud-rain-shaft.jpg",
+      "title": "Precipitation beneath a storm cloud",
+      "summary": "A NOAA National Severe Storms Laboratory photograph shows a shelf cloud and a descending rain shaft above open grassland.",
+      "group": "photos",
+      "alt": "Dark storm clouds over a flat grassy landscape, with a pale curtain of falling rain on the right.",
+      "caption": "Water evaporates into the atmosphere, condenses into clouds and returns to the surface as precipitation. This photograph records the cloud and precipitation stages; evaporation and invisible water vapor are not directly visible.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US federal NOAA work, marked public domain in the US; source Flickr license also CC BY 2.0 https://creativecommons.org/licenses/by/2.0/. Credit NOAA.",
+      "photographer": "NOAA National Severe Storms Laboratory / NOAA Photo Library",
+      "date": "2010-12-20 (source catalog date)",
+      "derivative": "Observed source re-encoded by the archive importer as a maximum 1800-pixel JPEG, quality 87, with orientation corrected if needed; original source retained by URL. No synthetic content or compositional alterations introduced.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Nssl0389_-_Flickr_-_NOAA_Photo_Library.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Nssl0389_-_Flickr_-_NOAA_Photo_Library.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/iceland-foggy-iceberg-glacier-lagoon.jpg",
+      "title": "Ice, liquid water and fog in Iceland",
+      "summary": "A photograph of an iceberg in Jökulsárlón glacier lagoon during foggy weather in southeastern Iceland.",
+      "group": "photos",
+      "alt": "A large pale, jagged iceberg surrounded by liquid water and fog in a grayscale photograph.",
+      "caption": "Solid ice floats in liquid water. The fog consists of suspended liquid droplets; gaseous water vapor itself is invisible. This photograph illustrates natural phase changes, not direct observation of the gaseous phase.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 2.0, Tim Sackton; https://creativecommons.org/licenses/by-sa/2.0/. Re-encoded derivative remains under the same license.",
+      "photographer": "Tim Sackton",
+      "date": "2016-09-17",
+      "derivative": "Observed source re-encoded by the archive importer as a maximum 1800-pixel JPEG, quality 87, with orientation corrected if needed; original source retained by URL. No synthetic content or compositional alterations introduced. Source monochrome rendering retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Foggy_Iceberg_at_Glacier_Lagoon.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Foggy_Iceberg_at_Glacier_Lagoon.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/botswana-egyptian-geese-crocodile.jpg",
+      "title": "Egyptian geese and a crocodile in Botswana",
+      "summary": "A documented wildlife photograph of Egyptian geese (Alopochen aegyptiaca) and a crocodile at Chobe National Park, Botswana.",
+      "group": "photos",
+      "alt": "Egyptian geese near a crocodile in a natural habitat.",
+      "caption": "Birds and crocodilians share an evolutionary ancestry within the archosaurs. Both groups still live on Earth. This photograph records representatives of both groups in one habitat; the source does not identify the crocodile to species.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 2.0 as verified by Commons Flickr review, Christoph Strässler; https://creativecommons.org/licenses/by-sa/2.0/. Re-encoded derivative remains under the same license.",
+      "photographer": "Christoph Strässler",
+      "date": "2021-09-29",
+      "derivative": "Observed source re-encoded by the archive importer as a maximum 1800-pixel JPEG, quality 87, with orientation corrected if needed; original source retained by URL. No synthetic content or compositional alterations introduced.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Egyptian_Geese_family_behind_a_Crocodile,_Chobe_National_Park,_Botswana.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Egyptian_Geese_family_behind_a_Crocodile%2C_Chobe_National_Park%2C_Botswana.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/red-bead-abacus.jpg",
+      "title": "Counting with physical beads",
+      "summary": "A photographed abacus illustrates discrete objects and quantities.",
+      "group": "photos",
+      "alt": "Red beads in rows on rods in a frame.",
+      "caption": "Provisional counting example: movable beads represent quantities under human conventions. A dedicated one-to-ten arrangement is still preferable for the universal primer.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY 4.0, Aliva Sahoo; https://creativecommons.org/licenses/by/4.0/. Attribution and re-encoding disclosed.",
+      "photographer": "Aliva Sahoo",
+      "date": "2025-11-02",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Red_Bead_Abacus_Display.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Red_Bead_Abacus_Display.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/entebbe-animal-size-comparison.jpg",
+      "title": "Different animal sizes",
+      "summary": "Several herbivorous mammals at a wildlife sanctuary in Uganda.",
+      "group": "photos",
+      "alt": "Elephant, antelope and zebra in a vegetated enclosure.",
+      "caption": "Different animals have different typical body dimensions. Perspective and distance prevent this photograph from providing exact size ratios.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, MDK-MUSO; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license.",
+      "photographer": "MDK-MUSO",
+      "date": "2021-08-28",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Elephants%2C_antelope_and_zebras_living_peaceful_together.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Elephants%2C_antelope_and_zebras_living_peaceful_together.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/north-sea-beach-pebbles.jpg",
+      "title": "Natural contrast and rock textures",
+      "summary": "Pebbles and rocks of differing shapes and shades on England's North Sea coast.",
+      "group": "photos",
+      "alt": "Rounded grey stones of many sizes on a beach.",
+      "caption": "Provisional natural tonal-contrast example; the image contains intermediate shades and is not a two-state binary calibration target.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, Gaisarix; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license.",
+      "photographer": "Gaisarix",
+      "date": "2017-05-13",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Beach_rocks_and_pebbles.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Beach_rocks_and_pebbles.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/chlorosome-microscopy.jpg",
+      "title": "Microscopic light-harvesting structures",
+      "summary": "Published scientific figure combining electron micrographs and interpretive diagrams of bacterial light-harvesting structures.",
+      "group": "photos",
+      "alt": "Colored diagrams above grayscale electron microscopy panels with scale bars.",
+      "caption": "The micrographs show observed cellular structures; the colored panels are explanatory models, not photographs. Source: Nature Communications 7, 12454 (2016), doi:10.1038/ncomms12454.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY 4.0; https://creativecommons.org/licenses/by/4.0/. Credit source article and authors.",
+      "photographer": "J. Nielsen, N. Kulminskaya, M. Bjerring et al.",
+      "date": "2016-08-18",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL. Original composite panels retained.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Organization_and_structure_overview_of_the_chlorosome_and_the_carotenosome.webp"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Organization_and_structure_overview_of_the_chlorosome_and_the_carotenosome.webp"
+        }
+      ]
+    },
+    {
+      "path": "photos/yellowstone-bacterial-mats.jpg",
+      "title": "Microbial mats in a hot spring",
+      "summary": "A close view of microbial mats near Grand Prismatic Spring, Yellowstone.",
+      "group": "photos",
+      "alt": "Orange-brown textured mats in shallow water.",
+      "caption": "Microbes form communities in geothermal water. This habitat photograph does not identify a specific species or establish that any other archived microscope specimen was collected here; independent cell observations appear elsewhere in the collection.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 3.0, Daniel Mayer; https://creativecommons.org/licenses/by-sa/3.0/. Archive derivative retains this license.",
+      "photographer": "Daniel Mayer",
+      "date": "2003 (autumn)",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Bacteria_mats_near_Grand_Prismatic_Spring_in_Yellowstone.JPG"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bacteria_mats_near_Grand_Prismatic_Spring_in_Yellowstone.JPG"
+        }
+      ]
+    },
+    {
+      "path": "photos/hypersaline-microbial-habitats.jpg",
+      "title": "Salt-loving microbes and their environments",
+      "summary": "Published multi-panel photographic figure showing hypersaline habitats and a microscopic sample from Lake Tyrrell.",
+      "group": "photos",
+      "alt": "Satellite salt ponds, field observations, colored microscopic cells, layered mineral crust and a lab sample.",
+      "caption": "The microscopic panel tentatively identifies square haloarchaeal cells alongside green algae; the other panels show distinct hypersaline environments, not necessarily the exact sampling site. Scale bar 5 micrometers. Source article doi:10.1111/1751-7915.13576.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, McGenity et al., with individual panel credits; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license.",
+      "photographer": "Terry J. McGenity et al.; NASA (A), Great Salt Lake Institute (B,C,G), Mike Dyall-Smith (D), Andreas Thywißen (E)",
+      "date": "2020-05-14",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL. Published photographic composite preserved.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Hypersaline_environments_and_extremely_halophilic_microbes.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Hypersaline_environments_and_extremely_halophilic_microbes.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/human-head-torso-model.jpg",
+      "title": "Human internal organs in a teaching model",
+      "summary": "A life-size educational model of the human head and torso made by the German Hygiene Museum in Dresden.",
+      "group": "photos",
+      "alt": "Painted anatomical model showing skull, lungs, heart, liver and intestines.",
+      "caption": "The model shows the relative positions of major organs. It is not a photograph of living tissue and does not include the whole body; compare the archived skeleton image.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, Wolfmann; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license.",
+      "photographer": "Wolfmann",
+      "date": "2020-01-22",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Anatomical_moulage_of_human_torso_(Realistic_lifelike_model_of_bodily_organs_Made_in_GDR_Deutsches_Hygiene_Museum_Dresden_Photo_Norway_2020-01-22_DSC02499.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Anatomical_moulage_of_human_torso_(Realistic_lifelike_model_of_bodily_organs_Made_in_GDR_Deutsches_Hygiene_Museum_Dresden_Photo_Norway_2020-01-22_DSC02499.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/three-generations-family-nci.jpg",
+      "title": "Three generations of a human family",
+      "summary": "National Cancer Institute photograph of three related adult women.",
+      "group": "photos",
+      "alt": "Three women of different adult generations together beneath a shelter.",
+      "caption": "Humans grow and age, and families can span multiple generations. This portrait shows adult life stages, not the entire human lifespan.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US National Cancer Institute image marked public domain with no reuse restrictions; credit Bill Branson / NCI. Separate model release is not established; review before flight.",
+      "photographer": "Bill Branson / National Cancer Institute",
+      "date": "1991-03",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Three_generations_of_a_family.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Three_generations_of_a_family.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/community-media-conference.jpg",
+      "title": "Humans gathering in a community",
+      "summary": "Participants at a community broadcasting conference in Salt Lake City, United States.",
+      "group": "photos",
+      "alt": "A wide conference hall filled with people gathered around tables.",
+      "caption": "Human societies organize gatherings to exchange information and maintain institutions. This event represents one community, not a statistical sample of humanity. Subject consent for flight reuse remains to be reviewed.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, SerahMead; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license.",
+      "photographer": "SerahMead",
+      "date": "2025-06-10",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Group_Photo_Conference_Morning.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Group_Photo_Conference_Morning.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/oldowan-toolkit-museum.jpg",
+      "title": "Early human stone technology",
+      "summary": "A museum exhibit of archaeological stone implements associated with Oldowan technology.",
+      "group": "photos",
+      "alt": "Stone artifacts displayed on a museum shelf below a map.",
+      "caption": "Archaeological stone implements preserve evidence of early hominin technological activity. The photograph documents a museum display; individual artifact ages are not established here.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, Suyash Dwivedi; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license.",
+      "photographer": "Suyash Dwivedi",
+      "date": "2025-08-10",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Oldowan_toolkit.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Oldowan_toolkit.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/family-kitchen-nci.jpg",
+      "title": "Preparing food in a household",
+      "summary": "National Cancer Institute photograph of three family members preparing vegetables in a kitchen.",
+      "group": "photos",
+      "alt": "Family members gathered around a kitchen counter with vegetables.",
+      "caption": "Humans prepare food using shared work, tools and domestic spaces. One US household scene from 1989 is not representative of all cultures.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "US National Cancer Institute image marked public domain with no reuse restrictions; credit Bill Branson / NCI. Separate model release is not established; review before flight.",
+      "photographer": "Bill Branson / National Cancer Institute",
+      "date": "1989-03",
+      "derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Family_in_a_kitchen.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Family_in_a_kitchen.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/terrestrial-globe-coordinate-grid.jpg",
+      "title": "A terrestrial globe and geographic coordinates",
+      "summary": "A photograph of a physical Earth globe mounted on a tilted axis, showing Asia and the Indian Ocean with geographic reference lines.",
+      "group": "photos",
+      "alt": "A blue globe on a black stand with colored continents, printed reference lines and geographic labels.",
+      "caption": "Latitude measures angular distance north or south of the equator; longitude measures angular position relative to a conventional reference meridian. The globe is a human-made model, and its political boundaries are historical conventions, not physical divisions.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 4.0, Harshul.phadke; https://creativecommons.org/licenses/by-sa/4.0/. Archive derivative retains this license. Review any underlying cartographic rights before flight.",
+      "photographer": "Harshul.phadke",
+      "date": "2015-05-18",
+      "derivative": "Source photograph re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87. No synthetic content added.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:GEO_Globe_Image.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/GEO_Globe_Image.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/ibm-80-column-punched-card.jpg",
+      "title": "Physical encoding on a historical punched card",
+      "summary": "A digitized 80-column IBM-standard punched card, showing how human information can be stored as the presence or absence of holes at defined positions.",
+      "group": "photos",
+      "alt": "Pink rectangular card with printed rows of digits and rectangular punched holes.",
+      "caption": "A historical example of information encoded in physical material. Reading the holes as characters requires a convention. This is not Centauri Archive's proposed 8-by-8 engraved plate, which remains an unmanufactured research deliverable.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "CC BY-SA 3.0, Harke; https://creativecommons.org/licenses/by-sa/3.0/. Archive derivative retains the same license.",
+      "photographer": "Harke / Wikimedia Commons",
+      "date": "2010-09-07 (source digitization)",
+      "derivative": "Source documentary image converted by the archive importer to an orientation-corrected JPEG, maximum 1800 pixels, quality 87. No synthetic content or compositional changes. Original source retained by URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Punch_card_80_columns_(2).jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Punch_card_80_columns_%282%29.jpg"
+        }
+      ]
+    },
+    {
+      "path": "photos/voyager-golden-record-preparation-1977.jpg",
+      "title": "Preparing humanity's Golden Record for interstellar travel",
+      "summary": "NASA archival photograph documenting preparation of the Voyager Golden Record in 1977.",
+      "group": "photos",
+      "alt": "A gloved cleanroom worker holds a gold-colored record beside a second circular metal component on a covered table.",
+      "caption": "The Voyager mission carried recorded images and sounds from Earth into interstellar space. This photograph documents the historical undertaking, not Centauri Archive personnel or a claim of affiliation with NASA. An original contributor portrait may be considered separately with documented informed consent.",
+      "status": "Photograph acquired; editorial review pending",
+      "rights": "NASA/JPL-Caltech image made available for reuse under NASA and JPL image-use policies; credit required, no implied endorsement. https://www.jpl.nasa.gov/jpl-image-use-policy/ . No claim of individual model-release consent.",
+      "photographer": "NASA/JPL-Caltech",
+      "date": "1977",
+      "derivative": "Source documentary image converted by the archive importer to an orientation-corrected JPEG, maximum 1800 pixels, quality 87. No synthetic content or compositional changes. Original source retained by URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://science.nasa.gov/image-detail/the-golden-record-30269492703-o/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://science.nasa.gov/wp-content/uploads/2024/03/the-golden-record-30269492703-o.jpg"
+        }
+      ]
+    },
+    {
+      "path": "encyclopedia/index.json",
+      "title": "Centauri Encyclopedia — structured first edition",
+      "summary": "Nine ordered knowledge categories and 25 linked introductory article drafts.",
+      "group": "encyclopedia",
+      "status": "Unreviewed editorial draft",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    }
+  ]
+}

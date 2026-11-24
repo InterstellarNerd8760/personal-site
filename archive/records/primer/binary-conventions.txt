@@ -1,0 +1,20 @@
+PRIMER / BINARY IS NOT A UNIVERSAL LANGUAGE
+
+A physical information carrier must communicate through structures that a reader can observe before knowing any human language. Binary encoding offers a simple candidate because information can be represented with two distinguishable states. For example, a surface can have either an engraved mark or an unmarked region. This does not require electricity. In a digital memory, the same principle may be implemented with two reliably detectable physical states, but the actual technology and interpretation must be explained separately.
+
+The symbols 0 and 1 are a human notation for two values. Their shapes are arbitrary. A pair of different marks does not automatically communicate that they are digits, that they should be read left to right, that groups of eight form bytes, or that the data represent text, images or sound. There is no evidence that an extraterrestrial civilization would recognize our binary convention without additional clues.
+
+A proposed primer can begin with directly visible quantities. One mark beside one physically identical item; two marks beside two items; three beside three. Repetition and carefully chosen geometric arrangements may allow a reader to infer counting and order. This remains a hypothesis, not a demonstrated communication with an unfamiliar intelligence.
+
+Once quantities and equality are established, we can introduce positional notation. In base two, the rightmost digit has the value of one unit, the next has twice that value, and the next twice again. A series written by humans as 101 consequently means one group of four, zero groups of two, and one group of one: a total of five. This conclusion follows ONLY after teaching both the values and the position rule. It cannot be deduced from the literal shapes of the characters.
+
+Now imagine the same string 101 represents an image row. Its three successive values could mean dark pixel, light pixel, dark pixel. Without a second explanation, the record gives no reason to favor the number interpretation over the image interpretation. A valid imaging primer therefore has to establish image width and height, scan order, where the first pixel lies, which state means light, and where the image ends. A visible grid displayed beside the encoded marks is a possible teaching device.
+
+A larger archive also needs framing: where a record starts, how many marks belong to it, whether an error or missing mark can be detected, and how numbers describe image dimensions or audio sampling. Even a perfectly preserved digital sequence is not intelligible without these conventions. A modern ZIP file, JPEG photograph or WAV recording is merely an Earth-specific implementation of those rules.
+
+To teach scientific meaning, the reader would then need demonstrations of measurable length, duration, physical relationships and objects. An atomic transition could offer a reproducible reference, but the selected phenomenon, diagram and practical readout remain to be specified. The proposed primer is a ladder of assumptions, not an automatic universal translator.
+
+The first worthwhile experiment is to build a physical panel showing observable marks and multiple paired image examples, give it to unfamiliar human testers without explanatory text, record what they independently reconstruct, and revise the design. Even successful human tests cannot prove extraterrestrial understanding.
+
+Original project teaching record. Unreviewed, not an implemented physical primer.
+Sources and precedents: NASA Voyager Golden Record cover and archive format research.

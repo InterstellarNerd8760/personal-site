@@ -167,7 +167,7 @@ a.project-media { display: block; color: inherit; text-decoration: none; }
 .long-title { font: 400 clamp(2.6rem, 6.4vw, 6rem)/1 var(--serif); letter-spacing: -.02em; margin-bottom: 2rem; }
 .long-line { display: block; }
 .long-copy { max-width: 34rem; color: var(--text); margin: 0 0 3rem; }
-.milestones { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; position: relative; padding-top: 1.6rem; }
+.milestones { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; position: relative; padding-top: 1.6rem; }
 .milestones::before { content: ""; position: absolute; top: 0; left: 0; height: 1px; width: 100%; background: var(--line-2); }
 .milestones::after { content: ""; position: absolute; top: 0; left: 0; height: 1px; width: 100%; background: var(--sky); transform-origin: left; transform: scaleX(var(--progress, 1)); }
 .milestones li { position: relative; font-size: .86rem; color: var(--text-2); }
@@ -509,3 +509,5 @@ html[data-theme="rustic"] .contribution-day.level-2,html[data-theme="rustic"] .c
 html[data-theme="rustic"] .contribution-day.level-3,html[data-theme="rustic"] .contribution-legend .level-3{background:#467950}
 html[data-theme="rustic"] .contribution-day.level-4,html[data-theme="rustic"] .contribution-legend .level-4{background:#28543b}
 @media(max-width:900px){html[data-theme="rustic"] .site-nav{background:var(--bg)}html[data-theme="rustic"] .hero-shade{background:linear-gradient(0deg,var(--bg) 5%,rgba(243,237,226,.96) 48%,rgba(243,237,226,.35) 100%)}}
+
+#source { scroll-margin-top: 5.5rem; }

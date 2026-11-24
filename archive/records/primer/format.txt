@@ -1,0 +1,18 @@
+PRIMER 02 / CURRENT DIGITAL ENCODING
+Human-readable format explanation. This is NOT the final flight framing scheme.
+
+A bit is a symbol with two possible values, represented here as 0 or 1.
+Eight bits form one byte. A byte has 256 possible values, 0 through 255.
+This edition is packaged as a standards-based ZIP file with a JSON manifest.
+Text files are UTF-8, and their scientific prose uses English.
+The manifest lists paths, byte lengths, MIME types and SHA-256 hashes.
+
+All these conventions are human inventions. The future physical primer must
+demonstrate bit order, grouping, boundaries and decoding from physical marks.
+We must also test readable image encoding without any software assumptions.
+Until then, a ZIP parser and UTF-8 decoder are prerequisites.
+
+A SHA-256 hash is a 256-bit digest used to flag alterations to data. It cannot
+recover the original bytes, determine their meaning or establish a physical unit.
+
+Refer to docs/format.md and docs/physical-primer.md for engineering details.

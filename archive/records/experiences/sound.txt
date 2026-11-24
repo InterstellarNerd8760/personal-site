@@ -1,0 +1,23 @@
+SOUND: FROM PHYSICAL VIBRATIONS TO RECORDED EXPERIENCE
+
+Sound in a material medium involves changing pressure and motion propagating through the medium. In air, many sounds travel as waves of small pressure variations. A vibrating object can disturb nearby air; those disturbances propagate to ears, microphones or other receivers. Sound cannot travel through an ideal vacuum because there is no material medium carrying a mechanical pressure wave.
+
+We often describe a periodic sound by its frequency, measured in cycles per unit time, and its amplitude. Real voices, rain, animals and music produce complex patterns rather than a single sinusoidal wave. Human hearing is limited to certain frequencies and intensities; other organisms detect different ranges.
+
+A digital recording samples an electrical signal obtained from a microphone or other sensor. A chosen sampling rate states how often measurements occur. Quantization represents each measurement with a finite number of values. A decoder also needs to know the reference time unit, sample order, numerical representation and how samples map back to a physical quantity. None of this follows automatically from a stream of zeros and ones.
+
+Reconstruction also depends on what the intended listener can physically perceive. A signal designed for human ears may be uninformative to another species. Paired diagrams of vibrating sources, pressure waves and reconstructed sample values offer a better scientific bridge than audio files alone.
+
+A future archive should include consented human speech in several languages, natural environments, animal sounds and ordinary activities. Musical recordings require explicit rights decisions and careful selection; a public streaming link is not a preservation copy.
+
+PROPOSED FIRST RECORDING EXPERIMENT
+
+- Generate an original sound with a known waveform and labeled sampling rate.
+- Archive uncompressed samples and write a reference decoder.
+- Reconstruct the original samples from a printed or engraved bitstream.
+- Only then evaluate environmental or human voice recordings.
+
+Current status: explanatory text only. No field recordings are included in this release.
+Prerequisites: counting, time, energy, matter, waves.
+Next: sample encoding and informed-consent recording collection.
+Editorial status: Original provisional summary; specialist review pending.

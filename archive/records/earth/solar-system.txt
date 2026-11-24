@@ -1,0 +1,19 @@
+EARTH / SOLAR SYSTEM / INITIAL FACTUAL RECORD
+
+Earth is the third planet from the Sun, the star at the center of our Solar
+System. Eight planets orbit the Sun. In order outward from the Sun, they are:
+Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.
+
+Earth has one large natural moon. Its surface includes liquid-water oceans,
+rocky continents, polar ice and an atmosphere dominated by nitrogen and oxygen.
+The Earth orbits the Sun in approximately 365.25 Earth days. Its rotation
+takes approximately one day relative to the Sun, and its tilted rotation axis
+causes seasons. Values here are approximate and require physical-unit decoding.
+
+The Solar System formed about 4.6 billion Earth years ago. Earth formed
+approximately 4.54 billion years ago. Evidence of life is ancient and varied;
+the earliest dates remain an active scientific research question.
+
+The physical primer must provide a non-linguistic location reference, scaled
+diagrams and a physically defined system of units before these sentences
+become useful to a reader who does not know English.

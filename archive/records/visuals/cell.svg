@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 520" role="img" aria-labelledby="title desc">
+<title id="title">Animal eukaryotic cell</title><desc id="desc">Original simplified diagram of a eukaryotic animal cell with membrane, cytoplasm, nucleus, mitochondria and endoplasmic reticulum.</desc>
+<defs><radialGradient id="bg"><stop stop-color="#103046"/><stop offset="1" stop-color="#06101b"/></radialGradient><radialGradient id="cyto"><stop stop-color="#244d61"/><stop offset="1" stop-color="#163447"/></radialGradient></defs>
+<rect width="840" height="520" fill="url(#bg)"/>
+<text x="45" y="62" fill="#9ac7d5" font-family="monospace" font-size="13" letter-spacing="3">CENTAURI ARCHIVE / 03 — LIFE</text>
+<text x="45" y="110" fill="#f1f6fa" font-family="Georgia,serif" font-size="49">Inside a living cell.</text>
+<text x="45" y="144" fill="#b4cbd9" font-family="sans-serif" font-size="16">An example animal eukaryotic cell, simplified.</text>
+<path d="M280 210C367 164 508 169 589 251C676 338 544 435 421 435C292 435 202 373 214 295C218 256 241 235 280 210Z" fill="url(#cyto)" stroke="#80c6c5" stroke-width="6"/>
+<ellipse cx="406" cy="293" rx="82" ry="68" fill="#836b92" stroke="#ba9bc8" stroke-width="5"/>
+<ellipse cx="414" cy="295" rx="30" ry="27" fill="#d4a4b3"/>
+<g fill="none" stroke="#7bb0d1" stroke-width="7" stroke-linecap="round"><path d="M315 257Q272 254 295 296Q310 317 283 342"/><path d="M322 345Q292 361 326 378Q354 385 330 406"/><path d="M486 228Q514 210 537 237Q560 265 531 282"/></g>
+<ellipse cx="527" cy="358" rx="39" ry="19" fill="#d18d5b" stroke="#ecb781" stroke-width="3" transform="rotate(-26 527 358)"/>
+<path d="M496 365Q511 347 525 357Q539 366 549 347" fill="none" stroke="#854b37" stroke-width="3"/>
+<ellipse cx="322" cy="232" rx="32" ry="17" fill="#d18d5b" stroke="#ecb781" stroke-width="3" transform="rotate(23 322 232)"/>
+<g fill="#d0dce8" font-family="monospace" font-size="12"><text x="622" y="243">MEMBRANE</text><text x="622" y="292">NUCLEUS</text><text x="622" y="365">MITOCHONDRION</text><text x="35" y="315">CYTOPLASM</text></g>
+<g stroke="#86a9bf" stroke-width="1.5" fill="none"><path d="M607 238L580 254"/><path d="M607 287L486 290"/><path d="M607 360L564 358"/><path d="M131 310L230 311"/></g>
+<path d="M45 454H795" stroke="#466074"/><text x="45" y="480" fill="#9bb2c5" font-family="monospace" font-size="11" letter-spacing="1">ILLUSTRATION OF A GENERALIZED CELL · NOT TO SCALE</text>
+</svg>

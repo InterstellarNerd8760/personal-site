@@ -1,0 +1,25 @@
+CELLS: THE BASIC UNITS OF KNOWN LIFE
+
+All confirmed cellular life on Earth consists of cells or organisms built from cells. Cells have boundaries separating an internal environment from their surroundings. They use molecules and energy to maintain structure, exchange material, respond to conditions and reproduce. Many viruses have biological significance but are not made of cells; whether they count as living is partly a question of definition.
+
+Most cells have membranes composed mainly of lipids and proteins. Genetic information in cellular organisms is stored in DNA, which is copied with high but imperfect fidelity. The universal genetic code is not absolutely identical across all organisms, and there are many exceptions and special cases. Similar fundamental molecular machinery across very different life forms is strong evidence of common ancestry.
+
+Bacteria and archaea are prokaryotic organisms. Their cells generally lack a membrane-enclosed nucleus. Eukaryotes include animals, plants, fungi and diverse single-celled lineages. Eukaryotic cells contain a nucleus and often other membrane-bound structures. Mitochondria, found in most eukaryotes, are involved in energy metabolism and descend from ancient bacteria. Chloroplasts in plants and algae carry out photosynthesis and also have bacterial evolutionary origins.
+
+Cells vary enormously. Some organisms are one cell; others consist of many specialized cells that communicate and form tissues. A human body contains many kinds of cells, each with specialized roles. A tree contains cells that transport water and sugars, photosynthesize, or provide structure. Microbial diversity is vast, and many species remain undescribed.
+
+Biological processes take place through interactions among molecules. Enzymes speed chemical reactions; membranes help maintain gradients; ribosomes build proteins from genetic instructions. These structures are not mechanical machines in the everyday sense, although some analogies can help explain their functions.
+
+OBSERVATIONS
+
+- Microscopy reveals cells, divisions and internal structures.
+- DNA comparisons uncover evolutionary relationships.
+- Biochemical experiments test metabolism, synthesis and heredity.
+
+LIMITATIONS
+
+The accompanying cell illustration is schematic, not to scale, and represents a generalized animal eukaryotic cell. Real cells are three-dimensional, dynamic and much more diverse.
+
+Prerequisites: atoms, water, energy, molecules, DNA.
+Next: evolution, microorganisms, organisms, ecosystems.
+Editorial status: Original provisional summary; expert verification pending.
