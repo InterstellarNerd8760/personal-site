@@ -1,5 +1,7 @@
 const root = document.querySelector('#bloom-playground');
-const HF_BASE = 'https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1/resolve/main';
+const HF_REPO = 'Centauri-Bloom/Bloom-Text-0.1';
+const HF_ROOT = 'https://huggingface.co';
+const HF_BASE = HF_ROOT + '/' + HF_REPO + '/resolve/';
 const BASELINE_URL = 'https://raw.githubusercontent.com/InterstellarNerd8760/centauri-bloom/main/experiments/baseline-001/model.safetensors';
 const BASELINE_SHA = 'f44d8fa110384e32eb917cd6e102924e8af5a006fa4f8d32f9c47314d8f84027';
 const BASELINE_CFG = { vocab_size: 256, context: 32, width: 64, heads: 4, layers: 2 };
@@ -15,6 +17,7 @@ const form = root.querySelector('[data-bloom-form]');
 const promptEl = root.querySelector('textarea');
 const lengthEl = root.querySelector('[data-bloom-length]');
 const tempEl = root.querySelector('[data-bloom-temp]');
+const economyEl = root.querySelector('[data-bloom-economy]');
 const log = root.querySelector('[data-bloom-log]');
 const fileInput = document.querySelector('.bloom-advanced input[type=file]');
 const empty = root.querySelector('[data-bloom-empty]');
@@ -35,7 +38,7 @@ function updateLengths() {
   const sizes = BPE ? [48,128,256] : [64,128,256];
   const previous = Number(lengthEl.value);
   lengthEl.replaceChildren(...sizes.map(n => new Option(n + (BPE ? ' tokens' : ' bytes'), String(n))));
-  lengthEl.value = String(sizes.includes(previous) ? previous : 128);
+  lengthEl.value = String(sizes.includes(previous) ? previous : sizes[0]);
 }
 function scrollLog() { log.scrollTop = log.scrollHeight; }
 function addTurn(prompt) {
@@ -293,38 +296,48 @@ async function sha256Hex(buf) {
   return Array.from(new Uint8Array(hash), x => x.toString(16).padStart(2, '0')).join('');
 }
 
+async function fetchRelease(signal) {
+  const opts = {signal, cache:'no-cache'};
+  const api = await fetch(HF_ROOT + '/api/models/' + HF_REPO, opts);
+  if (!api.ok) throw Error('Published model metadata unavailable');
+  const model = await api.json();
+  if (!/^[a-f0-9]{40}$/i.test(model.sha || '')) throw Error('Missing model revision');
+  const base = HF_BASE + model.sha;
+  const [c,m] = await Promise.all([fetch(base+'/config.json',opts),fetch(base+'/metrics.json',opts)]);
+  if (!c.ok || !m.ok) throw Error('Published configuration or metrics unavailable');
+  return {base, revision:model.sha, cfg:await c.json(), metrics:await m.json(), updated:model.lastModified};
+}
+function displayRelease(r) {
+  const put = (selector,value) => {const el=document.querySelector(selector);if(el)el.textContent=value;};
+  const num = v => typeof v==='number' && Number.isFinite(v) ? v.toLocaleString() : '—';
+  put('[data-release-params]',num(r.metrics.parameters));
+  put('[data-release-step]',num(r.metrics.step));
+  put('[data-release-loss]',num(r.metrics.val_loss));
+  put('[data-bloom-release-status]',HF_REPO.split('/')[1] + ' · HF ' + r.revision.slice(0,8));
+  put('[data-release-details]',[r.metrics.run_name, Number.isFinite(r.cfg.context) ? 'Context '+num(r.cfg.context)+' tokens' : null, r.updated ? 'Updated '+r.updated.slice(0,10) : null].filter(Boolean).join(' · '));
+}
+async function refreshRelease() {
+  try {displayRelease(await fetchRelease());}
+  catch(e){const el=document.querySelector('[data-bloom-release-status]');if(el)el.textContent='Live metadata unavailable — see the model card.';}
+}
 async function loadHuggingFace(signal) {
   status.textContent = 'Loading latest Bloom-Text-0.1 from Hugging Face…';
   if (metaEl) metaEl.textContent = '';
-  const [cfgRes, tokRes, wRes, metRes] = await Promise.all([
-    fetch(`${HF_BASE}/config.json`, { signal }),
-    fetch(`${HF_BASE}/tokenizer.json`, { signal }),
-    fetch(`${HF_BASE}/model.safetensors`, { signal }),
-    fetch(`${HF_BASE}/metrics.json`, { signal }).catch(() => null),
-  ]);
-  if (!cfgRes.ok || !wRes.ok) throw Error('Hugging Face model files unavailable');
-  const cfg = await cfgRes.json();
-  const tokJson = tokRes.ok ? await tokRes.json() : null;
-  const buf = await wRes.arrayBuffer();
-  const metrics = metRes && metRes.ok ? await metRes.json() : null;
-  const commit = wRes.headers.get('x-repo-commit') || cfgRes.headers.get('x-repo-commit');
-
-  W = parseSafetensors(buf);
-  CFG = cfg;
-  BPE = tokJson ? createBPE(tokJson) : null;
-  const sha = await sha256Hex(buf);
-  status.textContent = `Loaded Bloom-Text-0.1 (${(cfg.vocab_size === 256 ? 'byte' : 'BPE')} · ${(buf.byteLength / 1048576).toFixed(1)} MB). Ready to generate.`;
-  if (metaEl) {
-    const parts = [];
-    if (metrics?.parameters) parts.push(`${metrics.parameters.toLocaleString()} params`);
-    if (metrics?.step) parts.push(`step ${metrics.step.toLocaleString()}`);
-    if (metrics?.val_loss !== undefined) parts.push(`val loss ${metrics.val_loss}`);
-    if (commit) parts.push(`HF ${commit.slice(0, 8)}`);
-    else parts.push(`sha256 ${sha.slice(0, 12)}`);
-    metaEl.textContent = parts.join(' · ');
-  }
-  updateLengths();
-  setReady(true);
+  const release=await fetchRelease(signal);
+  displayRelease(release);
+  const {base,cfg,metrics,revision}=release;
+  const [tokRes,wRes]=await Promise.all([fetch(base+'/tokenizer.json',{signal}),fetch(base+'/model.safetensors',{signal})]);
+  if (!tokRes.ok || !wRes.ok) throw Error('Hugging Face model files unavailable');
+  const tokJson=await tokRes.json();
+  const buf=await wRes.arrayBuffer();
+  const sha=await sha256Hex(buf);
+  if (signal.aborted) throw new DOMException('Aborted','AbortError');
+  if (metrics.weights_sha256 && sha!==metrics.weights_sha256) throw Error('Published checkpoint hash mismatch');
+  const tokenizer=cfg.vocab_size===256 && !tokJson.model?.vocab ? null : createBPE(tokJson);
+  W=parseSafetensors(buf); CFG=cfg; BPE=tokenizer;
+  status.textContent='Loaded '+HF_REPO.split('/')[1]+' ('+(buf.byteLength/1048576).toFixed(1)+' MB). Ready to generate.';
+  if(metaEl)metaEl.textContent=[metrics.parameters?.toLocaleString()+' params',metrics.step!==undefined?'step '+metrics.step.toLocaleString():null,'HF '+revision.slice(0,8)].filter(Boolean).join(' · ');
+  updateLengths();setReady(true);
 }
 
 async function loadBaseline(signal) {
@@ -335,6 +348,7 @@ async function loadBaseline(signal) {
   const buf = await res.arrayBuffer();
   const sha = await sha256Hex(buf);
   if (sha !== BASELINE_SHA) throw Error('Not the verified baseline checkpoint');
+  if(signal.aborted) throw new DOMException('Aborted','AbortError');
   W = parseSafetensors(buf);
   CFG = BASELINE_CFG;
   BPE = null;
@@ -347,20 +361,21 @@ async function loadBaseline(signal) {
 async function selectSource(kind) {
   if (abortLoad) abortLoad.abort();
   abortLoad = new AbortController();
+  const signal = abortLoad.signal;
   setReady(false);
   try {
     if (kind === 'hf') {
-      await loadHuggingFace(abortLoad.signal);
+      await loadHuggingFace(signal);
     } else {
-      await loadBaseline(abortLoad.signal);
+      await loadBaseline(signal);
     }
   } catch (err) {
-    if (err.name === 'AbortError') return;
+    if (signal.aborted || err.name === 'AbortError') return;
     if (kind === 'hf') {
       if (modelSelect) modelSelect.value = 'baseline';
       try {
-        await loadBaseline(abortLoad.signal);
-        status.textContent = 'HF Bloom-Text-0.1 not published yet; fell back to verified baseline-001.';
+        await loadBaseline(signal);
+        status.textContent = 'Latest checkpoint unavailable; using verified baseline-001.';
       } catch {
         status.textContent = 'Automatic weights unavailable. Select a local model.safetensors file below.';
       }
@@ -440,6 +455,8 @@ async function generate(prompt) {
     await new Promise(r => setTimeout(r, 0));
     for (let i = 0; i < limit; i++) {
       if (cancelled) { reason = 'Stopped'; break; }
+      if (economyEl.checked && document.hidden) { reason='Paused tab — stopped'; break; }
+      const tokenStart=performance.now();
       const a = logits(ids.slice(-CFG.context));
       const nxt = sampleToken(a, temp, BPE ? 40 : 0);
       if (BPE && nxt === BPE.eotId) { reason = 'End of text'; break; }
@@ -447,7 +464,8 @@ async function generate(prompt) {
       text = BPE ? BPE.decode(gen) : utf8Dec.decode(Uint8Array.from(gen));
       output.textContent = text;
       scrollLog();
-      await new Promise(r => setTimeout(r, 0));
+      const rest=economyEl.checked ? Math.min(1500,Math.max(50,performance.now()-tokenStart)) : 0;
+      await new Promise(r => setTimeout(r, rest));
     }
     if (!text) output.textContent = 'No text generated.';
   } catch (err) {
@@ -466,4 +484,5 @@ clear.addEventListener('click', () => { if (running) return; log.querySelectorAl
 retry.addEventListener('click', () => generate(lastPrompt));
 root.querySelectorAll('[data-starter]').forEach(btn=>btn.addEventListener('click',()=>{promptEl.value=btn.dataset.starter; promptEl.focus();}));
 syncControls();
+refreshRelease();
 selectSource(modelSelect ? modelSelect.value : 'hf');
