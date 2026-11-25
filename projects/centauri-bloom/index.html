@@ -37,6 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="./bloom.css">
 </head>
 <body class="subpage">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -58,37 +59,61 @@
       <p class="kicker"><a href="/projects/">Projects</a> / Open research · November 2026</p>
       <section class="bloom-hero" aria-labelledby="bloom-title">
         <div><h1 id="bloom-title">Centauri <em>Bloom.</em></h1>
-        <p class="entry-meta"><span class="dot dot-dev"></span> Founding phase · Recruiting contributors</p>
+        <p class="entry-meta"><span class="dot dot-dev"></span> Research phase · Recruiting contributors</p>
         <p class="bloom-tagline">One model. Many contributors. Built from scratch.</p>
-        <p>Want something cool on your résumé? Help build Centauri Bloom from scratch. We're exploring how volunteers can build and train a small language model together, openly, using the computing resources they already have.</p>
-        <p class="project-actions"><a class="btn btn-solid" href="https://github.com/InterstellarNerd8760/centauri-bloom">GitHub ↗</a><a class="btn btn-ghost" href="https://discord.gg/mThAEaEgWf">Join Discord ↗</a><a class="btn btn-ghost" href="#workflow">How it works</a></p></div><svg viewBox="0 0 240 240" aria-hidden="true" class="bloom-mark"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(0 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(60 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(120 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(180 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(240 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(300 120 120)"/><circle cx="120" cy="120" r="11"/><circle cx="120" cy="120" r="105" stroke-dasharray="1 8"/></g></svg>
+        <p>An open research project exploring how people can train a small language model together, from random initialization, using the computing resources they already have.</p>
+        <p class="project-actions"><a class="btn btn-solid" href="https://github.com/InterstellarNerd8760/centauri-bloom">GitHub ↗</a><a class="btn btn-ghost" href="https://discord.gg/mThAEaEgWf">Join Discord ↗</a><a class="btn btn-ghost" href="#contribute">Contribute</a></p></div><svg viewBox="0 0 240 240" aria-hidden="true" class="bloom-mark"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(0 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(60 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(120 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(180 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(240 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(300 120 120)"/><circle cx="120" cy="120" r="11"/><circle cx="120" cy="120" r="105" stroke-dasharray="1 8"/></g></svg>
       </section>
-      <h2>Why Bloom?</h2>
-      <p>The name of our first model was inspired by the <a href="https://anti-doomer.si/">Anti-Doomer</a> community. Bloom is an independent project, not an official initiative of that community. The goal is to turn optimism about technology into a practical, reproducible experiment in collaborative AI research.</p>
-      <p>This is not affiliated with BigScience's existing BLOOM language model. There is no trained model, live training network, or confirmed compute budget yet.</p>
-      <section aria-labelledby="workflow">
-        <h2 id="workflow">How the project works</h2>
-        <p>One shared project, three main platforms. Discord is for conversation; GitHub is the source of truth for code, tasks and technical decisions; Hugging Face is the planned home for versioned datasets and model weights.</p>
-        <ol class="bloom-steps">
-          <li><strong>Develop.</strong> Discuss ideas in Discord, choose a GitHub issue, fork the repository and submit a pull request for review and testing.</li>
-          <li><strong>Experiment.</strong> Run independent training tests. Record the architecture, tokenizer, dataset version, training settings, hardware, metrics and checkpoint format. Independent experiments are not yet official model releases.</li>
-          <li><strong>Train together.</strong> Once a common architecture and tokenizer are agreed, workers will train on assigned shards from the same checkpoint. Compatible updates will be validated, aggregated and evaluated before promoting a new checkpoint. This network is still being developed.</li>
-          <li><strong>Release.</strong> Publish reviewed weights, configuration, tokenizer and model card on Hugging Face. A public chat interface and local inference are future goals.</li>
-        </ol>
-        <p>Pretraining uses a licensed text corpus; instruction tuning uses reviewed prompt-response examples. See the <a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/docs/architecture.md">technical architecture</a> and <a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/docs/roadmap.md">development roadmap</a> for the implementation details.</p>
+      <section class="bloom-section" id="bloom-playground"><p class="bloom-eyebrow">Experimental inference</p><h2>Bloom Playground</h2><p>Generate text with the first 118,528-parameter checkpoint. This is a next-byte model, not a chatbot. Prompts stay in your browser.</p><p role="status">Loading verified weights…</p><p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/actions/runs/45683242786/artifacts/15055286540">Download original checkpoint archive</a> (extract before selecting weights).</p><label>Local checkpoint <input type="file" accept=".safetensors"></label><p><label>Prompt <textarea maxlength="512" rows="3" style="display:block;width:100%">Once upon a time</textarea></label></p><label>Temperature <select><option>0.5</option><option selected>0.8</option><option>1.0</option></select></label><p><button class="btn btn-solid" type="button" disabled>Generate 64 bytes</button></p><pre aria-live="polite" style="white-space:pre-wrap;overflow-wrap:anywhere;min-height:4rem"></pre></section>
+      <section class="bloom-section" aria-labelledby="research">
+        <p class="bloom-eyebrow">01 / Research status</p>
+        <h2 id="research">From a prototype to a shared model.</h2>
+        <div class="bloom-spec bloom-metrics">
+          <div><strong>118.5K</strong><span>Experimental parameters</span></div>
+          <div><strong>1.68M</strong><span>Corpus byte tokens, all splits</span></div>
+          <div><strong>~15M</strong><span>Proposed release parameters</span></div>
+        </div>
+        <div class="bloom-progress">
+          <p><span class="bloom-state">Implemented</span> <span>Architecture, byte tokenizer, reproducible text data and checkpoint validation.</span></p>
+          <p><span class="bloom-state bloom-pending">In review</span> <span>Persistent training and the contributor notebook. First 100-step CPU run completed; weights saved. <a href="https://github.com/InterstellarNerd8760/centauri-bloom/actions/runs/45683242786">Training results</a> · <a href="https://github.com/InterstellarNerd8760/centauri-bloom/pull/13">PR #13</a></span></p>
+          <p><span class="bloom-state bloom-planned">Planned</span> <span>Independent worker experiment, expanded training data and reviewed model releases.</span></p>
+        </div>
+        <p>The experimental baseline has saved weights, but there is not yet an official model release or a live distributed training network. The initial baseline is deliberately small.</p>
+        <p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/issues">Follow the research issues ↗</a></p>
       </section>
-      <h2>Community tools</h2>
-      <p>A contributor is developing an independent Bloom website and browser-based training experiment. These are early community prototypes, not the official shared training network. Their compatibility with the central model and checkpoint format has not yet been established.</p>
-      <p class="project-actions"><a class="btn btn-ghost" href="https://mironox.de/Bloom">Community website ↗</a><a class="btn btn-ghost" href="https://mironox.de/Bloom/Training">Experimental trainer ↗</a></p>
-      <p>Use only reviewed software and authorized computing resources. Do not enter account credentials, private data or shared tokens into experimental tools.</p>
-      <h2>First model: Bloom 0.1</h2>
-      <div class="bloom-spec"><div><strong>~15M</strong><span>Target parameters</span></div><div><strong>512</strong><span>Context tokens</span></div><div><strong>2+</strong><span>Independent workers</span></div></div>
-      <p>Proposed baseline: a small decoder-only PyTorch transformer trained from random initialization, with a shared tokenizer and a curated, appropriately licensed text dataset. Exact dimensions and hyperparameters will be recorded before the first run.</p>
-      <h2 id="contribute">Where you can help</h2>
-      <div class="bloom-roles"><article><h3>Training &amp; ML</h3><p>Implement a minimal transformer, run experiments, or compare aggregation algorithms.</p></article><article><h3>Infrastructure</h3><p>Build the worker workflow, artifact storage and reproducible validation.</p></article><article><h3>Data</h3><p>Document provenance, licenses and privacy boundaries for datasets.</p></article><article><h3>Evaluation</h3><p>Track held-out loss, test regressions and define responsible-use checks.</p></article></div>
-      <p>No experience is required to start learning. Expensive hardware is not required for documentation, data review or small tests. Participation is voluntary; use only hardware and services you're authorized to use.</p>
-      <h2>Get involved</h2>
-      <p>The initial code scaffold and local two-worker CPU smoke test are in the public repository. Start with the <a href="https://github.com/InterstellarNerd8760/centauri-bloom/issues">open issues</a> and <a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/CONTRIBUTING.md">contribution guide</a>. Keep project discussions in moderated channels and personal information and credentials private.</p>
+      <section class="bloom-section" aria-labelledby="workflow">
+        <p class="bloom-eyebrow">02 / How it works</p>
+        <h2 id="workflow">One checkpoint. Many machines.</h2>
+        <div class="bloom-flow" aria-label="Proposed collaborative training workflow">
+          <div><span>01</span><strong>Assign</strong><p>Common model and distinct data shards.</p></div>
+          <div><span>02</span><strong>Train</strong><p>Independent, bounded runs on authorized compute.</p></div>
+          <div><span>03</span><strong>Validate</strong><p>Check metadata, weights and held-out loss.</p></div>
+          <div><span>04</span><strong>Advance</strong><p>Aggregate reviewed updates and evaluate.</p></div>
+        </div>
+        <p>GitHub coordinates code and research. Discord is for discussion. Hugging Face is intended for reviewed model and dataset artifacts. See the <a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/docs/architecture.md">architecture</a> for technical details.</p>
+      </section>
+      <section class="bloom-section" aria-labelledby="contribute">
+        <p class="bloom-eyebrow">03 / Participate</p>
+        <h2 id="contribute">Help build Bloom.</h2>
+        <div class="bloom-roles">
+          <article><p class="bloom-eyebrow">Training</p><h3>Run a baseline</h3><p>Try the reproducible text pipeline and review the proposed notebook. CPU tests are welcome.</p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/pull/13">Training notebook proposal ↗</a></article>
+          <article><p class="bloom-eyebrow">Development</p><h3>Improve the system</h3><p>Contribute data review, training tools, evaluation or infrastructure.</p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/issues">Choose an issue ↗</a></article>
+        </div>
+        <p>Use only reviewed software and authorized computing resources. Keep credentials and private data out of training tools. Participation is voluntary.</p>
+        <p class="project-actions"><a class="btn btn-solid" href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/CONTRIBUTING.md">Contribution guide ↗</a><a class="btn btn-ghost" href="https://discord.gg/mThAEaEgWf">Join Discord ↗</a></p>
+      </section>
+      <section class="bloom-section" aria-labelledby="community">
+        <p class="bloom-eyebrow">04 / Community experiments</p>
+        <h2 id="community">Independent research.</h2>
+        <p>Community prototypes explore browser training and other model types. Their compatibility with the official checkpoint format is not yet verified.</p>
+        <p class="project-actions"><a class="btn btn-ghost" href="https://mironox.de/Bloom">Community website ↗</a><a class="btn btn-ghost" href="https://mironox.de/Bloom/Training">Experimental trainer ↗</a></p>
+      </section>
+      <section class="bloom-section" aria-labelledby="about-bloom">
+        <p class="bloom-eyebrow">05 / About</p>
+        <h2 id="about-bloom">Open research, built from scratch.</h2>
+        <p>Bloom's name was inspired by the <a href="https://anti-doomer.si/">Anti-Doomer</a> community. This independent project is not affiliated with that community or BigScience BLOOM. Original code and documentation are Apache 2.0; official model releases target the Open Source AI Definition 1.0 after review.</p>
+        <p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/docs/open-source-ai.md">Release policy</a> · <a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/DESIGN.md">Design system</a> · <a href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/docs/roadmap.md">Roadmap</a></p>
+      </section>
     </div>
   </main>
   <footer class="site-footer">
@@ -109,5 +134,6 @@
     </div>
   </footer>
   <script src="/script.js" defer></script>
+  <script src="./playground.js" type="module"></script>
 </body>
 </html>
