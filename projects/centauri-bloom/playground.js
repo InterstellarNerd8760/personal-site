@@ -478,7 +478,11 @@ async function generate(prompt) {
   }
 }
 form.addEventListener('submit', e => { e.preventDefault(); const prompt = promptEl.value; if (ready && !running && prompt.trim()) { promptEl.value=''; generate(prompt); } });
-promptEl.addEventListener('keydown', e => { if (e.key==='Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); form.requestSubmit(); } });
+promptEl.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' || e.shiftKey || e.isComposing || e.keyCode === 229) return;
+  e.preventDefault();
+  if (ready && !running && promptEl.value.trim()) form.requestSubmit();
+});
 stop.addEventListener('click', () => { cancelled=true; syncControls(); });
 clear.addEventListener('click', () => { if (running) return; log.querySelectorAll('.bloom-turn').forEach(el=>el.remove()); empty.hidden=false; lastPrompt=''; syncControls(); promptEl.focus(); });
 retry.addEventListener('click', () => generate(lastPrompt));
