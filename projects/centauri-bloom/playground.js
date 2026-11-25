@@ -326,31 +326,62 @@ function loadedParams(weights) {
   const tied=head&&embedding&&head.length===embedding.length&&head.every((x,i)=>x===embedding[i]);
   return Object.entries(weights).reduce((sum,[key,tensor])=>sum+(key==='head.weight'&&tied?0:tensor.length),0);
 }
+let lastRelease = null;
+let latestRequest = 0;
 function displayRelease(r) {
   const put = (selector,value) => {const el=document.querySelector(selector);if(el)el.textContent=value;};
-  const num = v => typeof v==='number' && Number.isFinite(v) ? v.toLocaleString() : '—';
+  const finite=v=>typeof v==='number'&&Number.isFinite(v);
+  const num=v=>finite(v)?v.toLocaleString(undefined,{maximumFractionDigits:8}):'—';
+  const loss=v=>finite(v)?v.toLocaleString(undefined,{maximumFractionDigits:6}):'—';
   const expected=architectureParams(r.cfg);
-  put('[data-release-params]',num(expected));
+  const m=r.metrics,c=r.cfg;
+  put('[data-release-params]',num(expected??m.parameters));
+  put('[data-release-step]',num(m.step));
+  put('[data-release-tokens]',num(m.train_tokens));
+  put('[data-release-loss]',loss(m.val_loss));
+  put('[data-release-train-loss]',loss(m.last_train_loss??m.train_loss));
+  put('[data-release-perplexity]',finite(m.val_loss)&&Number.isFinite(Math.exp(m.val_loss))?loss(Math.exp(m.val_loss)):'—');
+  put('[data-release-context]',num(c.context));
+  put('[data-release-vocab]',num(c.vocab_size));
+  put('[data-release-layers]',num(c.layers));
+  put('[data-release-heads]',num(c.heads));
+  put('[data-release-width]',num(c.width));
+  put('[data-release-lr]',num(m.learning_rate));
+  put('[data-release-batch]',num(m.batch_size));
+  put('[data-release-accum]',num(m.grad_accum));
+  put('[data-release-elapsed]',finite(m.elapsed_seconds)?num(m.elapsed_seconds/60)+' min':'—');
   const warning=document.querySelector('[data-release-warning]');
   if(warning){
-    const mismatch=expected!==null&&Number.isFinite(r.metrics.parameters)&&r.metrics.parameters!==expected;
+    const mismatch=expected!==null&&finite(m.parameters)&&m.parameters!==expected;
     warning.hidden=!mismatch;
-    warning.textContent=mismatch?'Metrics report '+num(r.metrics.parameters)+' parameters, but the published configuration implies '+num(expected)+'. Check checkpoint metadata.':'';
+    warning.textContent=mismatch?'Metrics report '+num(m.parameters)+' parameters, but the configuration implies '+num(expected)+'. Check checkpoint metadata.':'';
   }
-  put('[data-release-step]',num(r.metrics.step));
-  put('[data-release-loss]',num(r.metrics.val_loss));
-  put('[data-bloom-release-status]',HF_REPO.split('/')[1] + ' · HF ' + r.revision.slice(0,8));
-  put('[data-release-details]',[r.metrics.run_name, Number.isFinite(r.cfg.context) ? 'Context '+num(r.cfg.context)+' tokens' : null, r.updated ? 'Updated '+r.updated.slice(0,10) : null].filter(Boolean).join(' · '));
+  put('[data-bloom-release-status]',HF_REPO.split('/')[1]+' · HF '+r.revision.slice(0,8));
+  put('[data-release-details]',[m.run_name,r.updated?'Published '+r.updated.slice(0,10):null,'Checked '+new Date().toLocaleTimeString()].filter(Boolean).join(' · '));
+  put('[data-release-provenance]',[m.train_tokens_scope?'Token count scope: '+m.train_tokens_scope:null,m.training_track?'Track: '+m.training_track:null,'Perplexity is calculated from reported validation loss. — means unavailable.'].filter(Boolean).join(' · '));
+  put('[data-release-raw]',JSON.stringify({model:HF_REPO,revision:r.revision,updated:r.updated,metrics:m,config:c},null,2));
+  lastRelease=r;
 }
 async function refreshRelease() {
-  try {displayRelease(await fetchRelease());}
-  catch(e){const el=document.querySelector('[data-bloom-release-status]');if(el)el.textContent='Live metadata unavailable — see the model card.';}
+  const request=++latestRequest;
+  try {
+    const r=await fetchRelease();
+    if(request===latestRequest)displayRelease(r);
+    return r;
+  }catch(e){
+    if(request===latestRequest){
+      const el=document.querySelector('[data-bloom-release-status]');
+      if(el)el.textContent=lastRelease?'Refresh failed — showing last successful revision '+lastRelease.revision.slice(0,8):'Live metadata unavailable — see the model card.';
+    }
+    return null;
+  }
 }
+document.querySelector('[data-release-refresh]')?.addEventListener('click',()=>refreshRelease());
 async function loadHuggingFace(signal) {
   status.textContent = 'Loading latest Bloom-Text-0.1 from Hugging Face…';
   if (metaEl) metaEl.textContent = '';
   const release=await fetchRelease(signal);
-  displayRelease(release);
+  if(!lastRelease)displayRelease(release);
   const {base,cfg,metrics,revision}=release;
   const [tokRes,wRes]=await Promise.all([fetch(base+'/tokenizer.json',{signal}),fetch(base+'/model.safetensors',{signal})]);
   if (!tokRes.ok || !wRes.ok) throw Error('Hugging Face model files unavailable');
@@ -530,3 +561,5 @@ root.querySelectorAll('[data-starter]').forEach(btn=>btn.addEventListener('click
 syncControls();
 refreshRelease();
 selectSource(modelSelect ? modelSelect.value : 'hf');
+// Refresh metadata only; never reload weights or interrupt generation in the background.
+setInterval(()=>{if(!document.hidden)refreshRelease();},120000);
