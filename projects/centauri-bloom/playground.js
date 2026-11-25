@@ -18,12 +18,19 @@ const promptEl = root.querySelector('textarea');
 const lengthEl = root.querySelector('[data-bloom-length]');
 const tempEl = root.querySelector('[data-bloom-temp]');
 const economyEl = root.querySelector('[data-bloom-economy]');
+const activity = root.querySelector('[data-bloom-activity]');
+const activityText = root.querySelector('[data-bloom-activity-text]');
+const activityProgress = root.querySelector('[data-bloom-activity-progress]');
 const log = root.querySelector('[data-bloom-log]');
 const fileInput = document.querySelector('.bloom-advanced input[type=file]');
 const empty = root.querySelector('[data-bloom-empty]');
 let ready = false, running = false, cancelled = false, lastPrompt = '';
 function syncControls() {
   go.disabled = !ready || running;
+  go.textContent = running ? 'Generating…' : 'Generate ↗';
+  form.setAttribute('aria-busy', String(running));
+  activity.hidden = !running;
+  if (running && cancelled) activityText.textContent = 'Stopping after the current token…';
   stop.disabled = !running || cancelled;
   clear.disabled = running;
   retry.disabled = !ready || running || !lastPrompt;
@@ -448,11 +455,16 @@ async function generate(prompt) {
   const t0 = performance.now();
   let count = 0, reason = 'Length limit', text = '';
   const units = BPE ? 'tokens' : 'bytes';
+  activityProgress.max = limit;
+  activityProgress.value = 0;
+  activityText.textContent = 'Generating locally · 0 / ' + limit + ' ' + units + ' · waiting for first output';
+  info.textContent = 'Generating on your device…';
   try {
     const ids = BPE ? BPE.encode(prompt) : Array.from(utf8Enc.encode(prompt));
     if (!ids.length) ids.push(BPE ? BPE.eotId : 32);
     const gen = [];
-    await new Promise(r => setTimeout(r, 0));
+    // Allow the browser to paint the indicator before synchronous CPU inference.
+    await new Promise(r => setTimeout(r, 50));
     for (let i = 0; i < limit; i++) {
       if (cancelled) { reason = 'Stopped'; break; }
       if (economyEl.checked && document.hidden) { reason='Paused tab — stopped'; break; }
@@ -463,6 +475,10 @@ async function generate(prompt) {
       ids.push(nxt); gen.push(nxt); count++;
       text = BPE ? BPE.decode(gen) : utf8Dec.decode(Uint8Array.from(gen));
       output.textContent = text;
+      activityProgress.value = count;
+      const elapsed = Math.max(0.001,(performance.now()-t0)/1000);
+      activityText.textContent = 'Generating locally · ' + count + ' / ' + limit + ' ' + units + ' · ' + elapsed.toFixed(1) + 's';
+      info.textContent = count + ' ' + units + ' generated · ' + (count/elapsed).toFixed(1) + ' /s';
       scrollLog();
       const rest=economyEl.checked ? Math.min(1500,Math.max(50,performance.now()-tokenStart)) : 0;
       await new Promise(r => setTimeout(r, rest));
