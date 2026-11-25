@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="./bloom.css?v=3">
+  <link rel="stylesheet" href="./bloom.css?v=4">
 </head>
 <body class="subpage">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -62,7 +62,7 @@
         <p class="entry-meta"><span class="dot dot-dev"></span> Research phase · Recruiting contributors</p>
         <p class="bloom-tagline">One model. Many contributors. Built from scratch.</p>
         <p>An open research project exploring how people can train a small language model together, from random initialization, using the computing resources they already have.</p>
-        <p class="project-actions"><a class="btn btn-solid" href="https://github.com/InterstellarNerd8760/centauri-bloom">GitHub ↗</a><a class="btn btn-ghost" href="https://discord.gg/mThAEaEgWf">Join Discord ↗</a><a class="btn btn-ghost" href="#contribute">Contribute</a></p></div><svg viewBox="0 0 240 240" aria-hidden="true" class="bloom-mark"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(0 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(60 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(120 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(180 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(240 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(300 120 120)"/><circle cx="120" cy="120" r="11"/><circle cx="120" cy="120" r="105" stroke-dasharray="1 8"/></g></svg>
+        <p class="project-actions"><a class="btn btn-solid" href="https://github.com/InterstellarNerd8760/centauri-bloom">GitHub ↗</a><a class="btn btn-ghost" href="https://discord.gg/mThAEaEgWf">Join Discord ↗</a><a class="btn btn-ghost" href="https://colab.research.google.com/github/InterstellarNerd8760/centauri-bloom/blob/main/notebooks/colab-bloom-0.1-continue.ipynb">Train the model ↗</a><a class="btn btn-ghost" href="#contribute">Contribute</a></p></div><svg viewBox="0 0 240 240" aria-hidden="true" class="bloom-mark"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(0 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(60 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(120 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(180 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(240 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(300 120 120)"/><circle cx="120" cy="120" r="11"/><circle cx="120" cy="120" r="105" stroke-dasharray="1 8"/></g></svg>
       </section>
       <section class="bloom-section" id="bloom-playground" aria-labelledby="playground-title">
         <p class="bloom-eyebrow">Experimental inference / 01</p><h2 id="playground-title">Bloom Playground</h2>
@@ -72,26 +72,29 @@
           <div class="bloom-chat-model"><label>Model <select data-bloom-model><option value="hf" selected>Bloom-Text-0.1 · Latest</option><option value="baseline">baseline-001 · 118.5K</option></select></label><div class="bloom-model-info"><p role="status">Loading model…</p><p data-bloom-meta></p></div></div>
           <div class="bloom-chat-log" data-bloom-log aria-label="Text completions"><div class="bloom-empty" data-bloom-empty><span class="bloom-chat-kicker">BEGIN AN EXPERIMENT</span><h3>What will Bloom write?</h3><p>Choose a starter or enter your own text.</p><div class="bloom-starters"><button type="button" data-starter="Once upon a time, there was a little robot">A little robot</button><button type="button" data-starter="The dog was hungry, so">Finish a sentence</button><button type="button" data-starter="One day, a spaceship landed">A spaceship</button></div></div></div>
           <form class="bloom-composer" data-bloom-form><label for="bloom-prompt" class="bloom-chat-kicker">PROMPT</label><textarea id="bloom-prompt" maxlength="2048" rows="3" placeholder="Once upon a time…" required></textarea>
-            <div class="bloom-composer-tools"><label>Length <select data-bloom-length><option value="48">48 tokens</option><option value="128" selected>128 tokens</option><option value="256">256 tokens</option></select></label><label>Temperature <select data-bloom-temp><option>0.5</option><option selected>0.8</option><option>1.0</option></select></label></div>
+            <div class="bloom-composer-tools"><label>Length <select data-bloom-length><option value="48" selected>48 tokens</option><option value="128">128 tokens</option><option value="256">256 tokens</option></select></label><label>Temperature <select data-bloom-temp><option>0.5</option><option selected>0.8</option><option>1.0</option></select></label><label class="bloom-economy"><input type="checkbox" data-bloom-economy checked> Economy mode</label></div>
             <div class="bloom-chat-actions"><button class="btn btn-ghost" type="button" data-bloom-clear>Clear</button><button class="btn btn-ghost" type="button" data-bloom-retry disabled>Retry</button><span class="bloom-action-spacer"></span><button class="btn btn-ghost" type="button" data-bloom-stop disabled>Stop</button><button class="btn btn-solid" type="submit" data-bloom-generate disabled>Generate ↗</button></div>
-          </form><p class="bloom-chat-foot">Prompts and generated text stay in your browser. Longer outputs may be slow on mobile devices.</p>
+          </form><p class="bloom-chat-foot">Prompts and output stay on this device. Economy mode pauses between tokens; longer outputs use more CPU. Stop if your device becomes unusually hot.</p>
         </div>
         <details class="bloom-advanced"><summary>Model files &amp; advanced options</summary><p><a href="https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1">Hugging Face checkpoint ↗</a> · <a href="https://github.com/InterstellarNerd8760/centauri-bloom/releases/download/baseline-001-experimental/model.safetensors">Baseline weights ↗</a></p><label>Local compatible checkpoint <input type="file" accept=".safetensors"></label></details>
       </section>
       <section class="bloom-section" aria-labelledby="research">
         <p class="bloom-eyebrow">01 / Research status</p>
         <h2 id="research">From a prototype to a shared model.</h2>
+        <div class="bloom-release-head"><span class="bloom-chat-kicker">LATEST PUBLISHED CHECKPOINT</span><p data-bloom-release-status role="status">Fetching Hugging Face metadata…</p></div>
         <div class="bloom-spec bloom-metrics">
-          <div><strong>118.5K</strong><span>Experimental parameters</span></div>
-          <div><strong>1.68M</strong><span>Corpus byte tokens, all splits</span></div>
-          <div><strong>~15M</strong><span>Proposed release parameters</span></div>
+          <div><strong data-release-params>—</strong><span>Parameters</span></div>
+          <div><strong data-release-step>—</strong><span>Training step</span></div>
+          <div><strong data-release-loss>—</strong><span>Reported validation loss</span></div>
         </div>
+        <p class="bloom-release-details" data-release-details>Version and revision will appear when available.</p>
+        <p><a href="https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1">Published weights and model card ↗</a></p>
         <div class="bloom-progress">
           <p><span class="bloom-state">Implemented</span> <span>Architecture, byte tokenizer, reproducible text data and checkpoint validation.</span></p>
           <p><span class="bloom-state bloom-pending">In review</span> <span>Persistent training and the contributor notebook. First 100-step CPU run completed; weights saved. <a href="https://github.com/InterstellarNerd8760/centauri-bloom/actions/runs/45683242786">Training results</a> · <a href="https://github.com/InterstellarNerd8760/centauri-bloom/pull/13">PR #13</a></span></p>
           <p><span class="bloom-state bloom-planned">Planned</span> <span>Independent worker experiment, expanded training data and reviewed model releases.</span></p>
         </div>
-        <p>The experimental baseline has saved weights, but there is not yet an official model release or a live distributed training network. The initial baseline is deliberately small.</p>
+        <p>Published experimental checkpoints are distinct from official reviewed releases. There is not yet a live distributed training network.</p>
         <p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/issues">Follow the research issues ↗</a></p>
       </section>
       <section class="bloom-section" aria-labelledby="workflow">
@@ -109,7 +112,7 @@
         <p class="bloom-eyebrow">03 / Participate</p>
         <h2 id="contribute">Help build Bloom.</h2>
         <div class="bloom-roles">
-          <article><p class="bloom-eyebrow">Training</p><h3>Run a baseline</h3><p>Try the reproducible text pipeline and review the proposed notebook. CPU tests are welcome.</p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/pull/13">Training notebook proposal ↗</a></article>
+          <article><p class="bloom-eyebrow">Current priority / continued pretraining</p><h3>Train the model.</h3><p>Use an authorized Colab GPU to continue the published checkpoint with its original tokenizer, evaluate the candidate and optionally submit a Hugging Face pull request for review. No automatic replacement of the live model.</p><a class="btn btn-solid" href="https://colab.research.google.com/github/InterstellarNerd8760/centauri-bloom/blob/main/notebooks/colab-bloom-0.1-continue.ipynb">Open training notebook ↗</a><p><a href="https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1/discussions">Review model submissions ↗</a></p></article>
           <article><p class="bloom-eyebrow">Development</p><h3>Improve the system</h3><p>Contribute data review, training tools, evaluation or infrastructure.</p><a href="https://github.com/InterstellarNerd8760/centauri-bloom/issues">Choose an issue ↗</a></article>
         </div>
         <p>Use only reviewed software and authorized computing resources. Keep credentials and private data out of training tools. Participation is voluntary.</p>
@@ -147,6 +150,6 @@
     </div>
   </footer>
   <script src="/script.js" defer></script>
-  <script src="./playground.js?v=2" type="module"></script>
+  <script src="./playground.js?v=4" type="module"></script>
 </body>
 </html>
