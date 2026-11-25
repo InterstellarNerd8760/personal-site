@@ -1,0 +1,27 @@
+/* Bloom only: preserve the personal site's base typography and theme. */
+.bloom-page{--bloom-pink:#f2a7cf;--bloom-accent:var(--sage)}
+.bloom-page .entry{max-width:64rem}
+.bloom-page .bloom-hero{padding-bottom:clamp(2rem,5vw,3.5rem)}
+.bloom-page .bloom-mark{filter:none}
+.bloom-page .bloom-section{padding:clamp(1.75rem,4vw,3rem) 0;border-bottom:1px solid var(--line)}
+.bloom-page .bloom-section:last-child{border-bottom:0}
+.bloom-page .bloom-eyebrow{font:500 .7rem/1.5 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--text-2);margin:0 0 .55rem}
+.bloom-page .bloom-section h2{margin-top:0}
+.bloom-page .bloom-metrics{gap:.75rem;margin:1.3rem 0}
+.bloom-page .bloom-metrics>div{min-width:0;padding:clamp(.8rem,2vw,1.3rem)}
+.bloom-page .bloom-metrics>div:last-child strong{color:var(--bloom-pink)}
+.bloom-page .bloom-progress{border-top:1px solid var(--line);margin:1.25rem 0}
+.bloom-page .bloom-progress p{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:.6rem;padding:.8rem 0;border-bottom:1px solid var(--line);margin:0;font-size:.95rem;align-items:baseline}
+.bloom-page .bloom-progress p a{grid-column:2}
+.bloom-page .bloom-state{font:500 .72rem/1.5 var(--mono);color:var(--bloom-accent)}
+.bloom-page .bloom-pending{color:var(--bloom-pink)}
+.bloom-page .bloom-planned{color:var(--text-2)}
+.bloom-page .bloom-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:1.25rem 0}
+.bloom-page .bloom-flow>div{background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:1rem;min-width:0}
+.bloom-page .bloom-flow span{display:block;font:.75rem var(--mono);color:var(--bloom-accent);margin-bottom:.65rem}
+.bloom-page .bloom-flow strong{font:400 1.5rem/1.2 var(--serif);color:var(--white)}
+.bloom-page .bloom-flow p{font-size:.85rem;line-height:1.55;margin:.5rem 0 0}
+.bloom-page .bloom-roles article a{display:inline-block;margin-top:.85rem}
+html[data-theme="rustic"] .bloom-page{--bloom-pink:#963d68}
+@media(max-width:760px){.bloom-page .bloom-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.bloom-page .bloom-metrics{grid-template-columns:1fr}.bloom-page .bloom-progress p{grid-template-columns:1fr;gap:.25rem}.bloom-page .bloom-progress p a{grid-column:1}}
