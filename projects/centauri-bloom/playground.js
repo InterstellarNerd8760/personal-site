@@ -7,8 +7,52 @@ const BASELINE_CFG = { vocab_size: 256, context: 32, width: 64, heads: 4, layers
 const status = root.querySelector('[role=status]');
 const metaEl = root.querySelector('[data-bloom-meta]');
 const modelSelect = root.querySelector('[data-bloom-model]');
-const go = root.querySelector('button');
-const outEl = root.querySelector('pre');
+const go = root.querySelector('[data-bloom-generate]');
+const stop = root.querySelector('[data-bloom-stop]');
+const clear = root.querySelector('[data-bloom-clear]');
+const retry = root.querySelector('[data-bloom-retry]');
+const form = root.querySelector('[data-bloom-form]');
+const promptEl = root.querySelector('textarea');
+const lengthEl = root.querySelector('[data-bloom-length]');
+const tempEl = root.querySelector('[data-bloom-temp]');
+const log = root.querySelector('[data-bloom-log]');
+const fileInput = document.querySelector('.bloom-advanced input[type=file]');
+const empty = root.querySelector('[data-bloom-empty]');
+let ready = false, running = false, cancelled = false, lastPrompt = '';
+function syncControls() {
+  go.disabled = !ready || running;
+  stop.disabled = !running || cancelled;
+  clear.disabled = running;
+  retry.disabled = !ready || running || !lastPrompt;
+  modelSelect.disabled = running;
+  fileInput.disabled = running;
+  lengthEl.disabled = running;
+  tempEl.disabled = running;
+  promptEl.disabled = running;
+}
+function setReady(value) { ready = value; syncControls(); }
+function updateLengths() {
+  const sizes = BPE ? [48,128,256] : [64,128,256];
+  const previous = Number(lengthEl.value);
+  lengthEl.replaceChildren(...sizes.map(n => new Option(n + (BPE ? ' tokens' : ' bytes'), String(n))));
+  lengthEl.value = String(sizes.includes(previous) ? previous : 128);
+}
+function scrollLog() { log.scrollTop = log.scrollHeight; }
+function addTurn(prompt) {
+  empty.hidden = true;
+  const turn = document.createElement('article'); turn.className = 'bloom-turn';
+  const user = document.createElement('div'); user.className = 'bloom-message bloom-message-user';
+  const model = document.createElement('div'); model.className = 'bloom-message bloom-message-model';
+  function label(parent, text) { const span = document.createElement('span'); span.className='bloom-chat-kicker'; span.textContent=text; parent.append(span); }
+  label(user, 'YOU / PROMPT');
+  const p = document.createElement('p'); p.textContent = prompt; user.append(p);
+  label(model, 'BLOOM / COMPLETION');
+  const output = document.createElement('p'); output.textContent = 'Generating…'; model.append(output);
+  const info = document.createElement('p'); info.className='bloom-run-info'; info.setAttribute('role','status'); model.append(info);
+  turn.append(user,model); log.append(turn);
+  while (log.querySelectorAll('.bloom-turn').length > 30) log.querySelector('.bloom-turn').remove();
+  scrollLog(); return {output, info};
+}
 
 let W = null;
 let CFG = BASELINE_CFG;
@@ -279,8 +323,8 @@ async function loadHuggingFace(signal) {
     else parts.push(`sha256 ${sha.slice(0, 12)}`);
     metaEl.textContent = parts.join(' · ');
   }
-  go.textContent = BPE ? 'Generate 48 tokens' : 'Generate 64 bytes';
-  go.disabled = false;
+  updateLengths();
+  setReady(true);
 }
 
 async function loadBaseline(signal) {
@@ -296,14 +340,14 @@ async function loadBaseline(signal) {
   BPE = null;
   status.textContent = 'Verified baseline-001 loaded (118.5K byte-level). Ready to generate.';
   if (metaEl) metaEl.textContent = `118,528 params · 100 CPU steps · sha256 ${sha.slice(0, 12)}`;
-  go.textContent = 'Generate 64 bytes';
-  go.disabled = false;
+  updateLengths();
+  setReady(true);
 }
 
 async function selectSource(kind) {
   if (abortLoad) abortLoad.abort();
   abortLoad = new AbortController();
-  go.disabled = true;
+  setReady(false);
   try {
     if (kind === 'hf') {
       await loadHuggingFace(abortLoad.signal);
@@ -330,9 +374,11 @@ if (modelSelect) {
   modelSelect.addEventListener('change', () => selectSource(modelSelect.value));
 }
 
-root.querySelector('input[type=file]').addEventListener('change', async e => {
+fileInput.addEventListener('change', async e => {
   const file = e.target.files[0];
-  if (!file) return;
+  if (!file || running) return;
+  if (abortLoad) abortLoad.abort();
+  setReady(false);
   try {
     const buf = await file.arrayBuffer();
     const sha = await sha256Hex(buf);
@@ -346,8 +392,8 @@ root.querySelector('input[type=file]').addEventListener('change', async e => {
     if (tokRows === 256) BPE = null;
     status.textContent = `Local checkpoint loaded (${width}w · ${layers}L · vocab ${tokRows}).`;
     if (metaEl) metaEl.textContent = `sha256 ${sha.slice(0, 12)}`;
-    go.textContent = BPE ? 'Generate 48 tokens' : 'Generate 64 bytes';
-    go.disabled = false;
+    updateLengths();
+    setReady(true);
   } catch (err) {
     status.textContent = err.message;
   }
@@ -378,43 +424,46 @@ function sampleToken(logitsArr, temp, topK) {
   return cand[cand.length - 1];
 }
 
-go.addEventListener('click', async () => {
-  go.disabled = true;
+async function generate(prompt) {
+  if (!ready || running || !prompt.trim()) return;
+  running = true; cancelled = false; lastPrompt = prompt; syncControls();
+  const {output, info} = addTurn(prompt);
+  const temp = Number(tempEl.value) || 0.8;
+  const limit = Math.min(256, Math.max(1, Number(lengthEl.value) || 128));
+  const t0 = performance.now();
+  let count = 0, reason = 'Length limit', text = '';
+  const units = BPE ? 'tokens' : 'bytes';
   try {
-    const prompt = root.querySelector('textarea').value || ' ';
-    const temp = Number(root.querySelector('select[data-bloom-temp]')?.value || root.querySelectorAll('select')[1]?.value || 0.8);
-    if (BPE) {
-      let ids = BPE.encode(prompt);
-      if (!ids.length) ids = [BPE.eotId];
-      const gen = [];
-      outEl.textContent = '';
-      for (let i = 0; i < 48; i++) {
-        const a = logits(ids.slice(-CFG.context));
-        const nxt = sampleToken(a, temp, 40);
-        if (nxt === BPE.eotId) break;
-        ids.push(nxt);
-        gen.push(nxt);
-        outEl.textContent = BPE.decode(gen);
-        await new Promise(r => setTimeout(r, 0));
-      }
-    } else {
-      const ids = Array.from(utf8Enc.encode(prompt));
-      const out = [];
-      outEl.textContent = '';
-      for (let i = 0; i < 64; i++) {
-        const a = logits(ids.slice(-CFG.context));
-        const nxt = sampleToken(a, temp, 0);
-        ids.push(nxt);
-        out.push(nxt);
-        outEl.textContent = utf8Dec.decode(Uint8Array.from(out));
-        await new Promise(r => setTimeout(r, 0));
-      }
+    const ids = BPE ? BPE.encode(prompt) : Array.from(utf8Enc.encode(prompt));
+    if (!ids.length) ids.push(BPE ? BPE.eotId : 32);
+    const gen = [];
+    await new Promise(r => setTimeout(r, 0));
+    for (let i = 0; i < limit; i++) {
+      if (cancelled) { reason = 'Stopped'; break; }
+      const a = logits(ids.slice(-CFG.context));
+      const nxt = sampleToken(a, temp, BPE ? 40 : 0);
+      if (BPE && nxt === BPE.eotId) { reason = 'End of text'; break; }
+      ids.push(nxt); gen.push(nxt); count++;
+      text = BPE ? BPE.decode(gen) : utf8Dec.decode(Uint8Array.from(gen));
+      output.textContent = text;
+      scrollLog();
+      await new Promise(r => setTimeout(r, 0));
     }
+    if (!text) output.textContent = 'No text generated.';
   } catch (err) {
-    status.textContent = err.message;
+    reason = 'Generation failed: ' + err.message;
+    if (!text) output.textContent = 'Generation failed.';
   } finally {
-    go.disabled = false;
+    const seconds = Math.max(0.001,(performance.now()-t0)/1000);
+    info.textContent = reason + ' · ' + count + ' ' + units + ' · ' + (count/seconds).toFixed(1) + ' /s';
+    running = false; syncControls(); scrollLog();
   }
-});
-
+}
+form.addEventListener('submit', e => { e.preventDefault(); const prompt = promptEl.value; if (ready && !running && prompt.trim()) { promptEl.value=''; generate(prompt); } });
+promptEl.addEventListener('keydown', e => { if (e.key==='Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); form.requestSubmit(); } });
+stop.addEventListener('click', () => { cancelled=true; syncControls(); });
+clear.addEventListener('click', () => { if (running) return; log.querySelectorAll('.bloom-turn').forEach(el=>el.remove()); empty.hidden=false; lastPrompt=''; syncControls(); promptEl.focus(); });
+retry.addEventListener('click', () => generate(lastPrompt));
+root.querySelectorAll('[data-starter]').forEach(btn=>btn.addEventListener('click',()=>{promptEl.value=btn.dataset.starter; promptEl.focus();}));
+syncControls();
 selectSource(modelSelect ? modelSelect.value : 'hf');
