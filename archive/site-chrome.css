@@ -1,13 +1,41 @@
 /* Personal-site chrome for the embedded Centauri Archive at /archive/.
-   Loaded after archive style.css. Shared color tokens follow the site theme toggle. */
+   Loaded after the archive's stylesheets. */
+
+html.embedded-archive {
+  scroll-padding-top: 8rem;
+}
 
 body.archive-page {
   padding-top: 4.5rem;
 }
 
-body.archive-page .skip,
-body.archive-page .skip-link {
-  z-index: 200;
+html[data-theme="rustic"] body.archive-editorial {
+  --soft: var(--text-2);
+}
+
+/* Existing archive exhibits use dark controls, figures, and media frames. */
+html[data-theme="rustic"] body.archive-page:not(.archive-editorial) {
+  background: #05080f;
+}
+
+html[data-theme="rustic"] body.archive-page:not(.archive-editorial) > main {
+  --bg: #05080f;
+  --bg-2: #0a1220;
+  --surface: #0f1a2b;
+  --line: rgba(160, 185, 215, .18);
+  --line-2: rgba(160, 185, 215, .26);
+  --sky: #5cc8f5;
+  --sage: #8fd1ae;
+  --text: #c9d3de;
+  --text-2: rgba(201, 211, 222, .72);
+  --text-3: rgba(201, 211, 222, .62);
+  --white: #f2f5f8;
+  color: var(--text);
+  color-scheme: dark;
+}
+
+body.archive-page .site-footer {
+  background: var(--bg);
 }
 
 .archive-subnav {
@@ -16,44 +44,48 @@ body.archive-page .skip-link {
   z-index: 95;
   display: flex;
   flex-wrap: wrap;
-  gap: .15rem 1.15rem;
+  gap: .25rem clamp(.9rem, 2.5vw, 1.75rem);
   align-items: center;
-  padding: .7rem clamp(1.25rem, 3vw, 2.5rem);
-  background: rgba(5, 8, 15, .88);
+  padding: .4rem clamp(1.25rem, 3vw, 2.5rem);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(16px);
-}
-
-html[data-theme="rustic"] .archive-subnav {
-  background: rgba(243, 237, 226, .94);
 }
 
 .archive-subnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
   color: var(--text-2);
   text-decoration: none;
-  font: 500 .78rem/1.4 var(--mono);
-  letter-spacing: .04em;
+  font: 500 .85rem/1.3 var(--sans);
 }
 
 .archive-subnav a:hover,
-.archive-subnav a[aria-current="page"] {
+.archive-subnav a[aria-current] {
   color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: .27em;
 }
 
-.archive-subnav .archive-source {
-  margin-left: auto;
-  color: var(--sky);
+.archive-subnav .archive-brand {
+  color: var(--white);
+  font: 400 1.35rem/1.1 var(--serif);
 }
 
 @media (max-width: 760px) {
+  html.embedded-archive {
+    scroll-padding-top: 5rem;
+  }
+
   .archive-subnav {
-    top: 4.5rem;
-    gap: .45rem 1rem;
-    padding: .75rem 1.5rem;
+    position: static;
+    gap: 0 1rem;
+    padding-block: .35rem;
   }
-  .archive-subnav .archive-source {
-    margin-left: 0;
-  }
+}
+
+@media (max-width: 510px) {
+  .archive-subnav .archive-brand { flex-basis: 100%; }
 }
 
 /* Personal-site .hero is a full-viewport homepage block. Reset it on archive pages

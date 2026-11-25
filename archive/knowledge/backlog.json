@@ -1,0 +1,1664 @@
+{
+  "version": 1,
+  "note": "Planning identifiers do not reserve live article IDs. First 100 topics are the Essential milestone shortlist.",
+  "strands": [
+    {
+      "id": "mathematics",
+      "category": "01",
+      "title": "Mathematics and logic",
+      "prerequisite_strands": [],
+      "topics": [
+        {
+          "id": "mathematics:01",
+          "title": "Quantity and counting",
+          "layer": 3,
+          "draft_reference": "CA-01.001"
+        },
+        {
+          "id": "mathematics:02",
+          "title": "Arithmetic and relationships",
+          "layer": 3,
+          "draft_reference": "CA-01.002"
+        },
+        {
+          "id": "mathematics:03",
+          "title": "Geometry and measurement",
+          "layer": 3,
+          "draft_reference": "CA-01.003"
+        },
+        {
+          "id": "mathematics:04",
+          "title": "Binary and information",
+          "layer": 3,
+          "draft_reference": "CA-01.004"
+        },
+        {
+          "id": "mathematics:05",
+          "title": "Mathematical statements",
+          "layer": 3
+        },
+        {
+          "id": "mathematics:06",
+          "title": "Ratios and proportions",
+          "layer": 3,
+          "draft_reference": "CA-01.005"
+        },
+        {
+          "id": "mathematics:07",
+          "title": "Coordinates",
+          "layer": 3
+        },
+        {
+          "id": "mathematics:08",
+          "title": "Algebraic unknowns",
+          "layer": 3
+        },
+        {
+          "id": "mathematics:09",
+          "title": "Functions and graphs",
+          "layer": 3
+        },
+        {
+          "id": "mathematics:10",
+          "title": "Probability",
+          "layer": 3
+        },
+        {
+          "id": "mathematics:11",
+          "title": "Equality and equivalence",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:12",
+          "title": "Prime numbers",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:13",
+          "title": "Fractions and decimals",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:14",
+          "title": "Negative numbers",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:15",
+          "title": "Exponentials and logarithms",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:16",
+          "title": "Vectors",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:17",
+          "title": "Symmetry",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:18",
+          "title": "Proof and counterexample",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:19",
+          "title": "Combinatorics",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:20",
+          "title": "Conditional probability",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:21",
+          "title": "Sampling and bias",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:22",
+          "title": "Descriptive statistics",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:23",
+          "title": "Inference and uncertainty",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:24",
+          "title": "Differential calculus",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:25",
+          "title": "Integral calculus",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:26",
+          "title": "Differential equations",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:27",
+          "title": "Dimensional analysis",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:28",
+          "title": "Numerical approximation",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:29",
+          "title": "Information entropy",
+          "layer": 4
+        },
+        {
+          "id": "mathematics:30",
+          "title": "Computability",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "category": "02",
+      "title": "Matter and physical interactions",
+      "prerequisite_strands": [
+        "mathematics"
+      ],
+      "topics": [
+        {
+          "id": "physics:01",
+          "title": "Matter and atoms",
+          "layer": 3,
+          "draft_reference": "CA-02.001"
+        },
+        {
+          "id": "physics:02",
+          "title": "Energy and physical interactions",
+          "layer": 3,
+          "draft_reference": "CA-02.002"
+        },
+        {
+          "id": "physics:03",
+          "title": "Molecules and chemical bonds",
+          "layer": 3,
+          "draft_reference": "CA-02.003"
+        },
+        {
+          "id": "physics:04",
+          "title": "Motion and reference frames",
+          "layer": 3
+        },
+        {
+          "id": "physics:05",
+          "title": "Gravity",
+          "layer": 3
+        },
+        {
+          "id": "physics:06",
+          "title": "Electromagnetic radiation",
+          "layer": 3,
+          "draft_reference": "CA-02.006"
+        },
+        {
+          "id": "physics:07",
+          "title": "Waves and oscillations",
+          "layer": 3
+        },
+        {
+          "id": "physics:08",
+          "title": "Heat and temperature",
+          "layer": 3,
+          "draft_reference": "CA-02.008"
+        },
+        {
+          "id": "physics:09",
+          "title": "Electric charge",
+          "layer": 3
+        },
+        {
+          "id": "physics:10",
+          "title": "Electric circuits",
+          "layer": 3
+        },
+        {
+          "id": "physics:11",
+          "title": "Conservation of momentum",
+          "layer": 4
+        },
+        {
+          "id": "physics:12",
+          "title": "Conservation of energy",
+          "layer": 4
+        },
+        {
+          "id": "physics:13",
+          "title": "Work and power",
+          "layer": 4
+        },
+        {
+          "id": "physics:14",
+          "title": "Fluids and pressure",
+          "layer": 4
+        },
+        {
+          "id": "physics:15",
+          "title": "Electric fields",
+          "layer": 4
+        },
+        {
+          "id": "physics:16",
+          "title": "Magnetism",
+          "layer": 4
+        },
+        {
+          "id": "physics:17",
+          "title": "Electromagnetic induction",
+          "layer": 4
+        },
+        {
+          "id": "physics:18",
+          "title": "Optics and lenses",
+          "layer": 4
+        },
+        {
+          "id": "physics:19",
+          "title": "Thermodynamic laws",
+          "layer": 4
+        },
+        {
+          "id": "physics:20",
+          "title": "Entropy and equilibrium",
+          "layer": 4
+        },
+        {
+          "id": "physics:21",
+          "title": "The periodic table",
+          "layer": 4
+        },
+        {
+          "id": "physics:22",
+          "title": "Chemical reactions",
+          "layer": 4,
+          "draft_reference": "CA-02.011"
+        },
+        {
+          "id": "physics:23",
+          "title": "Material phases",
+          "layer": 4
+        },
+        {
+          "id": "physics:24",
+          "title": "Quantum states",
+          "layer": 4
+        },
+        {
+          "id": "physics:25",
+          "title": "Radioactive decay",
+          "layer": 4
+        },
+        {
+          "id": "physics:26",
+          "title": "Atomic spectra",
+          "layer": 4,
+          "draft_reference": "CA-02.010"
+        },
+        {
+          "id": "physics:27",
+          "title": "Relativistic spacetime",
+          "layer": 4
+        },
+        {
+          "id": "physics:28",
+          "title": "Gravitational waves",
+          "layer": 4
+        },
+        {
+          "id": "physics:29",
+          "title": "Nuclear binding",
+          "layer": 4
+        },
+        {
+          "id": "physics:30",
+          "title": "Measurement and significant figures",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "astronomy",
+      "category": "02",
+      "title": "Astronomy and observation",
+      "prerequisite_strands": [
+        "mathematics",
+        "physics"
+      ],
+      "topics": [
+        {
+          "id": "astronomy:01",
+          "title": "Stars, galaxies and the Solar System",
+          "layer": 3,
+          "draft_reference": "CA-02.004"
+        },
+        {
+          "id": "astronomy:02",
+          "title": "Formation of the Solar System",
+          "layer": 3,
+          "draft_reference": "CA-02.005"
+        },
+        {
+          "id": "astronomy:03",
+          "title": "The Sun",
+          "layer": 3
+        },
+        {
+          "id": "astronomy:04",
+          "title": "Planetary orbits",
+          "layer": 3,
+          "draft_reference": "CA-02.009"
+        },
+        {
+          "id": "astronomy:05",
+          "title": "Rocky planets",
+          "layer": 3
+        },
+        {
+          "id": "astronomy:06",
+          "title": "Giant planets",
+          "layer": 3
+        },
+        {
+          "id": "astronomy:07",
+          "title": "Natural satellites",
+          "layer": 3
+        },
+        {
+          "id": "astronomy:08",
+          "title": "Stellar evolution",
+          "layer": 3,
+          "draft_reference": "CA-02.007"
+        },
+        {
+          "id": "astronomy:09",
+          "title": "Galaxies",
+          "layer": 3
+        },
+        {
+          "id": "astronomy:10",
+          "title": "Exoplanets",
+          "layer": 3
+        },
+        {
+          "id": "astronomy:11",
+          "title": "Light and telescopes",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:12",
+          "title": "Astronomical distance",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:13",
+          "title": "Celestial coordinates",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:14",
+          "title": "Asteroids and comets",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:15",
+          "title": "Origins of planetary rings",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:16",
+          "title": "Impact craters",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:17",
+          "title": "Planetary atmospheres",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:18",
+          "title": "Star-forming regions",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:19",
+          "title": "Binary stars",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:20",
+          "title": "White dwarfs",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:21",
+          "title": "Neutron stars",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:22",
+          "title": "Black holes",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:23",
+          "title": "The interstellar medium",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:24",
+          "title": "Cosmic expansion",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:25",
+          "title": "Cosmic microwave background",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:26",
+          "title": "Observational selection effects",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:27",
+          "title": "Planetary habitability",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:28",
+          "title": "Scientific search for life beyond Earth",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:29",
+          "title": "Search for technosignatures",
+          "layer": 4
+        },
+        {
+          "id": "astronomy:30",
+          "title": "Uncertainty in astronomical observations",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "earth",
+      "category": "03",
+      "title": "Earth and its environment",
+      "prerequisite_strands": [
+        "physics",
+        "astronomy"
+      ],
+      "topics": [
+        {
+          "id": "earth:01",
+          "title": "Earth as a planet",
+          "layer": 3,
+          "draft_reference": "CA-03.001"
+        },
+        {
+          "id": "earth:02",
+          "title": "Water and the water cycle",
+          "layer": 3,
+          "draft_reference": "CA-03.002"
+        },
+        {
+          "id": "earth:03",
+          "title": "Atmosphere, climate and geology",
+          "layer": 3,
+          "draft_reference": "CA-03.003"
+        },
+        {
+          "id": "earth:04",
+          "title": "Water reservoirs and transport",
+          "layer": 3,
+          "draft_reference": "CA-03.004"
+        },
+        {
+          "id": "earth:05",
+          "title": "Plate tectonics",
+          "layer": 3,
+          "draft_reference": "CA-03.005"
+        },
+        {
+          "id": "earth:06",
+          "title": "Earth's interior",
+          "layer": 3
+        },
+        {
+          "id": "earth:07",
+          "title": "Rocks and minerals",
+          "layer": 3
+        },
+        {
+          "id": "earth:08",
+          "title": "Oceans and circulation",
+          "layer": 3
+        },
+        {
+          "id": "earth:09",
+          "title": "Weather systems",
+          "layer": 3
+        },
+        {
+          "id": "earth:10",
+          "title": "Climate evidence",
+          "layer": 3
+        },
+        {
+          "id": "earth:11",
+          "title": "Deep time",
+          "layer": 4
+        },
+        {
+          "id": "earth:12",
+          "title": "Geologic dating",
+          "layer": 4
+        },
+        {
+          "id": "earth:13",
+          "title": "The geologic time scale",
+          "layer": 4
+        },
+        {
+          "id": "earth:14",
+          "title": "Volcanism",
+          "layer": 4
+        },
+        {
+          "id": "earth:15",
+          "title": "Earthquakes and seismic waves",
+          "layer": 4
+        },
+        {
+          "id": "earth:16",
+          "title": "Mountain building",
+          "layer": 4
+        },
+        {
+          "id": "earth:17",
+          "title": "Sediments and erosion",
+          "layer": 4
+        },
+        {
+          "id": "earth:18",
+          "title": "Groundwater",
+          "layer": 4
+        },
+        {
+          "id": "earth:19",
+          "title": "Soils",
+          "layer": 4,
+          "draft_reference": "CA-03.007"
+        },
+        {
+          "id": "earth:20",
+          "title": "Freshwater systems",
+          "layer": 4
+        },
+        {
+          "id": "earth:21",
+          "title": "Coastal processes",
+          "layer": 4
+        },
+        {
+          "id": "earth:22",
+          "title": "Glaciers and ice sheets",
+          "layer": 4
+        },
+        {
+          "id": "earth:23",
+          "title": "Atmospheric composition",
+          "layer": 4
+        },
+        {
+          "id": "earth:24",
+          "title": "Atmospheric circulation",
+          "layer": 4
+        },
+        {
+          "id": "earth:25",
+          "title": "Biogeochemical cycles",
+          "layer": 4
+        },
+        {
+          "id": "earth:26",
+          "title": "Carbon reservoirs",
+          "layer": 4
+        },
+        {
+          "id": "earth:27",
+          "title": "Natural resources and trade-offs",
+          "layer": 4
+        },
+        {
+          "id": "earth:28",
+          "title": "Planetary albedo",
+          "layer": 4
+        },
+        {
+          "id": "earth:29",
+          "title": "Ocean acidification",
+          "layer": 4
+        },
+        {
+          "id": "earth:30",
+          "title": "Earth observation",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "category": "04",
+      "title": "Life and ecology",
+      "prerequisite_strands": [
+        "physics",
+        "earth"
+      ],
+      "topics": [
+        {
+          "id": "life:01",
+          "title": "Characteristics and origins of known life",
+          "layer": 3,
+          "draft_reference": "CA-04.006"
+        },
+        {
+          "id": "life:02",
+          "title": "Cells and metabolism",
+          "layer": 3,
+          "draft_reference": "CA-04.001"
+        },
+        {
+          "id": "life:03",
+          "title": "DNA and inheritance",
+          "layer": 3,
+          "draft_reference": "CA-04.002"
+        },
+        {
+          "id": "life:04",
+          "title": "Evolution and biodiversity",
+          "layer": 3,
+          "draft_reference": "CA-04.003"
+        },
+        {
+          "id": "life:05",
+          "title": "Ecosystems and food webs",
+          "layer": 3,
+          "draft_reference": "CA-04.004"
+        },
+        {
+          "id": "life:06",
+          "title": "Cell membranes",
+          "layer": 3
+        },
+        {
+          "id": "life:07",
+          "title": "RNA and gene expression",
+          "layer": 3
+        },
+        {
+          "id": "life:08",
+          "title": "Proteins",
+          "layer": 3
+        },
+        {
+          "id": "life:09",
+          "title": "Photosynthesis and cellular respiration",
+          "layer": 3,
+          "draft_reference": "CA-04.008"
+        },
+        {
+          "id": "life:10",
+          "title": "Biological classification",
+          "layer": 3
+        },
+        {
+          "id": "life:11",
+          "title": "Genes, chromosomes and genomes",
+          "layer": 4,
+          "draft_reference": "CA-04.005"
+        },
+        {
+          "id": "life:12",
+          "title": "Inheritance and variation",
+          "layer": 4
+        },
+        {
+          "id": "life:13",
+          "title": "Natural selection",
+          "layer": 4
+        },
+        {
+          "id": "life:14",
+          "title": "Genetic drift",
+          "layer": 4
+        },
+        {
+          "id": "life:15",
+          "title": "Biological development",
+          "layer": 4
+        },
+        {
+          "id": "life:16",
+          "title": "Reproduction and life cycles",
+          "layer": 4
+        },
+        {
+          "id": "life:17",
+          "title": "Cellular organelles",
+          "layer": 4
+        },
+        {
+          "id": "life:18",
+          "title": "Microorganisms and diversity",
+          "layer": 4
+        },
+        {
+          "id": "life:19",
+          "title": "Archaea",
+          "layer": 4
+        },
+        {
+          "id": "life:20",
+          "title": "Bacteria as organisms",
+          "layer": 4
+        },
+        {
+          "id": "life:21",
+          "title": "Fungi",
+          "layer": 4
+        },
+        {
+          "id": "life:22",
+          "title": "Plants",
+          "layer": 4
+        },
+        {
+          "id": "life:23",
+          "title": "Animals",
+          "layer": 4
+        },
+        {
+          "id": "life:24",
+          "title": "Pollination and seed dispersal",
+          "layer": 4
+        },
+        {
+          "id": "life:25",
+          "title": "Ecological succession",
+          "layer": 4
+        },
+        {
+          "id": "life:26",
+          "title": "Population dynamics",
+          "layer": 4
+        },
+        {
+          "id": "life:27",
+          "title": "Symbiosis",
+          "layer": 4
+        },
+        {
+          "id": "life:28",
+          "title": "Extinctions and fossil evidence",
+          "layer": 4
+        },
+        {
+          "id": "life:29",
+          "title": "Biomes",
+          "layer": 4
+        },
+        {
+          "id": "life:30",
+          "title": "Biosphere and ecosystem change",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "human-body",
+      "category": "05",
+      "title": "Human anatomy and physiology",
+      "prerequisite_strands": [
+        "life"
+      ],
+      "topics": [
+        {
+          "id": "human-body:01",
+          "title": "Organization of the human body",
+          "layer": 3,
+          "draft_reference": "CA-05.004"
+        },
+        {
+          "id": "human-body:02",
+          "title": "Human anatomy and physiology",
+          "layer": 3,
+          "draft_reference": "CA-05.001"
+        },
+        {
+          "id": "human-body:03",
+          "title": "Human development and inheritance",
+          "layer": 3,
+          "draft_reference": "CA-05.002"
+        },
+        {
+          "id": "human-body:04",
+          "title": "Skeleton, joints and muscles",
+          "layer": 3,
+          "draft_reference": "CA-05.005"
+        },
+        {
+          "id": "human-body:05",
+          "title": "Blood, heart and circulation",
+          "layer": 3,
+          "draft_reference": "CA-05.006"
+        },
+        {
+          "id": "human-body:06",
+          "title": "Respiration and gas exchange",
+          "layer": 3,
+          "draft_reference": "CA-05.006"
+        },
+        {
+          "id": "human-body:07",
+          "title": "Digestion and nutrient absorption",
+          "layer": 3,
+          "draft_reference": "CA-05.007"
+        },
+        {
+          "id": "human-body:08",
+          "title": "Nervous system and senses",
+          "layer": 3,
+          "draft_reference": "CA-05.008"
+        },
+        {
+          "id": "human-body:09",
+          "title": "Homeostasis",
+          "layer": 3
+        },
+        {
+          "id": "human-body:10",
+          "title": "Human reproduction",
+          "layer": 3
+        },
+        {
+          "id": "human-body:11",
+          "title": "Human genetic variation",
+          "layer": 4
+        },
+        {
+          "id": "human-body:12",
+          "title": "Connective tissue",
+          "layer": 4
+        },
+        {
+          "id": "human-body:13",
+          "title": "Skin and temperature control",
+          "layer": 4
+        },
+        {
+          "id": "human-body:14",
+          "title": "Kidneys and fluid balance",
+          "layer": 4
+        },
+        {
+          "id": "human-body:15",
+          "title": "Hormones and endocrine feedback",
+          "layer": 4
+        },
+        {
+          "id": "human-body:16",
+          "title": "Immune system and defense",
+          "layer": 4
+        },
+        {
+          "id": "human-body:17",
+          "title": "Lymphatic circulation",
+          "layer": 4
+        },
+        {
+          "id": "human-body:18",
+          "title": "Muscle contraction and movement",
+          "layer": 4
+        },
+        {
+          "id": "human-body:19",
+          "title": "Bone growth and remodeling",
+          "layer": 4
+        },
+        {
+          "id": "human-body:20",
+          "title": "Touch and pressure",
+          "layer": 4
+        },
+        {
+          "id": "human-body:21",
+          "title": "Vision and the eye",
+          "layer": 4
+        },
+        {
+          "id": "human-body:22",
+          "title": "Hearing and balance",
+          "layer": 4
+        },
+        {
+          "id": "human-body:23",
+          "title": "Smell and taste",
+          "layer": 4
+        },
+        {
+          "id": "human-body:24",
+          "title": "Sleep and circadian patterns",
+          "layer": 4
+        },
+        {
+          "id": "human-body:25",
+          "title": "Aging across the lifespan",
+          "layer": 4
+        },
+        {
+          "id": "human-body:26",
+          "title": "Pregnancy and fetal development",
+          "layer": 4
+        },
+        {
+          "id": "human-body:27",
+          "title": "Infancy and childhood",
+          "layer": 4
+        },
+        {
+          "id": "human-body:28",
+          "title": "Human growth",
+          "layer": 4
+        },
+        {
+          "id": "human-body:29",
+          "title": "Individual differences in anatomy",
+          "layer": 4
+        },
+        {
+          "id": "human-body:30",
+          "title": "Medical imaging as evidence",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "category": "06",
+      "title": "History and civilization",
+      "prerequisite_strands": [
+        "earth",
+        "life",
+        "human-body"
+      ],
+      "topics": [
+        {
+          "id": "history:01",
+          "title": "Human history and communities",
+          "layer": 3,
+          "draft_reference": "CA-06.001"
+        },
+        {
+          "id": "history:02",
+          "title": "Institutions, exchange and ideas",
+          "layer": 3,
+          "draft_reference": "CA-06.002"
+        },
+        {
+          "id": "history:03",
+          "title": "Human origins and migration",
+          "layer": 3,
+          "draft_reference": "CA-06.003"
+        },
+        {
+          "id": "history:04",
+          "title": "Independent origins of agriculture",
+          "layer": 3,
+          "draft_reference": "CA-06.004"
+        },
+        {
+          "id": "history:05",
+          "title": "Mobile and settled societies",
+          "layer": 3
+        },
+        {
+          "id": "history:06",
+          "title": "Early cities and states",
+          "layer": 3
+        },
+        {
+          "id": "history:07",
+          "title": "Writing systems in history",
+          "layer": 3,
+          "draft_reference": "CA-06.005"
+        },
+        {
+          "id": "history:08",
+          "title": "Exchange networks",
+          "layer": 3
+        },
+        {
+          "id": "history:09",
+          "title": "Industrialization",
+          "layer": 3
+        },
+        {
+          "id": "history:10",
+          "title": "Space exploration history",
+          "layer": 3
+        },
+        {
+          "id": "history:11",
+          "title": "Archaeological evidence",
+          "layer": 4
+        },
+        {
+          "id": "history:12",
+          "title": "Historical documents and interpretation",
+          "layer": 4
+        },
+        {
+          "id": "history:13",
+          "title": "Indigenous histories",
+          "layer": 4
+        },
+        {
+          "id": "history:14",
+          "title": "The peopling of Oceania",
+          "layer": 4
+        },
+        {
+          "id": "history:15",
+          "title": "The Americas before European contact",
+          "layer": 4
+        },
+        {
+          "id": "history:16",
+          "title": "Civilizations of West Africa",
+          "layer": 4
+        },
+        {
+          "id": "history:17",
+          "title": "Histories around the Indian Ocean",
+          "layer": 4
+        },
+        {
+          "id": "history:18",
+          "title": "Civilization in the Andes",
+          "layer": 4
+        },
+        {
+          "id": "history:19",
+          "title": "Histories of East and Central Asia",
+          "layer": 4
+        },
+        {
+          "id": "history:20",
+          "title": "Mesopotamia and neighboring societies",
+          "layer": 4
+        },
+        {
+          "id": "history:21",
+          "title": "Ancient Egypt and the Nile",
+          "layer": 4
+        },
+        {
+          "id": "history:22",
+          "title": "Empires and their limits",
+          "layer": 4
+        },
+        {
+          "id": "history:23",
+          "title": "Knowledge exchange and translation",
+          "layer": 4
+        },
+        {
+          "id": "history:24",
+          "title": "Forced migration and slavery",
+          "layer": 4
+        },
+        {
+          "id": "history:25",
+          "title": "Colonialism and decolonization",
+          "layer": 4
+        },
+        {
+          "id": "history:26",
+          "title": "Public health in history",
+          "layer": 4
+        },
+        {
+          "id": "history:27",
+          "title": "Rights and social movements",
+          "layer": 4
+        },
+        {
+          "id": "history:28",
+          "title": "Global trade and labor",
+          "layer": 4
+        },
+        {
+          "id": "history:29",
+          "title": "International institutions",
+          "layer": 4
+        },
+        {
+          "id": "history:30",
+          "title": "Environmental history",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "category": "07",
+      "title": "Applied knowledge and technology",
+      "prerequisite_strands": [
+        "mathematics",
+        "physics",
+        "life"
+      ],
+      "topics": [
+        {
+          "id": "technology:01",
+          "title": "Agriculture and engineering",
+          "layer": 3,
+          "draft_reference": "CA-07.001"
+        },
+        {
+          "id": "technology:02",
+          "title": "Computing and artificial intelligence",
+          "layer": 3,
+          "draft_reference": "CA-07.002"
+        },
+        {
+          "id": "technology:03",
+          "title": "Flight and space exploration",
+          "layer": 3,
+          "draft_reference": "CA-07.003"
+        },
+        {
+          "id": "technology:04",
+          "title": "Tools and mechanisms",
+          "layer": 3
+        },
+        {
+          "id": "technology:05",
+          "title": "Materials and manufacturing",
+          "layer": 3
+        },
+        {
+          "id": "technology:06",
+          "title": "Construction and structures",
+          "layer": 3
+        },
+        {
+          "id": "technology:07",
+          "title": "Generating electrical power",
+          "layer": 3
+        },
+        {
+          "id": "technology:08",
+          "title": "Communication networks",
+          "layer": 3
+        },
+        {
+          "id": "technology:09",
+          "title": "Vehicles and transport",
+          "layer": 3
+        },
+        {
+          "id": "technology:10",
+          "title": "Scientific instruments",
+          "layer": 3
+        },
+        {
+          "id": "technology:11",
+          "title": "Measurement standards",
+          "layer": 4,
+          "draft_reference": "CA-07.004"
+        },
+        {
+          "id": "technology:12",
+          "title": "Information storage",
+          "layer": 4
+        },
+        {
+          "id": "technology:13",
+          "title": "Analogue and digital signals",
+          "layer": 4
+        },
+        {
+          "id": "technology:14",
+          "title": "Algorithms and programs",
+          "layer": 4
+        },
+        {
+          "id": "technology:15",
+          "title": "Machine learning and uncertainty",
+          "layer": 4
+        },
+        {
+          "id": "technology:16",
+          "title": "Printing and reproduction",
+          "layer": 4
+        },
+        {
+          "id": "technology:17",
+          "title": "Agricultural irrigation",
+          "layer": 4
+        },
+        {
+          "id": "technology:18",
+          "title": "Soil stewardship",
+          "layer": 4
+        },
+        {
+          "id": "technology:19",
+          "title": "Urban infrastructure",
+          "layer": 4
+        },
+        {
+          "id": "technology:20",
+          "title": "Drinking water treatment",
+          "layer": 4
+        },
+        {
+          "id": "technology:21",
+          "title": "Steam engines and turbines",
+          "layer": 4
+        },
+        {
+          "id": "technology:22",
+          "title": "Electrical motors and generators",
+          "layer": 4
+        },
+        {
+          "id": "technology:23",
+          "title": "Energy storage",
+          "layer": 4
+        },
+        {
+          "id": "technology:24",
+          "title": "Navigation and surveying",
+          "layer": 4
+        },
+        {
+          "id": "technology:25",
+          "title": "Aviation principles",
+          "layer": 4
+        },
+        {
+          "id": "technology:26",
+          "title": "Spacecraft subsystems",
+          "layer": 4
+        },
+        {
+          "id": "technology:27",
+          "title": "Launch and orbital maneuvers",
+          "layer": 4
+        },
+        {
+          "id": "technology:28",
+          "title": "Microscopy",
+          "layer": 4
+        },
+        {
+          "id": "technology:29",
+          "title": "Diagnostic imaging",
+          "layer": 4
+        },
+        {
+          "id": "technology:30",
+          "title": "Medical instruments",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "category": "08",
+      "title": "Culture and daily experience",
+      "prerequisite_strands": [
+        "history",
+        "human-body"
+      ],
+      "topics": [
+        {
+          "id": "culture:01",
+          "title": "Art, music and daily experience",
+          "layer": 3,
+          "draft_reference": "CA-08.001"
+        },
+        {
+          "id": "culture:02",
+          "title": "Cognition and language",
+          "layer": 3,
+          "draft_reference": "CA-05.003"
+        },
+        {
+          "id": "culture:03",
+          "title": "Families and communities",
+          "layer": 3
+        },
+        {
+          "id": "culture:04",
+          "title": "Food and subsistence",
+          "layer": 3
+        },
+        {
+          "id": "culture:05",
+          "title": "Education and learning",
+          "layer": 3
+        },
+        {
+          "id": "culture:06",
+          "title": "Music traditions",
+          "layer": 3
+        },
+        {
+          "id": "culture:07",
+          "title": "Architecture and place",
+          "layer": 3
+        },
+        {
+          "id": "culture:08",
+          "title": "Religion and cultural traditions",
+          "layer": 3
+        },
+        {
+          "id": "culture:09",
+          "title": "Philosophy and reasoning",
+          "layer": 3
+        },
+        {
+          "id": "culture:10",
+          "title": "Play and recreation",
+          "layer": 3
+        },
+        {
+          "id": "culture:11",
+          "title": "Visual art practices",
+          "layer": 4
+        },
+        {
+          "id": "culture:12",
+          "title": "Oral traditions",
+          "layer": 4,
+          "draft_reference": "CA-08.002"
+        },
+        {
+          "id": "culture:13",
+          "title": "Writing and literary forms",
+          "layer": 4
+        },
+        {
+          "id": "culture:14",
+          "title": "Performance and theater",
+          "layer": 4
+        },
+        {
+          "id": "culture:15",
+          "title": "Dance and movement",
+          "layer": 4
+        },
+        {
+          "id": "culture:16",
+          "title": "Textiles and clothing",
+          "layer": 4
+        },
+        {
+          "id": "culture:17",
+          "title": "Domestic spaces",
+          "layer": 4
+        },
+        {
+          "id": "culture:18",
+          "title": "Tools in daily life",
+          "layer": 4
+        },
+        {
+          "id": "culture:19",
+          "title": "Craft transmission",
+          "layer": 4
+        },
+        {
+          "id": "culture:20",
+          "title": "Language diversity",
+          "layer": 4
+        },
+        {
+          "id": "culture:21",
+          "title": "Sign languages",
+          "layer": 4
+        },
+        {
+          "id": "culture:22",
+          "title": "Translation and interpretation",
+          "layer": 4
+        },
+        {
+          "id": "culture:23",
+          "title": "Ritual and symbolism",
+          "layer": 4
+        },
+        {
+          "id": "culture:24",
+          "title": "Cultural change and exchange",
+          "layer": 4
+        },
+        {
+          "id": "culture:25",
+          "title": "Ethics and moral traditions",
+          "layer": 4
+        },
+        {
+          "id": "culture:26",
+          "title": "Celebrations across societies",
+          "layer": 4
+        },
+        {
+          "id": "culture:27",
+          "title": "Caregiving",
+          "layer": 4
+        },
+        {
+          "id": "culture:28",
+          "title": "Leisure and public space",
+          "layer": 4
+        },
+        {
+          "id": "culture:29",
+          "title": "Games with rules",
+          "layer": 4
+        },
+        {
+          "id": "culture:30",
+          "title": "Meaning and memory",
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "id": "archive",
+      "category": "09",
+      "title": "Archive, media and interpretation",
+      "prerequisite_strands": [
+        "technology",
+        "culture",
+        "astronomy"
+      ],
+      "topics": [
+        {
+          "id": "archive:01",
+          "title": "Centauri Archive and interstellar messages",
+          "layer": 3,
+          "draft_reference": "CA-09.001"
+        },
+        {
+          "id": "archive:02",
+          "title": "The Golden Record",
+          "layer": 3
+        },
+        {
+          "id": "archive:03",
+          "title": "Physical discovery",
+          "layer": 3
+        },
+        {
+          "id": "archive:04",
+          "title": "Passive reference standards",
+          "layer": 3
+        },
+        {
+          "id": "archive:05",
+          "title": "Physical information storage",
+          "layer": 3
+        },
+        {
+          "id": "archive:06",
+          "title": "Record framing",
+          "layer": 3
+        },
+        {
+          "id": "archive:07",
+          "title": "Error correction and redundancy",
+          "layer": 3
+        },
+        {
+          "id": "archive:08",
+          "title": "Picture and raster conventions",
+          "layer": 3
+        },
+        {
+          "id": "archive:09",
+          "title": "Source attribution",
+          "layer": 3
+        },
+        {
+          "id": "archive:10",
+          "title": "Independent interpretation",
+          "layer": 3
+        },
+        {
+          "id": "archive:11",
+          "title": "Pioneer plaques",
+          "layer": 4
+        },
+        {
+          "id": "archive:12",
+          "title": "Radio messages",
+          "layer": 4
+        },
+        {
+          "id": "archive:13",
+          "title": "Material retention",
+          "layer": 4
+        },
+        {
+          "id": "archive:14",
+          "title": "Optical readout",
+          "layer": 4
+        },
+        {
+          "id": "archive:15",
+          "title": "Alignment and registration",
+          "layer": 4
+        },
+        {
+          "id": "archive:16",
+          "title": "Image provenance",
+          "layer": 4
+        },
+        {
+          "id": "archive:17",
+          "title": "Human color vision and display conventions",
+          "layer": 4
+        },
+        {
+          "id": "archive:18",
+          "title": "Comparing archive editions",
+          "layer": 4
+        },
+        {
+          "id": "archive:19",
+          "title": "Identifying manufactured signals",
+          "layer": 4
+        },
+        {
+          "id": "archive:20",
+          "title": "Finite error correction bounds",
+          "layer": 4
+        },
+        {
+          "id": "archive:21",
+          "title": "Independent software decoders",
+          "layer": 4
+        },
+        {
+          "id": "archive:22",
+          "title": "Record relationship tables",
+          "layer": 4
+        },
+        {
+          "id": "archive:23",
+          "title": "Metadata recovery",
+          "layer": 4
+        },
+        {
+          "id": "archive:24",
+          "title": "Carrier qualification",
+          "layer": 4
+        },
+        {
+          "id": "archive:25",
+          "title": "Preserving language examples",
+          "layer": 4
+        },
+        {
+          "id": "archive:26",
+          "title": "Scientific and cultural review",
+          "layer": 4
+        },
+        {
+          "id": "archive:27",
+          "title": "Human interpretation studies",
+          "layer": 4
+        },
+        {
+          "id": "archive:28",
+          "title": "Corpus licensing and provenance",
+          "layer": 4
+        },
+        {
+          "id": "archive:29",
+          "title": "Teaching compression",
+          "layer": 4
+        },
+        {
+          "id": "archive:30",
+          "title": "Uncertainty in interstellar recovery",
+          "layer": 4
+        }
+      ]
+    }
+  ]
+}

@@ -31,5 +31,16 @@
 .enc-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.75rem}
 .enc-image{display:block;text-decoration:none;font-size:.75rem}
 .enc-image img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-2);margin-bottom:.3rem}
+.enc-terms dt{font-weight:500;color:var(--white)}
+.enc-terms dd{margin:0 0 .6rem}
+.enc-history summary{cursor:pointer}
+.enc-reader figure{margin:0 0 1rem}
+.enc-diagram img{display:block;width:100%;height:auto}
+.enc-reader figcaption{font-size:.82rem;margin-top:.4rem;color:var(--soft)}
 .enc-bottom{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;font-size:.85rem}
 @media(max-width:760px){.enc-layout{grid-template-columns:1fr}.enc-main{padding-block:2rem}.enc-toolbar{align-items:start;flex-direction:column}.enc-toolbar>div{width:100%}.enc-article-link{padding-left:1rem}}
+
+.enc-more { margin: .5rem; padding: .35rem .6rem; color: var(--sky); background: var(--bg-2); border: 1px solid var(--line); cursor: pointer; }
+#enc-search-note { display: block; margin-top: .35rem; }
+
+.enc-purpose { border-left: 2px solid var(--sky); padding-left: .8rem; }

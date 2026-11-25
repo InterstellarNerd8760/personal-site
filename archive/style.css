@@ -156,6 +156,137 @@ h2 {
   line-height:1.65
 }
 
+.archive-hero {
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+  align-items:center;
+  gap:clamp(2rem,5vw,4.5rem);
+  padding-block:clamp(2.5rem,7vw,6rem)
+}
+
+.archive-hero h1 {
+  font-size:clamp(3.5rem,6.1vw,6.3rem);
+  line-height:.98;
+  margin:1.1rem 0 1.5rem
+}
+
+.archive-hero h1 em {
+  display:block
+}
+
+.archive-hero .intro {
+  max-width:38rem;
+  font-weight:400
+}
+
+.archive-hero .archive-actions {
+  gap:.65rem;
+  margin:1.7rem 0 1.1rem
+}
+
+.archive-actions .button {
+  border:1px solid var(--sky);
+  background:var(--sky);
+  color:var(--bg)
+}
+
+.archive-actions .button:hover {
+  border-color:var(--white);
+  background:var(--white)
+}
+
+.archive-actions .button + .button {
+  border-color:var(--line);
+  background:transparent;
+  color:var(--white)
+}
+
+.archive-actions .button + .button:hover {
+  border-color:var(--sky)
+}
+
+.archive-status {
+  margin:0;
+  color:var(--soft);
+  font-size:.85rem
+}
+
+.archive-directory {
+  padding-block:clamp(2rem,5vw,3.5rem) clamp(3rem,6vw,5rem);
+  border-top:1px solid var(--line)
+}
+
+.archive-directory h2 {
+  font-size:clamp(2.4rem,4.5vw,3.8rem)
+}
+
+.archive-directory ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+  border-bottom:1px solid var(--line)
+}
+
+.archive-directory li {
+  border-top:1px solid var(--line)
+}
+
+.archive-directory a {
+  display:grid;
+  grid-template-columns:minmax(13rem,1fr) minmax(0,2fr) auto;
+  align-items:baseline;
+  gap:1.25rem;
+  padding:1.1rem .25rem;
+  text-decoration:none
+}
+
+.archive-directory a::after {
+  content:"→" / "";
+  color:var(--sky)
+}
+
+.archive-directory h3,.archive-directory p {
+  margin:0
+}
+
+.archive-directory h3 {
+  color:var(--white);
+  font-weight:500
+}
+
+.archive-directory p {
+  color:var(--soft)
+}
+
+.archive-directory a:hover h3 {
+  text-decoration:underline;
+  text-underline-offset:.2em
+}
+
+@media(max-width:760px) {
+  .archive-hero {
+    grid-template-columns:1fr
+  }
+
+  .archive-hero h1 {
+    font-size:clamp(2.9rem,11vw,3.5rem)
+  }
+
+  .archive-hero .earth-cover {
+    width:min(100%,29rem)
+  }
+
+  .archive-directory a {
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:.15rem 1rem
+  }
+
+  .archive-directory p {
+    grid-column:1 / -1;
+    grid-row:2
+  }
+}
+
 .actions {
   display:flex;
   align-items:center;
@@ -977,11 +1108,14 @@ h1 {
 }
 
 .header nav a {
+  padding-block:.25rem;
   transition:color .2s ease
 }
 
-.header nav a[aria-current=page] {
-  color:var(--sky)
+.header nav a[aria-current] {
+  color:var(--sky);
+  text-decoration:underline;
+  text-underline-offset:.25em
 }
 
 .hero {
@@ -1171,6 +1305,47 @@ h1 {
 .header {
     position:relative
   }
+}
+
+.edition-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.5rem;
+  margin-block: 2rem;
+}
+
+.edition-summary > div {
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+}
+
+.channel-controls {
+  display: grid;
+  gap: .5rem;
+  max-width: 19rem;
+}
+
+.channel-controls label {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  align-items: center;
+  gap: .5rem;
+}
+
+.channel-swatch {
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.25rem;
+  vertical-align: middle;
+  margin: 1rem .5rem 1rem 0;
+  border: 1px solid var(--line);
+  background: rgb(192, 192, 192);
+}
+
+#hamming-bits button[aria-pressed="true"] {
+  border-color: var(--sky);
+  color: var(--bg);
+  background: var(--sky);
 }
 
 /* Decoding lab: conventions become visible and adjustable. */
@@ -1872,19 +2047,23 @@ h1 {
 }
 
 .earth-cover {
-   margin:0;
-   text-align:center
+   margin:0
 }
 
 .earth-cover img {
    display:block;
    width:100%;
-   max-height:65vh;
-   object-fit:contain;
+   height:auto;
    background:#000
 }
 
-.earth-cover figcaption, #photo-gallery article > a:last-child {
+.earth-cover figcaption {
+   margin-top:.55rem;
+   color:var(--soft);
+   font-size:.8rem
+}
+
+#photo-gallery article > a:last-child {
    font-size:.85rem;
    color:var(--sky)
 }

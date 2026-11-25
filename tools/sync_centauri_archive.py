@@ -20,6 +20,7 @@ import argparse
 from contextlib import contextmanager
 from html import escape, unescape
 import json
+import posixpath
 import re
 import shutil
 import subprocess
@@ -98,18 +99,21 @@ SITE_FOOTER = """  <footer class="site-footer">
   <script src="/script.js" defer></script>
 """
 
-SUBNAV_ITEMS = (
-    ("index.html", "Overview"),
-    ("encyclopedia.html", "Encyclopedia"),
-    ("images.html", "Image Library"),
-    ("guide.html", "Decoding"),
-    ("discovery.html", "Discovery"),
-    ("engineering.html", "Engineering"),
-    ("proposal.html", "Mission Proposal"),
+LEGACY_SUBNAV_ITEMS = (
+    ("index.html", "Centauri Archive"),
     ("brief.html", "Project brief"),
+    ("encyclopedia.html", "Encyclopedia"),
+    ("images.html", "Image library"),
+    ("engineering.html", "Decoding and engineering"),
+)
+SOURCE_NAV = re.compile(
+    r'<header class="header">\s*(<a class="brand"[^>]*>.*?</a>)\s*'
+    r'<nav aria-label="Centauri Archive">(.*?)</nav>',
+    re.S,
 )
 
 ZIP_HREF = re.compile(r'''href=(["'])(?:/archive/|(?:\.{1,2}/)*)downloads/centauri\.zip(?:[?#][^"']*)?\1''', re.I)
+PAGE_HREF = re.compile(r'''(\s+href=)(["'])([^"'?#]+\.html)([?#][^"']*)?\2''', re.I)
 GITHUB_LINK = f'href="{GITHUB_SOURCE}"'
 
 
@@ -164,24 +168,49 @@ def copy_site(built: Path, output: Path):
     shutil.copyfile(CHROME_CSS, output / "site-chrome.css")
 
 
-def page_path(filename: str, *, canonical=False) -> str:
+def page_path(filename: str) -> str:
     # Cloudflare Workers serves file.html at /file and index.html at its folder.
     if Path(filename).name == "index.html":
         return "/archive/" + filename.removesuffix("index.html")
-    return "/archive/" + (filename.removesuffix(".html") if canonical else filename)
+    return "/archive/" + filename.removesuffix(".html")
 
 
-def subnav(current: str, pages: set[str]) -> str:
+def subnav(html: str, current: str, pages: set[str]) -> str:
+    source_nav = SOURCE_NAV.search(html)
+    if source_nav:
+        brand, links = source_nav.groups()
+        brand = brand.replace('class="brand"', 'class="archive-brand"', 1)
+        content = rewrite_page_links(f"{brand}{links}", current, pages)
+        return f'<nav class="archive-subnav" aria-label="Centauri Archive">\n    {content}</nav>\n'
+
+    # A preview can still build commits from before the archive generated a shared header.
     links = []
-    for filename, label in SUBNAV_ITEMS:
-        if filename not in pages or (filename == "brief.html" and "proposal.html" in pages):
+    for filename, label in LEGACY_SUBNAV_ITEMS:
+        if filename not in pages:
             continue
         current_attr = ' aria-current="page"' if filename == current else ""
-        if filename == "discovery.html" and current.startswith("knowledge/"):
-            current_attr = ' aria-current="location"'
-        links.append(f'<a href="{page_path(filename)}"{current_attr}>{label}</a>')
-    links.append(f'<a class="archive-source" href="{GITHUB_SOURCE}" target="_blank" rel="noreferrer">Source ↗</a>')
+        css_class = ' class="archive-brand"' if filename == "index.html" else ""
+        links.append(f'<a{css_class} href="{page_path(filename)}"{current_attr}>{label}</a>')
     return '<nav class="archive-subnav" aria-label="Centauri Archive">\n    ' + "\n    ".join(links) + "\n  </nav>\n"
+
+
+def rewrite_page_links(html: str, filename: str, pages: set[str]) -> str:
+    """Translate built HTML page links to their public routes on Cloudflare."""
+    def public_link(match: re.Match) -> str:
+        prefix, quote, href, suffix = match.groups()
+        if ":" in href or href.startswith("//"):
+            return match[0]
+        if href.startswith("/archive/"):
+            target = href.removeprefix("/archive/")
+        elif href.startswith("/"):
+            return match[0]
+        else:
+            target = posixpath.normpath(posixpath.join(posixpath.dirname(filename), href))
+        if target not in pages:
+            return match[0]
+        return f"{prefix}{quote}{page_path(target)}{suffix or ''}{quote}"
+
+    return PAGE_HREF.sub(public_link, html)
 
 
 def extra_stylesheets(html: str) -> str:
@@ -210,9 +239,11 @@ def extra_scripts(html: str) -> str:
     return "".join(tags)
 
 
-def body_classes(html: str) -> str:
+def body_classes(html: str, filename: str) -> str:
     match = re.search(r"<body([^>]*)>", html, re.I)
     classes = ["subpage", "archive-page"]
+    if filename in {"index.html", "brief.html"}:
+        classes.append("archive-editorial")
     if match:
         attr = match.group(1)
         existing = re.search(r'class="([^"]*)"', attr)
@@ -284,8 +315,8 @@ def decorate_page(path: Path, filename: str, pages: set[str]):
         title = f"{title} · Weston Rosch" if "Centauri Archive" in title else f"{title} · Centauri Archive · Weston Rosch"
     title = escape(title)
     description = escape(unescape(extract_description(html)))
-    page_url = SITE_ORIGIN + page_path(filename, canonical=True)
-    body_class = body_classes(html)
+    page_url = SITE_ORIGIN + page_path(filename)
+    body_class = body_classes(html, filename)
     main = extract_main(html)
     outside_main = html.replace(main, "", 1)
     trailing = extract_trailing_scripts(outside_main)
@@ -308,8 +339,8 @@ def decorate_page(path: Path, filename: str, pages: set[str]):
   <meta name="twitter:description" content="{description}">
 {styles}{scripts}</head>
 <body class="{body_class}">
-{SITE_HEADER}{subnav(filename, pages)}
-{main}
+{SITE_HEADER}{subnav(outside_main, filename, pages)}
+{rewrite_page_links(main, filename, pages)}
 {trailing}{SITE_FOOTER}
 </body>
 </html>

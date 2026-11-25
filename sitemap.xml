@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://westonrosch.com/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://westonrosch.com/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://westonrosch.com/about/</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/projects/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://westonrosch.com/projects/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://westonrosch.com/projects/centauri-academy/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://westonrosch.com/projects/wall-e/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://westonrosch.com/projects/wall-e/wiring/</loc><lastmod>2026-11-16</lastmod></url>
@@ -21,11 +21,10 @@
   <url><loc>https://westonrosch.com/writing/ai-and-the-future-of-humanity/</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://westonrosch.com/resume.pdf</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://westonrosch.com/projects/centauri-bloom/</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/projects/centauri-archive/</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/archive/</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/archive/encyclopedia.html</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/archive/images.html</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/archive/guide.html</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/archive/brief.html</loc><lastmod>2026-11-23</lastmod></url>
-  <url><loc>https://westonrosch.com/archive/library.html</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://westonrosch.com/archive/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://westonrosch.com/archive/brief</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://westonrosch.com/archive/encyclopedia</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://westonrosch.com/archive/images</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://westonrosch.com/archive/engineering</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://westonrosch.com/archive/guide</loc><lastmod>2026-11-25</lastmod></url>
 </urlset>

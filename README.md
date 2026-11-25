@@ -6,7 +6,7 @@ Static files, no required build step for everyday edits: `index.html`, `styles.c
 
 ## Deploy
 
-Deployed by **Cloudflare Workers Builds** from the `main` branch: every push to `main` publishes the site. It is not served by GitHub Pages. `_headers` sets security and cache headers, and `404.html` is the not-found page.
+Deployed by **Cloudflare Workers Builds** from the `main` branch: every push to `main` publishes the site. `_headers` sets security and cache headers, `_redirects` maps legacy URLs, and `404.html` is the not-found page.
 
 ## Checks
 
@@ -28,7 +28,7 @@ The source dashboard on the [Experiments](https://westonrosch.com/experiments/#s
 
 ## Centauri Archive (`/archive/`)
 
-The public Centauri Archive site at `/archive/` comes from the [`centauri-archive`](https://github.com/InterstellarNerd8760/centauri-archive) repository. The sync builds the verified development ZIP and copies the public records, manifest and small format examples. It excludes ZIP files from the personal site and directs links to the development ZIP to the source repository.
+The canonical Centauri Archive site is `/archive/`. Edit archive pages and records in the [`centauri-archive`](https://github.com/InterstellarNerd8760/centauri-archive) repository. Edit the personal site's integration in `tools/sync_centauri_archive.py` and `tools/archive-chrome.css`. The sync regenerates `archive/` from these sources, builds the verified development ZIP and copies the public records, manifest and small format examples. The personal site directs links for the development ZIP to the source repository.
 
 The approved source commit is in `tools/centauri-archive.lock`. The sync builds the exact committed tree in a temporary checkout and fails if the requested ref cannot be resolved. A local clone can supply that commit without reading the clone's uncommitted changes.
 
@@ -41,6 +41,8 @@ python3 tools/sync_centauri_archive.py --repo /path/to/centauri-archive --ref <s
 python3 tools/sync_centauri_archive.py
 ```
 
-For a browser preview, serve the output under `/archive/` alongside the personal site's root `styles.css`, `script.js`, favicon files and `img/`. The shared headers, nav and footer follow the personal-site theme, while archive content retains its deep-space palette. Cloudflare Workers serves individual HTML files at extensionless URLs and directory indexes with trailing slashes. The generated canonical and social URLs follow those routes. [Cloudflare Workers HTML handling](https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/)
+For a browser preview, serve the output under `/archive/` alongside the personal site's root `styles.css`, `script.js`, favicon files and `img/`. The sync uses the source archive's navigation inside the personal-site header and footer layout. The landing page and project brief follow the selected theme. Interactive exhibits retain their Deep Space palette. Cloudflare Workers serves individual HTML files at extensionless URLs and directory indexes with trailing slashes. The generated canonical and social URLs follow those routes. [Cloudflare Workers HTML handling](https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/)
 
-Once an archive commit is approved for publication, update the lockfile and review the regenerated `archive/` files and affected sitemap entries together. Run `python3 -m unittest discover -s tools -p 'test_*.py'` for the sync checks. A short project writeup lives at `/projects/centauri-archive/`.
+When publishing coordinated changes, land the archive source changes first. If the archive commit SHA changes when its pull request is merged, update the lockfile to the resulting commit and regenerate `archive/` before merging the personal-site pull request. Review the lockfile, generated files and any affected sitemap entries together. Run `python3 -m unittest discover -s tools -p 'test_*.py'` for the sync checks.
+
+Project listings link directly to `/archive/`. The former `/projects/centauri-archive/` address redirects to the archive, with a static redirect page for hosts that do not apply Cloudflare's `_redirects` file.

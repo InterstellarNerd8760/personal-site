@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="embedded-archive">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
@@ -29,14 +29,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="canonical" href="https://westonrosch.com/archive/library.html">
-  <meta property="og:url" content="https://westonrosch.com/archive/library.html">
+  <link rel="canonical" href="https://westonrosch.com/archive/library">
+  <meta property="og:url" content="https://westonrosch.com/archive/library">
   <meta property="og:title" content="Library · Centauri Archive · Weston Rosch">
   <meta property="og:description" content="Browse original articles, scientific illustrations and recordings in Centauri Archive.">
   <meta name="twitter:title" content="Library · Centauri Archive · Weston Rosch">
   <meta name="twitter:description" content="Browse original articles, scientific illustrations and recordings in Centauri Archive.">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="site-chrome.css">
+  <link rel="stylesheet" href="/archive/site-chrome.css">
   <script defer src="library.js"></script>
 </head>
 <body class="subpage archive-page record-library">
@@ -55,15 +55,14 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
   </header>
 <nav class="archive-subnav" aria-label="Centauri Archive">
-    <a href="/archive/">Overview</a>
-    <a href="/archive/encyclopedia.html">Encyclopedia</a>
-    <a href="/archive/images.html">Image library</a>
-    <a href="/archive/guide.html">Decoding</a>
-    <a href="/archive/brief.html">Project brief</a>
-    <a class="archive-source" href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Source ↗</a>
+    <a class="archive-brand" href="/archive/">Centauri Archive<span class="brand-dot">.</span></a>
+    <a href="/archive/brief">Project brief</a>
+    <a href="/archive/encyclopedia" aria-current="location">Encyclopedia</a>
+    <a href="/archive/images">Image library</a>
+    <a href="/archive/engineering">Decoding and engineering</a>
   </nav>
 
-<main id="main" class="library-main">
+<main id="main" tabindex="-1" class="library-main">
 <div class="wrap library-intro">
 <p class="eyebrow">THE HUMAN-READABLE EDITION</p>
 <h1>Explore the <em>archive.</em></h1>
@@ -75,7 +74,7 @@
 <details id="contents" open><summary>Contents</summary><label class="library-search-label" for="library-search">Find a record</label>
 <input id="library-search" type="search" placeholder="Search the collection" autocomplete="off">
 <nav id="record-nav" aria-label="Archive records"><p class="reader-loading">Loading chapter index…</p></nav>
-<a class="library-guide" href="guide.html">How could anyone decode this? <span aria-hidden="true">↗</span></a>
+<a class="library-guide" href="/archive/guide">How could anyone decode this? <span aria-hidden="true">↗</span></a>
 </details></aside>
 <div class="library-reader">
 <div class="reader-topline"><span id="record-category" class="eyebrow">SELECT A RECORD</span><span id="record-count" class="reader-counter"></span></div>
@@ -84,7 +83,7 @@
 <div id="record-details" class="record-details" aria-label="File type, review and rights"></div>
 <div id="reader-content" class="reader-prose" aria-live="polite"><p>The archive preserves plain text as one development source format. This site presents that content as readable HTML without changing its bytes.</p></div>
 <div id="reader-sources" class="reader-sources" aria-label="Sources and provenance"></div>
-<div class="reader-download"><span>Source and preservation</span><a id="record-raw" href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Original file ↗</a><p>Each source file also lives as a raw record on this page. This browser view does not demonstrate interstellar decoding.</p></div>
+<div class="reader-download"><span>Source and preservation</span><a id="record-raw" href="https://github.com/InterstellarNerd8760/centauri-archive">Original file ↗</a><p>Each source file also lives as a raw record on this page. This browser view does not demonstrate interstellar decoding.</p></div>
 <div class="reader-pagination"><button type="button" id="record-prev">← Previous</button><button type="button" id="record-next">Next →</button></div>
 </div>
 </div>

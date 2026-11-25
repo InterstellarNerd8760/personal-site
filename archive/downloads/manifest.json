@@ -1,5 +1,5 @@
 {
-  "archive_version": "0.6.1",
+  "archive_version": "0.8.0",
   "files": [
     {
       "media_type": "text/plain",
@@ -28,8 +28,8 @@
     {
       "media_type": "application/json",
       "path": "content/catalog.json",
-      "sha256": "d04228813227b0bab679e31c155ad389dfe15da0b6b7543f730198cb40921559",
-      "size": 176928
+      "sha256": "8348b7d4f44581060189e3c5d5399ff48ebfa57e139b9ecbf41478d06b518dda",
+      "size": 178635
     },
     {
       "media_type": "text/plain",
@@ -64,8 +64,8 @@
     {
       "media_type": "application/json",
       "path": "content/encyclopedia/index.json",
-      "sha256": "9419d765e26caf0dc3761824d40472c40473c4b1c65b9217a7b45720994eff23",
-      "size": 29053
+      "sha256": "1da7f940d2d370e7cf10f9b344b4d2b4d8cacf49f017b79a1adbe49335a78b7b",
+      "size": 197720
     },
     {
       "media_type": "text/plain",
@@ -754,8 +754,8 @@
     {
       "media_type": "text/plain",
       "path": "content/primer/start.txt",
-      "sha256": "dd468bf64abea49d992f0d7710d9e69ec29b45d8da07599ee2b6790f298be2f4",
-      "size": 1915
+      "sha256": "0671d7b17a28021416f539429f64cc8a8785f26e105f35c1a4bb4e3fcbdfabc5",
+      "size": 1972
     },
     {
       "media_type": "text/plain",
@@ -768,6 +768,12 @@
       "path": "content/science/energy.txt",
       "sha256": "4ce760f1402527e532e2606c927bb8acc3b074f1e35348e0c1562409fd5ec61b",
       "size": 2232
+    },
+    {
+      "media_type": "image/svg+xml",
+      "path": "content/visuals/blood-circulation.svg",
+      "sha256": "d91da4df6371ddde647484d41c7a5b44803f35e309ad59d2eac8ce1d6f7cb0b1",
+      "size": 1854
     },
     {
       "media_type": "image/svg+xml",
@@ -786,6 +792,18 @@
       "path": "content/visuals/water-molecule.svg",
       "sha256": "97c9b351287a18cc59071dbf4fc568f2ea053ad8ae0fbcb1463438107b489d34",
       "size": 2148
+    },
+    {
+      "media_type": "application/json",
+      "path": "content/vocabulary/index.json",
+      "sha256": "5489e532821da346e49058c2bf2a98a9f9b6aa24ce6414716efa9d856cf23908",
+      "size": 7285
+    },
+    {
+      "media_type": "image/svg+xml",
+      "path": "content/vocabulary/marks.svg",
+      "sha256": "1f72480f4350276afbb40ef2924e3c10cf569ffd8945e0b76326c3febd1ebc55",
+      "size": 5934
     }
   ],
   "format_version": 1

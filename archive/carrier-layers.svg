@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 470" role="img" aria-labelledby="title description">
+  <title id="title">Conceptual archive carrier</title>
+  <desc id="description">An exploded view and cross-section of passive primer, microscopic legend, dense archive, optional electronics and mount. This is not flight hardware.</desc>
+  <defs>
+    <pattern id="micropattern" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M0 1h7M1 5h9M0 9h5" fill="none" stroke="#9b8acc" stroke-width=".8"/></pattern>
+    <pattern id="datapattern" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 0h2v2H0zM4 3h2v2H4zM1 6h2v2H1zM6 7h2v2H6z" fill="#75d9bb"/></pattern>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><path d="M0 0v8" stroke="#71839b" stroke-width="1"/></pattern>
+  </defs>
+  <path d="M0 0H850V470H0z" fill="#0a1521"/>
+  <path d="M420 38V432" stroke="#304151"/>
+  <g fill="#90aabd" font-family="monospace" font-size="15" letter-spacing="2">
+    <text x="34" y="40">EXPLODED VIEW</text><text x="450" y="40">CROSS-SECTION</text>
+  </g>
+  <g fill="none" stroke="#658096" stroke-dasharray="5 6" opacity=".65">
+    <path d="M66 127V371M256 127V371M360 93V337"/>
+  </g>
+  <g stroke-width="1.5">
+    <path d="M66 364l104-38h190l-104 38z M66 364v11h190l104-38v-11 M256 364v11" fill="url(#hatch)" stroke="#8ca5bb"/>
+    <path d="M66 308l104-38h190l-104 38z M66 308v9h190l104-38v-9 M256 308v9" fill="#10283a" stroke="#90aabd" stroke-dasharray="5 4"/>
+    <path d="M198 282h80l-36 13h-80z M190 286l-16 6m84-7 12-4m-23 13-16 6" fill="none" stroke="#90aabd"/>
+    <path d="M66 246l104-38h190l-104 38z M66 246v9h190l104-38v-9 M256 246v9" fill="#11322f" stroke="#75d9bb"/>
+    <path d="M66 246l104-38h190l-104 38z" fill="url(#datapattern)" opacity=".8"/>
+    <path d="M66 185l104-38h190l-104 38z M66 185v9h190l104-38v-9 M256 185v9" fill="#262543" stroke="#b0a0de"/>
+    <path d="M66 185l104-38h190l-104 38z" fill="url(#micropattern)"/>
+    <path d="M66 123l104-38h190l-104 38z M66 123v9h190l104-38v-9 M256 123v9" fill="#173549" stroke="#72cef1"/>
+    <path d="M110 116l70-24h45l-21 8h-36m-42 11h35m-45 4h12 M236 100h22m-31 4h21m-33 4h22m-32 4h22m32-20h35" fill="none" stroke="#91def6"/>
+    <ellipse cx="272" cy="108" rx="16" ry="5" fill="none" stroke="#91def6"/>
+  </g>
+  <g>
+    <path d="M468 111h199v16H468z" fill="#173549" stroke="#72cef1"/>
+    <path d="M480 111v-4h14v4m9 0v-4h21v4m8 0v-4h8v4m10 0v-4h20v4m9 0v-4h10v4m9 0v-4h10v4m9 0v-4h19v4" fill="none" stroke="#72cef1"/>
+    <path d="M477 139h181v18H477z" fill="url(#micropattern)" stroke="#b0a0de"/>
+    <path d="M477 169h181v58H477z" fill="#102b28" stroke="#75d9bb"/>
+    <path d="M484 173h167v50H484z" fill="url(#datapattern)"/>
+    <path d="M477 243h181v33H477z" fill="none" stroke="#90aabd" stroke-dasharray="5 4"/>
+    <path d="M468 290h199v44H468z" fill="url(#hatch)" stroke="#8ca5bb"/>
+    <path d="M478 302h20v24h-20z M637 302h20v24h-20z" fill="#0a1521" stroke="#8ca5bb"/>
+    <path d="M448 104h11m-11 0 4-5m-4 5 4 5" fill="none" stroke="#72cef1"/>
+  </g>
+  <g fill="none" stroke-width="1.1">
+    <path d="M667 117l27-24h16" stroke="#72cef1"/>
+    <path d="M658 147l38-6h14" stroke="#b0a0de"/>
+    <path d="M658 193h52" stroke="#75d9bb"/>
+    <path d="M658 259l38-5h14" stroke="#90aabd"/>
+    <path d="M667 312h43" stroke="#8ca5bb"/>
+  </g>
+  <g fill="#e1edf6" font-family="system-ui,sans-serif" font-size="17">
+    <text x="718" y="89">Visible<tspan x="718" dy="20">primer</tspan></text>
+    <text x="718" y="137">Microscopic<tspan x="718" dy="20">legend</tspan></text>
+    <text x="718" y="189">Dense<tspan x="718" dy="20">records</tspan></text>
+    <text x="718" y="250">Optional<tspan x="718" dy="20">electronics</tspan></text>
+    <text x="718" y="319">Mount</text>
+  </g>
+  <path d="M32 414H818" stroke="#304151"/>
+  <text x="34" y="443" fill="#90aabd" font-family="monospace" font-size="13" letter-spacing="1">CONCEPT ILLUSTRATION · NOT FLIGHT HARDWARE · NOT TO SCALE</text>
+</svg>

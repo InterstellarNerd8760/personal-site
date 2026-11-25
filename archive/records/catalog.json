@@ -41,6 +41,10 @@
     {
       "id": "encyclopedia",
       "label": "10 / Centauri Encyclopedia dataset"
+    },
+    {
+      "id": "vocabulary",
+      "label": "11 / Visual vocabulary"
     }
   ],
   "records": [
@@ -2744,12 +2748,44 @@
       ]
     },
     {
+      "path": "visuals/blood-circulation.svg",
+      "title": "Blood flow between the heart, lungs, and body",
+      "summary": "An original schematic of the pulmonary and systemic circuits.",
+      "group": "visuals",
+      "alt": "Arrows trace blood through the right heart, lungs, left heart, body tissues, and back to the right heart.",
+      "caption": "The lungs add oxygen to the blood and body tissues remove some of it. The schematic simplifies anatomy and omits variations in circulation.",
+      "status": "Source-checked draft; independent review pending",
+      "rights": "Original project artwork; open-reuse license not yet assigned",
+      "sources": [
+        {
+          "label": "NHLBI — How Blood Flows through the Heart",
+          "url": "https://www.nhlbi.nih.gov/health/heart/blood-flow"
+        }
+      ]
+    },
+    {
       "path": "encyclopedia/index.json",
-      "title": "Centauri Encyclopedia — structured first edition",
-      "summary": "Nine ordered knowledge categories and 25 linked introductory article drafts.",
+      "title": "Centauri Encyclopedia — development edition",
+      "summary": "Nine ordered knowledge categories with linked explanatory articles and per-article source and review status.",
       "group": "encyclopedia",
-      "status": "Unreviewed editorial draft",
+      "status": "Editorial drafts; independent review pending",
       "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "vocabulary/index.json",
+      "title": "Experimental visual vocabulary",
+      "summary": "Ten visual concepts and three compositions linked to examples and existing records.",
+      "group": "vocabulary",
+      "status": "Unvalidated teaching experiment",
+      "rights": "Original project text; open-reuse license not yet assigned"
+    },
+    {
+      "path": "vocabulary/marks.svg",
+      "title": "Vocabulary marks and examples",
+      "summary": "Reusable glyphs and examples for quantity, spatial relations, length and observation order.",
+      "group": "vocabulary",
+      "status": "Unvalidated teaching experiment",
+      "rights": "Original project illustration; open-reuse license not yet assigned"
     }
   ]
 }

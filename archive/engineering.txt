@@ -20,8 +20,14 @@ physical decoding design is described in [physical-primer.md](physical-primer.md
   and payload both change, the manifest alone does not prove authenticity.
 - **Redundancy:** duplicate records in physically separated regions to reduce
   shared local failure risk.
-- **Error correction:** a future Reed–Solomon or comparable scheme could
-  correct defined error/erasure patterns. This has not been implemented.
+- **Error correction:** the optional CAEC v1 experiment corrects up to
+  16 unknown byte errors or 32 known byte erasures per 255-byte block, with
+  a mixed bound of twice the errors plus the erasures at most 32. The
+  decoder corrects block metadata alongside the payload and checks both
+  block and complete-record digests. Multiple copies can supply
+  complementary verified blocks. See the
+  [specification and damage simulations](error-correction.md). The
+  development ZIP retains its existing integrity-only format.
 - **Damage models:** random isolated bit flips, burst errors, scratches,
   missing blocks and total failure require different mitigation strategies.
 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="embedded-archive">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05080f">
-  <meta name="description" content="A collection originally planned for 100 images of Earth, life, science and human civilization, with accurate acquisition status.">
+  <meta name="description" content="The numbered image collection of Earth, life, science and human civilization, with captions, credits and planned subjects.">
   <title>Image library · Centauri Archive · Weston Rosch</title>
   <meta name="author" content="Weston Rosch">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -29,15 +29,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="canonical" href="https://westonrosch.com/archive/images.html">
-  <meta property="og:url" content="https://westonrosch.com/archive/images.html">
+  <link rel="canonical" href="https://westonrosch.com/archive/images">
+  <meta property="og:url" content="https://westonrosch.com/archive/images">
   <meta property="og:title" content="Image library · Centauri Archive · Weston Rosch">
-  <meta property="og:description" content="A collection originally planned for 100 images of Earth, life, science and human civilization, with accurate acquisition status.">
+  <meta property="og:description" content="The numbered image collection of Earth, life, science and human civilization, with captions, credits and planned subjects.">
   <meta name="twitter:title" content="Image library · Centauri Archive · Weston Rosch">
-  <meta name="twitter:description" content="A collection originally planned for 100 images of Earth, life, science and human civilization, with accurate acquisition status.">
+  <meta name="twitter:description" content="The numbered image collection of Earth, life, science and human civilization, with captions, credits and planned subjects.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="image-detail.css">
-  <link rel="stylesheet" href="site-chrome.css">
+  <link rel="stylesheet" href="/archive/site-chrome.css">
   <script defer src="images.js?v=details-1"></script>
 </head>
 <body class="subpage archive-page">
@@ -56,22 +56,21 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
   </header>
 <nav class="archive-subnav" aria-label="Centauri Archive">
-    <a href="/archive/">Overview</a>
-    <a href="/archive/encyclopedia.html">Encyclopedia</a>
-    <a href="/archive/images.html" aria-current="page">Image library</a>
-    <a href="/archive/guide.html">Decoding</a>
-    <a href="/archive/brief.html">Project brief</a>
-    <a class="archive-source" href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Source ↗</a>
+    <a class="archive-brand" href="/archive/">Centauri Archive<span class="brand-dot">.</span></a>
+    <a href="/archive/brief">Project brief</a>
+    <a href="/archive/encyclopedia">Encyclopedia</a>
+    <a href="/archive/images" aria-current="page">Image library</a>
+    <a href="/archive/engineering">Decoding and engineering</a>
   </nav>
 
-<main id="main">
+<main id="main" tabindex="-1">
 <section class="wrap image-atlas-intro">
 <h1>The image <em>library.</em></h1>
-<p class="intro"><span id="atlas-included">—</span> images in the archive · <span id="atlas-remaining">—</span> subjects still to gather.</p>
-<p id="atlas-error" hidden>The gallery could not load. <a href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Open the source repository</a>.</p>
-<p>Each numbered slot represents a subject in the collection. Voyager paired views of our world with human development and everyday life. This collection follows that sequence across photographs and scientific imaging. <a href="https://science.nasa.gov/mission/voyager/golden-record-contents/images/">Voyager image list ↗</a></p>
-<div id="atlas-filters" class="atlas-filters" role="group" aria-label="Filter by category"></div>
+<p id="atlas-error" hidden>The gallery could not load. <a href="https://github.com/InterstellarNerd8760/centauri-archive">Open the source repository</a>.</p>
+<p class="intro">Browse the numbered record of Earth, life and human civilization. Each acquired image includes its source and rights information. Slots marked “Planned” represent subjects still to gather.</p>
+<p>The collection follows the sequence of the <a href="https://science.nasa.gov/mission/voyager/golden-record-contents/images/">Voyager Golden Record image list</a>, from the natural world to human development and everyday life.</p>
 <div class="atlas-searchbar"><label id="scope-label" for="image-search">Search all subjects</label><input id="image-search" type="search"></div>
+<div id="atlas-filters" class="atlas-filters" role="group" aria-label="Filter by category"></div>
 <p id="atlas-count" aria-live="polite"></p><p id="empty-result" hidden>No matching subjects.</p><button id="reset-category" type="button" hidden>Search all subjects</button>
 <div id="photo-gallery" class="atlas-results"></div>
 <dialog id="image-detail" class="image-detail" aria-labelledby="image-detail-title"><div class="image-detail-toolbar"><span id="image-detail-id" class="eyebrow"></span><form method="dialog"><button type="submit" aria-label="Close image details">Close ×</button></form></div><h2 id="image-detail-title"></h2><div id="image-detail-content"></div></dialog>
@@ -80,7 +79,7 @@
 <section class="wrap atlas-section atlas-standards">
 <p class="eyebrow">THE CURATION STANDARD</p><h2>Evidence, not decoration.</h2>
 <div class="atlas-standards-grid"><div><h3>Scientific context</h3><p>Every image should have a clear claim, scale, relationship or observation and disclose when it is schematic, composite, enhanced or not to scale.</p></div><div><h3>Representative selection</h3><p>Show microorganisms, ecosystems and different human societies—not just famous monuments, astronauts and large mammals.</p></div><div><h3>Preservation proof</h3><p>Each selected image needs legal redistribution rights, source provenance, a tested readout encoding and a smaller fallback where appropriate.</p></div></div>
-<div class="doc-links"><a href="guide.html">How would these pictures be decoded? ↗</a><a href="brief.html">Read project brief ↗</a></div>
+<div class="doc-links"><a href="/archive/guide">How would these pictures be decoded? ↗</a><a href="/archive/brief">Read project brief ↗</a></div>
 </section>
 </main>
   <footer class="site-footer">

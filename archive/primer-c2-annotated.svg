@@ -1,0 +1,362 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 754">
+<title>Centauri Archive decoding primer C2</title>
+<desc>Matched markers lead from the outer map to two target regions. Each fine tile is paired with a fourfold enlarged view and a row-by-row transcription.</desc>
+<rect x="0" y="0" width="1000" height="754" fill="white" stroke="none"/>
+<path d="M20 39V16H980V197H20V56" fill="none" stroke="black" stroke-width="2.5" transform=""/>
+<circle cx="36" cy="31" r="6" fill="black" stroke="black"/>
+<circle cx="51" cy="31" r="3" fill="black" stroke="black"/>
+<text x="74" y="37" font-family="sans-serif" font-size="18">F / Locate and inspect smaller marks</text>
+<rect x="68" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="72" y="67" width="12" height="12" fill="black" stroke="none"/>
+<rect x="88" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="108" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="112" y="67" width="12" height="12" fill="black" stroke="none"/>
+<rect x="128" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="132" y="67" width="12" height="12" fill="black" stroke="none"/>
+<rect x="148" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="168" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="188" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="192" y="67" width="12" height="12" fill="black" stroke="none"/>
+<rect x="208" y="63" width="20" height="20" fill="white" stroke="black"/>
+<rect x="342" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="343" y="71.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="347" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="352" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="353" y="71.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="357" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="358" y="71.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="362" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="367" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="372" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="373" y="71.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="377" y="70.5" width="5" height="5" fill="white" stroke="black"/>
+<path d="M244 73.0L326 73.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M68 97L88 97" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M68 93L68 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M88 93L88 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M342 97L362 97" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M342 93L342 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M347 93L347 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M352 93L352 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M357 93L357 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M362 93L362 101" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M88 97L333 97" fill="none" stroke="black" stroke-width="1" transform=""/>
+<rect x="68" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="88" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="92" y="131" width="12" height="12" fill="black" stroke="none"/>
+<rect x="108" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="112" y="131" width="12" height="12" fill="black" stroke="none"/>
+<rect x="128" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="148" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="152" y="131" width="12" height="12" fill="black" stroke="none"/>
+<rect x="168" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="172" y="131" width="12" height="12" fill="black" stroke="none"/>
+<rect x="188" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="208" y="127" width="20" height="20" fill="white" stroke="black"/>
+<rect x="342" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="347" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="348" y="135.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="352" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="353" y="135.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="357" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="362" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="363" y="135.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="367" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="368" y="135.5" width="3" height="3" fill="black" stroke="none"/>
+<rect x="372" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<rect x="377" y="134.5" width="5" height="5" fill="white" stroke="black"/>
+<path d="M244 137.0L326 137.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M68 161L88 161" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M68 157L68 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M88 157L88 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M342 161L362 161" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M342 157L342 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M347 157L347 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M352 157L352 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M357 157L357 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M362 157L362 165" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M88 161L333 161" fill="none" stroke="black" stroke-width="1" transform=""/>
+<text x="463" y="78" font-family="sans-serif" font-size="14">The same marks can occur at different pitches.</text>
+<text x="463" y="103" font-family="sans-serif" font-size="14">Compare the spacing between consecutive boundaries.</text>
+<text x="463" y="142" font-family="sans-serif" font-size="14">Four small cells occupy the width of one large cell.</text>
+<text x="463" y="167" font-family="sans-serif" font-size="14">An enlargement preserves the order and number of marks.</text>
+<path d="M20 236V213H980V737H20V253" fill="none" stroke="black" stroke-width="2.5" transform=""/>
+<circle cx="36" cy="228" r="6" fill="black" stroke="black"/>
+<circle cx="51" cy="228" r="3" fill="black" stroke="black"/>
+<text x="74" y="234" font-family="sans-serif" font-size="18">Match the locator, enlarge the target, copy stable states</text>
+<text x="62" y="263" font-family="sans-serif" font-size="14">Locator</text>
+<text x="184" y="263" font-family="sans-serif" font-size="14">Target outline</text>
+<text x="565" y="263" font-family="sans-serif" font-size="14">Enlarged view</text>
+<text x="792" y="263" font-family="sans-serif" font-size="14">Ordered rows</text>
+<rect x="62" y="312" width="13" height="13" fill="white" stroke="black"/>
+<rect x="75" y="312" width="13" height="13" fill="white" stroke="black"/>
+<rect x="88" y="312" width="13" height="13" fill="white" stroke="black"/>
+<rect x="90" y="314" width="9" height="9" fill="black" stroke="none"/>
+<rect x="101" y="312" width="13" height="13" fill="white" stroke="black"/>
+<rect x="103" y="314" width="9" height="9" fill="black" stroke="none"/>
+<path d="M122 318L184 318" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="184" y="291" width="159" height="102" fill="white" stroke="black"/>
+<rect x="201" y="301" width="12" height="12" fill="white" stroke="black"/>
+<rect x="213" y="301" width="12" height="12" fill="white" stroke="black"/>
+<rect x="225" y="301" width="12" height="12" fill="white" stroke="black"/>
+<rect x="227" y="303" width="8" height="8" fill="black" stroke="none"/>
+<rect x="237" y="301" width="12" height="12" fill="white" stroke="black"/>
+<rect x="239" y="303" width="8" height="8" fill="black" stroke="none"/>
+<path d="M235 342v-5h50v30h-50v-15" fill="none" stroke="black" stroke-width="1" transform=""/>
+<circle cx="240" cy="342" r="1.25" fill="black" stroke="black"/>
+<circle cx="245" cy="342" r="0.7142857142857143" fill="black" stroke="black"/>
+<rect x="240" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="241" y="348" width="3" height="3" fill="black" stroke="none"/>
+<rect x="245" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="246" y="348" width="3" height="3" fill="black" stroke="none"/>
+<rect x="250" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="255" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="256" y="348" width="3" height="3" fill="black" stroke="none"/>
+<rect x="260" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="265" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="270" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="275" y="347" width="5" height="5" fill="white" stroke="black"/>
+<rect x="240" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="245" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="250" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="251" y="353" width="3" height="3" fill="black" stroke="none"/>
+<rect x="255" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="260" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="261" y="353" width="3" height="3" fill="black" stroke="none"/>
+<rect x="265" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="270" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="275" y="352" width="5" height="5" fill="white" stroke="black"/>
+<rect x="276" y="353" width="3" height="3" fill="black" stroke="none"/>
+<rect x="240" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="241" y="358" width="3" height="3" fill="black" stroke="none"/>
+<rect x="245" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="246" y="358" width="3" height="3" fill="black" stroke="none"/>
+<rect x="250" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="251" y="358" width="3" height="3" fill="black" stroke="none"/>
+<rect x="255" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="260" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="265" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="270" y="357" width="5" height="5" fill="white" stroke="black"/>
+<rect x="271" y="358" width="3" height="3" fill="black" stroke="none"/>
+<rect x="275" y="357" width="5" height="5" fill="white" stroke="black"/>
+<path d="M285 337L546 297" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M285 367L546 417" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="566" y="271" width="13" height="13" fill="white" stroke="black"/>
+<rect x="579" y="271" width="13" height="13" fill="white" stroke="black"/>
+<rect x="592" y="271" width="13" height="13" fill="white" stroke="black"/>
+<rect x="594" y="273" width="9" height="9" fill="black" stroke="none"/>
+<rect x="605" y="271" width="13" height="13" fill="white" stroke="black"/>
+<rect x="607" y="273" width="9" height="9" fill="black" stroke="none"/>
+<path d="M546 317v-20h200v120h-200v-60" fill="none" stroke="black" stroke-width="2.0" transform=""/>
+<circle cx="566" cy="317" r="5.0" fill="black" stroke="black"/>
+<circle cx="586" cy="317" r="2.857142857142857" fill="black" stroke="black"/>
+<rect x="566" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="570" y="341" width="12" height="12" fill="black" stroke="none"/>
+<rect x="586" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="590" y="341" width="12" height="12" fill="black" stroke="none"/>
+<rect x="606" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="626" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="630" y="341" width="12" height="12" fill="black" stroke="none"/>
+<rect x="646" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="666" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="686" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="706" y="337" width="20" height="20" fill="white" stroke="black"/>
+<rect x="566" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="586" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="606" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="610" y="361" width="12" height="12" fill="black" stroke="none"/>
+<rect x="626" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="646" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="650" y="361" width="12" height="12" fill="black" stroke="none"/>
+<rect x="666" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="686" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="706" y="357" width="20" height="20" fill="white" stroke="black"/>
+<rect x="710" y="361" width="12" height="12" fill="black" stroke="none"/>
+<rect x="566" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="570" y="381" width="12" height="12" fill="black" stroke="none"/>
+<rect x="586" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="590" y="381" width="12" height="12" fill="black" stroke="none"/>
+<rect x="606" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="610" y="381" width="12" height="12" fill="black" stroke="none"/>
+<rect x="626" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="646" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="666" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="686" y="377" width="20" height="20" fill="white" stroke="black"/>
+<rect x="690" y="381" width="12" height="12" fill="black" stroke="none"/>
+<rect x="706" y="377" width="20" height="20" fill="white" stroke="black"/>
+<path d="M746 347.0L778 347.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="792" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="794" y="343" width="6" height="6" fill="black" stroke="none"/>
+<rect x="802" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="804" y="343" width="6" height="6" fill="black" stroke="none"/>
+<rect x="812" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="822" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="824" y="343" width="6" height="6" fill="black" stroke="none"/>
+<rect x="832" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="842" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="852" y="341" width="10" height="10" fill="white" stroke="black"/>
+<rect x="862" y="341" width="10" height="10" fill="white" stroke="black"/>
+<path d="M746 367.0L778 367.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="792" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="802" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="812" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="814" y="363" width="6" height="6" fill="black" stroke="none"/>
+<rect x="822" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="832" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="834" y="363" width="6" height="6" fill="black" stroke="none"/>
+<rect x="842" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="852" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="862" y="361" width="10" height="10" fill="white" stroke="black"/>
+<rect x="864" y="363" width="6" height="6" fill="black" stroke="none"/>
+<path d="M746 387.0L778 387.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="792" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="794" y="383" width="6" height="6" fill="black" stroke="none"/>
+<rect x="802" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="804" y="383" width="6" height="6" fill="black" stroke="none"/>
+<rect x="812" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="814" y="383" width="6" height="6" fill="black" stroke="none"/>
+<rect x="822" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="832" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="842" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="852" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="854" y="383" width="6" height="6" fill="black" stroke="none"/>
+<rect x="862" y="381" width="10" height="10" fill="white" stroke="black"/>
+<rect x="62" y="499" width="13" height="13" fill="white" stroke="black"/>
+<rect x="75" y="499" width="13" height="13" fill="white" stroke="black"/>
+<rect x="77" y="501" width="9" height="9" fill="black" stroke="none"/>
+<rect x="88" y="499" width="13" height="13" fill="white" stroke="black"/>
+<rect x="101" y="499" width="13" height="13" fill="white" stroke="black"/>
+<rect x="103" y="501" width="9" height="9" fill="black" stroke="none"/>
+<path d="M122 505L184 505" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="184" y="478" width="159" height="102" fill="white" stroke="black"/>
+<rect x="201" y="488" width="12" height="12" fill="white" stroke="black"/>
+<rect x="213" y="488" width="12" height="12" fill="white" stroke="black"/>
+<rect x="215" y="490" width="8" height="8" fill="black" stroke="none"/>
+<rect x="225" y="488" width="12" height="12" fill="white" stroke="black"/>
+<rect x="237" y="488" width="12" height="12" fill="white" stroke="black"/>
+<rect x="239" y="490" width="8" height="8" fill="black" stroke="none"/>
+<path d="M235 529v-5h50v30h-50v-15" fill="none" stroke="black" stroke-width="1" transform=""/>
+<circle cx="240" cy="529" r="1.25" fill="black" stroke="black"/>
+<circle cx="245" cy="529" r="0.7142857142857143" fill="black" stroke="black"/>
+<rect x="240" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="245" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="246" y="535" width="3" height="3" fill="black" stroke="none"/>
+<rect x="250" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="255" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="260" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="265" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="270" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="271" y="535" width="3" height="3" fill="black" stroke="none"/>
+<rect x="275" y="534" width="5" height="5" fill="white" stroke="black"/>
+<rect x="276" y="535" width="3" height="3" fill="black" stroke="none"/>
+<rect x="240" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="241" y="540" width="3" height="3" fill="black" stroke="none"/>
+<rect x="245" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="250" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="255" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="256" y="540" width="3" height="3" fill="black" stroke="none"/>
+<rect x="260" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="261" y="540" width="3" height="3" fill="black" stroke="none"/>
+<rect x="265" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="266" y="540" width="3" height="3" fill="black" stroke="none"/>
+<rect x="270" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="275" y="539" width="5" height="5" fill="white" stroke="black"/>
+<rect x="240" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="245" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="246" y="545" width="3" height="3" fill="black" stroke="none"/>
+<rect x="250" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="251" y="545" width="3" height="3" fill="black" stroke="none"/>
+<rect x="255" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="260" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="265" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="266" y="545" width="3" height="3" fill="black" stroke="none"/>
+<rect x="270" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="275" y="544" width="5" height="5" fill="white" stroke="black"/>
+<rect x="276" y="545" width="3" height="3" fill="black" stroke="none"/>
+<path d="M285 524L546 484" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M285 554L546 604" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="566" y="458" width="13" height="13" fill="white" stroke="black"/>
+<rect x="579" y="458" width="13" height="13" fill="white" stroke="black"/>
+<rect x="581" y="460" width="9" height="9" fill="black" stroke="none"/>
+<rect x="592" y="458" width="13" height="13" fill="white" stroke="black"/>
+<rect x="605" y="458" width="13" height="13" fill="white" stroke="black"/>
+<rect x="607" y="460" width="9" height="9" fill="black" stroke="none"/>
+<path d="M546 504v-20h200v120h-200v-60" fill="none" stroke="black" stroke-width="2.0" transform=""/>
+<circle cx="566" cy="504" r="5.0" fill="black" stroke="black"/>
+<circle cx="586" cy="504" r="2.857142857142857" fill="black" stroke="black"/>
+<rect x="566" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="586" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="590" y="528" width="12" height="12" fill="black" stroke="none"/>
+<rect x="606" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="626" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="646" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="666" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="686" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="690" y="528" width="12" height="12" fill="black" stroke="none"/>
+<rect x="706" y="524" width="20" height="20" fill="white" stroke="black"/>
+<rect x="710" y="528" width="12" height="12" fill="black" stroke="none"/>
+<rect x="566" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="570" y="548" width="12" height="12" fill="black" stroke="none"/>
+<rect x="586" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="606" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="626" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="630" y="548" width="12" height="12" fill="black" stroke="none"/>
+<rect x="646" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="650" y="548" width="12" height="12" fill="black" stroke="none"/>
+<rect x="666" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="670" y="548" width="12" height="12" fill="black" stroke="none"/>
+<rect x="686" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="706" y="544" width="20" height="20" fill="white" stroke="black"/>
+<rect x="566" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="586" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="590" y="568" width="12" height="12" fill="black" stroke="none"/>
+<rect x="606" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="610" y="568" width="12" height="12" fill="black" stroke="none"/>
+<rect x="626" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="646" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="666" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="670" y="568" width="12" height="12" fill="black" stroke="none"/>
+<rect x="686" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="706" y="564" width="20" height="20" fill="white" stroke="black"/>
+<rect x="710" y="568" width="12" height="12" fill="black" stroke="none"/>
+<path d="M746 534.0L778 534.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="792" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="802" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="804" y="530" width="6" height="6" fill="black" stroke="none"/>
+<rect x="812" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="822" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="832" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="842" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="852" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="854" y="530" width="6" height="6" fill="black" stroke="none"/>
+<rect x="862" y="528" width="10" height="10" fill="white" stroke="black"/>
+<rect x="864" y="530" width="6" height="6" fill="black" stroke="none"/>
+<path d="M746 554.0L778 554.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="792" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="794" y="550" width="6" height="6" fill="black" stroke="none"/>
+<rect x="802" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="812" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="822" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="824" y="550" width="6" height="6" fill="black" stroke="none"/>
+<rect x="832" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="834" y="550" width="6" height="6" fill="black" stroke="none"/>
+<rect x="842" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="844" y="550" width="6" height="6" fill="black" stroke="none"/>
+<rect x="852" y="548" width="10" height="10" fill="white" stroke="black"/>
+<rect x="862" y="548" width="10" height="10" fill="white" stroke="black"/>
+<path d="M746 574.0L778 574.0" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="792" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="802" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="804" y="570" width="6" height="6" fill="black" stroke="none"/>
+<rect x="812" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="814" y="570" width="6" height="6" fill="black" stroke="none"/>
+<rect x="822" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="832" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="842" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="844" y="570" width="6" height="6" fill="black" stroke="none"/>
+<rect x="852" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="862" y="568" width="10" height="10" fill="white" stroke="black"/>
+<rect x="864" y="570" width="6" height="6" fill="black" stroke="none"/>
+<text x="62" y="687" font-family="sans-serif" font-size="14">The matching locator identifies each target. Follow the small frame and its unequal marks.</text>
+<text x="62" y="711" font-family="sans-serif" font-size="14">If any mark remains unresolved, record that position as unknown.</text>
+</svg>

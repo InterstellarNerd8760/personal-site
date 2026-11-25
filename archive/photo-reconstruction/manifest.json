@@ -1,0 +1,721 @@
+{
+  "encoder": {
+    "jpeg_codec": "6.2",
+    "libjpeg_turbo": "3.1.4.1",
+    "pillow": "12.2.0"
+  },
+  "protection": {
+    "block_bytes": 255,
+    "block_count": 24,
+    "encoded_bytes": 6120,
+    "file": "img-019-e32-rgb.caec",
+    "payload_bytes_per_block": 134,
+    "raw": "img-019-e32-rgb.car",
+    "raw_bytes": 3126,
+    "record_id": 19,
+    "sha256": "b650c7ef549f8b024328e819b17ada55cb0cacf0bf5929705538723fa8be639b"
+  },
+  "records": [
+    {
+      "alt": "Full disk Earth surrounded by black space, Africa and oceans visible.",
+      "asset": "photos/earth-apollo17.jpg",
+      "credit": "NASA / Apollo 17 crew",
+      "id": "IMG-019",
+      "preparation": "Uncropped experimental derivatives resized with BOX, stored in raw RGB, grayscale and thresholded black and white.",
+      "rights": "US federal government photograph, public domain in the United States; verify conditions internationally",
+      "sha256": "de918d9a6f1794c219c869f805fcdc0ec34289d04b71407b6980843ebb2446d5",
+      "source_derivative": "Processed 1400px-class JPEG copied without re-encoding from WebKit/Speedometer's public photo test assets; source original is available at the Wikimedia Commons file page.",
+      "sources": [
+        {
+          "label": "Source photograph and file rights — Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
+        },
+        {
+          "label": "Documented derivative provenance — WebKit/Speedometer",
+          "url": "https://github.com/WebKit/Speedometer/blob/main/suites-experimental/pdf-viewer/assets/README.md"
+        }
+      ],
+      "subject": "Earth",
+      "title": "Earth, photographed by Apollo 17",
+      "variants": [
+        {
+          "edge": 16,
+          "file": "img-019-e16-mono.car",
+          "frame_bytes": 86,
+          "height": 16,
+          "mode": "mono",
+          "payload_bytes": 32,
+          "record_id": 19,
+          "sha256": "26d2d489d798fe07f8b3d3c978106f6f4f475ac05bc813f64e9246ef84df7bb4",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-019-e16-gray.car",
+          "frame_bytes": 310,
+          "height": 16,
+          "mode": "gray",
+          "payload_bytes": 256,
+          "record_id": 19,
+          "sha256": "e02b5260fdb09eef6eb4b071e7c90a273c384157cee83f3b0e5f15b56dbe3b12",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-019-e16-rgb.car",
+          "frame_bytes": 822,
+          "height": 16,
+          "mode": "rgb",
+          "payload_bytes": 768,
+          "record_id": 19,
+          "sha256": "9e35d0087ad37804f5cce1470b9fb34c82e95a9c16311cc9867a21830edce9a3",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 32,
+          "file": "img-019-e32-mono.car",
+          "frame_bytes": 182,
+          "height": 32,
+          "mode": "mono",
+          "payload_bytes": 128,
+          "record_id": 19,
+          "sha256": "ee3c36757a7eae63848236ea7ae7af473c4a79e79c242ae6d29085e5e619ac41",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-019-e32-gray.car",
+          "frame_bytes": 1078,
+          "height": 32,
+          "mode": "gray",
+          "payload_bytes": 1024,
+          "record_id": 19,
+          "sha256": "d50de96a17468dcfad8c479cbf757414a9e2237976434350bc21cc5eee89750d",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-019-e32-rgb.car",
+          "frame_bytes": 3126,
+          "height": 32,
+          "mode": "rgb",
+          "payload_bytes": 3072,
+          "record_id": 19,
+          "sha256": "52c731345032073c448bbbba722c530a3714abdb1d1f4e85ce2017bfa020e091",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 64,
+          "file": "img-019-e64-mono.car",
+          "frame_bytes": 566,
+          "height": 64,
+          "mode": "mono",
+          "payload_bytes": 512,
+          "record_id": 19,
+          "sha256": "f1bcf0233b682e499f711c4eee3cf3389bc5d392437ea0d6683094c9d796d58c",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-019-e64-gray.car",
+          "frame_bytes": 4150,
+          "height": 64,
+          "mode": "gray",
+          "payload_bytes": 4096,
+          "record_id": 19,
+          "sha256": "75ee78d4476a4d2a1448606aacc1222f52655dd7659e667ee48a373c80eb5cdd",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-019-e64-rgb.car",
+          "frame_bytes": 12342,
+          "height": 64,
+          "mode": "rgb",
+          "payload_bytes": 12288,
+          "record_id": 19,
+          "sha256": "71545064275a4e73d68d2ca090a52ef9c5ffd1e971ecdfa392459f0934a48aee",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 128,
+          "file": "img-019-e128-mono.car",
+          "frame_bytes": 2102,
+          "height": 128,
+          "mode": "mono",
+          "payload_bytes": 2048,
+          "record_id": 19,
+          "sha256": "50902b0af766a2749cc33e83795678d0f8c8ee1ddd720d91ff0a3bc58edc802c",
+          "version": 2,
+          "width": 128
+        },
+        {
+          "edge": 128,
+          "file": "img-019-e128-gray.car",
+          "frame_bytes": 16438,
+          "height": 128,
+          "mode": "gray",
+          "payload_bytes": 16384,
+          "record_id": 19,
+          "sha256": "d3a60aada39cb241579dc443b9d8b094d730128152b191e6e2bab747de0d1d2a",
+          "version": 2,
+          "width": 128
+        },
+        {
+          "edge": 128,
+          "file": "img-019-e128-rgb.car",
+          "frame_bytes": 49206,
+          "height": 128,
+          "mode": "rgb",
+          "payload_bytes": 49152,
+          "record_id": 19,
+          "sha256": "d88035f1058250785dedb8d2e15fc9737a21ca9799913581d1e097a9dd919873",
+          "version": 2,
+          "width": 128
+        }
+      ]
+    },
+    {
+      "alt": "Green chloroplasts cluster inside adjoining cells of a waterweed leaf.",
+      "asset": "photos/elodea-leaf.jpg",
+      "credit": "Cimice50",
+      "id": "IMG-050",
+      "preparation": "Uncropped experimental derivatives resized with BOX, stored in raw RGB, grayscale and thresholded black and white.",
+      "rights": "CC BY-SA 4.0, including this resized JPEG.",
+      "sha256": "08f2f30e717f55dc4a47b3e04df9cf28ad8fd1e6dd81e2700514944988272a25",
+      "source_derivative": "Uncropped archive JPEG, maximum edge 1800 pixels.",
+      "sources": [
+        {
+          "label": "Wikimedia Commons · photographer’s description",
+          "url": "https://commons.wikimedia.org/wiki/File:Cloroplasti_Elodea.jpg"
+        },
+        {
+          "label": "Source image",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Cloroplasti_Elodea.jpg"
+        },
+        {
+          "label": "Creative Commons Attribution-ShareAlike 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      ],
+      "subject": "Biological specimen",
+      "title": "Inside an Elodea leaf",
+      "variants": [
+        {
+          "edge": 16,
+          "file": "img-050-e16-mono.car",
+          "frame_bytes": 78,
+          "height": 12,
+          "mode": "mono",
+          "payload_bytes": 24,
+          "record_id": 50,
+          "sha256": "ee86abb968bcdff2eea095a7ab96194ecb78baec5549bbac2239a782772b76f3",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-050-e16-gray.car",
+          "frame_bytes": 246,
+          "height": 12,
+          "mode": "gray",
+          "payload_bytes": 192,
+          "record_id": 50,
+          "sha256": "6580c642de2ae74296b8957320a4142791aaa644a1dbec4ccb3190bf1ea4271e",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-050-e16-rgb.car",
+          "frame_bytes": 630,
+          "height": 12,
+          "mode": "rgb",
+          "payload_bytes": 576,
+          "record_id": 50,
+          "sha256": "ff7b56e527d2437883f4f9d2504023ddcd6c698265e4b47281f2369293861e74",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 32,
+          "file": "img-050-e32-mono.car",
+          "frame_bytes": 150,
+          "height": 24,
+          "mode": "mono",
+          "payload_bytes": 96,
+          "record_id": 50,
+          "sha256": "fba5d9ccddfc3031ae8606651a9bcac122f8a00aee705e4ae030ad7013bf6dbf",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-050-e32-gray.car",
+          "frame_bytes": 822,
+          "height": 24,
+          "mode": "gray",
+          "payload_bytes": 768,
+          "record_id": 50,
+          "sha256": "b5a8566aa0647995d8b4fa9655a0778f65cd4aa2488bd797fa3155c497078503",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-050-e32-rgb.car",
+          "frame_bytes": 2358,
+          "height": 24,
+          "mode": "rgb",
+          "payload_bytes": 2304,
+          "record_id": 50,
+          "sha256": "74afcfe10d78eae49b203bd3e545827c904a6309e83cad411e36f985c289dbd7",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 64,
+          "file": "img-050-e64-mono.car",
+          "frame_bytes": 438,
+          "height": 48,
+          "mode": "mono",
+          "payload_bytes": 384,
+          "record_id": 50,
+          "sha256": "3ae6318273a1c6fb74d98e5d125713d56011d60b27a9252e5052cb33bd8e0afe",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-050-e64-gray.car",
+          "frame_bytes": 3126,
+          "height": 48,
+          "mode": "gray",
+          "payload_bytes": 3072,
+          "record_id": 50,
+          "sha256": "6dd5b675ecc5cc15087d560f359b6c396709582a520b630875d29a890afe6354",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-050-e64-rgb.car",
+          "frame_bytes": 9270,
+          "height": 48,
+          "mode": "rgb",
+          "payload_bytes": 9216,
+          "record_id": 50,
+          "sha256": "188c230321120d1185d57d824ae7eb832d08a47e153090d60b124c91fc15b3a6",
+          "version": 2,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "alt": "Aerial view of a deep blue geothermal pool surrounded by orange, yellow and rust-colored margins.",
+      "asset": "photos/grand-prismatic-spring.jpg",
+      "credit": "US National Park Service / Jim Peaco",
+      "id": "IMG-036",
+      "preparation": "Uncropped experimental derivatives resized with BOX, stored in raw RGB, grayscale and thresholded black and white.",
+      "rights": "US federal government photograph, public domain in the United States; verify conditions internationally",
+      "sha256": "3ba651cccc46d311874c097d69dd7770c2b8a4adaad4d2427cbfe47a60987f55",
+      "source_derivative": "Processed 1400px-class JPEG copied without re-encoding from WebKit/Speedometer's public photo test assets; source original is available at the Wikimedia Commons file page.",
+      "sources": [
+        {
+          "label": "Source photograph and file rights — Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Excelsior_Geyser_and_Grand_Prismatic_Spring_(23320428202).jpg"
+        },
+        {
+          "label": "Documented derivative provenance — WebKit/Speedometer",
+          "url": "https://github.com/WebKit/Speedometer/blob/main/suites-experimental/pdf-viewer/assets/README.md"
+        }
+      ],
+      "subject": "Landscape",
+      "title": "Grand Prismatic Spring",
+      "variants": [
+        {
+          "edge": 16,
+          "file": "img-036-e16-mono.car",
+          "frame_bytes": 76,
+          "height": 11,
+          "mode": "mono",
+          "payload_bytes": 22,
+          "record_id": 36,
+          "sha256": "1a47311f415c0bce3879549c989236a38a953febdfbe9bddd66a3ca56e6b3f46",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-036-e16-gray.car",
+          "frame_bytes": 230,
+          "height": 11,
+          "mode": "gray",
+          "payload_bytes": 176,
+          "record_id": 36,
+          "sha256": "02d33e94dc27c55b918fb018000f3c7db99532ebff190733e270cdb3cfcd6e72",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-036-e16-rgb.car",
+          "frame_bytes": 582,
+          "height": 11,
+          "mode": "rgb",
+          "payload_bytes": 528,
+          "record_id": 36,
+          "sha256": "b2408517ae5f3b287d2008ac297224487a780dbf0816b0d6e41260916cfd589b",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 32,
+          "file": "img-036-e32-mono.car",
+          "frame_bytes": 138,
+          "height": 21,
+          "mode": "mono",
+          "payload_bytes": 84,
+          "record_id": 36,
+          "sha256": "73b0b1c061edb9f80545c87644a4a16952348eec3b433ecdf543a918530b324c",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-036-e32-gray.car",
+          "frame_bytes": 726,
+          "height": 21,
+          "mode": "gray",
+          "payload_bytes": 672,
+          "record_id": 36,
+          "sha256": "de658961f7413f52ad4eaec6688242c14252d9be6f878d008c759ba58526d761",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-036-e32-rgb.car",
+          "frame_bytes": 2070,
+          "height": 21,
+          "mode": "rgb",
+          "payload_bytes": 2016,
+          "record_id": 36,
+          "sha256": "0b0f32b96f24bab0c074cbe15debe8a829d16e6165c588868775f10452401541",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 64,
+          "file": "img-036-e64-mono.car",
+          "frame_bytes": 398,
+          "height": 43,
+          "mode": "mono",
+          "payload_bytes": 344,
+          "record_id": 36,
+          "sha256": "46ebd0dadc3d4cccde794cf063f4d15177690047e9be90db4b2512a1f14094bc",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-036-e64-gray.car",
+          "frame_bytes": 2806,
+          "height": 43,
+          "mode": "gray",
+          "payload_bytes": 2752,
+          "record_id": 36,
+          "sha256": "0f279d66041e0a8d99768a4da4dae6c11bc191b16771268adc5e4bffbfe7d4dd",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-036-e64-rgb.car",
+          "frame_bytes": 8310,
+          "height": 43,
+          "mode": "rgb",
+          "payload_bytes": 8256,
+          "record_id": 36,
+          "sha256": "92da51e5313922102e74e367dc435daf8b51174e493c52691529e2413841dda5",
+          "version": 2,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "alt": "Three women of different adult generations together beneath a shelter.",
+      "asset": "photos/three-generations-family-nci.jpg",
+      "credit": "Bill Branson / National Cancer Institute",
+      "id": "IMG-073",
+      "preparation": "Uncropped experimental derivatives resized with BOX, stored in raw RGB, grayscale and thresholded black and white.",
+      "rights": "US National Cancer Institute image marked public domain with no reuse restrictions; credit Bill Branson / NCI. Separate model release is not established; review before flight.",
+      "sha256": "85499ac96157107dab0f2becdfabb7ac6b074e76a94baf399892afbbabe12e39",
+      "source_derivative": "Source image re-encoded by the existing importer as an orientation-corrected JPEG, maximum 1800 pixels, quality 87; no synthetic content added. Original retained by source URL.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://commons.wikimedia.org/wiki/File:Three_generations_of_a_family.jpg"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Three_generations_of_a_family.jpg"
+        }
+      ],
+      "subject": "Human group",
+      "title": "Three generations of a human family",
+      "variants": [
+        {
+          "edge": 16,
+          "file": "img-073-e16-mono.car",
+          "frame_bytes": 76,
+          "height": 11,
+          "mode": "mono",
+          "payload_bytes": 22,
+          "record_id": 73,
+          "sha256": "ee1ecc314a6ab716e2b9f176c75646e34eccb0b4e491e8730abcaf12eb87c108",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-073-e16-gray.car",
+          "frame_bytes": 230,
+          "height": 11,
+          "mode": "gray",
+          "payload_bytes": 176,
+          "record_id": 73,
+          "sha256": "ac1f7fe401b31058b782e290fd138bb2210139ee1ff3ab5690d5c371546a24d8",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-073-e16-rgb.car",
+          "frame_bytes": 582,
+          "height": 11,
+          "mode": "rgb",
+          "payload_bytes": 528,
+          "record_id": 73,
+          "sha256": "04ca4bb6ea7ffd6eaae1206a3f62b34c5f2ce5da34b5670550d3a22a2295e561",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 32,
+          "file": "img-073-e32-mono.car",
+          "frame_bytes": 138,
+          "height": 21,
+          "mode": "mono",
+          "payload_bytes": 84,
+          "record_id": 73,
+          "sha256": "e39558f4382c70055354b0dd74e113ded5071936b08cccfd024bbc18180f0532",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-073-e32-gray.car",
+          "frame_bytes": 726,
+          "height": 21,
+          "mode": "gray",
+          "payload_bytes": 672,
+          "record_id": 73,
+          "sha256": "67315f9b2ad5d362aaa76a6cef6c5d79707151fea68c6170b8556c5fb6a50298",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-073-e32-rgb.car",
+          "frame_bytes": 2070,
+          "height": 21,
+          "mode": "rgb",
+          "payload_bytes": 2016,
+          "record_id": 73,
+          "sha256": "f6029e55623db73d6be22cfd0f9cfb7b3c9b07c3bff647024857aadc7ff108a1",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 64,
+          "file": "img-073-e64-mono.car",
+          "frame_bytes": 398,
+          "height": 43,
+          "mode": "mono",
+          "payload_bytes": 344,
+          "record_id": 73,
+          "sha256": "73f608a17bfebfbd2904e3453562ee3c15b3ac8ef503e9e6484a79cd19a198e3",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-073-e64-gray.car",
+          "frame_bytes": 2806,
+          "height": 43,
+          "mode": "gray",
+          "payload_bytes": 2752,
+          "record_id": 73,
+          "sha256": "ddb8a6475c7f4ebffa12fb8ccc8fb3268feb2c99ac0466ae5d54b49ba36a63c5",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-073-e64-rgb.car",
+          "frame_bytes": 8310,
+          "height": 43,
+          "mode": "rgb",
+          "payload_bytes": 8256,
+          "record_id": 73,
+          "sha256": "823876174033ac532356afab01aa29ec9c53cc958b5f88080c368e1977c04aca",
+          "version": 2,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "alt": "Two brilliant orange-white stars against dark space, each showing long telescope diffraction spikes, with a 17-arcsecond scale bar.",
+      "asset": "photos/alpha-centauri-ab-hubble-eso.jpg",
+      "credit": "ESA/Hubble & NASA",
+      "id": "IMG-011",
+      "preparation": "Uncropped experimental derivatives resized with BOX, stored in raw RGB, grayscale and thresholded black and white.",
+      "rights": "ESO image distributed under CC BY 4.0 International (https://www.eso.org/public/outreach/copyright/); preserve exact credit ESA/Hubble & NASA visibly; indicate resizing.",
+      "sha256": "712ce282491f156453d6661c7971fb4fbdfa6613242608fc534265f1c13b0459",
+      "source_derivative": "ESO published image with scale annotation; max 1800px re-encoding for development edition. Source observational image resized to max 1800px and encoded as quality-87 JPEG for the development edition, with input URL recorded.",
+      "sources": [
+        {
+          "label": "Source description and credits",
+          "url": "https://www.eso.org/public/images/eso1629v/"
+        },
+        {
+          "label": "Source image before documented JPEG derivative",
+          "url": "https://cdn.eso.org/images/large/eso1629v.jpg"
+        }
+      ],
+      "subject": "Astronomical observation",
+      "title": "The nearby double stars Alpha Centauri A and B",
+      "variants": [
+        {
+          "edge": 16,
+          "file": "img-011-e16-mono.car",
+          "frame_bytes": 74,
+          "height": 10,
+          "mode": "mono",
+          "payload_bytes": 20,
+          "record_id": 11,
+          "sha256": "e57c93f92aee1b56811d472c22cde14b1f96752a69c13afba0d0d879fc5b24cf",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-011-e16-gray.car",
+          "frame_bytes": 214,
+          "height": 10,
+          "mode": "gray",
+          "payload_bytes": 160,
+          "record_id": 11,
+          "sha256": "f90d849aa2254ed63a76ed09d6bb6fde7c7da3b9a4ce31b63970d23bb7e8c980",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 16,
+          "file": "img-011-e16-rgb.car",
+          "frame_bytes": 534,
+          "height": 10,
+          "mode": "rgb",
+          "payload_bytes": 480,
+          "record_id": 11,
+          "sha256": "7aef2026b6fc302286387c589bfb4dbb359f9107114a319e400a93eb073828fa",
+          "version": 2,
+          "width": 16
+        },
+        {
+          "edge": 32,
+          "file": "img-011-e32-mono.car",
+          "frame_bytes": 138,
+          "height": 21,
+          "mode": "mono",
+          "payload_bytes": 84,
+          "record_id": 11,
+          "sha256": "07468ce93f8844d8bfa579f8511ed534073be58b8abd5caf71524d9a911ae0ca",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-011-e32-gray.car",
+          "frame_bytes": 726,
+          "height": 21,
+          "mode": "gray",
+          "payload_bytes": 672,
+          "record_id": 11,
+          "sha256": "7e7e91e790a6999d355e8a6fe8e868f1e6de16610816a3698ab469aa098268a2",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 32,
+          "file": "img-011-e32-rgb.car",
+          "frame_bytes": 2070,
+          "height": 21,
+          "mode": "rgb",
+          "payload_bytes": 2016,
+          "record_id": 11,
+          "sha256": "3404f0d52029661158b639762102dd363e4e4d301f1b5bb8780e674550365bd7",
+          "version": 2,
+          "width": 32
+        },
+        {
+          "edge": 64,
+          "file": "img-011-e64-mono.car",
+          "frame_bytes": 390,
+          "height": 42,
+          "mode": "mono",
+          "payload_bytes": 336,
+          "record_id": 11,
+          "sha256": "b28d8b0053faa2fef0825de27d5c9a4de235083e1b88b5a41c1062e5b65aefc4",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-011-e64-gray.car",
+          "frame_bytes": 2742,
+          "height": 42,
+          "mode": "gray",
+          "payload_bytes": 2688,
+          "record_id": 11,
+          "sha256": "94c01ceed8c03ea237264ca0f77ecad916b7f5bc8d46145f256793fc4d6cfb0a",
+          "version": 2,
+          "width": 64
+        },
+        {
+          "edge": 64,
+          "file": "img-011-e64-rgb.car",
+          "frame_bytes": 8118,
+          "height": 42,
+          "mode": "rgb",
+          "payload_bytes": 8064,
+          "record_id": 11,
+          "sha256": "1fe412bda8b6fdd8783c5c201760913df931df2df388bd45890ad6adbcf9828b",
+          "version": 2,
+          "width": 64
+        }
+      ]
+    }
+  ],
+  "version": 1
+}
