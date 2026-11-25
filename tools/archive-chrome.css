@@ -1,8 +1,25 @@
 /* Personal-site chrome for the embedded Centauri Archive at /archive/.
-   Loaded after archive style.css. Shared color tokens follow the site theme toggle. */
+   Loaded after the archive's stylesheets. */
+
+html.embedded-archive {
+  scroll-padding-top: 8rem;
+}
 
 body.archive-page {
   padding-top: 4.5rem;
+  background: #05080f;
+}
+
+/* Keep the archive's dark illustrations and controls legible with either site theme. */
+html[data-theme="rustic"] body.archive-page main {
+  --bg: #05080f;
+  --bg-2: #0a1220;
+  --line: rgba(160, 185, 215, .18);
+  --sky: #5cc8f5;
+  --text: #c9d3de;
+  --white: #f2f5f8;
+  color: var(--text);
+  color-scheme: dark;
 }
 
 body.archive-page .skip,
@@ -36,7 +53,7 @@ html[data-theme="rustic"] .archive-subnav {
 }
 
 .archive-subnav a:hover,
-.archive-subnav a[aria-current="page"] {
+.archive-subnav a[aria-current] {
   color: var(--white);
 }
 
@@ -46,6 +63,10 @@ html[data-theme="rustic"] .archive-subnav {
 }
 
 @media (max-width: 760px) {
+  html.embedded-archive {
+    scroll-padding-top: 10rem;
+  }
+
   .archive-subnav {
     top: 4.5rem;
     gap: .45rem 1rem;

@@ -9,7 +9,7 @@ the ZIP itself is not published here.
 Usage:
   python3 tools/sync_centauri_archive.py
   python3 tools/sync_centauri_archive.py --repo /path/to/centauri-archive
-  python3 tools/sync_centauri_archive.py --repo https://github.com/InterstellarNerd8760/centauri-archive --ref da2cddb
+  python3 tools/sync_centauri_archive.py --repo /path/to/centauri-archive --ref <commit> --output /tmp/preview/archive
 
 By default the script clones the source SHA recorded in
 tools/centauri-archive.lock.
@@ -17,6 +17,8 @@ tools/centauri-archive.lock.
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
+from html import escape, unescape
 import json
 import re
 import shutil
@@ -96,25 +98,19 @@ SITE_FOOTER = """  <footer class="site-footer">
   <script src="/script.js" defer></script>
 """
 
-SUBNAV_ITEMS = [
-    ("index.html", "Overview", "/archive/"),
-    ("encyclopedia.html", "Encyclopedia", "/archive/encyclopedia.html"),
-    ("images.html", "Image library", "/archive/images.html"),
-    ("guide.html", "Decoding", "/archive/guide.html"),
-    ("brief.html", "Project brief", "/archive/brief.html"),
-]
+SUBNAV_ITEMS = (
+    ("index.html", "Overview"),
+    ("encyclopedia.html", "Encyclopedia"),
+    ("images.html", "Image Library"),
+    ("guide.html", "Decoding"),
+    ("discovery.html", "Discovery"),
+    ("engineering.html", "Engineering"),
+    ("proposal.html", "Mission Proposal"),
+    ("brief.html", "Project brief"),
+)
 
-PAGE_PATHS = {
-    "index.html": "/archive/",
-    "encyclopedia.html": "/archive/encyclopedia.html",
-    "images.html": "/archive/images.html",
-    "guide.html": "/archive/guide.html",
-    "brief.html": "/archive/brief.html",
-    "library.html": "/archive/library.html",
-}
-
-ZIP_HREF = re.compile(r'href="downloads/centauri\.zip"')
-GITHUB_LINK = f'href="{GITHUB_SOURCE}" target="_blank" rel="noreferrer"'
+ZIP_HREF = re.compile(r'''href=(["'])(?:/archive/|(?:\.{1,2}/)*)downloads/centauri\.zip(?:[?#][^"']*)?\1''', re.I)
+GITHUB_LINK = f'href="{GITHUB_SOURCE}"'
 
 
 def load_lock():
@@ -126,30 +122,30 @@ def run(cmd, cwd=None):
     subprocess.check_call(cmd, cwd=cwd)
 
 
-def resolve_source(repo: str | None, ref: str | None) -> tuple[Path, str, str, tempfile.TemporaryDirectory | None]:
-    lock_repo, lock_sha = load_lock()
-    repo = repo or lock_repo
-    ref = ref or lock_sha
-    tmp = None
-    source = Path(repo).expanduser()
-    if source.exists() and (source / ".git").exists():
-        sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip()
-        if ref and sha != ref and not ref.startswith(sha):
-            print(f"Note: local repo is at {sha}, lock/requested ref is {ref}", file=sys.stderr)
-        return source, sha, repo if "://" in repo else str(source), None
-    tmp = tempfile.TemporaryDirectory(prefix="centauri-archive-")
-    clone = Path(tmp.name) / "centauri-archive"
-    run(["git", "clone", "--depth", "1", "--branch", "main", repo, str(clone)])
-    # If the lock SHA is not the tip of the shallow clone, fetch that commit.
-    sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=clone, text=True).strip()
-    if ref and sha != ref and not sha.startswith(ref) and not ref.startswith(sha):
-        try:
-            run(["git", "fetch", "--depth", "1", "origin", ref], cwd=clone)
-            run(["git", "checkout", "--detach", ref], cwd=clone)
-            sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=clone, text=True).strip()
-        except subprocess.CalledProcessError:
-            print(f"Could not check out {ref}; using {sha}", file=sys.stderr)
-    return clone, sha, repo, tmp
+def resolve_commit(source: Path, ref: str) -> str:
+    return subprocess.check_output(
+        ["git", "rev-parse", "--verify", "--end-of-options", f"{ref}^{{commit}}"],
+        cwd=source, text=True,
+    ).strip()
+
+
+@contextmanager
+def source_checkout(repo: str, ref: str):
+    """Resolve exactly one committed tree and build it in a disposable checkout."""
+    with tempfile.TemporaryDirectory(prefix="centauri-archive-") as directory:
+        clone = Path(directory) / "source"
+        source = Path(repo).expanduser()
+        if source.is_dir():
+            sha = resolve_commit(source, ref)
+            run(["git", "clone", "--quiet", "--shared", "--no-checkout", "--", str(source.resolve()), str(clone)])
+        else:
+            run(["git", "init", "--quiet", str(clone)])
+            run(["git", "fetch", "--quiet", "--depth=1", "--no-tags", "--", repo, ref], cwd=clone)
+            sha = resolve_commit(clone, "FETCH_HEAD")
+            if re.fullmatch(r"[0-9a-f]{40}", ref, re.I) and sha != ref.lower():
+                raise ValueError(f"Source returned {sha} for requested commit {ref}")
+        run(["git", "checkout", "--quiet", "--detach", sha], cwd=clone)
+        yield clone, sha
 
 
 def build_archive_site(source: Path) -> Path:
@@ -160,29 +156,30 @@ def build_archive_site(source: Path) -> Path:
     return built
 
 
-def copy_site(built: Path):
-    if DEST.exists():
-        shutil.rmtree(DEST)
-    DEST.mkdir(parents=True)
-    skip_names = {"centauri.zip"}
-    for path in built.rglob("*"):
-        rel = path.relative_to(built)
-        if path.is_dir():
-            (DEST / rel).mkdir(parents=True, exist_ok=True)
-            continue
-        if path.name in skip_names:
-            continue
-        target = DEST / rel
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(path, target)
-    shutil.copyfile(CHROME_CSS, DEST / "site-chrome.css")
+def copy_site(built: Path, output: Path):
+    def ignore_zip(_directory, names):
+        return [name for name in names if Path(name).suffix.lower() == ".zip"]
+
+    shutil.copytree(built, output, ignore=ignore_zip)
+    shutil.copyfile(CHROME_CSS, output / "site-chrome.css")
 
 
-def subnav(current: str) -> str:
+def page_path(filename: str, *, canonical=False) -> str:
+    # Cloudflare Workers serves file.html at /file and index.html at its folder.
+    if Path(filename).name == "index.html":
+        return "/archive/" + filename.removesuffix("index.html")
+    return "/archive/" + (filename.removesuffix(".html") if canonical else filename)
+
+
+def subnav(current: str, pages: set[str]) -> str:
     links = []
-    for filename, label, href in SUBNAV_ITEMS:
+    for filename, label in SUBNAV_ITEMS:
+        if filename not in pages or (filename == "brief.html" and "proposal.html" in pages):
+            continue
         current_attr = ' aria-current="page"' if filename == current else ""
-        links.append(f'<a href="{href}"{current_attr}>{label}</a>')
+        if filename == "discovery.html" and current.startswith("knowledge/"):
+            current_attr = ' aria-current="location"'
+        links.append(f'<a href="{page_path(filename)}"{current_attr}>{label}</a>')
     links.append(f'<a class="archive-source" href="{GITHUB_SOURCE}" target="_blank" rel="noreferrer">Source ↗</a>')
     return '<nav class="archive-subnav" aria-label="Centauri Archive">\n    ' + "\n    ".join(links) + "\n  </nav>\n"
 
@@ -196,28 +193,20 @@ def extra_stylesheets(html: str) -> str:
         if href == "style.css" or href.startswith("style.css?"):
             href = "style.css"
         sheets.append(href)
-    # Preserve query-less local CSS in a stable order, then chrome.
-    ordered = []
-    for name in ("style.css", "encyclopedia.css", "image-detail.css"):
-        if name in sheets and name not in ordered:
-            ordered.append(name)
-    for name in sheets:
-        if name not in ordered:
-            ordered.append(name)
-    tags = "".join(f'  <link rel="stylesheet" href="{name}">\n' for name in ordered)
-    tags += '  <link rel="stylesheet" href="site-chrome.css">\n'
+    # Keep the archive's original dependency/cascade order, then apply chrome.
+    tags = "".join(f'  <link rel="stylesheet" href="{name}">\n' for name in dict.fromkeys(sheets))
+    tags += '  <link rel="stylesheet" href="/archive/site-chrome.css">\n'
     return tags
 
 
 def extra_scripts(html: str) -> str:
     tags = []
-    for match in re.finditer(r'<script([^>]*)>\s*</script>|<script([^>]*)></script>|<script([^>]*) defer src="([^"]+)"></script>|<script defer src="([^"]+)"></script>', html):
-        pass
-    for match in re.finditer(r'<script([^>]*)src="([^"]+)"([^>]*)></script>', html):
-        src = match.group(2)
+    for match in re.finditer(r'<script\b([^>]*\bsrc="([^"]+)"[^>]*)>\s*</script>', html, re.I):
+        attributes, src = match.groups()
         if src.startswith("http") or src.startswith("/"):
             continue
-        tags.append(f'  <script defer src="{src}"></script>\n')
+        module = ' type="module"' if re.search(r'\btype="module"', attributes) else ""
+        tags.append(f'  <script{module} defer src="{src}"></script>\n')
     return "".join(tags)
 
 
@@ -287,22 +276,24 @@ def rewrite_zip_links(html: str) -> str:
     return html
 
 
-def decorate_page(path: Path):
+def decorate_page(path: Path, filename: str, pages: set[str]):
     html = path.read_text(encoding="utf-8")
     html = rewrite_zip_links(html)
-    title = extract_title(html)
+    title = unescape(extract_title(html))
     if "Weston Rosch" not in title:
         title = f"{title} · Weston Rosch" if "Centauri Archive" in title else f"{title} · Centauri Archive · Weston Rosch"
-    description = extract_description(html)
-    page_url = SITE_ORIGIN + PAGE_PATHS.get(path.name, f"/archive/{path.name}")
+    title = escape(title)
+    description = escape(unescape(extract_description(html)))
+    page_url = SITE_ORIGIN + page_path(filename, canonical=True)
     body_class = body_classes(html)
     main = extract_main(html)
-    trailing = extract_trailing_scripts(html)
+    outside_main = html.replace(main, "", 1)
+    trailing = extract_trailing_scripts(outside_main)
     styles = extra_stylesheets(html)
-    scripts = extra_scripts(html)
+    scripts = extra_scripts(outside_main)
 
     built = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="embedded-archive">
 <head>
 {GTAG}  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -317,7 +308,7 @@ def decorate_page(path: Path):
   <meta name="twitter:description" content="{description}">
 {styles}{scripts}</head>
 <body class="{body_class}">
-{SITE_HEADER}{subnav(path.name)}
+{SITE_HEADER}{subnav(filename, pages)}
 {main}
 {trailing}{SITE_FOOTER}
 </body>
@@ -328,7 +319,7 @@ def decorate_page(path: Path):
     path.write_text(built, encoding="utf-8")
 
 
-def write_stamp(sha: str, repo: str, edition: str | None):
+def write_stamp(output: Path, sha: str, repo: str, edition: str | None):
     text = (
         f"Source: {repo}\n"
         f"Commit: {sha}\n"
@@ -336,42 +327,63 @@ def write_stamp(sha: str, repo: str, edition: str | None):
         "This directory is generated by tools/sync_centauri_archive.py.\n"
         "The development ZIP is not published here; build it from the source repository.\n"
     )
-    (DEST / "SOURCE.txt").write_text(text, encoding="utf-8")
+    (output / "SOURCE.txt").write_text(text, encoding="utf-8")
 
 
 def detect_edition(built: Path) -> str | None:
-    index = built / "index.html"
-    if index.exists():
-        match = re.search(r"EDITION\s+([0-9.]+)", index.read_text(encoding="utf-8"))
-        if match:
-            return match.group(1)
-    return None
+    manifest = built / "downloads" / "manifest.json"
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    return data.get("archive_version")
+
+
+def install_site(built: Path, destination: Path, sha: str, upstream: str, edition: str | None):
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".archive-sync-", dir=destination.parent) as directory:
+        temporary = Path(directory)
+        output = temporary / "site"
+        copy_site(built, output)
+        pages = {path.relative_to(output).as_posix() for path in output.rglob("*.html")}
+        if "index.html" not in pages:
+            raise ValueError("Archive site is missing index.html")
+        for name in sorted(pages):
+            decorate_page(output / name, name, pages)
+        write_stamp(output, sha, upstream, edition)
+
+        if destination.exists() or destination.is_symlink():
+            stamp = destination / "SOURCE.txt"
+            if destination.is_symlink() or not stamp.is_file() or "generated by tools/sync_centauri_archive.py" not in stamp.read_text(encoding="utf-8"):
+                raise ValueError(f"Refusing to replace a directory without an archive source stamp: {destination}")
+            backup = temporary / "previous"
+            destination.rename(backup)
+            try:
+                output.rename(destination)
+            except OSError:
+                backup.rename(destination)
+                raise
+        else:
+            output.rename(destination)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", help="Local clone or git URL of centauri-archive")
-    parser.add_argument("--ref", help="Commit SHA or tag to sync")
+    parser.add_argument("--ref", help="Git commit, branch or tag to sync (use full SHA for a remote commit)")
+    parser.add_argument("--output", type=Path, help="Separate destination for a local review build")
     args = parser.parse_args()
 
-    source, sha, repo, tmp = resolve_source(args.repo, args.ref)
+    upstream, locked_sha = load_lock()
+    destination = args.output or DEST
     try:
-        print(f"Building Centauri Archive from {source} ({sha[:12]})")
-        built = build_archive_site(source)
-        edition = detect_edition(built)
-        copy_site(built)
-        for name in PAGE_PATHS:
-            page = DEST / name
-            if page.exists():
-                decorate_page(page)
-        write_stamp(sha, repo, edition)
-    finally:
-        if tmp is not None:
-            tmp.cleanup()
-    zip_left = list(DEST.rglob("*.zip"))
-    if zip_left:
-        raise SystemExit(f"ZIP files were copied into the site: {zip_left}")
-    print(f"Wrote {DEST} (edition {edition or 'unknown'}, source {sha})")
+        with source_checkout(args.repo or upstream, args.ref or locked_sha) as (source, sha):
+            if destination.resolve() == DEST and sha != locked_sha:
+                raise ValueError("Use --output to preview a commit other than the approved pin")
+            print(f"Building Centauri Archive at {sha}")
+            built = build_archive_site(source)
+            edition = detect_edition(built)
+            install_site(built, destination, sha, upstream, edition)
+    except (OSError, ValueError, subprocess.CalledProcessError) as error:
+        parser.exit(1, f"Archive sync failed: {error}\n")
+    print(f"Wrote {destination} (edition {edition or 'unknown'}, source {sha})")
 
 
 if __name__ == "__main__":
