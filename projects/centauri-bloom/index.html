@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="./bloom.css?v=5">
+  <link rel="stylesheet" href="./bloom.css?v=6">
 <style id="bloom-control-colors">
 #bloom-playground .bloom-chat button,#bloom-playground .bloom-chat select,#bloom-playground .bloom-chat select option{color:#f2f5f8!important;background:#18283b!important;border:1px solid #53677d!important;appearance:none;-webkit-appearance:none;text-shadow:none!important}
 #bloom-playground .bloom-chat button.bloom-control-primary{color:#082131!important;background:#86c7e5!important;border-color:#86c7e5!important}
@@ -84,7 +84,7 @@ html[data-theme="rustic"] #bloom-playground .bloom-chat select{color-scheme:ligh
           <div class="bloom-chat-log" data-bloom-log aria-label="Text completions"><div class="bloom-empty" data-bloom-empty><span class="bloom-chat-kicker">BEGIN AN EXPERIMENT</span><h3>What will Bloom write?</h3><p>Choose a starter or enter your own text.</p><div class="bloom-starters"><button type="button" data-starter="Once upon a time, there was a little robot">A little robot</button><button type="button" data-starter="The dog was hungry, so">Finish a sentence</button><button type="button" data-starter="One day, a spaceship landed">A spaceship</button></div></div></div>
           <form class="bloom-composer" data-bloom-form><label for="bloom-prompt" class="bloom-chat-kicker">PROMPT</label><textarea id="bloom-prompt" maxlength="2048" rows="3" placeholder="Once upon a time…" aria-describedby="bloom-keyboard-hint" required></textarea>
             <p id="bloom-keyboard-hint" class="bloom-chat-kicker">Enter to send · Shift+Enter for a new line</p><div class="bloom-composer-tools"><label>Length <select data-bloom-length><option value="48" selected>48 tokens</option><option value="128">128 tokens</option><option value="256">256 tokens</option></select></label><label>Temperature <select data-bloom-temp><option>0.5</option><option selected>0.8</option><option>1.0</option></select></label><label class="bloom-economy"><input type="checkbox" data-bloom-economy checked> Economy mode</label></div>
-            <div class="bloom-chat-actions"><button class="bloom-control bloom-control-secondary" type="button" data-bloom-clear>Clear</button><button class="bloom-control bloom-control-secondary" type="button" data-bloom-retry disabled>Retry</button><span class="bloom-action-spacer"></span><button class="bloom-control bloom-control-secondary" type="button" data-bloom-stop disabled>Stop</button><button class="bloom-control bloom-control-primary" type="submit" data-bloom-generate disabled>Generate ↗</button></div>
+            <div class="bloom-activity" data-bloom-activity hidden><div class="bloom-activity-row"><span class="bloom-activity-dot" aria-hidden="true"></span><span data-bloom-activity-text role="status" aria-live="polite">Generating locally…</span></div><progress data-bloom-activity-progress aria-label="Generated output toward maximum length" value="0" max="48"></progress></div><div class="bloom-chat-actions"><button class="bloom-control bloom-control-secondary" type="button" data-bloom-clear>Clear</button><button class="bloom-control bloom-control-secondary" type="button" data-bloom-retry disabled>Retry</button><span class="bloom-action-spacer"></span><button class="bloom-control bloom-control-secondary" type="button" data-bloom-stop disabled>Stop</button><button class="bloom-control bloom-control-primary" type="submit" data-bloom-generate disabled>Generate ↗</button></div>
           </form><p class="bloom-chat-foot">Prompts and output stay on this device. Economy mode pauses between tokens; longer outputs use more CPU. Stop if your device becomes unusually hot.</p>
         </div>
         <details class="bloom-advanced"><summary>Model files &amp; advanced options</summary><p><a href="https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1">Hugging Face checkpoint ↗</a> · <a href="https://github.com/InterstellarNerd8760/centauri-bloom/releases/download/baseline-001-experimental/model.safetensors">Baseline weights ↗</a></p><label>Local compatible checkpoint <input type="file" accept=".safetensors"></label></details>
@@ -162,6 +162,6 @@ html[data-theme="rustic"] #bloom-playground .bloom-chat select{color-scheme:ligh
     </div>
   </footer>
   <script src="/script.js" defer></script>
-  <script src="./playground.js?v=5" type="module"></script>
+  <script src="./playground.js?v=6" type="module"></script>
 </body>
 </html>
