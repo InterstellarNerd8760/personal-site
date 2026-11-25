@@ -76,3 +76,12 @@ html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid:hover:not(:di
 .bloom-page .bloom-release-head{margin-top:1.4rem}.bloom-page .bloom-release-head p,.bloom-page .bloom-release-details{font:.78rem/1.5 var(--mono);color:var(--text-2);overflow-wrap:anywhere}.bloom-page .bloom-economy{display:inline-flex;align-items:center;gap:.4rem}.bloom-page .bloom-economy input{accent-color:var(--bloom-accent);width:1rem;height:1rem}
 
 .bloom-page .bloom-control{display:inline-flex;align-items:center;justify-content:center;font:500 .8rem/1.2 var(--sans);border-radius:6px;padding:.6rem .85rem;min-height:2.5rem;cursor:pointer}.bloom-page .bloom-control:disabled{cursor:not-allowed}.bloom-page .bloom-training-options{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}.bloom-page #train{scroll-margin-top:6rem}.bloom-page #train details{margin:.8rem 0;font-size:.85rem}.bloom-page #train summary{cursor:pointer}
+
+/* Generation activity is visible even before the first token. */
+.bloom-page .bloom-activity[hidden]{display:none}
+.bloom-page .bloom-activity{display:grid;gap:.5rem;margin:.75rem 0;padding:.65rem .75rem;border:1px solid var(--line-2);border-radius:7px;background:var(--surface);color:var(--white);font:.72rem/1.5 var(--mono)}
+.bloom-page .bloom-activity-row{display:flex;align-items:center;gap:.55rem}
+.bloom-page .bloom-activity-dot{flex:0 0 .55rem;height:.55rem;border-radius:50%;background:var(--bloom-accent);animation:bloom-activity-pulse 1.25s ease-in-out infinite}
+.bloom-page .bloom-activity progress{display:block;width:100%;height:.3rem;accent-color:var(--bloom-accent)}
+@keyframes bloom-activity-pulse{50%{opacity:.35;transform:scale(.8)}}
+@media(prefers-reduced-motion:reduce){.bloom-page .bloom-activity-dot{animation:none}}
