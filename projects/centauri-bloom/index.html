@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="./bloom.css?v=7">
+  <link rel="stylesheet" href="./bloom.css?v=8">
 <style id="bloom-control-colors">
 #bloom-playground .bloom-chat button,#bloom-playground .bloom-chat select,#bloom-playground .bloom-chat select option{color:#f2f5f8!important;background:#18283b!important;border:1px solid #53677d!important;appearance:none;-webkit-appearance:none;text-shadow:none!important}
 #bloom-playground .bloom-chat button.bloom-control-primary{color:#082131!important;background:#86c7e5!important;border-color:#86c7e5!important}
@@ -93,12 +93,7 @@ html[data-theme="rustic"] #bloom-playground .bloom-chat select{color-scheme:ligh
         <p class="bloom-eyebrow">01 / Research status</p>
         <h2 id="research">From a prototype to a shared model.</h2>
         <div class="bloom-release-head"><span class="bloom-chat-kicker">LATEST PUBLISHED CHECKPOINT / BLOOM-TEXT-0.1</span><p data-bloom-release-status role="status">Fetching Hugging Face metadata…</p></div>
-        <div class="bloom-spec bloom-metrics">
-          <div><strong data-release-params>—</strong><span>Architecture parameters</span></div>
-          <div><strong data-release-step>—</strong><span>Training step</span></div>
-          <div><strong data-release-loss>—</strong><span>Reported validation loss</span></div>
-        </div>
-        <p class="bloom-release-details" data-release-details>Version and revision will appear when available.</p><p class="bloom-release-details" data-release-warning hidden></p>
+        <div class="bloom-spec bloom-metrics bloom-live-grid"><div><strong data-release-params>—</strong><span>Architecture parameters</span></div><div><strong data-release-step>—</strong><span>Training step</span></div><div><strong data-release-tokens>—</strong><span>Reported training tokens</span></div><div><strong data-release-loss>—</strong><span>Validation loss</span></div><div><strong data-release-train-loss>—</strong><span>Training loss</span></div><div><strong data-release-perplexity>—</strong><span>Validation perplexity</span></div><div><strong data-release-context>—</strong><span>Context tokens</span></div><div><strong data-release-vocab>—</strong><span>Vocabulary</span></div><div><strong data-release-layers>—</strong><span>Transformer layers</span></div><div><strong data-release-heads>—</strong><span>Attention heads</span></div><div><strong data-release-width>—</strong><span>Hidden width</span></div><div><strong data-release-lr>—</strong><span>Learning rate</span></div><div><strong data-release-batch>—</strong><span>Batch size</span></div><div><strong data-release-accum>—</strong><span>Gradient accumulation</span></div><div><strong data-release-elapsed>—</strong><span>Training duration</span></div></div><p class="bloom-release-details" data-release-details>Version and revision will appear when available.</p><p class="bloom-release-details" data-release-warning hidden></p><p class="bloom-release-details" data-release-provenance></p><details class="bloom-live-raw"><summary>All published metrics and architecture fields</summary><p>Values supplied by the selected Hugging Face revision. Missing metrics are not estimated.</p><pre data-release-raw>Waiting for live metadata…</pre></details><p><button class="bloom-control bloom-control-secondary" type="button" data-release-refresh>Refresh metrics</button></p>
         <p><a href="https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1" target="_blank" rel="noopener noreferrer">Published weights and model card ↗</a></p>
         <div class="bloom-progress">
           <p><span class="bloom-state">Implemented</span> <span>Architecture, byte tokenizer, reproducible text data and checkpoint validation.</span></p>
@@ -165,6 +160,6 @@ html[data-theme="rustic"] #bloom-playground .bloom-chat select{color-scheme:ligh
     </div>
   </footer>
   <script src="/script.js" defer></script>
-  <script src="./playground.js?v=7" type="module"></script>
+  <script src="./playground.js?v=8" type="module"></script>
 </body>
 </html>
