@@ -85,3 +85,5 @@ html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid:hover:not(:di
 .bloom-page .bloom-activity progress{display:block;width:100%;height:.3rem;accent-color:var(--bloom-accent)}
 @keyframes bloom-activity-pulse{50%{opacity:.35;transform:scale(.8)}}
 @media(prefers-reduced-motion:reduce){.bloom-page .bloom-activity-dot{animation:none}}
+
+.bloom-page .bloom-task-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}.bloom-page .bloom-task-grid article{min-width:0}.bloom-page .bloom-kaggle{font-size:.85rem;margin-top:.75rem;overflow-wrap:anywhere}.bloom-page .bloom-kaggle summary{cursor:pointer;color:var(--white)}.bloom-page .bloom-kaggle p{margin:.45rem 0}.bloom-page [data-release-warning]{color:var(--bloom-pink)}@media(max-width:800px){.bloom-page .bloom-task-grid{grid-template-columns:1fr}}

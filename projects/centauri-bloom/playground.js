@@ -314,10 +314,29 @@ async function fetchRelease(signal) {
   if (!c.ok || !m.ok) throw Error('Published configuration or metrics unavailable');
   return {base, revision:model.sha, cfg:await c.json(), metrics:await m.json(), updated:model.lastModified};
 }
+// The current Bloom architecture ties its input embedding and output head.
+function architectureParams(cfg) {
+  const {vocab_size:v,context:t,width:w,layers:l,heads:h}=cfg;
+  if (![v,t,w,l,h].every(x=>Number.isSafeInteger(x)&&x>0)||w%h!==0) return null;
+  const n=v*w+t*w+l*(12*w*w+13*w)+2*w;
+  return Number.isSafeInteger(n)?n:null;
+}
+function loadedParams(weights) {
+  const head=weights['head.weight'], embedding=weights['tokens.weight'];
+  const tied=head&&embedding&&head.length===embedding.length&&head.every((x,i)=>x===embedding[i]);
+  return Object.entries(weights).reduce((sum,[key,tensor])=>sum+(key==='head.weight'&&tied?0:tensor.length),0);
+}
 function displayRelease(r) {
   const put = (selector,value) => {const el=document.querySelector(selector);if(el)el.textContent=value;};
   const num = v => typeof v==='number' && Number.isFinite(v) ? v.toLocaleString() : '—';
-  put('[data-release-params]',num(r.metrics.parameters));
+  const expected=architectureParams(r.cfg);
+  put('[data-release-params]',num(expected));
+  const warning=document.querySelector('[data-release-warning]');
+  if(warning){
+    const mismatch=expected!==null&&Number.isFinite(r.metrics.parameters)&&r.metrics.parameters!==expected;
+    warning.hidden=!mismatch;
+    warning.textContent=mismatch?'Metrics report '+num(r.metrics.parameters)+' parameters, but the published configuration implies '+num(expected)+'. Check checkpoint metadata.':'';
+  }
   put('[data-release-step]',num(r.metrics.step));
   put('[data-release-loss]',num(r.metrics.val_loss));
   put('[data-bloom-release-status]',HF_REPO.split('/')[1] + ' · HF ' + r.revision.slice(0,8));
@@ -343,7 +362,12 @@ async function loadHuggingFace(signal) {
   const tokenizer=cfg.vocab_size===256 && !tokJson.model?.vocab ? null : createBPE(tokJson);
   W=parseSafetensors(buf); CFG=cfg; BPE=tokenizer;
   status.textContent='Loaded '+HF_REPO.split('/')[1]+' ('+(buf.byteLength/1048576).toFixed(1)+' MB). Ready to generate.';
-  if(metaEl)metaEl.textContent=[metrics.parameters?.toLocaleString()+' params',metrics.step!==undefined?'step '+metrics.step.toLocaleString():null,'HF '+revision.slice(0,8)].filter(Boolean).join(' · ');
+  const actual=loadedParams(W);
+  const expected=architectureParams(cfg);
+  if(expected!==null&&actual!==expected){
+    throw Error('Checkpoint tensors do not match the supported architecture parameter count');
+  }
+  if(metaEl)metaEl.textContent=[actual.toLocaleString()+' loaded params',metrics.step!==undefined?'step '+metrics.step.toLocaleString():null,'HF '+revision.slice(0,8)].filter(Boolean).join(' · ');
   updateLengths();setReady(true);
 }
 
