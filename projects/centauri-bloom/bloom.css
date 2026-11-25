@@ -72,3 +72,5 @@ html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid:hover:not(:di
 .bloom-page .bloom-chat button:disabled{opacity:1;background:transparent;color:var(--text-2);border:1px dashed var(--line-2);cursor:not-allowed}
 .bloom-page .bloom-chat button.btn-solid:disabled,html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid:disabled{background:var(--bg-2);color:var(--text-2);border-color:var(--line-2)}
 .bloom-page .bloom-empty[hidden]{display:none}
+
+.bloom-page .bloom-release-head{margin-top:1.4rem}.bloom-page .bloom-release-head p,.bloom-page .bloom-release-details{font:.78rem/1.5 var(--mono);color:var(--text-2);overflow-wrap:anywhere}.bloom-page .bloom-economy{display:inline-flex;align-items:center;gap:.4rem}.bloom-page .bloom-economy input{accent-color:var(--bloom-accent);width:1rem;height:1rem}
