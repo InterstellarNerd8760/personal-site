@@ -60,3 +60,15 @@ html[data-theme="rustic"] .bloom-page{--bloom-pink:#963d68}
 .bloom-page .bloom-advanced summary{cursor:pointer;color:var(--text-2)}
 .bloom-page .bloom-chat :focus-visible{outline:2px solid var(--bloom-accent);outline-offset:2px}
 @media(max-width:600px){.bloom-page .bloom-chat-head,.bloom-page .bloom-chat-model,.bloom-page .bloom-chat-log{padding:.85rem}.bloom-page .bloom-composer{margin:0 .85rem;padding:.75rem}.bloom-page .bloom-chat-log{min-height:15rem;max-height:27rem}.bloom-page .bloom-chat-foot{padding:.7rem .85rem}.bloom-page .bloom-message{max-width:96%}.bloom-page .bloom-chat-actions{gap:.4rem}.bloom-page .bloom-chat-actions .btn{padding:.5rem .65rem}.bloom-page .bloom-composer-tools select{font-size:1rem}}
+
+/* Explicit button colors: native button backgrounds must not override ghost styles. */
+.bloom-page .bloom-chat button{appearance:none;-webkit-appearance:none}
+.bloom-page .bloom-chat button.btn-ghost,.bloom-page .bloom-starters button{background:transparent;color:var(--white);border:1px solid var(--line-2)}
+.bloom-page .bloom-chat button.btn-ghost:hover:not(:disabled),.bloom-page .bloom-starters button:hover:not(:disabled){background:var(--surface);color:var(--white);border-color:var(--white)}
+.bloom-page .bloom-chat button.btn-solid{background:#86c7e5;color:#082131;border:1px solid #86c7e5}
+.bloom-page .bloom-chat button.btn-solid:hover:not(:disabled){background:#b7e2f5;color:#082131}
+html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid{background:#285a43;color:#fffaf2;border-color:#285a43}
+html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid:hover:not(:disabled){background:#183d2b;color:#fffaf2}
+.bloom-page .bloom-chat button:disabled{opacity:1;background:transparent;color:var(--text-2);border:1px dashed var(--line-2);cursor:not-allowed}
+.bloom-page .bloom-chat button.btn-solid:disabled,html[data-theme="rustic"] .bloom-page .bloom-chat button.btn-solid:disabled{background:var(--bg-2);color:var(--text-2);border-color:var(--line-2)}
+.bloom-page .bloom-empty[hidden]{display:none}
