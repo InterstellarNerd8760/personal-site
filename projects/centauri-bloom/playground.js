@@ -67,6 +67,7 @@ function addTurn(prompt) {
 let W = null;
 let CFG = BASELINE_CFG;
 let BPE = null;
+let activeInstructionFormat = false;
 let abortLoad = null;
 
 function buildByteTables() {
@@ -337,7 +338,18 @@ function displayRelease(r) {
   const m=r.metrics,c=r.cfg;
   put('[data-release-params]',num(expected??m.parameters));
   put('[data-release-step]',num(m.step));
+  const scope=String(m.train_tokens_scope||'');
+  const isContinuation=scope.startsWith('this continuation');
+  let cumulative=Number.isSafeInteger(m.cumulative_train_tokens)&&m.cumulative_train_tokens>=0?m.cumulative_train_tokens:null;
+  let cumulativeNote=cumulative!==null?'Published cumulative token exposures (includes repeated tokens).':'Lifetime token count not established.';
+  if(cumulative===null&&!isContinuation&&Number.isSafeInteger(m.train_tokens)&&m.train_tokens>=0&&m.step===3000){cumulative=m.train_tokens;cumulativeNote='Original pretraining count reported by this checkpoint.';}
+  if(cumulative===null&&m.step===4500&&m.parent_revision&&m.parent_reported_train_tokens===49152000&&m.train_tokens===24576000&&isContinuation){cumulative=m.parent_reported_train_tokens+m.train_tokens;cumulativeNote='Derived from reported original and continuation token counts.';}
   put('[data-release-tokens]',num(m.train_tokens));
+  put('[data-release-total-tokens]',num(cumulative));
+  put('[data-release-target-tokens]',num(m.supervised_target_tokens));
+  put('[data-release-updates]',num(m.optimizer_updates));
+  put('[data-release-examples]',num(m.train_examples));
+  put('[data-release-val-examples]',num(m.validation_examples));
   put('[data-release-loss]',loss(m.val_loss));
   put('[data-release-train-loss]',loss(m.last_train_loss??m.train_loss));
   put('[data-release-perplexity]',finite(m.val_loss)&&Number.isFinite(Math.exp(m.val_loss))?loss(Math.exp(m.val_loss)):'—');
@@ -358,7 +370,7 @@ function displayRelease(r) {
   }
   put('[data-bloom-release-status]',HF_REPO.split('/')[1]+' · HF '+r.revision.slice(0,8));
   put('[data-release-details]',[m.run_name,r.updated?'Published '+r.updated.slice(0,10):null,'Checked '+new Date().toLocaleTimeString()].filter(Boolean).join(' · '));
-  put('[data-release-provenance]',[m.train_tokens_scope?'Token count scope: '+m.train_tokens_scope:null,m.training_track?'Track: '+m.training_track:null,'Perplexity is calculated from reported validation loss. — means unavailable.'].filter(Boolean).join(' · '));
+  put('[data-release-provenance]',[m.train_tokens_scope?'Token count scope: '+m.train_tokens_scope:null,m.training_track?'Track: '+m.training_track:null,cumulativeNote,m.validation_loss_scope?'Loss scope: '+m.validation_loss_scope:null,'Losses across different datasets/objectives are not directly comparable. Perplexity is derived from validation loss. — means unavailable.'].filter(Boolean).join(' · '));
   put('[data-release-raw]',JSON.stringify({model:HF_REPO,revision:r.revision,updated:r.updated,metrics:m,config:c},null,2));
   lastRelease=r;
 }
@@ -392,6 +404,7 @@ async function loadHuggingFace(signal) {
   if (metrics.weights_sha256 && sha!==metrics.weights_sha256) throw Error('Published checkpoint hash mismatch');
   const tokenizer=cfg.vocab_size===256 && !tokJson.model?.vocab ? null : createBPE(tokJson);
   W=parseSafetensors(buf); CFG=cfg; BPE=tokenizer;
+  activeInstructionFormat=metrics.training_track==='instruction-tuning'&&typeof metrics.prompt_format==='string'&&metrics.prompt_format.includes('User:')&&metrics.prompt_format.includes('Assistant:');
   status.textContent='Loaded '+HF_REPO.split('/')[1]+' ('+(buf.byteLength/1048576).toFixed(1)+' MB). Ready to generate.';
   const actual=loadedParams(W);
   const expected=architectureParams(cfg);
@@ -414,6 +427,7 @@ async function loadBaseline(signal) {
   W = parseSafetensors(buf);
   CFG = BASELINE_CFG;
   BPE = null;
+  activeInstructionFormat = false;
   status.textContent = 'Verified baseline-001 loaded (118.5K byte-level). Ready to generate.';
   if (metaEl) metaEl.textContent = `118,528 params · 100 CPU steps · sha256 ${sha.slice(0, 12)}`;
   updateLengths();
@@ -460,6 +474,7 @@ fileInput.addEventListener('change', async e => {
     const buf = await file.arrayBuffer();
     const sha = await sha256Hex(buf);
     W = parseSafetensors(buf);
+    activeInstructionFormat = false;
     const tokRows = Math.round(W['tokens.weight'].length / (W['norm.weight']?.length || 64));
     const width = W['norm.weight'].length;
     const context = Math.round(W['positions.weight'].length / width);
@@ -515,7 +530,8 @@ async function generate(prompt) {
   activityText.textContent = 'Generating locally · 0 / ' + limit + ' ' + units + ' · waiting for first output';
   info.textContent = 'Generating on your device…';
   try {
-    const ids = BPE ? BPE.encode(prompt) : Array.from(utf8Enc.encode(prompt));
+    const modelPrompt=activeInstructionFormat&&!/^User:/.test(prompt)?'User: '+prompt+'\nAssistant:':prompt;
+    const ids = BPE ? BPE.encode(modelPrompt) : Array.from(utf8Enc.encode(modelPrompt));
     if (!ids.length) ids.push(BPE ? BPE.eotId : 32);
     const gen = [];
     // Allow the browser to paint the indicator before synchronous CPU inference.
@@ -529,6 +545,7 @@ async function generate(prompt) {
       if (BPE && nxt === BPE.eotId) { reason = 'End of text'; break; }
       ids.push(nxt); gen.push(nxt); count++;
       text = BPE ? BPE.decode(gen) : utf8Dec.decode(Uint8Array.from(gen));
+      if(activeInstructionFormat){const nextTurn=text.search(/\n\s*(?:User|Assistant):/);if(nextTurn>=0){text=text.slice(0,nextTurn).trim();output.textContent=text;reason='End of reply';break;}}
       output.textContent = text;
       activityProgress.value = count;
       const elapsed = Math.max(0.001,(performance.now()-t0)/1000);
