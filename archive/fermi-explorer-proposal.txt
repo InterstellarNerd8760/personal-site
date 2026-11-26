@@ -1,6 +1,6 @@
 # Centauri Core feasibility proposal for Fermi Explorer
 
-**Prepared for the Fermi Explorer mission team · 24 November 2026**
+**Prepared for the Fermi Explorer mission team · 26 November 2026**
 
 **Prepared by Centauri Archive, an independent open-source research project**
 
@@ -20,7 +20,9 @@ Fermi Explorer’s FAQ describes an Alpha Centauri approach within 80,000 years 
 
 The July 2026 Physical Superintelligence report commissioned by Fermi Explorer uses a 500,000-year arrival bound for its initial feasibility case. It studies a multi-revolution solar-electric perihelion-pumping trajectory, with a geostationary transfer orbit (GTO) departure emerging as a feasible modeled route under the report’s assumptions. The authors state that the report did not undergo comprehensive human peer review. The mission’s public engineering calculator explores further architecture trades. We use the studies to identify environmental questions and defer component limits to verified interface documentation. A distant passage near Alpha Centauri allows no assumption of interception or recovery. [PSI report, cover, abstract and executive summary][psi] · [Public trade calculator][calculator] · [Repository source review](fermi-mission-sources-2026.md)
 
-## Proposed contents and editions
+## Minimum useful contribution and proposed contents
+
+The initial hardware candidate is a small passive marked coupon with orientation witnesses, a paired thumbnail and short protected scientific records. It is a feasibility specimen, not a fixed flight configuration. The Core byte target is scalable and is not a minimum requirement. If the mission cannot accommodate a useful, accessible, protected configuration within an agreed mass and volume allocation, do not proceed to flight integration. Extended remains optional research.
 
 | Edition | Logical content study target | Contents and independence |
 | --- | ---: | --- |
@@ -49,7 +51,7 @@ Protect each header and payload together, then verify the reconstructed record a
 
 ## Development status and milestones
 
-The development package includes 104 credited photographic records and 56 source-checked encyclopedia drafts. The photographs can be decoded in independent software implementations. The C2 primer adds paired coarse/fine patterns and a held-out readout exercise. A mixed CAX1 prototype frames actual mathematical, photographic, vocabulary and science records with citations and provenance. CAS v1 recovered a complete logical specimen from complementary damaged digital readouts even when the initial bit phase was unknown. With no surviving physical slot map, verified records may be recovered while completeness stays unknown. These tests start after a signal has been sampled. Physical mark acquisition and environmental testing are open. [CAX1 specification](research-archive-format.md) · [CAS experiment](physical-recovery.md)
+The development package includes 104 credited photographic records and 56 source-checked encyclopedia drafts. The photographs can be decoded in independent software implementations. The C2 primer adds paired coarse/fine patterns and a held-out readout exercise. A mixed CAX1 prototype frames actual mathematical, photographic, vocabulary and science records with citations and provenance. CAS v1 recovered a complete logical specimen from complementary damaged digital readouts even when the initial bit phase was unknown. With no surviving physical slot map, verified records may be recovered while completeness stays unknown. These tests start after a signal has been sampled. Physical mark acquisition and environmental testing are open. The C2 first-read pilot did not achieve exact unaided reconstruction; independent human trials are necessary to evaluate whether orientation, state mapping, dimensions and scan order can be inferred without hints. Such trials cannot establish extraterrestrial interpretability. [CAX1 specification](research-archive-format.md) · [CAS experiment](physical-recovery.md)
 
 Propose a small marked coupon with observable orientation witnesses, two feature pitches, a paired thumbnail, and short protected records duplicated in accessible parts of the coupon. Measure optical contrast, feature classification and usable density. Ask independent readers to infer the sequence and separate readout success from interpretation. Collect scientific and cultural review and resolve rights before any edition is approved. The mission team would need to provide current engineering constraints before spacecraft compatibility could be evaluated.
 
@@ -65,6 +67,8 @@ Propose a small marked coupon with observable orientation witnesses, two feature
 Coupon testing should record changes in feature readability and decoded data after exposure, alongside structural and contamination outcomes. Sample tests and analog human interpretation trials support specific claims within their measurement limits. Lifetime models require measured degradation mechanisms, defensible inputs and uncertainty bounds.
 
 ## Request to the Fermi Explorer team
+
+The immediate decision is whether a feasibility study is of interest, not whether to approve a flight payload. The mission team may adopt the concept independently, collaborate on a demonstrator, or provide constraints and feedback for independent research. We would welcome clarification of the contribution pathway, compatibility with existing record plans, actual mass and volume allocation including protection and margin, candidate mounting locations, expected launch and cruise environments, verification criteria and deadlines.
 
 Would Fermi Explorer consider a passive archive demonstrator under a prospective scientific or cultural payload pathway? If so, we request a technical point of contact, the current payload and verification documents, and guidance on the relevant solicitation dates. Centauri Archive could contribute content curation, encoding software and a bounded concept study for review. Physical fabrication, materials selection, qualification, funding and integration responsibilities would need to be agreed with the mission team and qualified engineering or manufacturing collaborators. This proposal does not commit the project to delivering flight hardware independently. We welcome early feedback on placement, cleanliness, prior record plans, fault containment, and whether an optional powered experiment would have any value. The companion questionnaire lists the information needed to scope that work. [Integration questionnaire](mission-integration.md)
 
