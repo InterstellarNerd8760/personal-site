@@ -52,8 +52,8 @@ function connectCapacityForm(form) {
     const remainingBytes = result.rawBytes - result.protectedBytes;
 
     show('estimate-status', remainingBytes < 0
-      ? `Each copy falls short by ${displayBytes(-remainingBytes)} in this model.`
-      : `Each copy has ${displayBytes(remainingBytes)} of raw space remaining in this model.`);
+      ? `Capacity insufficient: each copy falls short by ${displayBytes(-remainingBytes)}. The mass below is for this undersized configuration.`
+      : `Capacity fits this model: ${displayBytes(remainingBytes)} of raw space remains per copy. Material, readout, durability and mission qualification are still unverified.`);
     show('raw-capacity', displayBytes(result.rawBytes));
     show('protected-per-copy', displayBytes(result.protectedBytes));
     show('logical-bytes', displayBytes(result.logicalBytes));

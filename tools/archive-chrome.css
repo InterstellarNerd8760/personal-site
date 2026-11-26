@@ -107,13 +107,49 @@ body.archive-page .section-head h2 {
   color: var(--white);
 }
 
-/* Keep the two navigation bars adjacent and leave room for the mission intro. */
-body.archive-page { padding-top: 3.5rem; }
-body.archive-page .site-header { height: 3.5rem; }
-body.archive-page .archive-subnav { top: 3.5rem; padding-block: .2rem; }
-html.embedded-archive { scroll-padding-top: 6.5rem; }
+/* Archive navigation is primary. Reveal the personal-site bar at the top edge. */
+body.archive-page { padding-top: 0; }
+body.archive-page .site-header {
+  height: 3.5rem;
+  top: -3.5rem;
+  transition: top .18s ease, background .2s ease;
+}
+body.archive-page .site-header:focus-within { top: 0; }
+body.archive-page .site-header:has(.menu-btn[aria-expanded="true"]) { top: 0; }
+@media (hover: hover) {
+  body.archive-page .site-header::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0 auto;
+    height: 6px;
+  }
+  body.archive-page .site-header:hover { top: 0; }
+}
+body.archive-page .archive-subnav { top: 0; padding-block: .4rem; }
+body.archive-page .archive-subnav .archive-brand,
+body.archive-page .archive-subnav .archive-brand:hover,
+body.archive-page .archive-subnav .archive-brand[aria-current] {
+  text-decoration: none;
+}
+body.archive-page .archive-subnav .archive-brand .brand-dot { color: var(--sky); }
+body.archive-page .archive-subnav .archive-main-site { display: none; }
+html.embedded-archive { scroll-padding-top: 3.5rem; }
 body.archive-page .archive-hero { margin-top: 0; }
-@media(max-width:760px) {
+@media (max-width: 900px) {
+  body.archive-page .site-header .site-nav { top: 3.5rem; }
+}
+@media (max-width: 760px) {
   body.archive-page .archive-subnav { position: static; }
-  html.embedded-archive { scroll-padding-top: 4rem; }
+  html.embedded-archive { scroll-padding-top: 1rem; }
+}
+@media (hover: none) {
+  body.archive-page .archive-subnav .archive-main-site {
+    display: inline-flex;
+    margin-left: auto;
+    font-size: .78rem;
+    color: var(--text-2);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.archive-page .site-header { transition: none; }
 }

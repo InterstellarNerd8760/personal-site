@@ -63,7 +63,7 @@
     <a href="/archive/encyclopedia">Encyclopedia</a>
     <a href="/archive/images">Image library</a>
     <a href="/archive/engineering" aria-current="page">Decoding and engineering</a>
-  </nav>
+  <a class="archive-main-site" href="/">Main site ↗</a></nav>
 
 <main id="main" tabindex="-1" class="wrap mission-study engineering-study">
   <section class="study-intro">
@@ -115,6 +115,7 @@
   <section class="study-section" id="capacity">
     <h2>Archive capacity calculator</h2>
     <p>Compare a chosen logical content budget with estimated storage, correction overhead and copies. This square-cell model assumes one bit per cell and applies a usable fraction for packing losses. It uses illustrative inputs and gives no credit for shielding performance.</p>
+    <p class="study-status"><strong>Read capacity before mass.</strong> The assembly mass describes the dimensions and materials entered, even when the data will not fit. It is not a mass estimate for a working archive unless the capacity requirement is met, and it is not a qualified spacecraft payload. Fermi Explorer's published payload objective is mission-wide; no allocation to Centauri Archive has been confirmed.</p>
     <label for="capacity-preset">Model preset</label>
     <select id="capacity-preset">
       <option value="custom">Custom budget</option>
@@ -156,7 +157,7 @@
     </form>
     <noscript><p>The calculator uses JavaScript. The values below correspond to the initial settings. The integration study provides the equations.</p></noscript>
     <div id="capacity-results" aria-live="polite" aria-atomic="true">
-      <p class="study-estimate-status" id="estimate-status">Each copy falls short by 113.6 MB in this model.</p>
+      <p class="study-estimate-status" id="estimate-status">Capacity insufficient: each copy falls short by 113.6 MB. The mass below is for this undersized configuration.</p>
       <dl class="study-results">
         <div><dt>Estimated raw space per copy</dt><dd id="raw-capacity">1.4 MB</dd></div>
         <div><dt>Protected bytes per copy</dt><dd id="protected-per-copy">115 MB</dd></div>
@@ -166,7 +167,7 @@
         <div><dt>Total encoded bytes</dt><dd id="total-bytes">230 MB</dd></div>
         <div><dt>Substrate volume per copy</dt><dd id="substrate-volume">1.6 cm³</dd></div>
         <div><dt>Substrate and shield mass per copy</dt><dd id="copy-mass">5.68 g</dd></div>
-        <div><dt>Total mass with shared allowance</dt><dd id="carrier-mass">16.36 g</dd></div>
+        <div><dt>Modeled assembly mass (including shared allowance)</dt><dd id="carrier-mass">16.36 g</dd></div>
       </dl>
     </div>
     <figure class="explainer">

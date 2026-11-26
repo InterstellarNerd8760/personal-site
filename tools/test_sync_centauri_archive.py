@@ -143,6 +143,7 @@ class InstallSiteTests(unittest.TestCase):
                 self.assertIn('href="/archive/encyclopedia"', html)
                 self.assertIn('href="/archive/images"', html)
                 self.assertIn('href="/archive/engineering"', html)
+                self.assertIn('class="archive-main-site" href="/"', html)
                 self.assertNotIn('href="/archive/discovery"', html)
         nested = (self.output / 'knowledge/life.html').read_text()
         proposal = (self.output / 'proposal.html').read_text()

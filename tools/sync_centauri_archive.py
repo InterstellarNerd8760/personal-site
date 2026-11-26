@@ -181,7 +181,7 @@ def subnav(html: str, current: str, pages: set[str]) -> str:
         brand, links = source_nav.groups()
         brand = brand.replace('class="brand"', 'class="archive-brand"', 1)
         content = rewrite_page_links(f"{brand}{links}", current, pages)
-        return f'<nav class="archive-subnav" aria-label="Centauri Archive">\n    {content}</nav>\n'
+        return f'<nav class="archive-subnav" aria-label="Centauri Archive">\n    {content}<a class="archive-main-site" href="/">Main site ↗</a></nav>\n'
 
     # A preview can still build commits from before the archive generated a shared header.
     links = []
@@ -191,6 +191,7 @@ def subnav(html: str, current: str, pages: set[str]) -> str:
         current_attr = ' aria-current="page"' if filename == current else ""
         css_class = ' class="archive-brand"' if filename == "index.html" else ""
         links.append(f'<a{css_class} href="{page_path(filename)}"{current_attr}>{label}</a>')
+    links.append('<a class="archive-main-site" href="/">Main site ↗</a>')
     return '<nav class="archive-subnav" aria-label="Centauri Archive">\n    ' + "\n    ".join(links) + "\n  </nav>\n"
 
 
