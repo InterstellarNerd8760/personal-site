@@ -1,10 +1,79 @@
 const root = document.querySelector('#bloom-playground');
-const HF_REPO = 'Centauri-Bloom/Bloom-Text-0.1';
 const HF_ROOT = 'https://huggingface.co';
-const HF_BASE = HF_ROOT + '/' + HF_REPO + '/resolve/';
+const WEIGHTS_FILE = 'model.safetensors';
+const CHAT_PROMPT_FORMAT = 'User: {prompt}\nAssistant:';
 const BASELINE_URL = 'https://raw.githubusercontent.com/InterstellarNerd8760/centauri-bloom/main/experiments/baseline-001/model.safetensors';
 const BASELINE_SHA = 'f44d8fa110384e32eb917cd6e102924e8af5a006fa4f8d32f9c47314d8f84027';
 const BASELINE_CFG = { vocab_size: 256, context: 32, width: 64, heads: 4, layers: 2 };
+const HEADS_BY_WIDTH = { 64: 4, 384: 6, 640: 10 };
+
+// Adding a published model is one catalog entry. Optional entries enable
+// themselves once model.safetensors is present on the listed revision.
+const MODELS = [
+  {
+    id: 'text-0.2',
+    label: 'Bloom Text 0.2 (50M)',
+    detail: 'Base model that continues text · about 229 MB',
+    source: 'hf',
+    repo: 'Centauri-Bloom/Bloom-Text-0.2',
+    revision: 'main',
+    fallbacks: ['refs/pr/1'],
+    format: 'completion',
+    card: 'https://huggingface.co/Centauri-Bloom/Bloom-Text-0.2'
+  },
+  {
+    id: 'chat-0.2',
+    label: 'Bloom Chat 0.2',
+    detail: 'Assistant fine-tune · coming soon',
+    source: 'hf',
+    repo: 'Centauri-Bloom/Bloom-Chat-0.2',
+    revision: 'main',
+    format: 'chat',
+    optional: true,
+    disabled: true,
+    card: 'https://huggingface.co/Centauri-Bloom/Bloom-Chat-0.2'
+  },
+  {
+    id: 'text-0.1',
+    label: 'Bloom Text 0.1 (14M) · Latest',
+    detail: 'Latest published 14M checkpoint · about 65 MB',
+    source: 'hf',
+    repo: 'Centauri-Bloom/Bloom-Text-0.1',
+    revision: 'main',
+    format: 'auto',
+    default: true,
+    card: 'https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1'
+  },
+  {
+    id: 'baseline',
+    label: 'baseline-001 · 118.5K',
+    detail: 'Original verified prototype',
+    source: 'baseline',
+    format: 'completion',
+    card: 'https://github.com/InterstellarNerd8760/centauri-bloom/releases/download/baseline-001-experimental/model.safetensors'
+  }
+];
+
+function findModel(id) {
+  return MODELS.find(model => model.id === id) || null;
+}
+function defaultModel() {
+  return MODELS.find(model => model.default && !model.disabled) || MODELS.find(model => !model.disabled);
+}
+function headsForWidth(width) {
+  if (HEADS_BY_WIDTH[width]) return HEADS_BY_WIDTH[width];
+  if (width % 64 === 0) return width / 64;
+  throw Error('Could not infer attention heads for width ' + width);
+}
+function usesChatTemplate(format, metrics) {
+  if (format === 'chat') return true;
+  if (format === 'completion') return false;
+  return metrics && metrics.training_track === 'instruction-tuning' && typeof metrics.prompt_format === 'string' && metrics.prompt_format.includes('User:') && metrics.prompt_format.includes('Assistant:');
+}
+function formatPrompt(prompt) {
+  if (!activeInstructionFormat || /^User:/.test(prompt)) return prompt;
+  return CHAT_PROMPT_FORMAT.replace('{prompt}', prompt);
+}
 
 const status = root.querySelector('[role=status]');
 const metaEl = root.querySelector('[data-bloom-meta]');
@@ -56,7 +125,7 @@ function addTurn(prompt) {
   function label(parent, text) { const span = document.createElement('span'); span.className='bloom-chat-kicker'; span.textContent=text; parent.append(span); }
   label(user, 'YOU / PROMPT');
   const p = document.createElement('p'); p.textContent = prompt; user.append(p);
-  label(model, 'BLOOM / COMPLETION');
+  label(model, activeInstructionFormat ? 'BLOOM / REPLY' : 'BLOOM / COMPLETION');
   const output = document.createElement('p'); output.textContent = 'Generating…'; model.append(output);
   const info = document.createElement('p'); info.className='bloom-run-info'; info.setAttribute('role','status'); model.append(info);
   turn.append(user,model); log.append(turn);
@@ -187,7 +256,13 @@ function parseSafetensors(buf) {
   const tensors = {};
   for (const [k, v] of Object.entries(h)) {
     if (k === '__metadata__') continue;
-    tensors[k] = new Float32Array(buf.slice(8 + n + v.data_offsets[0], 8 + n + v.data_offsets[1]));
+    const start = 8 + n + v.data_offsets[0];
+    const end = 8 + n + v.data_offsets[1];
+    const dtype = v.dtype || 'F32';
+    if (dtype !== 'F32') throw Error('Unsupported tensor type ' + dtype);
+    tensors[k] = start % 4 === 0
+      ? new Float32Array(buf, start, (end - start) / 4)
+      : new Float32Array(buf.slice(start, end));
   }
   return tensors;
 }
@@ -304,16 +379,41 @@ async function sha256Hex(buf) {
   return Array.from(new Uint8Array(hash), x => x.toString(16).padStart(2, '0')).join('');
 }
 
-async function fetchRelease(signal) {
-  const opts = {signal, cache:'no-cache'};
-  const api = await fetch(HF_ROOT + '/api/models/' + HF_REPO, opts);
+function hasWeightFile(info) {
+  return (info.siblings || []).some(item => (item.rfilename || item) === WEIGHTS_FILE);
+}
+async function fetchHfModel(repo, revision, signal) {
+  const suffix = revision && revision !== 'main' ? '/revision/' + encodeURIComponent(revision) : '';
+  const api = await fetch(HF_ROOT + '/api/models/' + repo + suffix, {signal, cache:'no-cache'});
   if (!api.ok) throw Error('Published model metadata unavailable');
-  const model = await api.json();
-  if (!/^[a-f0-9]{40}$/i.test(model.sha || '')) throw Error('Missing model revision');
-  const base = HF_BASE + model.sha;
-  const [c,m] = await Promise.all([fetch(base+'/config.json',opts),fetch(base+'/metrics.json',opts)]);
-  if (!c.ok || !m.ok) throw Error('Published configuration or metrics unavailable');
-  return {base, revision:model.sha, cfg:await c.json(), metrics:await m.json(), updated:model.lastModified};
+  return api.json();
+}
+async function fetchRelease(entry, signal) {
+  if (!entry || entry.source !== 'hf') throw Error('No Hugging Face checkpoint selected');
+  const opts = {signal, cache:'no-cache'};
+  const revisions = [entry.revision, ...(entry.fallbacks || [])].filter(Boolean);
+  const seen = new Set();
+  let lastError = null;
+  for (const rev of revisions) {
+    if (seen.has(rev)) continue;
+    seen.add(rev);
+    try {
+      const info = await fetchHfModel(entry.repo, rev, signal);
+      if (!hasWeightFile(info)) {
+        lastError = Error(entry.label + ' has not published model weights yet');
+        continue;
+      }
+      if (!/^[a-f0-9]{40}$/i.test(info.sha || '')) throw Error('Missing model revision');
+      const base = HF_ROOT + '/' + entry.repo + '/resolve/' + info.sha;
+      const [c,m] = await Promise.all([fetch(base+'/config.json',opts),fetch(base+'/metrics.json',opts)]);
+      if (!c.ok || !m.ok) throw Error('Published configuration or metrics unavailable');
+      return {entry, base, revision:info.sha, requested:rev, cfg:await c.json(), metrics:await m.json(), updated:info.lastModified};
+    } catch (err) {
+      if (signal && (signal.aborted || err.name === 'AbortError')) throw err;
+      lastError = err;
+    }
+  }
+  throw lastError || Error(entry.label + ' is not published yet');
 }
 // The current Bloom architecture ties its input embedding and output head.
 function architectureParams(cfg) {
@@ -368,16 +468,34 @@ function displayRelease(r) {
     warning.hidden=!mismatch;
     warning.textContent=mismatch?'Metrics report '+num(m.parameters)+' parameters, but the configuration implies '+num(expected)+'. Check checkpoint metadata.':'';
   }
-  put('[data-bloom-release-status]',HF_REPO.split('/')[1]+' · HF '+r.revision.slice(0,8));
+  put('[data-bloom-release-status]',(r.entry?r.entry.repo.split('/')[1]:'Bloom')+' · HF '+r.revision.slice(0,8));
   put('[data-release-details]',[m.run_name,r.updated?'Published '+r.updated.slice(0,10):null,'Checked '+new Date().toLocaleTimeString()].filter(Boolean).join(' · '));
   put('[data-release-provenance]',[m.train_tokens_scope?'Token count scope: '+m.train_tokens_scope:null,m.training_track?'Track: '+m.training_track:null,cumulativeNote,m.validation_loss_scope?'Loss scope: '+m.validation_loss_scope:null,'Losses across different datasets/objectives are not directly comparable. Perplexity is derived from validation loss. — means unavailable.'].filter(Boolean).join(' · '));
-  put('[data-release-raw]',JSON.stringify({model:HF_REPO,revision:r.revision,updated:r.updated,metrics:m,config:c},null,2));
+  put('[data-release-raw]',JSON.stringify({model:r.entry?r.entry.repo:null,revision:r.revision,requested:r.requested,updated:r.updated,metrics:m,config:c},null,2));
+  const kicker=document.querySelector('.bloom-release-head .bloom-chat-kicker');
+  if(kicker&&r.entry)kicker.textContent='SELECTED CHECKPOINT / '+(r.entry.repo?r.entry.repo.split('/')[1]:r.entry.label).toUpperCase();
+  const card=document.querySelector('[data-bloom-card]');
+  if(card&&r.entry&&r.entry.card){card.href=r.entry.card;card.hidden=false;}
   lastRelease=r;
+}
+
+function selectedHfEntry() {
+  const current = findModel(modelSelect && modelSelect.value);
+  if (current && current.source === 'hf' && !current.disabled) return current;
+  return MODELS.find(model => model.source === 'hf' && !model.disabled && !model.optional) || null;
 }
 async function refreshRelease() {
   const request=++latestRequest;
+  const entry=selectedHfEntry();
+  if(!entry){
+    if(request===latestRequest){
+      const el=document.querySelector('[data-bloom-release-status]');
+      if(el)el.textContent='Select a published Hugging Face model to load live metrics.';
+    }
+    return null;
+  }
   try {
-    const r=await fetchRelease();
+    const r=await fetchRelease(entry);
     if(request===latestRequest)displayRelease(r);
     return r;
   }catch(e){
@@ -388,14 +506,57 @@ async function refreshRelease() {
     return null;
   }
 }
+function optionLabel(model) {
+  return model.disabled ? model.label + ' · coming soon' : model.label;
+}
+function renderModelSelect() {
+  if (!modelSelect) return;
+  const previous = modelSelect.value;
+  modelSelect.replaceChildren(...MODELS.map(model => {
+    const opt = new Option(optionLabel(model), model.id);
+    opt.disabled = !!model.disabled;
+    if (model.detail) opt.title = model.detail;
+    return opt;
+  }));
+  const keep = findModel(previous);
+  modelSelect.value = keep && !keep.disabled ? previous : defaultModel().id;
+}
+function renderFileLinks() {
+  const host = document.querySelector('[data-bloom-file-links]');
+  if (!host) return;
+  host.replaceChildren();
+  MODELS.forEach((model, index) => {
+    if (!model.card) return;
+    if (index && host.childNodes.length) host.append(' · ');
+    const a = document.createElement('a');
+    a.href = model.card;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.textContent = model.label + ' ↗';
+    host.append(a);
+  });
+}
+async function refreshOptionalModels(signal) {
+  const optional = MODELS.filter(model => model.optional && model.source === 'hf');
+  await Promise.all(optional.map(async model => {
+    try {
+      const info = await fetchHfModel(model.repo, model.revision, signal);
+      model.disabled = !hasWeightFile(info);
+    } catch {
+      model.disabled = true;
+    }
+  }));
+  renderModelSelect();
+}
 document.querySelector('[data-release-refresh]')?.addEventListener('click',()=>refreshRelease());
-async function loadHuggingFace(signal) {
-  status.textContent = 'Loading latest Bloom-Text-0.1 from Hugging Face…';
+async function loadHuggingFace(entry, signal) {
+  const sizeNote = entry.detail ? ' (' + entry.detail + ')' : '';
+  status.textContent = 'Loading ' + entry.label + sizeNote + ' from Hugging Face…';
   if (metaEl) metaEl.textContent = '';
-  const release=await fetchRelease(signal);
-  if(!lastRelease)displayRelease(release);
-  const {base,cfg,metrics,revision}=release;
-  const [tokRes,wRes]=await Promise.all([fetch(base+'/tokenizer.json',{signal}),fetch(base+'/model.safetensors',{signal})]);
+  const release=await fetchRelease(entry, signal);
+  displayRelease(release);
+  const {base,cfg,metrics,revision,requested}=release;
+  const [tokRes,wRes]=await Promise.all([fetch(base+'/tokenizer.json',{signal}),fetch(base+'/'+WEIGHTS_FILE,{signal})]);
   if (!tokRes.ok || !wRes.ok) throw Error('Hugging Face model files unavailable');
   const tokJson=await tokRes.json();
   const buf=await wRes.arrayBuffer();
@@ -404,14 +565,16 @@ async function loadHuggingFace(signal) {
   if (metrics.weights_sha256 && sha!==metrics.weights_sha256) throw Error('Published checkpoint hash mismatch');
   const tokenizer=cfg.vocab_size===256 && !tokJson.model?.vocab ? null : createBPE(tokJson);
   W=parseSafetensors(buf); CFG=cfg; BPE=tokenizer;
-  activeInstructionFormat=metrics.training_track==='instruction-tuning'&&typeof metrics.prompt_format==='string'&&metrics.prompt_format.includes('User:')&&metrics.prompt_format.includes('Assistant:');
-  status.textContent='Loaded '+HF_REPO.split('/')[1]+' ('+(buf.byteLength/1048576).toFixed(1)+' MB). Ready to generate.';
+  activeInstructionFormat=usesChatTemplate(entry.format, metrics);
+  const mb=(buf.byteLength/1048576).toFixed(1)+' MB';
+  const viaPr = requested && requested !== 'main' && requested !== revision;
+  status.textContent='Loaded '+entry.label+' ('+mb+(viaPr ? ', from an open Hugging Face PR' : '')+'). Ready to generate.';
   const actual=loadedParams(W);
   const expected=architectureParams(cfg);
   if(expected!==null&&actual!==expected){
     throw Error('Checkpoint tensors do not match the supported architecture parameter count');
   }
-  if(metaEl)metaEl.textContent=[actual.toLocaleString()+' loaded params',metrics.step!==undefined?'step '+metrics.step.toLocaleString():null,'HF '+revision.slice(0,8)].filter(Boolean).join(' · ');
+  if(metaEl)metaEl.textContent=[entry.detail||null,actual.toLocaleString()+' loaded params',metrics.step!==undefined?'step '+metrics.step.toLocaleString():null,'HF '+revision.slice(0,8)].filter(Boolean).join(' · ');
   updateLengths();setReady(true);
 }
 
@@ -434,24 +597,31 @@ async function loadBaseline(signal) {
   setReady(true);
 }
 
-async function selectSource(kind) {
+async function selectSource(id) {
   if (abortLoad) abortLoad.abort();
   abortLoad = new AbortController();
   const signal = abortLoad.signal;
+  const entry = findModel(id) || defaultModel();
+  if (modelSelect && entry) modelSelect.value = entry.id;
+  if (!entry || entry.disabled) {
+    setReady(false);
+    status.textContent = (entry ? entry.label : 'That model') + ' is not published yet.';
+    return;
+  }
   setReady(false);
   try {
-    if (kind === 'hf') {
-      await loadHuggingFace(signal);
+    if (entry.source === 'hf') {
+      await loadHuggingFace(entry, signal);
     } else {
       await loadBaseline(signal);
     }
   } catch (err) {
     if (signal.aborted || err.name === 'AbortError') return;
-    if (kind === 'hf') {
+    if (entry.id === 'text-0.1') {
       if (modelSelect) modelSelect.value = 'baseline';
       try {
         await loadBaseline(signal);
-        status.textContent = 'Latest checkpoint unavailable; using verified baseline-001.';
+        status.textContent = 'Latest 14M checkpoint unavailable; using verified baseline-001.';
       } catch {
         status.textContent = 'Automatic weights unavailable. Select a local model.safetensors file below.';
       }
@@ -480,7 +650,7 @@ fileInput.addEventListener('change', async e => {
     const context = Math.round(W['positions.weight'].length / width);
     let layers = 0;
     while (W[`blocks.layers.${layers}.norm1.weight`]) layers++;
-    CFG = { vocab_size: tokRows, context, width, heads: width === 384 ? 6 : 4, layers };
+    CFG = { vocab_size: tokRows, context, width, heads: headsForWidth(width), layers };
     if (tokRows === 256) BPE = null;
     status.textContent = `Local checkpoint loaded (${width}w · ${layers}L · vocab ${tokRows}).`;
     if (metaEl) metaEl.textContent = `sha256 ${sha.slice(0, 12)}`;
@@ -530,7 +700,7 @@ async function generate(prompt) {
   activityText.textContent = 'Generating locally · 0 / ' + limit + ' ' + units + ' · waiting for first output';
   info.textContent = 'Generating on your device…';
   try {
-    const modelPrompt=activeInstructionFormat&&!/^User:/.test(prompt)?'User: '+prompt+'\nAssistant:':prompt;
+    const modelPrompt=formatPrompt(prompt);
     const ids = BPE ? BPE.encode(modelPrompt) : Array.from(utf8Enc.encode(modelPrompt));
     if (!ids.length) ids.push(BPE ? BPE.eotId : 32);
     const gen = [];
@@ -575,8 +745,11 @@ stop.addEventListener('click', () => { cancelled=true; syncControls(); });
 clear.addEventListener('click', () => { if (running) return; log.querySelectorAll('.bloom-turn').forEach(el=>el.remove()); empty.hidden=false; lastPrompt=''; syncControls(); promptEl.focus(); });
 retry.addEventListener('click', () => generate(lastPrompt));
 root.querySelectorAll('[data-starter]').forEach(btn=>btn.addEventListener('click',()=>{promptEl.value=btn.dataset.starter; promptEl.focus();}));
+renderModelSelect();
+renderFileLinks();
 syncControls();
 refreshRelease();
-selectSource(modelSelect ? modelSelect.value : 'hf');
+selectSource(modelSelect ? modelSelect.value : defaultModel().id);
+refreshOptionalModels().catch(()=>{});
 // Refresh metadata only; never reload weights or interrupt generation in the background.
 setInterval(()=>{if(!document.hidden)refreshRelease();},120000);
