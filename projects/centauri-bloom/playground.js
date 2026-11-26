@@ -6,7 +6,7 @@ import {
   architectureParams,
   usesChatTemplate,
   sha256Hex
-} from './inference.js?v=11';
+} from './inference.js?v=12';
 
 const root = document.querySelector('#bloom-playground');
 const HF_ROOT = 'https://huggingface.co';
@@ -17,37 +17,37 @@ const BASELINE_CFG = { vocab_size: 256, context: 32, width: 64, heads: 4, layers
 // themselves once model.safetensors is present on the listed revision.
 const MODELS = [
   {
+    id: 'chat-0.2',
+    label: 'Bloom Chat 0.2 (54M)',
+    detail: 'Assistant fine-tune · about 229 MB F32, or 115 MB F16 when published',
+    source: 'hf',
+    repo: 'Centauri-Bloom/Bloom-Chat-0.2',
+    revision: 'main',
+    fallbacks: ['refs/pr/1'],
+    format: 'chat',
+    latest: true,
+    card: 'https://huggingface.co/Centauri-Bloom/Bloom-Chat-0.2'
+  },
+  {
     id: 'text-0.2',
-    label: 'Bloom Text 0.2 (50M)',
+    label: 'Bloom Text 0.2 (54M)',
     detail: 'Base model that continues text · about 229 MB F32, or 115 MB F16 when published',
     source: 'hf',
     repo: 'Centauri-Bloom/Bloom-Text-0.2',
     revision: 'main',
     fallbacks: ['refs/pr/1'],
     format: 'completion',
+    latest: true,
     card: 'https://huggingface.co/Centauri-Bloom/Bloom-Text-0.2'
   },
   {
-    id: 'chat-0.2',
-    label: 'Bloom Chat 0.2',
-    detail: 'Assistant fine-tune · coming soon',
-    source: 'hf',
-    repo: 'Centauri-Bloom/Bloom-Chat-0.2',
-    revision: 'main',
-    format: 'chat',
-    optional: true,
-    disabled: true,
-    card: 'https://huggingface.co/Centauri-Bloom/Bloom-Chat-0.2'
-  },
-  {
     id: 'text-0.1',
-    label: 'Bloom Text 0.1 (14M) · Latest',
+    label: 'Bloom Text 0.1 (14M)',
     detail: 'Latest published 14M checkpoint · about 65 MB',
     source: 'hf',
     repo: 'Centauri-Bloom/Bloom-Text-0.1',
     revision: 'main',
     format: 'auto',
-    default: true,
     card: 'https://huggingface.co/Centauri-Bloom/Bloom-Text-0.1'
   },
   {
@@ -63,8 +63,12 @@ const MODELS = [
 function findModel(id) {
   return MODELS.find(model => model.id === id) || null;
 }
+function defaultChain() {
+  const preferred = MODELS.filter(model => model.latest && !model.disabled);
+  return preferred.length ? preferred : MODELS.filter(model => !model.disabled);
+}
 function defaultModel() {
-  return MODELS.find(model => model.default && !model.disabled) || MODELS.find(model => !model.disabled);
+  return defaultChain()[0] || MODELS.find(model => !model.disabled);
 }
 const status = root.querySelector('[role=status]');
 const metaEl = root.querySelector('[data-bloom-meta]');
@@ -287,7 +291,7 @@ async function refreshOptionalModels(signal) {
 document.querySelector('[data-release-refresh]')?.addEventListener('click',()=>refreshRelease());
 
 function createInferenceBackend() {
-  const worker = new Worker(new URL('./playground-worker.js?v=11', import.meta.url), { type: 'module' });
+  const worker = new Worker(new URL('./playground-worker.js?v=12', import.meta.url), { type: 'module' });
   let nextId = 1;
   const pending = new Map();
   let onProgress = null;
@@ -421,6 +425,20 @@ async function selectSource(id) {
     }
   } catch (err) {
     if (signal.aborted || err.name === 'AbortError') return;
+    const chain = defaultChain();
+    const index = chain.findIndex(model => model.id === entry.id);
+    const fallback = index >= 0 ? chain[index + 1] : null;
+    if (fallback) {
+      if (modelSelect) modelSelect.value = fallback.id;
+      try {
+        if (fallback.source === 'hf') await loadHuggingFace(fallback, signal);
+        else await loadBaseline(signal);
+        status.textContent = entry.label + ' unavailable; using ' + fallback.label + '.';
+        return;
+      } catch (fallbackErr) {
+        if (signal.aborted || fallbackErr.name === 'AbortError') return;
+      }
+    }
     if (entry.id === 'text-0.1') {
       if (modelSelect) modelSelect.value = 'baseline';
       try {

@@ -10,7 +10,7 @@ import {
   headsForWidth,
   utf8Enc,
   utf8Dec
-} from './inference.js?v=11';
+} from './inference.js?v=12';
 
 let session = null;
 let BPE = null;
