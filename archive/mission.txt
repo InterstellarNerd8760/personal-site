@@ -22,6 +22,8 @@ To avoid accidentally designing the wrong hardware, request:
 8. Handling cleanliness, outgassing, licensing and safety requirements.
 9. Whether contribution requires a formal team, university or sponsor.
 
-Archive's **Fermi Edition** should only be sized and built against approved
-values. Its **Ark Edition** is a separate future concept and is not a claim
-about Fermi Explorer capabilities.
+The [Centauri Core baseline](archive-editions.md) is the recommended feasibility
+case. Use mission-provided constraints for any hardware sizing. Centauri
+Extended is an optional, independently recoverable expansion. See the
+[mission proposal](fermi-explorer-proposal.md) and
+[integration questionnaire](mission-integration.md).

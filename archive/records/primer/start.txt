@@ -1,4 +1,4 @@
-CENTAURI ARCHIVE / DIGITAL DEVELOPMENT EDITION 0.2.0
+CENTAURI ARCHIVE / DIGITAL DEVELOPMENT PACKAGE
 READ THIS FIRST — HUMAN TEST PACKAGE
 
 This package is a development exercise, not a complete interstellar decoding system.
@@ -31,5 +31,5 @@ humans check for changed bytes. A matching digest is not proof of authenticity
 without a trusted reference, and a mismatch does not reconstruct lost data.
 
 The core problem is still open: how to make information intelligible when the
-reader knows neither our language nor our technology. The companion
-docs/physical-primer.md provides a research plan, NOT a completed solution.
+reader knows neither our language nor our technology. The companion docs/physical-primer.md describes candidate teaching panels
+and planned interpretation trials. See the manifest for this package version.

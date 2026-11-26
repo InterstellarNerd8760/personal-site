@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 406" role="img" aria-labelledby="title description">
+  <title id="title">Blood flow between the heart, lungs, and body</title>
+  <desc id="description">A circuit follows blood from the right side of the heart through the lungs, the left side of the heart, the body tissues, then back to the right side. Blood gains oxygen in the lungs and delivers it to body tissues.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#223e52"/>
+    </marker>
+  </defs>
+  <rect width="720" height="406" fill="#f8f7ef"/>
+  <g fill="none" stroke="#223e52" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M128 168V80H258"/>
+    <path d="M462 80H592V168"/>
+    <path d="M592 240V327H462"/>
+    <path d="M258 327H128V240"/>
+  </g>
+  <g fill="#edf2f4" stroke="#223e52" stroke-width="2">
+    <rect x="32" y="168" width="192" height="72" rx="5"/>
+    <rect x="258" y="44" width="204" height="72" rx="5"/>
+    <rect x="496" y="168" width="192" height="72" rx="5"/>
+    <rect x="258" y="291" width="204" height="72" rx="5"/>
+  </g>
+  <g fill="#102c40" text-anchor="middle" font-family="sans-serif">
+    <g font-size="21" font-weight="bold">
+      <text x="128" y="200">Right heart</text>
+      <text x="360" y="76">Lungs</text>
+      <text x="592" y="200">Left heart</text>
+      <text x="360" y="323">Body tissues</text>
+    </g>
+    <g font-size="17">
+      <text x="128" y="224">Pumps to lungs</text>
+      <text x="360" y="100">Blood gains oxygen</text>
+      <text x="592" y="224">Pumps to body</text>
+      <text x="360" y="347">Blood delivers oxygen</text>
+    </g>
+    <text x="360" y="395" font-size="15">Simplified flow schematic. Arrows show the direction of blood flow.</text>
+  </g>
+</svg>

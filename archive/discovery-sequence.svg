@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 306" role="img" aria-labelledby="title desc">
+  <title id="title">Four representations of the archive</title>
+  <desc id="desc">A human browser, source bundle, hypothetical optical readout and verified records, shown as four independent views.</desc>
+  <rect width="900" height="306" rx="7" fill="#0a1220"/>
+  <path d="M225 24v258M450 24v258M675 24v258" stroke="#314455"/>
+  <g fill="#93d6ef" font-family="monospace" font-size="14" letter-spacing="1">
+    <text x="28" y="258">WEBSITE</text><text x="254" y="258">SOURCE BUNDLE</text>
+    <text x="480" y="258">OPTICAL READOUT</text><text x="705" y="258">VERIFIED RECORDS</text>
+  </g>
+  <g fill="none" stroke="#93d6ef" stroke-width="2" stroke-linejoin="round">
+    <rect x="30" y="76" width="165" height="122" rx="5"/><path d="M30 99h165M44 87h5m8 0h5m8 0h5M43 117h53v58H43zM111 118h64m-64 14h52m-52 14h64m-64 14h34"/>
+    <path d="M261 161h167v29H261zM262 119h166v28H262zM262 78h166v28H262zM276 92h14m-14 42h14m-14 42h14M305 92h107m-107 42h107m-107 42h107"/>
+    <path d="M481 166l113-31 60 30-114 36zm0 1v12l59 35 114-36v-13M540 201v13"/>
+    <circle cx="574" cy="101" r="36"/><path d="m599 126 27 24M554 87v24h18m10-24h12v10m-15 14h14"/>
+    <path d="M507 167l31-9m-21 17 34-9m4 10 31-10m-15 19 39-12"/>
+    <path d="M711 79h150v36H711zM711 123h150v36H711zM711 167h150v36H711zM724 94l6 6 10-12m-16 50 6 6 10-12m-16 50 6 6 10-12M753 95h92m-92 44h63m-63 44h81"/>
+  </g>
+  <g fill="#c9d3de" font-family="sans-serif" font-size="13">
+    <text x="28" y="280">Human interface</text><text x="254" y="280">Editable, credited files</text>
+    <text x="480" y="280">Schematic carrier surface</text><text x="705" y="280">Individually checked data</text>
+  </g>
+</svg>

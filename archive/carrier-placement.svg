@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 315" role="img" aria-labelledby="title description">
+  <title id="title">Carrier placement concepts on a generic spacecraft</title>
+  <desc id="description">A conceptual spacecraft carries an exterior primer, a recessed archive, and a secondary copy in a separate bay. The geometry is generic and is not flight hardware.</desc>
+  <defs>
+    <pattern id="panel" patternUnits="userSpaceOnUse" width="22" height="14"><path d="M0 0h22v14H0z" fill="#152d44" stroke="#54728a" stroke-width=".7"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0l10 5-10 5z" fill="#abc8dc"/></marker>
+  </defs>
+  <path d="M0 0h850v315H0z" fill="#0a1521"/>
+  <path d="M37 136h235v55H37zm541 0h235v55H578z" fill="url(#panel)" stroke="#54728a" stroke-width="1.5"/>
+  <path d="M271 157h36v12h-36zm272 0h36v12h-36z" fill="#1f384c" stroke="#7797ae"/>
+  <path d="M306 117l117-46 121 46v92l-121 42-117-42z" fill="#102738" stroke="#7aa0b8" stroke-width="1.5"/>
+  <path d="M306 117l117 41 121-41M423 158v93M306 173l117 40 121-41" fill="none" stroke="#5d829a" stroke-width="1.2"/>
+  <path d="M327 132l62 22v28l-62-22z" fill="#1c4c62" stroke="#72cef1" stroke-width="2"/>
+  <path d="M335 142l44 16m-43-10 29 10m-30-4 39 14" fill="none" stroke="#72cef1"/>
+  <path d="M440 180l43-14v45l-43 15z" fill="#13382f" stroke="#75d9bb" stroke-width="1.5"/>
+  <path d="M449 186l25-9m-25 16 25-9m-25 16 25-9m-25 16 25-9" fill="none" stroke="#75d9bb"/>
+  <path d="M495 156l36-13v42l-36 12z" fill="#241e35" stroke="#b0a0de" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M234 77h66l48 65m237-81h-34l-39 100m72 79h-57l-56-39" fill="none" stroke="#abc8dc" marker-end="url(#arrow)"/>
+  <g fill="#e1edf6" font-family="system-ui,sans-serif" font-size="17">
+    <text x="54" y="81">Visible exterior primer</text>
+    <text x="590" y="65">Secondary copy</text>
+    <text x="590" y="244">Recessed dense archive</text>
+  </g>
+  <path d="M32 269h786" stroke="#304151"/>
+  <text x="34" y="291" fill="#90aabd" font-family="monospace" font-size="13" letter-spacing="1">CONCEPT ILLUSTRATION · NOT FLIGHT HARDWARE · GENERIC SPACECRAFT</text>
+</svg>

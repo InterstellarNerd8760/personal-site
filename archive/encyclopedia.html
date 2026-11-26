@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="embedded-archive">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
@@ -29,15 +29,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="canonical" href="https://westonrosch.com/archive/encyclopedia.html">
-  <meta property="og:url" content="https://westonrosch.com/archive/encyclopedia.html">
+  <link rel="canonical" href="https://westonrosch.com/archive/encyclopedia">
+  <meta property="og:url" content="https://westonrosch.com/archive/encyclopedia">
   <meta property="og:title" content="Encyclopedia · Centauri Archive · Weston Rosch">
   <meta property="og:description" content="Nine connected domains of human knowledge, from mathematics to interstellar preservation.">
   <meta name="twitter:title" content="Encyclopedia · Centauri Archive · Weston Rosch">
   <meta name="twitter:description" content="Nine connected domains of human knowledge, from mathematics to interstellar preservation.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="visual-explainers.css">
   <link rel="stylesheet" href="encyclopedia.css">
-  <link rel="stylesheet" href="site-chrome.css">
+  <link rel="stylesheet" href="/archive/site-chrome.css">
   <script defer src="encyclopedia.js"></script>
 </head>
 <body class="subpage archive-page encyclopedia">
@@ -56,23 +57,22 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
   </header>
 <nav class="archive-subnav" aria-label="Centauri Archive">
-    <a href="/archive/">Overview</a>
-    <a href="/archive/encyclopedia.html" aria-current="page">Encyclopedia</a>
-    <a href="/archive/images.html">Image library</a>
-    <a href="/archive/guide.html">Decoding</a>
-    <a href="/archive/brief.html">Project brief</a>
-    <a class="archive-source" href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Source ↗</a>
+    <a class="archive-brand" href="/archive/">Centauri Archive<span class="brand-dot">.</span></a>
+    <a href="/archive/brief">Project brief</a>
+    <a href="/archive/encyclopedia" aria-current="page">Encyclopedia</a>
+    <a href="/archive/images">Image library</a>
+    <a href="/archive/engineering">Decoding and engineering</a>
   </nav>
 
-<main id="main" class="wrap enc-main">
+<main id="main" tabindex="-1" class="wrap enc-main">
 <p class="eyebrow">THE KNOWLEDGE RECORD / DEVELOPMENT EDITION</p>
 <h1>Centauri <em>Encyclopedia.</em></h1>
 <p class="enc-lead">A connected account of the physical universe, Earth, life and human civilization, beginning with the most fundamental concepts. Articles connect to relevant photographs and original archive records.</p>
 <p class="reader-warning">Original editorial drafts · Independent factual and cultural review pending · Not a validated universal encoding</p>
-<div class="enc-toolbar"><div><label for="enc-search">Search all knowledge</label><input type="search" id="enc-search" placeholder="Search topics, concepts, or article IDs" autocomplete="off"></div><span id="enc-count" aria-live="polite">Loading…</span></div>
+<details class="explainer" aria-labelledby="enc-coverage-title"><summary id="enc-coverage-title">Knowledge coverage and review</summary><p id="enc-review-summary" class="explain-review">Loading article coverage…</p><div id="enc-coverage" class="explain-bars"></div><div class="explain-key"><span>Source-checked drafts</span><span class="explain-pending">Other review stages</span></div><p class="explain-note">Counts describe the current collection, not the completeness or scientific accuracy of each knowledge area.</p></details><div class="enc-toolbar"><div><label for="enc-search">Search all knowledge</label><input type="search" id="enc-search" placeholder="Search topics, concepts, or article IDs" autocomplete="off" aria-describedby="enc-search-note"><small id="enc-search-note">Article text search loads when you enter a query.</small></div><span id="enc-count" aria-live="polite">Loading…</span></div>
 <div class="enc-layout"><aside aria-label="Knowledge hierarchy"><h2 class="enc-small-title">Hierarchy of knowledge</h2><div id="enc-categories"></div></aside>
 <section id="enc-reader" class="enc-reader" aria-labelledby="enc-title"><p class="eyebrow" id="enc-id">SELECT AN ARTICLE</p><h2 id="enc-title" tabindex="-1">Explore the foundations.</h2><div id="enc-body"><p>Choose a category and an article to follow a path through the encyclopedia.</p></div></section></div>
-<div class="enc-bottom"><a href="images.html">Browse the complete image library ↗</a><a href="records/encyclopedia/index.json">Structured source JSON ↗</a><a href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Source repository on GitHub ↗</a><a href="encyclopedia.txt">Editorial specification ↗</a></div>
+<div class="enc-bottom"><a href="/archive/images">Browse the image library ↗</a><a href="/archive/library">Browse original archive records ↗</a><a href="records/encyclopedia/index.json">Structured source JSON ↗</a><a href="https://github.com/InterstellarNerd8760/centauri-archive">Source repository on GitHub ↗</a><a href="encyclopedia.txt">Editorial specification ↗</a><a href="knowledge/backlog.json">Editorial backlog ↗</a></div>
 </main>
   <footer class="site-footer">
   <div class="footer-moon">

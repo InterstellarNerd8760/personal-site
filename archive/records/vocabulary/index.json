@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "status": "Unvalidated visual vocabulary prototype",
+  "sheet": "vocabulary/marks.svg",
+  "entries": [
+    {
+      "id": "V-001",
+      "label": "Two",
+      "examples": [
+        "two-disks",
+        "two-squares"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.001"
+      ],
+      "ambiguity": "The invariant is the number of marks. The repeated arrangement could instead suggest a pair, symmetry, or equal spacing."
+    },
+    {
+      "id": "V-002",
+      "label": "Inside",
+      "examples": [
+        "disk-inside",
+        "triangle-inside"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.003"
+      ],
+      "ambiguity": "A closed boundary contains a mark in each positive example. A 2D diagram cannot by itself distinguish containment from projected overlap.",
+      "contrast_with": [
+        "V-007"
+      ]
+    },
+    {
+      "id": "V-003",
+      "label": "Change of position",
+      "examples": [
+        "disk-moves",
+        "square-moves"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.003",
+        "CA-02.002"
+      ],
+      "ambiguity": "Successive frames suggest one object changing position. A reader may see separate objects or infer the reverse order. Frame order depends on the primer.",
+      "contrast_with": [
+        "V-009"
+      ]
+    },
+    {
+      "id": "V-004",
+      "label": "Earth",
+      "examples": [],
+      "images": [
+        "IMG-019",
+        "IMG-020"
+      ],
+      "articles": [
+        "CA-03.001"
+      ],
+      "ambiguity": "The two views show the same planet from different perspectives. The shared shape may suggest the class of planets instead of this individual body."
+    },
+    {
+      "id": "V-005",
+      "label": "Plant",
+      "examples": [],
+      "images": [
+        "IMG-057",
+        "IMG-059"
+      ],
+      "articles": [
+        "CA-04.001",
+        "CA-04.003"
+      ],
+      "ambiguity": "The fern and tree show two examples of plants. Backgrounds and different scales make it unclear which pictured feature carries the label."
+    },
+    {
+      "id": "V-006",
+      "label": "Human",
+      "examples": [],
+      "images": [
+        "IMG-073",
+        "IMG-085"
+      ],
+      "articles": [
+        "CA-05.001"
+      ],
+      "ambiguity": "Groups in varied settings show multiple humans. The examples cannot independently teach species membership, cultural roles, or the range of human variation."
+    },
+    {
+      "id": "V-007",
+      "label": "Outside",
+      "examples": [
+        "disk-outside",
+        "triangle-outside"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.003"
+      ],
+      "contrast_with": [
+        "V-002"
+      ],
+      "ambiguity": "The mark is separated from the closed boundary in both examples. It could be interpreted as distance or exclusion. Try touching and overlapping cases separately."
+    },
+    {
+      "id": "V-008",
+      "label": "Equal length",
+      "examples": [
+        "horizontal-equal",
+        "vertical-equal"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.002",
+        "CA-01.003"
+      ],
+      "ambiguity": "The segments have different positions but cover the same number of intervals. A reader may infer parallelism or equal placement instead of length."
+    },
+    {
+      "id": "V-009",
+      "label": "Same position across observations",
+      "examples": [
+        "disk-stays",
+        "square-stays"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.003"
+      ],
+      "contrast_with": [
+        "V-003"
+      ],
+      "ambiguity": "The mark occupies corresponding positions in the two aligned frames. It could be seen as two separate objects or as repetition without time."
+    },
+    {
+      "id": "V-010",
+      "label": "Earlier observation",
+      "examples": [
+        "disk-earlier",
+        "square-earlier"
+      ],
+      "images": [],
+      "articles": [
+        "CA-01.003",
+        "CA-05.003"
+      ],
+      "ambiguity": "The shorter observation count identifies the earlier frame. Reversed chronology or simple spatial ordering remains plausible without separate demonstrations of elapsed time."
+    }
+  ],
+  "statements": [
+    {
+      "id": "VS-001",
+      "label": "Two inside",
+      "tokens": [
+        "V-001",
+        "V-002"
+      ],
+      "examples": [
+        "two-disks-inside",
+        "two-triangles-inside"
+      ],
+      "ambiguity": "The trial convention places quantity before relationship. The sequence alone leaves the object type and enclosing boundary implicit."
+    },
+    {
+      "id": "VS-002",
+      "label": "Two move",
+      "tokens": [
+        "V-001",
+        "V-003"
+      ],
+      "examples": [
+        "two-disks-move",
+        "two-squares-move"
+      ],
+      "ambiguity": "These examples hold the number constant as positions change. They do not establish tense, agency, cause or simultaneous movement."
+    },
+    {
+      "id": "VS-003",
+      "label": "Two outside",
+      "tokens": [
+        "V-001",
+        "V-007"
+      ],
+      "examples": [
+        "two-disks-outside",
+        "two-triangles-outside"
+      ],
+      "ambiguity": "The enclosing boundary acts as the reference. The images do not establish whether the two objects are a group or independent items."
+    }
+  ],
+  "illustrations": {
+    "two-disks": "Two filled disks, spaced apart on one line.",
+    "two-squares": "Two filled squares, one above and left of the other.",
+    "disk-inside": "A disk lies within a rounded rectangle.",
+    "triangle-inside": "A triangle lies within a circle.",
+    "disk-moves": "In the first frame a disk is near the lower left. In the next frame it is near the upper right.",
+    "square-moves": "A square is near the upper right in the first frame and near the lower left in the next.",
+    "two-disks-inside": "Two disks lie within a rounded rectangle.",
+    "two-triangles-inside": "Two triangles lie within a circle.",
+    "two-disks-move": "The first frame has two disks near the bottom. The second has two disks near the top.",
+    "two-squares-move": "The first frame has two squares on its right side. The second has two squares on its left side.",
+    "disk-outside": "A disk is to the left of and entirely outside a rounded rectangle.",
+    "triangle-outside": "A triangle is to the right of and entirely outside a circle.",
+    "horizontal-equal": "Two offset horizontal segments each cover three equally spaced intervals.",
+    "vertical-equal": "Two offset vertical segments each cover three equally spaced intervals.",
+    "disk-stays": "Two successive frames show a disk in the same position within each frame.",
+    "square-stays": "Two successive frames show a square in the same position within each frame.",
+    "disk-earlier": "The first frame, containing a lower disk, is paired with one observation mark. The second frame, containing a higher disk, is paired with two.",
+    "square-earlier": "The first frame, containing an upper square, is paired with two observation marks. The second frame, containing a lower square, is paired with three.",
+    "two-disks-outside": "Two disks are outside a rounded rectangle, one on either side.",
+    "two-triangles-outside": "Two triangles are outside a circle, one above and one below."
+  },
+  "edition": "0.2"
+}

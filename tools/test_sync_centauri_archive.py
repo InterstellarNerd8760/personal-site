@@ -1,9 +1,32 @@
 import subprocess
 import tempfile
 import unittest
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote, urljoin, urlsplit
+from xml.etree import ElementTree
 
-from sync_centauri_archive import install_site, source_checkout
+from sync_centauri_archive import ROOT, SITE_ORIGIN, install_site, load_lock, page_path, source_checkout
+
+
+class PageLinks(HTMLParser):
+    def __init__(self, path):
+        super().__init__()
+        self.links = []
+        self.references = []
+        self.canonical = None
+        self.refresh = None
+        self.feed(path.read_text(encoding='utf-8'))
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        self.references.extend(attrs[key] for key in ('href', 'src', 'poster') if attrs.get(key))
+        if tag == 'a' and 'href' in attrs:
+            self.links.append(attrs['href'])
+        if tag == 'link' and attrs.get('rel') == 'canonical':
+            self.canonical = attrs.get('href')
+        if tag == 'meta' and attrs.get('http-equiv', '').lower() == 'refresh':
+            self.refresh = attrs.get('content')
 
 
 class SourceCheckoutTests(unittest.TestCase):
@@ -71,8 +94,18 @@ class InstallSiteTests(unittest.TestCase):
         self.page('index.html')
         self.page('engineering.html')
         self.page('brief.html')
+        self.page('encyclopedia.html')
+        self.page('images.html')
         self.page('discovery.html')
-        self.page('proposal.html')
+        self.page('proposal.html', '''<header class="header">
+  <a class="brand" href="index.html">Centauri Archive</a>
+  <nav aria-label="Centauri Archive">
+    <a href="brief.html" aria-current="location">Project brief</a>
+    <a href="encyclopedia.html">Encyclopedia</a>
+    <a href="images.html">Image library</a>
+    <a href="engineering.html">Decoding and engineering</a>
+  </nav>
+</header><main id="main">Proposal</main>''')
         self.page('vocabulary.html')
         self.page('knowledge/index.html')
         self.page('knowledge/life.html', '''<!doctype html>
@@ -80,6 +113,9 @@ class InstallSiteTests(unittest.TestCase):
 <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="knowledge.css">
 <script src="../visual-explainers.js"></script></head>
 <main id="main"><a href='../downloads/centauri.zip?download'>Download the archive</a>
+<a href="../index.html#archive">Overview</a><a href="index.html#life">Knowledge index</a>
+<a href="../images.html?record=photos/earth.jpg&amp;category=earth#result">Image</a>
+<a href="https://example.org/edition.html">External edition</a>
 <script src="inside.js"></script></main>''')
         self.page('downloads/centauri.zip', 'omit')
         self.page('downloads/extra.ZIP', 'omit')
@@ -91,6 +127,8 @@ class InstallSiteTests(unittest.TestCase):
         expected = {
             'index.html': '/archive/', 'discovery.html': '/archive/discovery',
             'engineering.html': '/archive/engineering', 'proposal.html': '/archive/proposal',
+            'brief.html': '/archive/brief', 'encyclopedia.html': '/archive/encyclopedia',
+            'images.html': '/archive/images',
             'vocabulary.html': '/archive/vocabulary', 'knowledge/index.html': '/archive/knowledge/',
             'knowledge/life.html': '/archive/knowledge/life',
         }
@@ -101,16 +139,25 @@ class InstallSiteTests(unittest.TestCase):
                 self.assertIn('<meta property="og:url" content="https://westonrosch.com' + route + '">', html)
                 self.assertIn('class="site-header"', html)
                 self.assertIn('href="/archive/site-chrome.css"', html)
-                self.assertIn('href="/archive/discovery.html"', html)
-                self.assertNotIn('href="/archive/brief.html"', html)
+                self.assertIn('href="/archive/brief"', html)
+                self.assertIn('href="/archive/encyclopedia"', html)
+                self.assertIn('href="/archive/images"', html)
+                self.assertIn('href="/archive/engineering"', html)
+                self.assertNotIn('href="/archive/discovery"', html)
         nested = (self.output / 'knowledge/life.html').read_text()
-        self.assertIn('href="/archive/discovery.html" aria-current="location"', nested)
+        proposal = (self.output / 'proposal.html').read_text()
+        self.assertIn('class="archive-brand" href="/archive/"', proposal)
+        self.assertIn('href="/archive/brief" aria-current="location"', proposal)
         self.assertIn('Life &amp; Earth', nested)
         self.assertIn('Quote &quot; and &amp;', nested)
         self.assertLess(nested.index('href="../style.css"'), nested.index('href="knowledge.css"'))
         self.assertIn('defer src="../visual-explainers.js"', nested)
         self.assertEqual(nested.count('src="inside.js"'), 1)
         self.assertNotIn('centauri.zip', nested)
+        self.assertIn('href="/archive/#archive"', nested)
+        self.assertIn('href="/archive/knowledge/#life"', nested)
+        self.assertIn('href="/archive/images?record=photos/earth.jpg&amp;category=earth#result"', nested)
+        self.assertIn('href="https://example.org/edition.html"', nested)
 
     def test_pinned_legacy_menu_only_includes_built_pages(self):
         self.page('index.html')
@@ -118,9 +165,9 @@ class InstallSiteTests(unittest.TestCase):
         self.install()
         html = (self.output / 'index.html').read_text()
         self.assertIn('href="/archive/" aria-current="page"', html)
-        self.assertIn('href="/archive/brief.html"', html)
-        self.assertNotIn('href="/archive/proposal.html"', html)
-        self.assertNotIn('href="/archive/engineering.html"', html)
+        self.assertIn('href="/archive/brief"', html)
+        self.assertNotIn('href="/archive/proposal"', html)
+        self.assertNotIn('href="/archive/engineering"', html)
 
     def test_unstamped_destinations_are_preserved(self):
         self.page('index.html')
@@ -139,6 +186,61 @@ class InstallSiteTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'no <main>'):
             self.install()
         self.assertEqual((self.output / 'index.html').read_bytes(), previous)
+
+
+class PublishedRoutesTests(unittest.TestCase):
+    def test_project_listings_link_directly_to_archive(self):
+        for filename in ('index.html', 'projects/index.html'):
+            with self.subTest(filename=filename):
+                page = PageLinks(ROOT / filename)
+                self.assertIn('/archive/', page.links)
+                self.assertFalse(any(href.startswith('/projects/centauri-archive') for href in page.links))
+
+    def test_legacy_project_url_redirects_to_archive(self):
+        aliases = ('/projects/centauri-archive', '/projects/centauri-archive/', '/projects/centauri-archive/index.html')
+        rules = {tuple(line.split()) for line in (ROOT / '_redirects').read_text().splitlines()}
+        for alias in aliases:
+            self.assertIn((alias, '/archive/', '301'), rules)
+        fallback = PageLinks(ROOT / 'projects/centauri-archive/index.html')
+        self.assertEqual(fallback.canonical, SITE_ORIGIN + '/archive/')
+        self.assertEqual(fallback.refresh, '0; url=/archive/')
+        self.assertIn('/archive/', fallback.links)
+
+    def test_archive_sitemap_matches_published_canonicals(self):
+        sitemap = ElementTree.parse(ROOT / 'sitemap.xml')
+        locations = {element.text for element in sitemap.findall('.//{*}loc') if element.text}
+        self.assertNotIn(SITE_ORIGIN + '/projects/centauri-archive/', locations)
+        routes = ('/archive/', '/archive/brief', '/archive/encyclopedia', '/archive/images', '/archive/engineering')
+        self.assertTrue({SITE_ORIGIN + route for route in routes}.issubset(locations))
+        for url in sorted(locations):
+            if url.startswith(SITE_ORIGIN + '/archive/'):
+                with self.subTest(url=url):
+                    route = url.removeprefix(SITE_ORIGIN).lstrip('/')
+                    file = route + ('index.html' if route.endswith('/') else '.html')
+                    self.assertEqual(PageLinks(ROOT / file).canonical, url)
+
+    def test_generated_archive_matches_lock_and_chrome(self):
+        repository, sha = load_lock()
+        stamp = (ROOT / 'archive/SOURCE.txt').read_text()
+        self.assertIn(f'Source: {repository}\n', stamp)
+        self.assertIn(f'Commit: {sha}\n', stamp)
+        self.assertEqual((ROOT / 'tools/archive-chrome.css').read_bytes(), (ROOT / 'archive/site-chrome.css').read_bytes())
+        self.assertFalse(any(path.suffix.lower() == '.zip' for path in (ROOT / 'archive').rglob('*')))
+
+    def test_embedded_archive_local_links_and_assets_resolve(self):
+        archive = ROOT / 'archive'
+        for file in sorted(archive.rglob('*.html')):
+            origin = SITE_ORIGIN + page_path(file.relative_to(archive).as_posix())
+            for reference in PageLinks(file).references:
+                target = urlsplit(urljoin(origin, reference))
+                if target.netloc != urlsplit(SITE_ORIGIN).netloc:
+                    continue
+                path = ROOT / unquote(target.path.lstrip('/'))
+                with self.subTest(file=file.relative_to(ROOT), reference=reference):
+                    self.assertTrue(
+                        path.is_file() or (path / 'index.html').is_file() or path.with_suffix('.html').is_file(),
+                        f'No static asset or clean route for {target.path}',
+                    )
 
 
 if __name__ == '__main__':

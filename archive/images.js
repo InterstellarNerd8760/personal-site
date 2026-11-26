@@ -15,9 +15,6 @@ async function loadJSON(url) {
 async function initAtlas() {
   const [plan, catalog] = await Promise.all([loadJSON("image-plan.json"), loadJSON("records/catalog.json")]);
   const records = new Map(catalog.records.map(record => [record.path, record]));
-  const included = plan.records.filter(slot => slot.status === "included");
-  get("atlas-included").textContent = included.length;
-  get("atlas-remaining").textContent = plan.records.length - included.length;
   const dialog = get("image-detail");
   function showDetail(slot, updateUrl = false) {
     const record = records.get(slot.asset);

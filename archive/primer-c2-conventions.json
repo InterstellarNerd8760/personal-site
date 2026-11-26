@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "primer_edition": "C2",
+  "scope": "Experimental physical-interpretation conventions. Raster container formats have their own specifications.",
+  "parent_edition": "C1",
+  "conventions": [
+    {
+      "id": "frame-orientation",
+      "introduced": "C1/A",
+      "prerequisites": [],
+      "definition": "The boundary break and the unequal two marks identify the start corner. The larger mark precedes the smaller along the first row axis.",
+      "observation": "Orient unfamiliar, rotated and mirrored sheets using the markers, then point to the first usable position."
+    },
+    {
+      "id": "mark-states",
+      "introduced": "C1/A",
+      "prerequisites": ["frame-orientation"],
+      "definition": "A bounded cell contains either a dark inset or no inset. Separately learn which numerical or image state it denotes.",
+      "observation": "Recover the same cell sequence on different readable replicas and flag ambiguous or missing marks."
+    },
+    {
+      "id": "linear-framing",
+      "introduced": "C1/A",
+      "prerequisites": ["frame-orientation", "mark-states"],
+      "definition": "An isolated dot precedes the regularly spaced cells and a bar ends the sequence.",
+      "observation": "Separate two adjacent sequences without counting the delimiter as a data cell."
+    },
+    {
+      "id": "quantity",
+      "introduced": "C1/B",
+      "prerequisites": ["frame-orientation"],
+      "definition": "The number of marks inside a quantity boundary is counted. No mark inside the boundary represents zero.",
+      "observation": "Pair a new arrangement of marks with the matching quantity and identify the empty case."
+    },
+    {
+      "id": "positional-weights",
+      "introduced": "C1/B",
+      "prerequisites": ["mark-states", "quantity"],
+      "definition": "A dark inset contributes the position's weight. The last position has weight one. Each preceding position doubles the weight.",
+      "observation": "Interpret a longer held-out group whose value differs from the count of inset cells."
+    },
+    {
+      "id": "arithmetic",
+      "introduced": "C1/B",
+      "prerequisites": ["quantity"],
+      "definition": "Repeated dot-group relations pair glyphs with equality, order, operations, signed groups and an unknown.",
+      "observation": "Complete a held-out relation without the examples sharing its outcome."
+    },
+    {
+      "id": "spatial-scale",
+      "introduced": "C1/C",
+      "prerequisites": ["quantity", "arithmetic"],
+      "definition": "Count intervals relative to a common origin or equal-pitch reference. A proportional scaling preserves ratios of lengths.",
+      "observation": "Place a new coordinate and compare two similar diagrams using length ratios."
+    },
+    {
+      "id": "hydrogen-reference",
+      "introduced": "C1/D",
+      "prerequisites": ["spatial-scale"],
+      "definition": "Candidate period and vacuum wavelength come from the rest-frame neutral protium ground-state hyperfine transition.",
+      "observation": "Distinguish the two quantities and name the transition; C1 does not yet teach its full experimental identification."
+    },
+    {
+      "id": "raster-scan",
+      "introduced": "C1/E",
+      "prerequisites": ["frame-orientation", "linear-framing", "positional-weights", "spatial-scale"],
+      "definition": "Start at the marked corner, cross each row along the first axis, and then move one row along the second axis.",
+      "observation": "Recover asymmetric grids and reject alternative transposed or reversed interpretations."
+    },
+    {
+      "id": "raster-code",
+      "introduced": "C1/E",
+      "prerequisites": ["raster-scan"],
+      "definition": "The toy frames pair dimensions, identifier, mode and sample count with a row-grouped payload. Monochrome open becomes dark; filled becomes light. Other toy modes use increasing intensity codes or ordered RGB triplets.",
+      "observation": "Agree on header values and independently reconstruct held-out monochrome, grayscale and color results."
+    },
+    {
+      "id": "locator",
+      "introduced": "C2/F",
+      "prerequisites": ["frame-orientation", "positional-weights"],
+      "definition": "A large four-position tag occurs on the outer map and on its matching target outline. The tag identifies a region; payload cells sit inside the region.",
+      "observation": "Select a target by a new tag among alternatives, independent of target order."
+    },
+    {
+      "id": "magnification",
+      "introduced": "C2/F",
+      "prerequisites": ["spatial-scale", "locator"],
+      "definition": "Pairs show the same target geometry at two pitches. Enlarging every distance by four preserves state, order, relative position and number of cells.",
+      "observation": "Predict a matching enlarged shape and record the fine-to-coarse pitch ratio."
+    },
+    {
+      "id": "tile-readout",
+      "introduced": "C2/F",
+      "prerequisites": ["raster-scan", "locator", "magnification"],
+      "definition": "Independently orient the selected tile by its notch and two marks. Read its cells in groups across rows without changing state. Unresolved cells are recorded as unknown.",
+      "observation": "Recover an unseen fine tile and its locator. Separately record region, orientation, pitch inference, cell agreement and missing states."
+    }
+  ]
+}

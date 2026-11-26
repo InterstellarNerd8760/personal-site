@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="embedded-archive">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05080f">
   <meta name="description" content="A readable explanation of the Centauri Archive decoding primer and proposed physical spacecraft carrier.">
-  <title>Decoding & physical design · Centauri Archive · Weston Rosch</title>
+  <title>Decoding &amp; physical design · Centauri Archive · Weston Rosch</title>
   <meta name="author" content="Weston Rosch">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
@@ -29,15 +29,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="canonical" href="https://westonrosch.com/archive/guide.html">
-  <meta property="og:url" content="https://westonrosch.com/archive/guide.html">
-  <meta property="og:title" content="Decoding & physical design · Centauri Archive · Weston Rosch">
+  <link rel="canonical" href="https://westonrosch.com/archive/guide">
+  <meta property="og:url" content="https://westonrosch.com/archive/guide">
+  <meta property="og:title" content="Decoding &amp; physical design · Centauri Archive · Weston Rosch">
   <meta property="og:description" content="A readable explanation of the Centauri Archive decoding primer and proposed physical spacecraft carrier.">
-  <meta name="twitter:title" content="Decoding & physical design · Centauri Archive · Weston Rosch">
+  <meta name="twitter:title" content="Decoding &amp; physical design · Centauri Archive · Weston Rosch">
   <meta name="twitter:description" content="A readable explanation of the Centauri Archive decoding primer and proposed physical spacecraft carrier.">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="site-chrome.css">
+  <link rel="stylesheet" href="visual-explainers.css">
+  <link rel="stylesheet" href="/archive/site-chrome.css">
+  <script defer src="visual-explainers.js"></script>
   <script defer src="decoder.js"></script>
+  <script defer src="decoding-experiments.js"></script>
 </head>
 <body class="subpage archive-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -55,15 +58,14 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
   </header>
 <nav class="archive-subnav" aria-label="Centauri Archive">
-    <a href="/archive/">Overview</a>
-    <a href="/archive/encyclopedia.html">Encyclopedia</a>
-    <a href="/archive/images.html">Image library</a>
-    <a href="/archive/guide.html" aria-current="page">Decoding</a>
-    <a href="/archive/brief.html">Project brief</a>
-    <a class="archive-source" href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Source ↗</a>
+    <a class="archive-brand" href="/archive/">Centauri Archive<span class="brand-dot">.</span></a>
+    <a href="/archive/brief">Project brief</a>
+    <a href="/archive/encyclopedia">Encyclopedia</a>
+    <a href="/archive/images">Image library</a>
+    <a href="/archive/engineering" aria-current="location">Decoding and engineering</a>
   </nav>
 
-<main id="main">
+<main id="main" tabindex="-1">
 <section class="wrap guide-intro"><p class="eyebrow">THE BIG ENGINEERING QUESTION</p>
 <h1>How could anyone <em>read it?</em></h1><section class="decoder-lab" aria-labelledby="decoder-lab-title">
   <div class="decoder-lab-head">
@@ -105,16 +107,120 @@
 <article><p class="eyebrow">03 / RULES OF READING</p><div class="binary-demo-row" role="img" aria-label="Three adjacent light and dark image pixels"><span></span><span></span><span></span></div><h3>Exactly the same marks could be pixels.</h3><p>To reconstruct a picture, a reader must know its width, height, start corner, scan direction, and light/dark assignment.</p></article>
 </div>
 <p class="binary-key-point"><strong>The primer is a proposed teaching sequence, not an alien dictionary.</strong> It must demonstrate how to infer each convention from visible physical examples. Nothing currently proves that an unfamiliar intelligence could decode it.</p>
-<div class="binary-budget"><div><p class="eyebrow">AND WHAT ABOUT 100 IMAGES?</p><h3>Binary does not mean writing millions of digits on a plate.</h3><p>For one hundred uncompressed 1,000 × 1,000 images, one bit per pixel takes about 12.5 MB; eight-bit grayscale about 100 MB; and 24-bit color about 300 MB. Compression can reduce the file sizes, but a future reader would need to be taught how to decompress them. The archive's current 80 MB ZIP ceiling is only a software-prototype limit.</p></div><a class="text-link" href="images.html">View the 100-image plan ↗</a></div>
+<div class="binary-budget"><div><p class="eyebrow">AND WHAT ABOUT 100 IMAGES?</p><h3>Binary does not mean writing millions of digits on a plate.</h3><p>Raw raster sizes depend on resolution and the number of channels. A grayscale image typically needs one byte per pixel. RGB needs three. The raster study measures the existing collection at multiple resolutions, and the engineering calculator adds correction and copy costs.</p></div><a class="text-link" href="raw-raster-v2.txt">Read the format and storage measurements ↗</a></div>
+</section>
+<section class="wrap guide-section" id="experiments">
+  <h2>From bits to records.</h2>
+  <div class="guide-experiment"><div>
+    <h3>Count in powers of two</h3>
+    <p>Choose a number from 0 to 15 and see how base two represents it.</p>
+    <label for="binary-number">Number</label>
+    <input type="range" id="binary-number" min="0" max="15" value="5">
+    <p><output id="binary-reading" for="binary-number" aria-live="polite">5 = 0101</output></p>
+  </div><div>
+    <h3>Construct an RGB pixel</h3>
+    <p>With all three channels equal, the display pixel is neutral. Change the channels independently to see RGB, a human display convention.</p>
+    <div class="channel-controls">
+      <label>Red <input id="channel-red" type="range" min="0" max="255" value="192"></label>
+      <label>Green <input id="channel-green" type="range" min="0" max="255" value="192"></label>
+      <label>Blue <input id="channel-blue" type="range" min="0" max="255" value="192"></label>
+    </div>
+    <span id="channel-swatch" class="channel-swatch" aria-hidden="true"></span>
+    <output id="channel-values" for="channel-red channel-green channel-blue" aria-live="polite">192, 192, 192</output>
+  </div></div>
+  <div class="guide-experiment"><div>
+    <h3>Damage a Hamming codeword</h3>
+    <p>The encoded data <code>1011</code> begins as <code>01100110</code>. Positions 1, 2 and 4 check selected subsets. Position 8 checks even parity across the whole word.</p>
+    <p>Flip one bit to see how the decoder locates it. Flip two to see rejection. Clear the flips to start again.</p>
+    <div class="decoder-controls" id="hamming-bits" role="group" aria-label="Toggle received codeword bits"></div>
+    <button type="button" id="hamming-reset">Clear flips</button>
+  </div><div>
+    <h3>Decoder reading</h3>
+    <p id="hamming-result" aria-live="polite">Syndrome 0 · even overall parity · data 1011.</p>
+    <p id="hamming-assessment">The decoded value matches the example.</p>
+    <p>Single-error correction and double-error detection are guaranteed. Three or more flips fall outside those guarantees.</p>
+  </div></div>
+  <section class="explainer reconstruction" id="photo-encoding" aria-labelledby="photo-encoding-title">
+    <h3 id="photo-encoding-title">Reconstruct a photograph from its bits</h3>
+    <p>Start with a photograph in the archive. Follow its samples into a binary frame and back to a picture. The browser verifies and reads the same CAR v2 bytes available for download.</p>
+    <div class="explain-controls">
+      <label>Photograph <select id="explain-subject" disabled></select></label>
+      <label>Maximum edge <select id="explain-resolution" disabled></select> pixels</label>
+      <label>Encoding <select id="explain-mode" disabled><option value="mono">1-bit monochrome</option><option value="gray">8-bit grayscale</option><option value="rgb" selected>24-bit RGB</option></select></label>
+    </div>
+    <ol class="reconstruction-stages">
+      <li>
+        <h4>Recognize the reference</h4>
+        <figure class="reconstruction-reference">
+          <img id="explain-photo-source" src="records/photos/earth-apollo17.jpg" alt="Full disk Earth surrounded by black space, Africa and oceans visible.">
+          <figcaption><strong id="explain-photo-title">Earth, photographed by Apollo 17</strong><br>
+          <span id="explain-photo-credit">NASA / Apollo 17 crew</span><br>
+          <small id="explain-photo-rights">US federal government photograph, public domain in the United States.</small><br>
+          <a id="explain-photo-link" href="https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg">Original source ↗</a> ·
+          <a id="explain-photo-archive" href="/archive/images?record=IMG-019">Archive record ↗</a></figcaption>
+        </figure>
+      </li>
+    </ol>
+    <p id="explain-raster-summary" role="status">Waiting for the raster reader. The frames can also be decoded offline.</p>
+    <noscript><p>The image comparison requires JavaScript. The raw and protected files remain available below.</p></noscript>
+    <ol class="reconstruction-stages" id="explain-verified-stages" start="2" hidden>
+      <li>
+        <h4>Sample a tiny grid</h4>
+        <div class="reconstruction-tiny"><canvas class="reconstruction-pixelated" id="explain-tiny-raster" role="img">Tiny color sample grid.</canvas>
+        <p>Each cell represents a small area of the reference photograph. In this example the long edge has just 16 cells.</p></div>
+      </li>
+      <li>
+        <h4>Pair marks with cells</h4>
+        <p>One row excerpt below pairs the two recorded states with dark and light display cells. The human labels 0 and 1 stand for those two states.</p>
+        <div id="explain-paired-marks" class="reconstruction-marks" role="group" aria-label="Eight consecutive monochrome pixels"></div>
+      </li>
+      <li>
+        <h4>Set the dimensions and reading order</h4>
+        <p id="explain-tiny-dimensions"></p>
+      </li>
+      <li>
+        <h4>Compare three ways to describe the same sample grid</h4>
+        <div class="reconstruction-variants">
+          <figure><canvas class="reconstruction-pixelated" id="explain-mono-raster" role="img">Monochrome sample.</canvas><figcaption><strong>Monochrome</strong><br>One bit chooses dark or light.</figcaption></figure>
+          <figure><canvas class="reconstruction-pixelated" id="explain-gray-raster" role="img">Grayscale sample.</canvas><figcaption><strong>Grayscale</strong><br>Eight bits choose a display level.</figcaption></figure>
+          <figure><canvas class="reconstruction-pixelated" id="explain-rgb-raster" role="img">Color sample.</canvas><figcaption><strong>RGB</strong><br>Three bytes give red, green and blue levels in a human display convention.</figcaption></figure>
+        </div>
+      </li>
+      <li>
+        <h4>Read the framed binary</h4>
+        <dl class="reconstruction-fields">
+          <dt>22-byte header, hex</dt><dd><code class="explain-bytes" id="explain-raster-header"></code></dd>
+          <dt>Beginning of sample data, binary</dt><dd><code class="explain-bytes" id="explain-raster-stream"></code></dd>
+          <dt>32-byte SHA-256 footer, hex</dt><dd><code class="explain-bytes" id="explain-raster-digest"></code></dd>
+        </dl>
+        <p>The header establishes the record ID, dimensions, mode, and payload length. The footer checks that these fields and the samples agree with the stored digest.</p>
+      </li>
+      <li>
+        <h4>Wrap the frame in protected blocks</h4>
+        <p>The 32 × 32 Earth RGB frame uses 3,126 bytes. The matching protected record uses 24 Reed–Solomon blocks totaling 6,120 bytes in one copy. Each block carries metadata, integrity checks and correction symbols. Use the command-line recovery tool to recover the frame and check its digest.</p>
+        <button type="button" id="explain-read-protected">Unwrap the intact Earth copy</button>
+        <p id="explain-protected-status" role="status">This browser example verifies intact blocks. The recovery tool can repair damage within the code’s limits.</p>
+        <canvas class="reconstruction-pixelated reconstruction-protected" id="explain-protected-raster" role="img" hidden>Verified image from the protected Earth record.</canvas>
+        <p><a href="error-correction.txt">Read the protection format and finite correction limits ↗</a></p>
+      </li>
+      <li>
+        <h4>Reconstruct the selected image</h4>
+        <figure class="reconstruction-output"><canvas class="reconstruction-pixelated" id="explain-photo-raster" role="img">The reconstructed frame requires JavaScript.</canvas>
+        <figcaption>Rendered sample-by-sample from the selected CAR v2 frame after validation. Switch record, size, or encoding to compare the reconstructed samples to the reference above.</figcaption></figure>
+      </li>
+    </ol>
+    <div class="doc-links">
+      <a id="explain-download-frame" href="photo-reconstruction/img-019-e32-rgb.car" download>Download CAR frame ↓</a>
+      <a href="photo-reconstruction/img-019-e32-rgb.caec" download>Download protected Earth record ↓</a>
+      <a href="photo-reconstruction/manifest.json">Sample inventory and credits ↗</a>
+      <a href="raw-raster-v2.txt">Raster layout and reproduction commands ↗</a>
+    </div>
+  </section>
+  <div class="doc-links"><a href="raw-raster-v2.txt">Raw raster format and vectors ↗</a><a href="downloads/raster-vectors/mono-3x5.car" download>1-bit vector ↓</a><a href="downloads/raster-vectors/gray-5x2.car" download>Grayscale vector ↓</a><a href="downloads/raster-vectors/rgb-2x3.car" download>RGB vector ↓</a><a href="error-correction.txt">Archive correction experiment ↗</a></div>
 </section>
 <section class="wrap guide-section" id="primer"><p class="eyebrow">01 / THE PRIMER</p><h2>Teach the reader how to read.</h2>
 <p>We cannot open with a sentence in English. We would need to build common ground using repeated physical marks, relationships and pictures. Each stage depends on the previous one.</p>
-<div class="guide-steps">
-<div><small>01</small><h3>Counting</h3><p>One mark, two marks, three marks. Repeated groups establish quantities.</p></div>
-<div><small>02</small><h3>Measurement</h3><p>Relationships, geometry and reference phenomena establish scales.</p></div>
-<div><small>03</small><h3>Images</h3><p>Repeated examples demonstrate how ordered symbols map to a picture.</p></div>
-<div><small>04</small><h3>Interpretation</h3><p>Build from physics and astronomy to molecules, biology and human culture.</p></div>
-</div>
+<figure class="explainer"><h3>From marks to meaning</h3><ol class="explain-flow"><li><svg viewBox="0 0 80 54" aria-hidden="true" fill="currentColor"><circle cx="20" cy="20" r="6"/><circle cx="40" cy="20" r="6" fill="none" stroke="currentColor"/><circle cx="60" cy="20" r="6"/><path d="M10 8H70V42H10V30" fill="none" stroke="currentColor"/></svg><strong>A · Recognize</strong><small>Orientation and two states</small></li><li><svg viewBox="0 0 80 54" aria-hidden="true" fill="currentColor"><circle cx="15" cy="16" r="4"/><circle cx="28" cy="16" r="4"/><circle cx="41" cy="16" r="4"/><rect x="15" y="29" width="12" height="12" fill="none" stroke="currentColor"/><rect x="29" y="29" width="12" height="12"/><rect x="43" y="29" width="12" height="12"/></svg><strong>B · Count</strong><small>Quantities and binary</small></li><li><svg viewBox="0 0 80 54" aria-hidden="true" fill="currentColor"><path d="M8 43L27 8L46 43ZM45 43L57 22L70 43Z" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>C · Measure</strong><small>Geometry and scale</small></li><li><svg viewBox="0 0 80 54" aria-hidden="true" fill="currentColor"><path d="M7 10H32M7 38H32M20 12V35M16 30L20 35L24 30M34 24Q40 5 46 24T58 24T70 24" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>D · Reference</strong><small>Hydrogen transition</small></li><li><svg viewBox="0 0 80 54" aria-hidden="true" fill="currentColor"><path d="M20 7H60V47H20ZM20 17H60M20 27H60M20 37H60M30 7V47M40 7V47M50 7V47" fill="none" stroke="currentColor"/><path d="M30 7H50V17H30ZM20 17H60V27H20ZM40 27H50V47H40Z"/></svg><strong>E · Reconstruct</strong><small>Pixels and records</small></li></ol><figcaption>Human-facing summary of the experimental C1 primer. Each stage depends on conventions taught earlier. <a href="primer-ladder-annotated.svg">See the complete annotated panels.</a></figcaption></figure>
 <div class="guide-experiment"><div><p class="eyebrow">CURRENT TEST / 8 × 8 RASTER</p><h3>One tiny example</h3><p>In our experimental software, each character is a bit. The eight rows of eight symbols can be reconstructed as light or dark squares. This only works if you already know which character means which value and how to scan the image.</p><pre>00010000
 00111000
 01111100
@@ -125,24 +231,20 @@
 00000001</pre></div>
 <div><div class="raster-grid" aria-label="Eight-by-eight pixel image reconstructed from eight binary rows" role="img" id="raster-grid"></div><small>Light = 1 · Dark = 0 · Row-major order</small></div></div>
 
+<div class="guide-experiment"><div><p class="eyebrow">EXPERIMENT B / BLIND INTERPRETATION</p><h3>Can a reader infer the rules without words?</h3><p>This new text-free specimen pairs physical counts, two-state patterns and several asymmetric rectangular rasters. It is intended for independent interpretation trials, not a demonstration that a future reader will understand the archive.</p><p><a href="primer-blind-panel.svg">Open the printable specimen ↗</a> · <a href="blind-primer-experiment.txt">Read the test protocol ↗</a></p></div><figure><img src="primer-blind-panel.svg" alt="Unlabeled experimental panel pairing grouped quantities and two-state patterns with reconstructed grids" style="width:100%;height:auto" loading="lazy"><figcaption>Unvalidated 2D research specimen</figcaption></figure></div>
+<div class="doc-links">
+  <a href="primer-ladder.svg">Text-free A–E panels ↗</a>
+  <a href="primer-ladder-annotated.svg">Annotated C1 panels ↗</a><a href="/archive/discovery#knowledge-layers">C2 magnification and alignment ↗</a>
+  <a href="primer-ladder.txt">Primer rationale and reference units ↗</a>
+  <a href="primer-ladder-trial.svg">Held-out trial sheet ↗</a>
+  <a href="/archive/vocabulary">Visual vocabulary ↗</a>
+</div>
 <p class="guide-small">A genuine primer must demonstrate that mapping through physical examples. The current English labels are explanations for human developers, not decoding instructions for an unknown civilization.</p>
 </section>
 <section class="wrap guide-section" id="carrier"><p class="eyebrow">02 / PHYSICAL ARCHITECTURE</p><h2>What actually goes on the probe?</h2>
 <p>Our website and Python code do not need to travel. A proposed artifact would need a permanent physical representation of the information.</p>
-<div class="carrier-layers">
-<article><small>A / EXTERNAL</small><h3>A passive reference surface</h3><p>A recognizable primer, orientation cues and examples of how to interpret the remaining data, readable without electrical power.</p></article>
-<article><small>B / STORAGE</small><h3>Microscopic information</h3><p>A possible etched carrier containing diagrams and images. More detail requires greater magnification. No material or manufacturing process has been selected or tested.</p></article>
-<article><small>C / CANDIDATE</small><h3>Two independent digital copies</h3><p>Investigate two separately protected copies of a denser library, with recoverable encodings and error correction. Different media may reduce common failures, but both must be tested for the actual mission environment. No hardware or allocation is yet approved.</p></article>
-</div>
-<p class="guide-small">These are candidates, not an approved design. We still need spacecraft mass and space allocations, mounting conditions, environmental limits and evidence that the data remains recoverable.</p></section>
-<section class="wrap guide-section"><p class="eyebrow">03 / WHAT WE KNOW</p><h2>Learn from earlier archives.</h2>
-<p>Voyager's Golden Record carries a physically engraved guide to playback and constructing its images. The Rosetta Disk uses microscopic etched pages. Both provide useful design precedents, but neither is proof that our design would survive Fermi Explorer's journey.</p>
-<div class="doc-links"><a href="https://science.nasa.gov/mission/voyager/golden-record-cover/">NASA · Golden Record instructions ↗</a><a href="https://rosettaproject.org/disk/technology/">Rosetta Disk technology ↗</a><a href="https://www.fermiexplorer.org/">Fermi Explorer mission ↗</a></div>
-<p>Fermi Explorer's public objectives include a payload measuring at least 10 × 10 × 10 cm with a mass of at least 1 kg. That describes an overall mission target, <strong>not an allocation to Centauri Archive</strong>. The mission has discussed carrying its own Golden Record copy; our contribution would need a distinct purpose.</p>
-</section>
-<section class="wrap guide-section guide-last"><p class="eyebrow">04 / WHERE WE GO NEXT</p><h2>Build a test, not a claim.</h2>
-<p>First fabricate an experimental primer panel and ask people to interpret it without instructions. Independently test the step from physical symbols to image reconstruction. Then compare passive materials, readout requirements, mass, environmental risks and error recovery.</p>
-<a class="button" href="encyclopedia.html">Browse the development collection <span aria-hidden="true">↗</span></a></section>
+<p>For the physical layers, candidate materials and storage estimates, see <a href="/archive/engineering#physical">Engineering</a>. For a recipient's path from visible marks to microscopic records, see <a href="/archive/discovery">If someone finds the spacecraft</a>.</p></section>
+<section class="wrap guide-section guide-last"><p class="eyebrow">NEXT EXPERIMENT</p><h2>Test the reading method.</h2><p>The C2 interpretation pilot did not achieve exact unaided reconstruction. Independent human trials and a physical readout specimen remain necessary.</p><div class="doc-links"><a href="/archive/discovery">Explore discovery and simulated readout ↗</a><a href="/archive/vocabulary">Visual vocabulary ↗</a><a href="/archive/proposal#milestones">Research milestones ↗</a></div></section>
 </main>
 
 <script>

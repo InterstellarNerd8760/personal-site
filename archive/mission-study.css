@@ -1,0 +1,270 @@
+/* The brief, proposal and engineering pages share a document layout. */
+.mission-study {
+  max-width: 72rem;
+  padding-block: clamp(2.5rem, 7vw, 6.5rem) 4rem;
+}
+
+.study-intro {
+  padding-bottom: 2.8rem;
+}
+
+.study-intro h1 {
+  margin: .7rem 0 1.25rem;
+  font: 400 clamp(3.5rem, 9vw, 7.4rem)/.92 var(--serif);
+}
+
+.study-intro h1 em {
+  color: var(--sky);
+  font-weight: 400;
+}
+
+.project-brief {
+  max-width: 54rem;
+}
+
+.project-brief .study-intro {
+  padding-bottom: .5rem;
+}
+
+.project-brief .study-intro h1 {
+  font-size: clamp(3.5rem, 7vw, 6.6rem);
+}
+
+.project-brief .study-section {
+  padding-block: 1.65rem;
+}
+
+.project-brief .study-section h2 {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+}
+
+.engineering-study .study-intro h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+.study-intro .intro,
+.study-section > p {
+  max-width: 71ch;
+}
+
+.study-status {
+  max-width: 70ch;
+  padding: .75rem 0 .75rem 1rem;
+  margin-block: 1.25rem;
+  border-inline-start: 2px solid var(--sky);
+  color: var(--soft);
+}
+
+.study-contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem 1.7rem;
+  padding-block: 1.1rem;
+  border-block: 1px solid var(--line);
+}
+
+.study-section {
+  scroll-margin-top: 1.5rem;
+  padding-block: clamp(1.8rem, 4vw, 3.7rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.study-section h2 {
+  margin-block: 0 .65rem;
+  font: 400 clamp(2.2rem, 5vw, 3.6rem)/1.04 var(--serif);
+  color: var(--white);
+}
+
+.study-section p,
+.study-milestones,
+.study-section dd {
+  line-height: 1.65;
+}
+
+.study-section .study-citations {
+  display: flex;
+  gap: .4rem 1.3rem;
+  flex-wrap: wrap;
+  max-width: none;
+  margin: .65rem 0 1.4rem;
+  font-size: .88rem;
+}
+
+.project-brief .study-citations {
+  margin-bottom: 0;
+}
+
+.edition-compare,
+.study-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2.75rem;
+  margin-block: 1.5rem;
+}
+
+.edition-compare article {
+  border-top: 2px solid var(--sky);
+  padding-block: 1rem .35rem;
+}
+
+.edition-compare h3,
+.study-form legend {
+  margin: 0;
+  color: var(--white);
+  font: 400 1.85rem var(--serif);
+}
+
+.study-metric {
+  color: var(--sky);
+  font: 500 1rem var(--mono);
+  margin-block: .25rem;
+}
+
+.study-milestones {
+  max-width: 76ch;
+  margin-block: 1.3rem 0;
+  padding-inline-start: 1.35rem;
+}
+
+.study-milestones li + li {
+  margin-block-start: .65rem;
+}
+
+.study-figure {
+  margin: 1.6rem 0;
+}
+
+.study-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #0a1521;
+}
+
+.study-figure figcaption {
+  margin-block: .65rem;
+  color: var(--soft);
+  font-size: .92rem;
+}
+
+.study-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 1.5rem;
+  text-align: start;
+  font-size: .94rem;
+  overflow-wrap: anywhere;
+}
+
+.study-table th,
+.study-table td {
+  padding: .7rem .55rem;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+  vertical-align: top;
+}
+
+.study-table th {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.study-table th:first-child {
+  width: 25%;
+}
+
+.study-form {
+  margin-block: 1.5rem;
+}
+
+.study-form fieldset {
+  border: 1px solid var(--line);
+  margin: 0 0 1.15rem;
+  padding: .75rem 1.2rem 1.2rem;
+  min-width: 0;
+}
+
+.study-form legend {
+  padding-inline: .45rem;
+}
+
+.study-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: .8rem;
+}
+
+.study-fields label {
+  display: grid;
+  align-content: space-between;
+  gap: .35rem;
+  font-size: .9rem;
+}
+
+.study-fields input {
+  width: 100%;
+  padding: .55rem .65rem;
+  background: var(--bg);
+  color: var(--white);
+  border: 1px solid var(--line);
+  font: .92rem var(--mono);
+  color-scheme: dark;
+}
+
+.study-form button {
+  cursor: pointer;
+}
+
+.study-results div {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: .45rem;
+  margin-block: 0;
+}
+
+.study-results dd {
+  margin: 0;
+  color: var(--sky);
+  font: 500 1rem var(--mono);
+  overflow-wrap: anywhere;
+}
+
+.study-estimate-status {
+  color: var(--white);
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .edition-compare,
+  .study-results {
+    grid-template-columns: 1fr;
+  }
+
+  .study-table th,
+  .study-table td {
+    padding-inline: .3rem;
+  }
+}
+
+@media print {
+  .header, .skip, .study-contents, .actions, .footer {
+    display: none;
+  }
+
+  .mission-study, .mission-study * {
+    background: white;
+    color: black;
+  }
+
+  .mission-study {
+    padding-block: 0;
+  }
+
+  .study-section h2 {
+    break-after: avoid;
+  }
+}
+
+/* Engineering schematics are supporting figures, not full-page hero art. */
+.engineering-study #carrier .study-figure { width: min(100%, 31rem); margin: 1.25rem auto; }
+.engineering-study #carrier .study-figure img { width: 100%; height: auto; }

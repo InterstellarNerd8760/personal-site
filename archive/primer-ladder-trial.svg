@@ -1,0 +1,336 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 569">
+<rect x="0" y="0" width="1000" height="569" fill="white" stroke="none"/>
+<path d="M20 39V16H980V100H20V56" fill="none" stroke="black" stroke-width="2.5" transform=""/>
+<circle cx="36" cy="31" r="6" fill="black" stroke="black"/>
+<circle cx="51" cy="31" r="3" fill="black" stroke="black"/>
+<rect x="60" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="63" y="59" width="12" height="12" fill="black" stroke="none"/>
+<rect x="78" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="96" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="99" y="59" width="12" height="12" fill="black" stroke="none"/>
+<rect x="114" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="117" y="59" width="12" height="12" fill="black" stroke="none"/>
+<rect x="132" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="150" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="168" y="56" width="18" height="18" fill="white" stroke="black"/>
+<rect x="171" y="59" width="12" height="12" fill="black" stroke="none"/>
+<rect x="186" y="56" width="18" height="18" fill="white" stroke="black"/>
+<path d="M20 137V114H980V206H20V154" fill="none" stroke="black" stroke-width="2.5" transform=""/>
+<circle cx="36" cy="129" r="6" fill="black" stroke="black"/>
+<circle cx="51" cy="129" r="3" fill="black" stroke="black"/>
+<rect x="60" y="152" width="15" height="15" fill="white" stroke="black"/>
+<rect x="63" y="155" width="9" height="9" fill="black" stroke="none"/>
+<rect x="75" y="152" width="15" height="15" fill="white" stroke="black"/>
+<rect x="90" y="152" width="15" height="15" fill="white" stroke="black"/>
+<rect x="93" y="155" width="9" height="9" fill="black" stroke="none"/>
+<rect x="105" y="152" width="15" height="15" fill="white" stroke="black"/>
+<rect x="225" y="151" width="45" height="20" fill="white" stroke="black"/>
+<circle cx="232" cy="157" r="2.7" fill="black" stroke="black"/>
+<circle cx="240" cy="157" r="2.7" fill="black" stroke="black"/>
+<path d="M-7 0H7M0 -7V7" fill="none" stroke="black" stroke-width="2" transform="translate(285 161)"/>
+<rect x="301" y="151" width="45" height="20" fill="white" stroke="black"/>
+<circle cx="308" cy="157" r="2.7" fill="black" stroke="black"/>
+<circle cx="316" cy="157" r="2.7" fill="black" stroke="black"/>
+<circle cx="324" cy="157" r="2.7" fill="black" stroke="black"/>
+<circle cx="332" cy="157" r="2.7" fill="black" stroke="black"/>
+<path d="M-7 -3H7M-7 3H7" fill="none" stroke="black" stroke-width="2" transform="translate(361 161)"/>
+<rect x="377" y="151" width="45" height="20" fill="white" stroke="black"/>
+<path d="M0 -7L7 0L0 7L-7 0Z" fill="none" stroke="black" stroke-width="2" transform="translate(399 161)"/>
+<path d="M20 243V220H980V319H20V260" fill="none" stroke="black" stroke-width="2.5" transform=""/>
+<circle cx="36" cy="235" r="6" fill="black" stroke="black"/>
+<circle cx="51" cy="235" r="3" fill="black" stroke="black"/>
+<rect x="60" y="246" width="14" height="14" fill="white" stroke="black"/>
+<rect x="74" y="246" width="14" height="14" fill="white" stroke="black"/>
+<rect x="88" y="246" width="14" height="14" fill="white" stroke="black"/>
+<rect x="102" y="246" width="14" height="14" fill="white" stroke="black"/>
+<rect x="60" y="260" width="14" height="14" fill="white" stroke="black"/>
+<rect x="74" y="260" width="14" height="14" fill="white" stroke="black"/>
+<rect x="88" y="260" width="14" height="14" fill="white" stroke="black"/>
+<rect x="102" y="260" width="14" height="14" fill="white" stroke="black"/>
+<rect x="60" y="274" width="14" height="14" fill="white" stroke="black"/>
+<rect x="74" y="274" width="14" height="14" fill="white" stroke="black"/>
+<rect x="88" y="274" width="14" height="14" fill="white" stroke="black"/>
+<rect x="102" y="274" width="14" height="14" fill="white" stroke="black"/>
+<rect x="60" y="288" width="14" height="14" fill="white" stroke="black"/>
+<rect x="74" y="288" width="14" height="14" fill="white" stroke="black"/>
+<rect x="88" y="288" width="14" height="14" fill="white" stroke="black"/>
+<rect x="102" y="288" width="14" height="14" fill="white" stroke="black"/>
+<circle cx="60" cy="302" r="4" fill="white" stroke="black"/>
+<rect x="145" y="268" width="45" height="20" fill="white" stroke="black"/>
+<circle cx="152" cy="274" r="2.7" fill="black" stroke="black"/>
+<circle cx="160" cy="274" r="2.7" fill="black" stroke="black"/>
+<circle cx="168" cy="274" r="2.7" fill="black" stroke="black"/>
+<rect x="195" y="268" width="45" height="20" fill="white" stroke="black"/>
+<circle cx="202" cy="274" r="2.7" fill="black" stroke="black"/>
+<circle cx="210" cy="274" r="2.7" fill="black" stroke="black"/>
+<path d="M20 356V333H980V553H20V373" fill="none" stroke="black" stroke-width="2.5" transform=""/>
+<circle cx="36" cy="348" r="6" fill="black" stroke="black"/>
+<circle cx="51" cy="348" r="3" fill="black" stroke="black"/>
+<circle cx="62" cy="375" r="4" fill="black" stroke="black"/>
+<rect x="73" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="82" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="83" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="91" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="100" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="101" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="121" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="130" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="139" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="148" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="169" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="178" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="179" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="187" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="196" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="217" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="226" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="235" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="236" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="244" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="245" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="265" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="266" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="274" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="275" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="283" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="292" y="370" width="9" height="9" fill="white" stroke="black"/>
+<path d="M315 367L315 383" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M319 367L319 383" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="72" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="84" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="85" y="393" width="6" height="6" fill="black" stroke="none"/>
+<rect x="96" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="108" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="109" y="393" width="6" height="6" fill="black" stroke="none"/>
+<path d="M123 390L123 401" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="72" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="73" y="407" width="6" height="6" fill="black" stroke="none"/>
+<rect x="84" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="85" y="407" width="6" height="6" fill="black" stroke="none"/>
+<rect x="96" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="108" y="406" width="8" height="8" fill="white" stroke="black"/>
+<path d="M123 404L123 415" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="72" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="84" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="96" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="97" y="421" width="6" height="6" fill="black" stroke="none"/>
+<rect x="108" y="420" width="8" height="8" fill="white" stroke="black"/>
+<path d="M123 418L123 429" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M63 437L92 437" fill="none" stroke="black" stroke-width="2" transform=""/>
+<circle cx="542" cy="375" r="4" fill="black" stroke="black"/>
+<rect x="553" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="562" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="563" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="571" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="572" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="580" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="601" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="610" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="619" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="628" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="629" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="649" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="658" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="667" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="668" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="676" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="697" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="706" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="707" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="715" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="724" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="745" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="746" y="371" width="7" height="7" fill="black" stroke="none"/>
+<rect x="754" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="763" y="370" width="9" height="9" fill="white" stroke="black"/>
+<rect x="772" y="370" width="9" height="9" fill="white" stroke="black"/>
+<path d="M795 367L795 383" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M799 367L799 383" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="552" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="553" y="393" width="6" height="6" fill="black" stroke="none"/>
+<rect x="560" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="561" y="393" width="6" height="6" fill="black" stroke="none"/>
+<rect x="568" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="569" y="393" width="6" height="6" fill="black" stroke="none"/>
+<rect x="580" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="588" y="392" width="8" height="8" fill="white" stroke="black"/>
+<rect x="596" y="392" width="8" height="8" fill="white" stroke="black"/>
+<path d="M611 390L611 401" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="552" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="560" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="561" y="407" width="6" height="6" fill="black" stroke="none"/>
+<rect x="568" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="580" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="581" y="407" width="6" height="6" fill="black" stroke="none"/>
+<rect x="588" y="406" width="8" height="8" fill="white" stroke="black"/>
+<rect x="596" y="406" width="8" height="8" fill="white" stroke="black"/>
+<path d="M611 404L611 415" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="552" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="560" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="568" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="569" y="421" width="6" height="6" fill="black" stroke="none"/>
+<rect x="580" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="581" y="421" width="6" height="6" fill="black" stroke="none"/>
+<rect x="588" y="420" width="8" height="8" fill="white" stroke="black"/>
+<rect x="589" y="421" width="6" height="6" fill="black" stroke="none"/>
+<rect x="596" y="420" width="8" height="8" fill="white" stroke="black"/>
+<path d="M611 418L611 429" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="552" y="434" width="8" height="8" fill="white" stroke="black"/>
+<rect x="553" y="435" width="6" height="6" fill="black" stroke="none"/>
+<rect x="560" y="434" width="8" height="8" fill="white" stroke="black"/>
+<rect x="568" y="434" width="8" height="8" fill="white" stroke="black"/>
+<rect x="569" y="435" width="6" height="6" fill="black" stroke="none"/>
+<rect x="580" y="434" width="8" height="8" fill="white" stroke="black"/>
+<rect x="588" y="434" width="8" height="8" fill="white" stroke="black"/>
+<rect x="589" y="435" width="6" height="6" fill="black" stroke="none"/>
+<rect x="596" y="434" width="8" height="8" fill="white" stroke="black"/>
+<rect x="597" y="435" width="6" height="6" fill="black" stroke="none"/>
+<path d="M611 432L611 443" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M543 451L572 451" fill="none" stroke="black" stroke-width="2" transform=""/>
+<circle cx="62" cy="471" r="4" fill="black" stroke="black"/>
+<rect x="73" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="82" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="83" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="91" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="92" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="100" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="101" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="121" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="130" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="139" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="140" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="148" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="169" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="178" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="187" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="188" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="196" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="197" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="217" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="226" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="235" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="236" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="244" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="245" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="265" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="266" y="467" width="7" height="7" fill="black" stroke="none"/>
+<rect x="274" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="283" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="292" y="466" width="9" height="9" fill="white" stroke="black"/>
+<rect x="293" y="467" width="7" height="7" fill="black" stroke="none"/>
+<path d="M315 463L315 479" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M319 463L319 479" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="72" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="80" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="88" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="98" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="106" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="114" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="124" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="132" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="140" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="158" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="159" y="489" width="6" height="6" fill="black" stroke="none"/>
+<rect x="166" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="167" y="489" width="6" height="6" fill="black" stroke="none"/>
+<rect x="174" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="175" y="489" width="6" height="6" fill="black" stroke="none"/>
+<rect x="184" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="192" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="200" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="210" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="218" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="226" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="244" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="252" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="253" y="489" width="6" height="6" fill="black" stroke="none"/>
+<rect x="260" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="270" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="278" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="286" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="296" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="297" y="489" width="6" height="6" fill="black" stroke="none"/>
+<rect x="304" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="312" y="488" width="8" height="8" fill="white" stroke="black"/>
+<rect x="313" y="489" width="6" height="6" fill="black" stroke="none"/>
+<path d="M333 486L333 497" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="72" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="80" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="88" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="98" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="99" y="503" width="6" height="6" fill="black" stroke="none"/>
+<rect x="106" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="107" y="503" width="6" height="6" fill="black" stroke="none"/>
+<rect x="114" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="115" y="503" width="6" height="6" fill="black" stroke="none"/>
+<rect x="124" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="132" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="140" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="158" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="166" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="174" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="184" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="192" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="200" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="210" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="218" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="226" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="244" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="252" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="260" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="270" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="278" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="286" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="296" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="297" y="503" width="6" height="6" fill="black" stroke="none"/>
+<rect x="304" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="305" y="503" width="6" height="6" fill="black" stroke="none"/>
+<rect x="312" y="502" width="8" height="8" fill="white" stroke="black"/>
+<rect x="313" y="503" width="6" height="6" fill="black" stroke="none"/>
+<path d="M333 500L333 511" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<rect x="72" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="73" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="80" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="88" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="98" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="106" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="114" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="115" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="124" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="132" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="140" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="158" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="166" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="167" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="174" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="175" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="184" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="192" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="193" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="200" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="210" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="211" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="218" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="219" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="226" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="244" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="245" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="252" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="253" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="260" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="261" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="270" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="271" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="278" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="279" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="286" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="287" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="296" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="297" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="304" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="305" y="517" width="6" height="6" fill="black" stroke="none"/>
+<rect x="312" y="516" width="8" height="8" fill="white" stroke="black"/>
+<rect x="313" y="517" width="6" height="6" fill="black" stroke="none"/>
+<path d="M333 514L333 525" fill="none" stroke="black" stroke-width="1.5" transform=""/>
+<path d="M63 533L92 533" fill="none" stroke="black" stroke-width="2" transform=""/>
+</svg>

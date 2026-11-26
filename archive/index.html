@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="embedded-archive">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#05080f">
-  <meta name="description" content="Centauri Archive is an independent, open-source experiment in preserving knowledge of Earth, life, and humanity for interstellar travel.">
-  <title>Centauri Archive — A record of Earth · Weston Rosch</title>
+  <meta name="description" content="An independent, open-source project developing a compact, durable and self-describing record of Earth, life and human civilization for potential interstellar carriage.">
+  <title>Centauri Archive — A record of Earth, beyond Earth · Weston Rosch</title>
   <meta name="author" content="Weston Rosch">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
@@ -31,15 +31,14 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="canonical" href="https://westonrosch.com/archive/">
   <meta property="og:url" content="https://westonrosch.com/archive/">
-  <meta property="og:title" content="Centauri Archive — A record of Earth · Weston Rosch">
-  <meta property="og:description" content="Centauri Archive is an independent, open-source experiment in preserving knowledge of Earth, life, and humanity for interstellar travel.">
-  <meta name="twitter:title" content="Centauri Archive — A record of Earth · Weston Rosch">
-  <meta name="twitter:description" content="Centauri Archive is an independent, open-source experiment in preserving knowledge of Earth, life, and humanity for interstellar travel.">
+  <meta property="og:title" content="Centauri Archive — A record of Earth, beyond Earth · Weston Rosch">
+  <meta property="og:description" content="An independent, open-source project developing a compact, durable and self-describing record of Earth, life and human civilization for potential interstellar carriage.">
+  <meta name="twitter:title" content="Centauri Archive — A record of Earth, beyond Earth · Weston Rosch">
+  <meta name="twitter:description" content="An independent, open-source project developing a compact, durable and self-describing record of Earth, life and human civilization for potential interstellar carriage.">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="site-chrome.css">
-  <script defer src="carrier.js"></script>
+  <link rel="stylesheet" href="/archive/site-chrome.css">
 </head>
-<body class="subpage archive-page">
+<body class="subpage archive-page archive-editorial archive-landing">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="/">Weston Rosch</a>
@@ -55,78 +54,49 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
   </header>
 <nav class="archive-subnav" aria-label="Centauri Archive">
-    <a href="/archive/" aria-current="page">Overview</a>
-    <a href="/archive/encyclopedia.html">Encyclopedia</a>
-    <a href="/archive/images.html">Image library</a>
-    <a href="/archive/guide.html">Decoding</a>
-    <a href="/archive/brief.html">Project brief</a>
-    <a class="archive-source" href="https://github.com/InterstellarNerd8760/centauri-archive" target="_blank" rel="noreferrer">Source ↗</a>
+    <a class="archive-brand" href="/archive/" aria-current="page">Centauri Archive<span class="brand-dot">.</span></a>
+    <a href="/archive/brief">Project brief</a>
+    <a href="/archive/encyclopedia">Encyclopedia</a>
+    <a href="/archive/images">Image library</a>
+    <a href="/archive/engineering">Decoding and engineering</a>
   </nav>
 
-<main id="main">
-  <section class="hero wrap" id="top">
-    <p class="eyebrow">INDEPENDENT INTERSTELLAR ARCHIVE PROJECT &nbsp;/&nbsp; EDITION 0.6.1</p>
-    <div class="hero-grid"><div class="hero-copy">
-      <h1>A record<br>of <em>Earth.</em></h1>
-      <p class="hero-tagline">An intelligible record of a living world.</p>
-      <p class="intro">Centauri Archive is an independent project to preserve knowledge of Earth, its biosphere, and human civilization in a compact record intended for the extraordinary distances and timescales of interstellar travel.</p>
-      <p class="hero-note">A growing scientific and cultural collection, alongside experiments in how a future reader might reconstruct its meaning.</p>
-    </div><figure class="earth-cover"><a href="images.html?record=photos/earth-apollo17.jpg"><img src="records/photos/earth-apollo17.jpg" alt="Blue Marble, a full view of Earth from Apollo 17"></a><figcaption>Blue Marble · Apollo 17 crew, 1972</figcaption></figure></div>
-    <div class="actions"><a class="button" href="encyclopedia.html">Explore the encyclopedia <span aria-hidden="true">↗</span></a><a class="text-link" href="brief.html">Project brief ↗</a></div>
-    <p class="disclosure">Experimental digital edition. Not affiliated with or approved by Fermi Explorer. No flight hardware or extraterrestrial-readable format exists yet.</p>
-  </section>
-
-  <section class="section wrap archive-showcase photographic-showcase" id="visuals">
-    <div class="section-head">
-      <p class="eyebrow">THE PHOTOGRAPHIC RECORD / FIRST ACQUISITIONS</p>
-      <h2>The world as it was actually seen.</h2>
-      <p>Real photographs, captured by humans and scientific instruments. Each preserved image includes an identifiable origin, accurate context, and rights information. The three original scientific diagrams remain available in the reference library but do not count toward the 100-photograph target.</p>
+<main id="main" tabindex="-1">
+  <section class="wrap archive-hero" id="top">
+    <div>
+      <p class="eyebrow">Centauri Archive</p>
+      <h1>A record of Earth, <em>beyond Earth.</em></h1>
+      <p class="intro">A proposed contribution to Fermi Explorer: a compact record of Earth, life and human civilization designed to be discovered and decoded long after spacecraft power is lost. Centauri Archive is an independent, open-source research project.</p>
+      <div class="actions archive-actions">
+        <a class="button" href="/archive/brief">Project brief <span aria-hidden="true">→</span></a>
+        <a class="button" href="/archive/encyclopedia">Encyclopedia</a>
+        <a class="button" href="/archive/images">Image library</a>
+        <a class="button" href="#archive">Explore <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="archive-status">Digital research prototype · No flight approval</p>
     </div>
-<div class="showcase-grid"><a class="showcase-card" href="images.html?record=photos/elodea-leaf.jpg"><img src="records/photos/elodea-leaf.jpg" alt="Chloroplasts in a waterweed leaf" loading="lazy"><div class="showcase-card-body"><h3>Inside a leaf</h3></div></a>
-<a class="showcase-card" href="images.html?record=photos/navajo-weavers.jpg"><img src="records/photos/navajo-weavers.jpg" alt="Navajo weavers, 1914" loading="lazy"><div class="showcase-card-body"><h3>At the loom</h3></div></a>
-<a class="showcase-card" href="images.html?record=photos/mississippi-delta.jpg"><img src="records/photos/mississippi-delta.jpg" alt="Mississippi River Delta from orbit" loading="lazy"><div class="showcase-card-body"><h3>Where the river meets the sea</h3></div></a>
-</div><p><a href="images.html">Browse all photographs ↗</a></p>
+    <figure class="earth-cover">
+      <a href="/archive/images?record=photos/earth-apollo17.jpg"><img src="records/photos/earth-apollo17.jpg" alt="The full disk of Earth photographed from Apollo 17, with Africa and Antarctica visible" width="1399" height="1400" fetchpriority="high"></a>
+      <figcaption>Blue Marble · Apollo 17 crew, 1972</figcaption>
+    </figure>
   </section>
-  <section class="section wrap" id="overview">
-    <div class="section-head"><p class="eyebrow">THE PROJECT / IN BRIEF</p><h2>What is Centauri Archive?</h2><p>An open effort to make a compact, intelligible record of Earth for long-duration spaceflight. The work has three distinct parts: deciding what to preserve, finding a way to explain it, and designing a medium that can survive.</p></div>
-    <div class="overview-grid">
-      <article><p class="status-label">WORKING PROTOTYPE</p><h3>A reproducible digital collection</h3><p>Original introductory records, a versioned manifest, SHA-256 integrity checks and automated tests. Browse the collection or inspect the source and build tools.</p><a href="encyclopedia.html">Explore the collection ↗</a></article>
-      <article><p class="status-label">ACTIVE RESEARCH</p><h3>A physical decoding primer</h3><p>Early visual examples of counting and image reconstruction. We have not demonstrated that an unfamiliar reader can decode the information independently.</p><a href="guide.html">Understand the experiment ↗</a></article>
-      <article><p class="status-label">NOT YET BUILT</p><h3>A spacecraft-ready artifact</h3><p>A passive engraved carrier is one candidate. Material, mass, size, mounting, durability and mission compatibility remain undetermined.</p><a href="brief.html">Read the project brief ↗</a></article>
-    </div>
-    <div class="project-distinction"><h3>Why a new archive?</h3><p>Voyager's Golden Record is an enduring cultural portrait of Earth. Centauri Archive explores a different, complementary direction: a structured introduction to our scientific understanding, supported by diagrams and a carefully tested decoding method. It is not a claim to supersede Voyager or represent all humanity.</p></div>
-  </section>
-
-  <section class="section wrap" id="archive">
-    <div class="section-head"><p class="eyebrow">01 / CONTENTS</p><h2>What we want to preserve.</h2><p>An initial collection of original records, with an explicit plan for a more complete miniature encyclopedia. It does not yet represent all of humanity.</p></div>
-    <div class="topic"><span class="topic-no">01</span><div><h3>Mathematics &amp; decoding</h3><p>Counting, repeated structure, how the current digital package works, and the limits of its readability.</p><a href="guide.html">How the primer works ↗</a></div></div>
-    <div class="topic"><span class="topic-no">02</span><div><h3>Earth &amp; the Solar System</h3><p>Where we are, how our planet moves, and the environment in which terrestrial life evolved.</p><a href="encyclopedia.html?article=CA-02.004">Read Earth record ↗</a></div></div>
-    <div class="topic"><span class="topic-no">03</span><div><h3>Biology &amp; the tree of life</h3><p>Cells, DNA, evolution and the biodiversity of Earth's biosphere. The priority for the expanded edition.</p><a href="encyclopedia.html?article=CA-04.003">Read biology record ↗</a></div></div>
-    <div class="topic"><span class="topic-no">04</span><div><h3>Humanity &amp; our message</h3><p>Human cultures, selected history and a clearly marked editorial message draft awaiting review.</p><a href="encyclopedia.html?article=CA-06.002">Read humanity record ↗</a></div></div>
-    <div class="doc-links"><a href="encyclopedia.html">Browse the encyclopedia ↗</a><a href="encyclopedia.html?article=CA-03.002">Read: Water on Earth ↗</a></div>
-  </section>
-
-  <section class="section wrap" id="decoding">
-    <div class="section-head"><p class="eyebrow">02 / INTERPRETATION</p><h2>How would anyone read it?</h2><p>We cannot assume the reader knows English, computers, ZIP files or the concept of a byte. The goal is a physical-to-digital learning sequence — currently a research plan.</p></div>
-    <ol class="steps">
-      <li><span>Recognize structure</span><p>Repeated marks, patterns, orientation and counting.</p></li>
-      <li><span>Establish shared references</span><p>Mathematical relationships, units and diagrams grounded in physics.</p></li>
-      <li><span>Decode stored information</span><p>Framing, ordered symbols, test images and error recovery.</p></li>
-      <li><span>Understand the record</span><p>The Solar System, chemistry, biology, and then human civilization.</p></li>
-    </ol>
-    <div class="doc-links"><a href="guide.html">Understand the primer and payload ↗</a><a href="primer-panel.svg">See experimental primer panel ↗</a><a href="guide.html">Explore raster example ↗</a></div>
-  </section>
-
-  <section class="section wrap" id="engineering">
-    <div class="section-head"><p class="eyebrow">03 / ENGINEERING</p><h2>Designed to be tested.</h2><p>Reproducible data, transparent assumptions, and a path from experiments to potential mission integration.</p></div>
-    <figure class="carrier-figure"><div class="carrier-frame"><canvas id="carrier" width="840" height="680" role="img" aria-label="Concept illustration of an engraved archive carrier with a reading grid and circular alignment marks">Conceptual archive carrier</canvas></div><figcaption><span>Carrier study / concept illustration</span><span>Not flight hardware</span></figcaption></figure>
-    <div class="status">
-      <div><p class="status-label">WORKING TODAY</p><h3>Digital package</h3><p>Build, inspect and verify original content and a manifest with file lengths and SHA-256 checksums. These detect corruption, not repair it.</p></div>
-      <div><p class="status-label">RESEARCH</p><h3>Physical preservation</h3><p>A passive decoding-primer concept. No fabricated carrier, lifetime estimate or tested extraterrestrial decoding yet.</p></div>
-      <div><p class="status-label">UNCONFIRMED</p><h3>Mission fit</h3><p>Mass, dimensions, environment, telemetry and any available payload allocation need direct confirmation from the mission team.</p></div>
-    </div>
-    <p class="meta">Digital edition 0.6.1 · Development package verified in the source repository</p>
-    <div class="doc-links"><a href="guide.html">What goes on the probe? ↗</a><a href="brief.html">Development status and next steps ↗</a><a href="downloads/manifest.json">Digital manifest ↗</a></div>
+  <section class="wrap archive-directory" id="overview" aria-labelledby="archive">
+    <h2 id="archive" tabindex="-1">Explore the archive</h2>
+    <ul>
+      <li>
+        <a href="/archive/brief"><h3>Project brief</h3><p>Mission rationale, prototype status and open questions for a Fermi Explorer feasibility review.</p></a>
+      </li>
+      <li>
+        <a href="/archive/encyclopedia"><h3>Encyclopedia</h3><p>Foundational science and culture, connected through articles, diagrams and source references.</p></a>
+      </li>
+      <li id="visuals">
+        <a href="/archive/images"><h3>Image library</h3><p>Real photographs of Earth, life and humanity, with context, provenance and rights information.</p></a>
+      </li>
+      <li id="engineering"><a id="decoding" href="/archive/engineering">
+        <h3 id="archive-method">Decoding and engineering</h3>
+        <p id="carrier">The proposed carrier, four layers of information and experiments in recovering the archive.</p>
+      </a></li>
+    </ul>
   </section>
 </main>
   <footer class="site-footer">
