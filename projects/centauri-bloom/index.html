@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="./bloom.css?v=8">
+  <link rel="stylesheet" href="./bloom.css?v=9">
 <style id="bloom-control-colors">
 #bloom-playground .bloom-chat button,#bloom-playground .bloom-chat select,#bloom-playground .bloom-chat select option{color:#f2f5f8!important;background:#18283b!important;border:1px solid #53677d!important;appearance:none;-webkit-appearance:none;text-shadow:none!important}
 #bloom-playground .bloom-chat button.bloom-control-primary{color:#082131!important;background:#86c7e5!important;border-color:#86c7e5!important}
@@ -118,7 +118,7 @@ html[data-theme="rustic"] #bloom-playground .bloom-chat select{color-scheme:ligh
         <p class="bloom-eyebrow">Training / Contribute compute</p>
         <h2 id="training-tracks">Train the model.</h2>
         <p>One trainer, one model, multiple datasets. Choose your dataset and training budget in Google Colab. Every run starts from the latest accepted checkpoint and automatically submits a candidate Hugging Face pull request.</p>
-        <div class="bloom-roles"><article>
+        <div class="bloom-roles bloom-single-trainer"><article>
           <h3>Bloom Trainer</h3>
           <p>Default: Jaron’s instruction dataset · 3,000 steps. Switch to FineWeb-Edu, TinyStories, Cosmopedia, public-domain literature or a mixed recipe using the dataset selector.</p>
           <div class="bloom-training-options"><a class="btn btn-solid" href="https://colab.research.google.com/github/InterstellarNerd8760/centauri-bloom/blob/main/notebooks/bloom-trainer.ipynb" target="_blank" rel="noopener noreferrer">Open trainer ↗</a><a class="btn btn-ghost" href="https://github.com/InterstellarNerd8760/centauri-bloom/blob/main/docs/unified-training.md" target="_blank" rel="noopener noreferrer">Training guide ↗</a></div>
