@@ -9,6 +9,9 @@
 /img/*
   Cache-Control: public, max-age=2592000
 
+/og/*
+  Cache-Control: public, max-age=2592000
+
 /*.png
   Cache-Control: public, max-age=2592000
 
