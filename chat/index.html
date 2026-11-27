@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6MDTRSW0F"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#05080f">
+  <meta name="color-scheme" content="dark">
+  <title>Bloom chat · Weston Rosch</title>
+  <meta name="description" content="Chat with Centauri Bloom, a small open language model trained from scratch. Runs on your device.">
+  <meta name="author" content="Weston Rosch">
+  <link rel="canonical" href="https://chat.westonrosch.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chat.westonrosch.com/">
+  <meta property="og:site_name" content="Weston Rosch">
+  <meta property="og:title" content="Bloom chat">
+  <meta property="og:description" content="Chat with Centauri Bloom, a small open language model trained from scratch. Runs on your device.">
+  <meta property="og:image" content="https://westonrosch.com/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rosch_weston">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/chat/chat.css?v=1">
+</head>
+<body>
+  <svg class="sprite" width="0" height="0" aria-hidden="true">
+    <symbol id="bloom-mark" viewBox="0 0 240 240"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="120" cy="82" rx="27" ry="54"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(60 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(120 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(180 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(240 120 120)"/><ellipse cx="120" cy="82" rx="27" ry="54" transform="rotate(300 120 120)"/><circle cx="120" cy="120" r="11"/><circle cx="120" cy="120" r="105" stroke-dasharray="1 8"/></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 15V6a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-retry" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 12h8l1-12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <div class="app" data-app>
+    <aside class="sidebar" id="sidebar" data-sidebar aria-label="Chats">
+      <div class="sidebar-head">
+        <a class="brand" href="/" data-home-link aria-label="Bloom chat home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#bloom-mark"/></svg>
+          <span class="brand-text">Bloom <em>chat</em></span>
+        </a>
+        <button class="icon-btn sidebar-close" type="button" data-sidebar-close aria-label="Close chat list"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <button class="new-chat" type="button" data-new-chat><svg aria-hidden="true"><use href="#i-plus"/></svg>New chat</button>
+      <p class="side-label">Recent</p>
+      <nav class="history" data-history aria-label="Saved chats"></nav>
+      <div class="sidebar-foot">
+        <p>Chats are saved only in this browser.</p>
+        <p><a href="https://westonrosch.com/projects/centauri-bloom/">About Centauri Bloom</a> · <a href="https://westonrosch.com/">westonrosch.com</a></p>
+      </div>
+    </aside>
+    <div class="scrim" data-scrim hidden></div>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button class="icon-btn menu-toggle" type="button" data-sidebar-open aria-controls="sidebar" aria-expanded="false" aria-label="Open chat list"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+        <div class="model-picker">
+          <button class="model-button" type="button" data-model-button aria-haspopup="true" aria-expanded="false" aria-controls="model-menu">
+            <span class="model-dot" data-model-dot aria-hidden="true"></span>
+            <span class="model-name" data-model-name>Bloom</span>
+            <span class="model-version" data-model-version></span>
+            <svg class="chev" aria-hidden="true"><use href="#i-chevron"/></svg>
+          </button>
+          <div class="model-menu" id="model-menu" data-model-menu role="menu" aria-label="Choose a model" hidden></div>
+        </div>
+        <span class="topbar-spacer"></span>
+        <button class="icon-btn" type="button" data-settings-button aria-expanded="false" aria-controls="settings" aria-label="Generation settings"><svg aria-hidden="true"><use href="#i-sliders"/></svg></button>
+        <button class="icon-btn topbar-new" type="button" data-new-chat aria-label="New chat"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="settings" id="settings" data-settings hidden>
+          <p class="settings-title">Generation</p>
+          <label class="field"><span>Reply length</span><select data-length><option value="64">Short · 64</option><option value="128" selected>Medium · 128</option><option value="256">Long · 256</option></select></label>
+          <label class="field"><span>Temperature</span><select data-temp><option value="0.5">0.5 · focused</option><option value="0.7" selected>0.7</option><option value="0.9">0.9</option><option value="1.1">1.1 · loose</option></select></label>
+          <label class="toggle"><input type="checkbox" data-memory> <span>Include earlier messages<small>Chat models only. Bloom was mostly tuned on single questions, so this can help or confuse it.</small></span></label>
+          <label class="toggle"><input type="checkbox" data-economy> <span>Battery saver<small>Rests between tokens and stops when the tab is hidden.</small></span></label>
+          <button class="text-btn" type="button" data-clear-cache>Remove downloaded models from this browser</button>
+        </div>
+      </header>
+
+      <div class="load-bar" data-load hidden>
+        <div class="load-row"><span class="load-dot" aria-hidden="true"></span><span data-load-text role="status" aria-live="polite">Loading model…</span></div>
+        <div class="load-track"><div class="load-fill" data-load-fill></div></div>
+      </div>
+
+      <section class="thread" data-thread aria-label="Conversation" aria-live="polite">
+        <div class="empty" data-empty>
+          <svg class="empty-mark" aria-hidden="true"><use href="#bloom-mark"/></svg>
+          <h1>Chat with <em>Bloom.</em></h1>
+          <p class="empty-note">Bloom models are small language models trained from scratch by contributors. They run here on your device, and their answers are often wrong, repetitive or odd. That is part of the research.</p>
+          <div class="starters" data-starters></div>
+        </div>
+        <div class="messages" data-messages></div>
+      </section>
+
+      <div class="composer-wrap">
+        <button class="jump" type="button" data-jump hidden aria-label="Scroll to latest message"><svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <form class="composer" data-form>
+          <label class="sr-only" for="prompt">Message</label>
+          <textarea id="prompt" data-input rows="1" maxlength="2000" placeholder="Message Bloom" autocomplete="off" enterkeyhint="send"></textarea>
+          <button class="send" type="submit" data-send aria-label="Send" disabled><svg aria-hidden="true"><use href="#i-send"/></svg></button>
+        </form>
+        <p class="composer-note" data-note>Enter to send · Shift+Enter for a new line · Runs on your device</p>
+      </div>
+    </main>
+  </div>
+  <script src="/chat/chat.js?v=1" type="module"></script>
+</body>
+</html>
