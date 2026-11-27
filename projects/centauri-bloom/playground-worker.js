@@ -1,9 +1,7 @@
 import {
   parseSafetensors,
-  createSession,
   createBPE,
   sha256Hex,
-  sampleToken,
   formatPrompt,
   loadedParams,
   architectureParams,
@@ -11,6 +9,7 @@ import {
   utf8Enc,
   utf8Dec
 } from './inference.js?v=11';
+import { createFastSession, sampleTokenFast } from './fast-engine.js?v=1';
 
 let session = null;
 let BPE = null;
@@ -52,7 +51,9 @@ async function installWeights(buf, { tokenizer, expectedSha, format, metrics, cf
     throw Error('Checkpoint tensors do not match the supported architecture parameter count');
   }
   CFG = nextCfg;
-  session = createSession(weights, CFG);
+  if (session && session.dispose) session.dispose();
+  session = null;
+  session = (await createFastSession(weights, CFG)).session;
   chat = !!format;
   return { params: actual, bytes: buf.byteLength, bpe: !!BPE, cfg: CFG, chat };
 }
@@ -91,16 +92,19 @@ async function generate(msg) {
   const units = BPE ? 'tokens' : 'bytes';
   const t0 = performance.now();
   let count = 0, reason = 'Length limit', text = '';
-  session.reset();
+  // KV cache prefix reuse makes reset unnecessary; past the context the window
+  // jumps a quarter context at a time instead of re-reading it every token.
+  const shift = Math.max(1, Math.floor(CFG.context / 4));
+  let start = Math.max(0, ids.length - CFG.context);
   post({ type: 'progress', requestId: msg.requestId, count: 0, limit, units, text: '', rate: 0, elapsed: 0, phase: 'start' });
   try {
     for (let i = 0; i < limit; i++) {
       if (cancelled) { reason = 'Stopped'; break; }
       if (economy && hidden) { reason = 'Paused tab — stopped'; break; }
       const tokenStart = performance.now();
-      const window = ids.slice(-CFG.context);
-      const logits = session.forward(window);
-      const nxt = sampleToken(logits, temp, BPE ? 40 : 0);
+      if (ids.length - start > CFG.context) start = ids.length - (CFG.context - shift);
+      const logits = await session.forward(ids.slice(start));
+      const nxt = sampleTokenFast(logits, temp, BPE ? 40 : 0);
       if (BPE && nxt === BPE.eotId) { reason = 'End of text'; break; }
       ids.push(nxt); gen.push(nxt); count++;
       text = BPE ? BPE.decode(gen) : utf8Dec.decode(Uint8Array.from(gen));

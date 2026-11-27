@@ -140,6 +140,15 @@ svg { width: 1.15rem; height: 1.15rem; flex: none; }
 .tag-kind { color: var(--text-2); border: 1px solid var(--line-2); }
 .model-more { display: block; margin: .15rem .65rem .2rem; padding: .3rem 0; border: 0; background: none; color: var(--sage); font: .74rem/1.4 var(--mono); }
 .model-more:hover { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.model-older-toggle {
+  display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: .35rem; padding: .6rem .65rem;
+  border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; color: var(--text-2);
+  font: .72rem/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; text-align: left;
+}
+.model-older-toggle:hover, .model-older-toggle:focus-visible { color: var(--white); background: var(--surface-2); border-radius: 9px; }
+.model-older-toggle .chev { color: var(--sage); }
+.model-older { padding-left: .1rem; }
+.model-older .model-group-title strong { font-size: 1rem; }
 .model-menu-foot { margin: .3rem .65rem .4rem; font-size: .74rem; color: var(--text-3); line-height: 1.45; }
 
 .settings { right: clamp(.75rem, 2vw, 1.25rem); width: min(20rem, calc(100vw - 1.5rem)); padding: .9rem 1rem 1rem; display: grid; gap: .75rem; }
