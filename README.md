@@ -12,10 +12,7 @@ Deployed by **Cloudflare Workers Builds** from the `main` branch: every push to 
 
 `chat/` is a full-screen chat client for every published Centauri Bloom model. It reuses the playground's inference engine (`projects/centauri-bloom/inference.js`, KV cache) in its own worker (`chat/chat-worker.js`), which adds download progress and keeps downloaded weights in the browser's Cache Storage. The model list is read live from the `Centauri-Bloom` Hugging Face organization: each repo's `main` revision plus open or merged PR checkpoints that publish `model.safetensors`, with the original `baseline-001` always available. The newest chat model is the default; `?model=<repo>@<revision>` selects another. Chats and settings are stored only in `localStorage`. All asset paths are absolute (`/chat/…`, `/projects/centauri-bloom/…`), so the page works at both `westonrosch.com/chat/` and the root of `chat.westonrosch.com`.
 
-To serve it at `chat.westonrosch.com` (Cloudflare dashboard, no code change):
-
-1. **Workers & Pages → this site's Worker → Settings → Domains & Routes → Add → Custom domain:** `chat.westonrosch.com`. Cloudflare creates the DNS record and certificate.
-2. **Rules → Overview → Create rule → URL Rewrite Rule:** when `Hostname equals chat.westonrosch.com` **and** `URI Path equals /`, rewrite the path (static) to `/chat/`. Leave the query string unchanged. Only the root is rewritten; every other asset is requested by absolute path and is served normally.
+The custom domain `chat.westonrosch.com` is attached to this site's Worker in Cloudflare (Workers & Pages → Settings → Domains & Routes). The homepage (`index.html`) includes an early redirect: if the hostname is `chat.westonrosch.com` and the path is `/`, it replaces the location with `/chat/` and keeps the query string and hash. Asset paths are already absolute, so no URL rewrite rule is required.
 
 ## Checks
 
