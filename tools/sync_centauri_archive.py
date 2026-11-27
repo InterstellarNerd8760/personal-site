@@ -40,19 +40,45 @@ GTAG = """  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6M
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q6MDTRSW0F');</script>
 """
 
+# Per-page 1200x630 share screenshots under /og/. Unknown archive pages
+# fall back to the archive landing screenshot.
+ARCHIVE_SHARE_IMAGES = {
+    "index.html": ("/og/archive.png", "The Centauri Archive homepage on Weston Rosch's website"),
+    "brief.html": ("/og/archive-brief.png", "The Centauri Archive project brief on Weston Rosch's website"),
+    "encyclopedia.html": ("/og/archive-encyclopedia.png", "The Centauri Archive encyclopedia on Weston Rosch's website"),
+    "images.html": ("/og/archive-images.png", "The Centauri Archive image library on Weston Rosch's website"),
+    "engineering.html": ("/og/archive-engineering.png", "The Centauri Archive decoding and engineering page on Weston Rosch's website"),
+    "guide.html": ("/og/archive-guide.png", "The Centauri Archive decoding and physical design page on Weston Rosch's website"),
+    "discovery.html": ("/og/archive-discovery.png", "The Centauri Archive discovery page on Weston Rosch's website"),
+    "library.html": ("/og/archive-library.png", "The Centauri Archive library on Weston Rosch's website"),
+    "proposal.html": ("/og/archive-proposal.png", "The Fermi Explorer proposal page on Weston Rosch's website"),
+    "vocabulary.html": ("/og/archive-vocabulary.png", "The Centauri Archive visual vocabulary page on Weston Rosch's website"),
+}
+ARCHIVE_SHARE_FALLBACK = ("/og/archive.png", "Centauri Archive on Weston Rosch's website")
+
+
+def share_head(filename: str) -> str:
+    path, alt = ARCHIVE_SHARE_IMAGES.get(filename, ARCHIVE_SHARE_FALLBACK)
+    url = SITE_ORIGIN + path
+    alt_esc = escape(alt)
+    return f"""  <meta property="og:image" content="{url}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{alt_esc}">
+  <meta name="twitter:image" content="{url}">
+  <meta name="twitter:image:alt" content="{alt_esc}">
+"""
+
+
 HEAD_COMMON = """  <meta name="author" content="Weston Rosch">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Weston Rosch">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://westonrosch.com/og.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@rosch_weston">
   <meta name="twitter:creator" content="@rosch_weston">
-  <meta name="twitter:image" content="https://westonrosch.com/og.jpg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -317,6 +343,7 @@ def decorate_page(path: Path, filename: str, pages: set[str]):
     title = escape(title)
     description = escape(unescape(extract_description(html)))
     page_url = SITE_ORIGIN + page_path(filename)
+    share_meta = share_head(filename)
     body_class = body_classes(html, filename)
     main = extract_main(html)
     outside_main = html.replace(main, "", 1)
@@ -332,7 +359,7 @@ def decorate_page(path: Path, filename: str, pages: set[str]):
   <meta name="theme-color" content="#05080f">
   <meta name="description" content="{description}">
   <title>{title}</title>
-{HEAD_COMMON}  <link rel="canonical" href="{page_url}">
+{HEAD_COMMON}{share_meta}  <link rel="canonical" href="{page_url}">
   <meta property="og:url" content="{page_url}">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
