@@ -28,13 +28,24 @@ const BASELINE = {
 // Known families, newest first. Other repos in the org that publish
 // model.safetensors are discovered and added automatically.
 const KNOWN = [
-  { repo: `${ORG}/Bloom-Chat-0.2`, name: 'Bloom Chat 0.2', kind: 'chat', size: '54M', approxMB: 229,
-    desc: 'Assistant fine-tune of Bloom Text 0.2. It answers questions, often incorrectly.' },
-  { repo: `${ORG}/Bloom-Text-0.2`, name: 'Bloom Text 0.2', kind: 'text', size: '54M', approxMB: 229,
-    desc: 'Base model. It continues whatever you write instead of answering.' },
+  { repo: `${ORG}/Bloom-Chat-0.2`, name: 'Chat 0.2 (experimental, old base)', kind: 'chat', size: '54M', approxMB: 229,
+    desc: 'Early assistant fine-tune on the first Bloom 0.2 base. It answers questions, often incorrectly.' },
+  { repo: `${ORG}/Bloom-Text-0.2`, name: 'Bloom 0.2 Text checkpoints', kind: 'text', size: '54M', approxMB: 229,
+    desc: 'Every Bloom 0.2 Text checkpoint as plain text completion: it continues whatever you write.' },
   { repo: `${ORG}/Bloom-Text-0.1`, name: 'Bloom Text 0.1', kind: 'auto', size: '14M', approxMB: 65,
     desc: 'The first 14M Bloom model. Small and fast, mostly story-like text.' }
 ];
+
+// The main model: the newest Bloom 0.2 Text checkpoint, talked to through a
+// short User:/Bloom: transcript since it is a base model, not a chat model.
+const MAIN_REPO = `${ORG}/Bloom-Text-0.2`;
+const MAIN_ID = 'bloom-0.2-text';
+const MAIN = { name: 'Bloom 0.2 Text', size: '54M',
+  desc: 'The newest Bloom checkpoint. It is still a small base model in training, so expect odd answers.' };
+const BLOOM_PREAMBLE = 'Bloom is a friendly assistant. Bloom answers each question in one or two clear sentences.\n\n' +
+  'User: What color is the sky?\nBloom: The sky looks blue because air scatters blue sunlight more than other colors.\n\n' +
+  'User: What do bees make?\nBloom: Bees make honey from the nectar of flowers.\n\n';
+const chatty = kind => kind === 'chat' || kind === 'bloom';
 
 const STARTERS = {
   chat: [
@@ -82,7 +93,7 @@ function activeChat() { return store.chats.find(c => c.id === store.activeId) ||
 
 /* ---------- worker ---------- */
 function createBackend() {
-  const worker = new Worker('/chat/chat-worker.js?v=1', { type: 'module' });
+  const worker = new Worker('/chat/chat-worker.js?v=2', { type: 'module' });
   let nextId = 1;
   const pending = new Map();
   worker.onmessage = ({ data: msg }) => {
@@ -169,7 +180,7 @@ async function discoverFamily(fam) {
   }
   // Latest = main when it has weights, otherwise the newest PR checkpoint.
   return versions.map((v, i) => ({
-    id: `${fam.repo}@${v.rev}`, family: fam.name, name: fam.name, kind: fam.kind, size: fam.size, approxMB: fam.approxMB,
+    id: `${fam.repo}@${v.rev}`, family: fam.name, name: fam.name, kind: fam.kind, size: fam.size, approxMB: fam.approxMB, updated: v.updated,
     repo: fam.repo, rev: v.rev, sha: v.sha, latest: i === 0, versionLabel: i === 0 ? 'Latest' : v.label,
     meta: [v.note, v.updated ? shortDate(v.updated) : null].filter(Boolean).join(' · ')
   }));
@@ -185,18 +196,45 @@ async function discover() {
   const fams = repos.map(familyFromRepo).sort((a, b) => familyRank(b) - familyRank(a));
   const results = await Promise.all(fams.map(f => discoverFamily(f).catch(() => [])));
   const out = [];
-  fams.forEach((f, i) => { if (results[i].length) out.push({ ...f, versions: results[i] }); });
-  out.push({ name: 'baseline-001', kind: 'text', size: '118.5K', desc: 'The original prototype. Kept for comparison; it produces mostly gibberish.', versions: [BASELINE] });
+  fams.forEach((f, i) => { if (results[i].length) out.push({ ...f, versions: results[i], older: true }); });
+  out.push({ name: 'baseline-001', kind: 'text', size: '118.5K', desc: 'The original prototype. Kept for comparison; it produces mostly gibberish.', versions: [BASELINE], older: true });
+  // Bloom 0.2 Text = the most recently updated Text 0.2 checkpoint (main or an
+  // open PR), so a new training session shows up here on its own.
+  const text02 = out.find(f => f.repo === MAIN_REPO);
+  if (text02) {
+    const newest = text02.versions.slice().sort((a, b) => (Date.parse(b.updated) || 0) - (Date.parse(a.updated) || 0))[0];
+    const main = { ...newest, id: MAIN_ID, family: MAIN.name, name: MAIN.name, kind: 'bloom', latest: true,
+      versionLabel: newest.rev === 'main' ? 'Main' : newest.rev.replace('refs/pr/', 'PR #'), main: true };
+    main.meta = ['Newest checkpoint', main.versionLabel, newest.updated ? shortDate(newest.updated) : null].filter(Boolean).join(' · ');
+    out.unshift({ name: 'Bloom 0.2', kind: 'bloom', size: MAIN.size, desc: MAIN.desc, versions: [main], primary: true });
+  }
   return out;
 }
 
 /* ---------- model menu ---------- */
 const VISIBLE_VERSIONS = 3;
 const expanded = new Set();
-const kindLabel = kind => kind === 'chat' ? 'Chat' : kind === 'text' ? 'Text completion' : 'Text';
+const kindLabel = kind => kind === 'chat' ? 'Chat' : kind === 'bloom' ? '' : kind === 'text' ? 'Text completion' : 'Text';
+let olderOpen = false;
 function renderModelMenu() {
   els.modelMenu.replaceChildren();
+  const older = families.filter(f => f.older);
+  const showOlder = olderOpen || older.some(f => f.versions.some(v => current && current.id === v.id)) || !families.some(f => !f.older);
+  let olderBox = null;
   for (const fam of families) {
+    if (fam.older && !olderBox) {
+      const t = document.createElement('button'); t.type = 'button'; t.className = 'model-older-toggle';
+      t.setAttribute('aria-expanded', String(showOlder));
+      const label = document.createElement('span');
+      const count = older.reduce((n, f) => n + f.versions.length, 0);
+      label.textContent = `Older versions · ${count}`;
+      const chev = document.createElement('span'); chev.className = 'chev'; chev.setAttribute('aria-hidden', 'true'); chev.textContent = showOlder ? '\u25B4' : '\u25BE';
+      t.append(label, chev);
+      t.addEventListener('click', () => { olderOpen = !showOlder; renderModelMenu(); els.modelMenu.querySelector('.model-older-toggle')?.focus(); });
+      els.modelMenu.append(t);
+      olderBox = document.createElement('div'); olderBox.className = 'model-older'; olderBox.hidden = !showOlder;
+      els.modelMenu.append(olderBox);
+    }
     const g = document.createElement('div'); g.className = 'model-group'; 
     const head = document.createElement('div'); head.className = 'model-group-title';
     const s = document.createElement('strong'); s.textContent = fam.name;
@@ -213,8 +251,8 @@ function renderModelMenu() {
       if (current && current.id === m.id) b.setAttribute('aria-current', 'true');
       const main = document.createElement('span'); main.className = 'opt-main';
       const n = document.createElement('span'); n.className = 'opt-name';
-      n.textContent = m === BASELINE ? m.versionLabel : m.rev === 'main' ? 'Main' : m.rev.replace('refs/pr/', 'PR #');
-      if (m.latest && m !== BASELINE) { const t = document.createElement('span'); t.className = 'tag tag-latest'; t.textContent = 'latest'; n.append(t); }
+      n.textContent = m.main ? m.name : m === BASELINE ? m.versionLabel : m.rev === 'main' ? 'Main' : m.rev.replace('refs/pr/', 'PR #');
+      if (m.latest && m !== BASELINE && !fam.older) { const t = document.createElement('span'); t.className = 'tag tag-latest'; t.textContent = 'latest'; n.append(t); }
       if (!m.latest && m.rev && m.rev.startsWith('refs/pr/')) { const t = document.createElement('span'); t.className = 'tag tag-pr'; t.textContent = 'checkpoint'; n.append(t); }
       const meta = document.createElement('span'); meta.className = 'opt-meta'; meta.textContent = m.meta || '';
       main.append(n, meta);
@@ -234,7 +272,7 @@ function renderModelMenu() {
       });
       g.append(more);
     }
-    els.modelMenu.append(g);
+    (fam.older ? olderBox : els.modelMenu).append(g);
   }
   const foot = document.createElement('p'); foot.className = 'model-menu-foot';
   foot.textContent = 'Models download once from Hugging Face and run on this device. The 54M models are about 229 MB.';
@@ -242,7 +280,7 @@ function renderModelMenu() {
 }
 function renderModelButton() {
   els.modelName.textContent = current ? current.name : 'Bloom';
-  els.modelVersion.textContent = current ? (current === BASELINE ? '' : current.versionLabel) : '';
+  els.modelVersion.textContent = current ? (current === BASELINE || current.main ? '' : current.versionLabel) : '';
   els.modelDot.className = 'model-dot ' + (ready ? 'ready' : loadError ? 'error' : 'loading');
 }
 
@@ -256,6 +294,8 @@ function showLoad(text, fraction, isError) {
   else { els.loadFill.classList.remove('indeterminate'); els.loadFill.style.width = Math.round(fraction * 100) + '%'; }
 }
 const mb = n => (n / 1048576).toFixed(n > 1048576 * 10 ? 0 : 1) + ' MB';
+const ENGINE = ['webgpu', 'wasm', 'js'].includes(new URLSearchParams(location.search).get('engine')) ? new URLSearchParams(location.search).get('engine') : null;
+const engineLabel = e => !e ? '' : e.backend === 'webgpu' ? "'s GPU" : e.backend === 'wasm' ? "'s CPU (WebAssembly)" : "'s CPU";
 async function selectModel(id) {
   const m = models.get(id) || models.get(families[0]?.versions[0]?.id) || BASELINE;
   if (running) return;
@@ -269,7 +309,7 @@ async function selectModel(id) {
   try {
     let opts;
     if (m === BASELINE) {
-      opts = { label: m.name, weightsUrl: m.weightsUrl, expectedSha: m.expectedSha, cfg: m.cfg, tokenizerUrl: null, cacheable: false };
+      opts = { label: m.name, weightsUrl: m.weightsUrl, expectedSha: m.expectedSha, cfg: m.cfg, tokenizerUrl: null, cacheable: false, engine: ENGINE };
     } else {
       showLoad(`Checking ${m.name}…`, null);
       const info = await revisionInfo(m.repo, m.sha);
@@ -283,7 +323,7 @@ async function selectModel(id) {
         renderStarters();
       }
       opts = { label: m.name, weightsUrl: `${base}/${file}`, tokenizerUrl: `${base}/tokenizer.json`, cfg,
-        expectedSha: file === WEIGHTS_FILE ? (metrics.weights_sha256 || null) : null, cacheable: true };
+        expectedSha: file === WEIGHTS_FILE ? (metrics.weights_sha256 || null) : null, cacheable: true, engine: ENGINE };
     }
     if (token !== loadToken) return;
     showLoad(`Downloading ${m.name}…`, null);
@@ -299,7 +339,7 @@ async function selectModel(id) {
     loaded = m.id; ready = true;
     if (m.kind === 'auto') m.kind = 'text';
     els.load.hidden = true;
-    els.note.textContent = `${m.name} · ${res.params.toLocaleString()} parameters · ${res.cached ? 'loaded from this browser' : mb(res.bytes) + ' downloaded'} · runs on your device`;
+    els.note.textContent = `${m.name} · ${res.params.toLocaleString()} parameters · ${res.cached ? 'loaded from this browser' : mb(res.bytes) + ' downloaded'} · runs on your device${engineLabel(res.engine)}`;
   } catch (err) {
     if (err.name === 'AbortError' || token !== loadToken) return;
     loadError = err.message;
@@ -314,7 +354,7 @@ function icon(name) {
   const u = document.createElementNS('http://www.w3.org/2000/svg', 'use'); u.setAttribute('href', '#' + name); s.append(u); return s;
 }
 function renderStarters() {
-  const kind = current && current.kind === 'chat' ? 'chat' : 'text';
+  const kind = current && chatty(current.kind) ? 'chat' : 'text';
   els.starters.replaceChildren(...STARTERS[kind].map(([tag, text]) => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'starter';
     const t = document.createElement('span'); t.textContent = tag;
@@ -410,17 +450,21 @@ els.jump.addEventListener('click', () => { stick = true; els.thread.scrollTo({ t
 
 /* ---------- generation ---------- */
 function buildPrompt(chat, upto, text) {
-  if (current.kind !== 'chat') return text;
-  let prompt = `User: ${text}\nAssistant:`;
-  if (!prefs.memory) return prompt;
-  for (let i = upto - 1; i > 0; i--) {
-    const bot = chat.messages[i], user = chat.messages[i - 1];
-    if (bot.role !== 'bot' || user.role !== 'user' || bot.kind !== 'chat' || !bot.text) { i--; continue; }
-    const pair = `User: ${user.text}\nAssistant: ${bot.text}\n`;
-    if (pair.length + prompt.length > MEMORY_CHARS) break;
-    prompt = pair + prompt; i--;
+  if (!chatty(current.kind)) return text;
+  const bloom = current.kind === 'bloom';
+  const who = bloom ? 'Bloom' : 'Assistant';
+  const gap = bloom ? '\n\n' : '\n';
+  let prompt = `User: ${text}\n${who}:`;
+  if (prefs.memory) {
+    for (let i = upto - 1; i > 0; i--) {
+      const bot = chat.messages[i], user = chat.messages[i - 1];
+      if (bot.role !== 'bot' || user.role !== 'user' || bot.kind !== current.kind || !bot.text) { i--; continue; }
+      const pair = `User: ${user.text}\n${who}: ${bot.text}${gap}`;
+      if (pair.length + prompt.length > MEMORY_CHARS) break;
+      prompt = pair + prompt; i--;
+    }
   }
-  return prompt;
+  return bloom ? BLOOM_PREAMBLE + prompt : prompt;
 }
 function syncControls() {
   const hasText = els.input.value.trim().length > 0;
@@ -448,10 +492,10 @@ async function runGeneration(chat, botIndex, userText) {
   p.append(dots);
   running = true; stick = true; syncControls();
   backend.setHidden(document.hidden);
-  const chatMode = current.kind === 'chat';
+  const chatMode = chatty(current.kind);
   try {
     const res = await backend.generate({
-      prompt: buildPrompt(chat, botIndex - 1, userText), chat: chatMode,
+      prompt: buildPrompt(chat, botIndex - 1, userText), chat: chatMode, stopAtBlankLine: current.kind === 'bloom',
       temp: Number(prefs.temp), limit: Number(prefs.length), economy: !!prefs.economy
     }, ev => {
       const t = chatMode ? ev.text.replace(/^\s+/, '') : ev.text;
@@ -586,7 +630,7 @@ async function start() {
   const params = new URLSearchParams(location.search);
   const wanted = params.get('model');
   const pick = (wanted && [...models.values()].find(m => m.id === wanted || m.name.toLowerCase().replace(/\s+/g, '-') === wanted.toLowerCase()))
-    || families[0].versions[0];
+    || models.get(MAIN_ID) || families[0].versions[0];
   // Newest model is always the default; ?model= picks another (for links).
   selectModel(pick.id);
 }

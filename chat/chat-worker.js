@@ -1,17 +1,18 @@
-// Bloom chat inference worker. Reuses the playground's KV-cache inference
-// engine; adds download progress, a browser model cache and multi-turn prompts.
+// Bloom chat inference worker. Runs Bloom on the GPU (WebGPU) when that is
+// faster and matches the CPU, otherwise on WebAssembly SIMD, otherwise on the
+// original JavaScript engine. Adds download progress, a browser model cache
+// and multi-turn prompts.
 import {
   parseSafetensors,
-  createSession,
   createBPE,
   sha256Hex,
-  sampleToken,
   loadedParams,
   architectureParams,
   headsForWidth,
   utf8Enc,
   utf8Dec
 } from '/projects/centauri-bloom/inference.js?v=11';
+import { createFastSession, sampleTokenFast } from '/projects/centauri-bloom/fast-engine.js?v=1';
 
 const CACHE_NAME = 'bloom-chat-models-v1';
 let session = null;
@@ -21,6 +22,7 @@ let cancelled = false;
 let running = false;
 let hidden = false;
 let abortLoad = null;
+let engineInfo = null;
 
 const post = msg => postMessage(msg);
 
@@ -74,12 +76,16 @@ async function download(url, { signal, requestId, label, cacheable }) {
   } else {
     buf = await res.arrayBuffer();
   }
-  if (cache) {
-    try {
-      await cache.put(url, new Response(buf.slice(0), { headers: { 'content-type': 'application/octet-stream' } }));
-    } catch { /* Storage full or unavailable: keep going without caching. */ }
-  }
-  return { buf, cached: false };
+  return { buf, cached: false, cache };
+}
+
+// Stores a download only after it passed the hash check, so a bad file is
+// never kept and cached copies do not need hashing again.
+async function remember(cache, url, buf) {
+  if (!cache) return;
+  try {
+    await cache.put(url, new Response(buf.slice(0), { headers: { 'content-type': 'application/octet-stream' } }));
+  } catch { /* Storage full or unavailable: keep going without caching. */ }
 }
 
 async function load(msg, signal) {
@@ -88,13 +94,14 @@ async function load(msg, signal) {
   const tokenizer = msg.tokenizerUrl
     ? await (await fetch(msg.tokenizerUrl, { signal })).json()
     : null;
-  const { buf, cached } = await download(msg.weightsUrl, { signal, requestId, label, cacheable: !!msg.cacheable });
+  const { buf, cached, cache } = await download(msg.weightsUrl, { signal, requestId, label, cacheable: !!msg.cacheable });
   if (signal.aborted) throw new DOMException('Aborted', 'AbortError');
   post({ type: 'progress-load', requestId, phase: 'install', label });
-  if (msg.expectedSha) {
+  if (msg.expectedSha && !cached) {
     const sha = await sha256Hex(buf);
     if (sha !== msg.expectedSha) throw Error('Checkpoint hash mismatch');
   }
+  if (!cached) remember(cache, msg.weightsUrl, buf);
   const weights = parseSafetensors(buf);
   const cfg = msg.cfg || inferCfg(weights);
   BPE = tokenizer && tokenizer.model && tokenizer.model.vocab ? createBPE(tokenizer) : null;
@@ -102,8 +109,14 @@ async function load(msg, signal) {
   const expected = architectureParams(cfg);
   if (expected !== null && actual !== expected) throw Error('Checkpoint does not match its configuration');
   CFG = cfg;
-  session = createSession(weights, CFG);
-  return { params: actual, bytes: buf.byteLength, bpe: !!BPE, cfg: CFG, cached };
+  if (session && session.dispose) session.dispose();
+  session = null;
+  const built = await createFastSession(weights, CFG, { backend: msg.engine || 'auto' });
+  if (signal.aborted) { built.session.dispose(); throw new DOMException('Aborted', 'AbortError'); }
+  session = built.session;
+  engineInfo = built.info;
+  console.info('Bloom engine', JSON.stringify(engineInfo));
+  return { params: actual, bytes: buf.byteLength, bpe: !!BPE, cfg: CFG, cached, engine: engineInfo };
 }
 
 async function generate(msg) {
@@ -120,20 +133,31 @@ async function generate(msg) {
   const units = BPE ? 'tokens' : 'bytes';
   const t0 = performance.now();
   let count = 0, reason = 'Length limit', text = '';
-  session.reset();
+  // The session keeps its KV cache between replies and reuses the longest
+  // matching token prefix, so a follow-up only pays for its new tokens.
+  // When the text outgrows the context, the window jumps forward a quarter of
+  // the context at a time (one re-read) instead of sliding every token, which
+  // would re-read the whole window for each new token.
+  const shift = Math.max(1, Math.floor(CFG.context / 4));
+  let start = Math.max(0, ids.length - CFG.context);
   try {
     for (let i = 0; i < limit; i++) {
       if (cancelled) { reason = 'Stopped'; break; }
       if (msg.economy && hidden) { reason = 'Paused while the tab was hidden'; break; }
       const tokenStart = performance.now();
-      const logits = session.forward(ids.slice(-CFG.context));
-      const next = sampleToken(logits, temp, BPE ? 40 : 0);
+      if (ids.length - start > CFG.context) start = ids.length - (CFG.context - shift);
+      const logits = await session.forward(ids.slice(start));
+      const next = sampleTokenFast(logits, temp, BPE ? 40 : 0);
       if (BPE && next === BPE.eotId) { reason = 'End of reply'; break; }
       ids.push(next); gen.push(next); count++;
       text = BPE ? BPE.decode(gen) : utf8Dec.decode(Uint8Array.from(gen));
       if (chat) {
-        const turn = text.search(/\n\s*(?:User|Assistant):/);
-        if (turn >= 0) { text = text.slice(0, turn); reason = 'End of reply'; }
+        // Stop at the next turn label, or (for the base model transcript) at a
+        // blank line once the reply has started.
+        const lead = text.length - text.replace(/^\s+/, '').length;
+        const body = text.slice(lead);
+        const turn = body.search(msg.stopAtBlankLine ? /\n\s*(?:User|Assistant|Bloom):|\n[ \t]*\n/ : /\n\s*(?:User|Assistant):/);
+        if (turn >= 0) { text = text.slice(0, lead + turn); reason = 'End of reply'; }
       }
       const elapsed = Math.max(0.001, (performance.now() - t0) / 1000);
       post({ type: 'token', requestId: msg.requestId, text, count, limit, units, rate: count / elapsed });

@@ -287,7 +287,7 @@ async function refreshOptionalModels(signal) {
 document.querySelector('[data-release-refresh]')?.addEventListener('click',()=>refreshRelease());
 
 function createInferenceBackend() {
-  const worker = new Worker(new URL('./playground-worker.js?v=11', import.meta.url), { type: 'module' });
+  const worker = new Worker(new URL('./playground-worker.js?v=12', import.meta.url), { type: 'module' });
   let nextId = 1;
   const pending = new Map();
   let onProgress = null;
