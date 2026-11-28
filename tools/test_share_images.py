@@ -33,6 +33,7 @@ PUBLIC_PAGES = {
     "vault/week-1/index.html": "/og/vault-week-1.png",
     "vault/week-2/index.html": "/og/vault-week-2.png",
     "vault/week-3/index.html": "/og/vault-week-3.png",
+    "vault/week-4/index.html": "/og/vault-week-4.png",
     "archive/index.html": "/og/archive.png",
     "archive/brief.html": "/og/archive-brief.png",
     "archive/encyclopedia.html": "/og/archive-encyclopedia.png",

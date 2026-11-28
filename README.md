@@ -19,7 +19,7 @@ The custom domain `chat.westonrosch.com` is attached to this site's Worker in Cl
 Before merging, validate the HTML and check links:
 
 ```sh
-npx html-validate index.html 404.html vault/index.html vault/week-1/index.html vault/week-2/index.html vault/week-3/index.html
+npx html-validate index.html 404.html vault/index.html vault/week-1/index.html vault/week-2/index.html vault/week-3/index.html vault/week-4/index.html
 ```
 
 ## Public source dashboard
